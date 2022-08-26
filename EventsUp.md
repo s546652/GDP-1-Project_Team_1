@@ -8,3 +8,5 @@ Our team's first go to step is to get the *permissions related to university cal
 As a team we have thought about certain ideas like using a QRcode scaning for the e-pass and then we are yet to decide on how to implement the payment gateway. We are thinking to gather the requirements to set up the user stories and work accordingly.
 
 As a team, we discussed that the home page contains 3 module login, one for the student who has their SID, the other for general people who don’t have SID can log in as a guest, and the 3rd module is used by the administration to update the event in the calendar manually. 
+
+While discussing about the name for our project we did choose many names like Event Check, Make An Event, Events Up. But keeping in mind that short name could make students to remeber easily. So we collectively agreed on "EventsUp" as our app name.
