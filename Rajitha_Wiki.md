@@ -1,6 +1,6 @@
 ### Rajitha Wiki
 
-**LinkedIn Profile:** [Rajitha Bandaru](www.linkedin.com/in/bandaru-rajitha-3129b5112)
+**LinkedIn Profile:** [Rajitha Bandaru](https://www.linkedin.com/in/bandaru-rajitha-3129b5112/)
 
 **Few of my Previous Projects:**
 
