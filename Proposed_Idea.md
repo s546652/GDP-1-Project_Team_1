@@ -4,3 +4,5 @@ Initially we thought of working on the **Food Pantry** Application for our unive
 We thought that we could do an application which students could use to take a look at the application and get to know if the items they need are in the pantry or not and then decide to stop by and pickup stuff needed.
 
 Some of the features which we thought we could implement were adding image search and then tracking the search information and trying to predict the items which students are searching for the most.
+
+We also thought about topics related Machine Learning along with ios application. We came up with couple of ideas but didn't seem to workout. Later on we came up with the events application using ios. 
