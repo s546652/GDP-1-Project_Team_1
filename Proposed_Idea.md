@@ -5,4 +5,4 @@ We thought that we could do an application which students could use to take a lo
 
 Some of the features which we thought we could implement were adding image search and then tracking the search information and trying to predict the items which students are searching for the most.
 
-We also thought about topics related Machine Learning along with ios application. We came up with couple of ideas but didn't seem to workout. Later on we came up with the events application using ios. 
+While discussing about the events in the college and make an application to make all events visible at one place with the necessary description, I have suggested to make this available for only ISA students. But after the effective suggestions and team discussions we have decided to make this available for all the students and organizations in the university. 
