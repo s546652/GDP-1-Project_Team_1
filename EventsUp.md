@@ -1,4 +1,4 @@
-# GDP-1-Project_Team_1 --- EventsUp
+# GDP-1-Project_Team_1 -- EventsUp
 
 For our Graduate Directed Project we decided to work on an application which is going to show up all the events that are going to take place in the university.
 After some internal discussions we thought of developing the applicaition using ***IOS***. 
