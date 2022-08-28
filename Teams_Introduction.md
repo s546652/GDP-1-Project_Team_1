@@ -7,3 +7,6 @@ I have also done some projects in those feilds.
 
 I am from Hyderabad. I am from Computer Science background and worked as a **Salesforce Developer** for 3 years in a startup. 
 I have done certifications as Salesforce Platfrom Developer - I and II and Salesforce Administrator.
+
+#### I am Naveen Kumar Gundu.
+I'm from Hyderabad. I did my Bachelors in CMR Institute of Technology in Computer Sceience and Engineering. Worked as a Quality Analust in TCS for 2+ years.
