@@ -27,8 +27,8 @@ class ViewController: UIViewController {
         }
 
         task.resume()
-        print("-------------")
-       // label.text = task
+        print("-------------"+task)
+        label.text = task
         print(task)
     }
     
