@@ -12,8 +12,13 @@
   
   
   <p> Tried creating a table but failed to create one, tryong to debug errors from the code.
+    
+    
+    **09/23/2022**
 
   <p>Researching on database hosting applications like Back4app and blueHost and how to connect it to a Database.</p><br>
   Sites:<br>
   <a href="https://www.back4app.com/docs/database-hub/connect">How to connect Back4app to a Database</a><br>
   <a href="https://codewithchris.com/iphone-app-connect-to-mysql-database/">The Best Way to Connect Your iOS App to MySQL Database</a><br>
+  
+  <p> Also tried connecting the Database using SQLite using Swift but failed due to multiple errors, Since SQLite is not a centralized database searching for an online Host platform to store data. We also came across cordate tried to connect it using SQLite but after detailed research came to the conclusion that Core Data is just a framework and so we cannot use it as source database.</p>  
