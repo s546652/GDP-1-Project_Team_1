@@ -56,6 +56,9 @@ struct ContentView: View {
                            .background(Color.red)
                            .cornerRadius(25)
                            
+                           NavigationLink(destination: Text("You are logged in @\(sid)"), isActive: $showingLoginScreen){
+                                              EmptyView()
+                                             }
                            
                        }
                    }
