@@ -18,8 +18,6 @@ struct ContentView: View {
     var body: some View {
         NavigationView{
             ZStack{
-                Color.red
-                    .ignoresSafeArea()
                 Circle()
                     .scale(1.7)
                     .foregroundColor(.white.opacity(0.15))
@@ -54,9 +52,6 @@ struct ContentView: View {
                     .background(Color.red)
                     .cornerRadius(25)
                     
-                    NavigationLink(destination: Text("You are logged in @\(sid)"), isActive: $showingLoginScreen){
-                        EmptyView()
-                    }
                     
                 }
             }
