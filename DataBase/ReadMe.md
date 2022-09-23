@@ -8,14 +8,12 @@
   https://www.appcoda.com/sqlite-database-ios-app-tutorial/ <br>
   https://github.com/Kilo-Loco/SQLite<br>
   https://youtu.be/c4wLS9py1rU
-  
-  
-  
+ 
   <p> Tried creating a table but failed to create one, tryong to debug errors from the code.
-    
+   <br>
+    <br>
     
     **09/23/2022**
-
   <p>Researching on database hosting applications like Back4app and blueHost and how to connect it to a Database.</p><br>
   Sites:<br>
   <a href="https://www.back4app.com/docs/database-hub/connect">How to connect Back4app to a Database</a><br>
