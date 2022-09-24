@@ -18,5 +18,11 @@
   Sites:<br>
   <a href="https://www.back4app.com/docs/database-hub/connect">How to connect Back4app to a Database</a><br>
   <a href="https://codewithchris.com/iphone-app-connect-to-mysql-database/">The Best Way to Connect Your iOS App to MySQL Database</a><br>
+
+  <p>I have created EventsUp app in Back4app as inorder to connect to Database app should be created at Back4App and need to install Parse SDK on the iOS Swift Project.</p><br>
+  Below are the links for creation of app at Back4app and installing Parse SDK:<br>
+
+  <a href="https://www.back4app.com/docs/get-started/new-parse-app">How to Create App at Back4App</a><br>
+  <a href="https://www.back4app.com/docs/ios/parse-swift-sdk">Install Parse SDK on iOS Swift Project</a><br>
   
   <p> Also tried connecting the Database using SQLite using Swift but failed due to multiple errors, Since SQLite is not a centralized database searching for an online Host platform to store data. We also came across cordate tried to connect it using SQLite but after detailed research came to the conclusion that Core Data is just a framework and so we cannot use it as source database.</p>  
