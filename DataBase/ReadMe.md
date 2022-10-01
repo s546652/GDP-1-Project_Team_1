@@ -30,4 +30,8 @@
 **09/30/2022**
 <p> Still working on how to implement centralized database. Came accross many online dataHosting servers like azure and back4app.
   
-<p> Created accounts at Azure and blueHost to try implementing database hosting for iOS app.
+<p> Created accounts at Azure and blueHost to try implementing database hosting for iOS app.<br>
+
+<p>Reasearched on accessing SQLite in iOS application. Below is the website for the same.
+
+<a href="https://www.simplifiedios.net/swift-sqlite-tutorial/">Using SQLite in iOS Application</a><br>
