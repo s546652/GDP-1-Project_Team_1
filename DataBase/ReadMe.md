@@ -36,3 +36,7 @@
 <p>Reasearched on accessing SQLite in iOS application. Below is the website for the same.
 
 <a href="https://www.simplifiedios.net/swift-sqlite-tutorial/">Using SQLite in iOS Application</a><br>
+
+Reasearching on connecting iOS app to either MySQL or SQLite.
+
+<a href="https://medium.com/@joseortizcosta/connecting-ios-app-to-mysql-database-with-swift-5-using-protocol-delegation-and-mvc-architectural-259dc32fcc4b">Connecting iOS App to MySQL Database with Swift 5</a><br>
