@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,18 +13,37 @@
             <objects>
                 <viewController id="YWl-04-nVT" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="n4m-hx-RwK">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="24F-Di-kI2">
-                                <rect key="frame" x="0.0" y="818" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="848" width="428" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
-                                    <barButtonItem title="Events" image="list.bullet.rectangle.portrait" catalog="system" id="uJG-PZ-aIl"/>
-                                    <barButtonItem title="Home" image="homekit" catalog="system" width="916.5" id="iw6-I4-cgS"/>
-                                    <barButtonItem title="Login" image="person" catalog="system" width="298.5" id="nka-Pe-iut"/>
+                                    <barButtonItem title="Events" image="list.bullet.rectangle.portrait" catalog="system" id="uJG-PZ-aIl">
+                                        <connections>
+                                            <segue destination="YWl-04-nVT" kind="presentation" modalPresentationStyle="fullScreen" id="NtF-7S-g0X"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Home" image="homekit" catalog="system" width="916.5" id="iw6-I4-cgS">
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="presentation" id="hCq-P1-ZyW"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Login" image="person" catalog="system" width="298.5" id="nka-Pe-iut">
+                                        <connections>
+                                            <segue destination="lpf-Wp-6MR" kind="presentation" modalPresentationStyle="fullScreen" id="9j6-FE-QiP"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Events List" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6En-sa-J4c">
+                                <rect key="frame" x="99" y="433" width="230" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1F4-zn-RCr"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -39,18 +58,37 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="EventsUp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YXW-gs-Kwf">
-                                <rect key="frame" x="0.0" y="818" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="848" width="428" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
-                                    <barButtonItem title="Events" image="list.bullet.rectangle.portrait" catalog="system" id="KXl-ff-QWF"/>
-                                    <barButtonItem title="Home" image="homekit" catalog="system" width="916.5" id="1vR-df-A0f"/>
-                                    <barButtonItem title="Login" image="person" catalog="system" width="298.5" id="iaF-zs-4xI"/>
+                                    <barButtonItem title="Events" image="list.bullet.rectangle.portrait" catalog="system" id="KXl-ff-QWF">
+                                        <connections>
+                                            <segue destination="YWl-04-nVT" kind="presentation" modalPresentationStyle="fullScreen" id="r3p-SM-d0z"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Home" image="homekit" catalog="system" width="916.5" id="1vR-df-A0f">
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="wnV-wv-OKb"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Login" image="person" catalog="system" width="298.5" id="iaF-zs-4xI">
+                                        <connections>
+                                            <segue destination="lpf-Wp-6MR" kind="presentation" modalPresentationStyle="fullScreen" id="CLu-Sd-XRw"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xRg-ip-6tl">
+                                <rect key="frame" x="150" y="433" width="129" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -58,25 +96,44 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-164" y="80"/>
+            <point key="canvasLocation" x="-164.01869158878503" y="79.697624190064801"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ED8-Lx-c8g">
             <objects>
                 <viewController id="lpf-Wp-6MR" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="65K-bv-2od">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a40-AX-evt">
-                                <rect key="frame" x="0.0" y="818" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="848" width="428" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
-                                    <barButtonItem title="Events" image="list.bullet.rectangle.portrait" catalog="system" id="x1l-VD-PdZ"/>
-                                    <barButtonItem title="Home" image="homekit" catalog="system" width="916.5" id="Tv7-HW-CtO"/>
-                                    <barButtonItem title="Login" image="person" catalog="system" width="298.5" id="ijw-av-tiB"/>
+                                    <barButtonItem title="Events" image="list.bullet.rectangle.portrait" catalog="system" id="x1l-VD-PdZ">
+                                        <connections>
+                                            <segue destination="YWl-04-nVT" kind="presentation" modalPresentationStyle="fullScreen" id="1A9-dw-qty"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Home" image="homekit" catalog="system" width="916.5" id="Tv7-HW-CtO">
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="pLd-hp-ahC"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Login" image="person" catalog="system" width="298.5" id="ijw-av-tiB">
+                                        <connections>
+                                            <segue destination="lpf-Wp-6MR" kind="presentation" modalPresentationStyle="fullScreen" id="kT4-lt-hov"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bzr-B3-HKZ">
+                                <rect key="frame" x="155" y="433" width="118" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="CAk-Oq-kuS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -87,6 +144,11 @@
             <point key="canvasLocation" x="539" y="80"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="CLu-Sd-XRw"/>
+        <segue reference="pLd-hp-ahC"/>
+        <segue reference="1A9-dw-qty"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="homekit" catalog="system" width="128" height="106"/>
         <image name="list.bullet.rectangle.portrait" catalog="system" width="115" height="128"/>
