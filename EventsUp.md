@@ -15,8 +15,11 @@ While discussing about the name for our project we did choose many names like Ev
 
 As part of our application we also want to include a feature to make users available to buy their tickets online. For that we need to implement apple pay to make the transaction possible. So started learning more about that.
 
+Finalized on using python for web scraping. I tried to use selenium framework to display the fetched data from the site to API and then I used flask framework for hosting data pulling it to swift.  
+
 
 Decided on a basic home page and the list of event page view. 
 On the main screen we will have a banner(image) of Events and underneath it we will have EventsList icon  on the right corner, middle home button and then towards the left login button. 
 
 We have decided to maintain the uniformity we have decided to maintain same footer and header across all the pages. We are using navigate function and trying to store the data retrived from web scraping as a string and displaying them as list.
+
