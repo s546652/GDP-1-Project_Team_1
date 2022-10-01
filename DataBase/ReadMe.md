@@ -1,4 +1,4 @@
-**09/15/2022**
+  **09/15/2022**
 <p>Started research how to connect database to ios device using Swift Language.
 
 <p>Started researching SQLLite and its features, as well as centralizing the database.</p>
@@ -26,3 +26,7 @@
   <a href="https://www.back4app.com/docs/ios/parse-swift-sdk">Install Parse SDK on iOS Swift Project</a><br>
   
   <p> Also tried connecting the Database using SQLite using Swift but failed due to multiple errors, Since SQLite is not a centralized database searching for an online Host platform to store data. We also came across cordate tried to connect it using SQLite but after detailed research came to the conclusion that Core Data is just a framework and so we cannot use it as source database.</p>  
+
+**09/30/2022**
+<p> Still working on how to implement centralized database. Came accross many online dataHosting servers like azure and back4app.
+  
