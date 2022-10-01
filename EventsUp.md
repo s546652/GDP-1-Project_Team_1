@@ -14,3 +14,7 @@ As a team, we discussed that the home page contains 3 module login, one for the 
 While discussing about the name for our project we did choose many names like Event Check, Make An Event, Events Up. But keeping in mind that short name could make students to remember easily. So we collectively agreed on "EventsUp" as our app name.
 
 As part of our application we also want to include a feature to make users available to buy their tickets online. For that we need to implement apple pay to make the transaction possible. So started learning more about that.
+
+
+Decided on a based home page and the list of event page view. 
+On the main screen we will have a banner(image)  of Events and underneath it we will have EventsList icon  on the right corne, middle home button and then towards the left login button. 
