@@ -29,5 +29,5 @@
 
 **09/30/2022**
 <p> Still working on how to implement centralized database. Came accross many online dataHosting servers like azure and back4app.
+ <p> For the framework we are considering Coredata as a frame work because it is in built in by python and can easily be used in Xcode.
   
-<p> Created accounts at Azure and blueHost to try implementing database hosting for iOS app.
