@@ -30,3 +30,4 @@
 **09/30/2022**
 <p> Still working on how to implement centralized database. Came accross many online dataHosting servers like azure and back4app.
   
+<p> Created accounts at Azure and blueHost to try implementing database hosting for iOS app.
