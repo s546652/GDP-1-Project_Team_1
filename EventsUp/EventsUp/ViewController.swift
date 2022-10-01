@@ -6,11 +6,9 @@
 //
 
 import UIKit
+import SwiftUI
 
 class ViewController: UIViewController {
-
-    @IBOutlet weak var pageView: UIPageControl!
-    @IBOutlet weak var slideCollectionView: UICollectionView!
     
     
     

@@ -111,10 +111,10 @@
             </objects>
             <point key="canvasLocation" x="-164.01869158878503" y="79.697624190064801"/>
         </scene>
-        <!--View Controller-->
+        <!--Login Controller-->
         <scene sceneID="ED8-Lx-c8g">
             <objects>
-                <viewController id="lpf-Wp-6MR" sceneMemberID="viewController">
+                <viewController id="lpf-Wp-6MR" customClass="LoginController" customModule="EventsUp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="65K-bv-2od">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -140,8 +140,8 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bzr-B3-HKZ">
-                                <rect key="frame" x="155" y="433" width="118" height="60"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bzr-B3-HKZ">
+                                <rect key="frame" x="155" y="433" width="0.0" height="0.0"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <nil key="textColor"/>
@@ -173,7 +173,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="CLu-Sd-XRw"/>
         <segue reference="447-IA-peg"/>
-        <segue reference="r3p-SM-d0z"/>
+        <segue reference="1A9-dw-qty"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="arrow.backward.circle" catalog="system" width="128" height="121"/>
