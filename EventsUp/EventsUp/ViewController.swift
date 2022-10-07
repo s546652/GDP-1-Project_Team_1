@@ -11,6 +11,11 @@ class ViewController: UIViewController {
      
     var imgNum = 0
     
+   
+    
+    @IBOutlet weak var tabelView: UITableView!
+    
+    
     @IBOutlet weak var displayImageOutlet: UIImageView!
     let img = ["img1","img2","img3"]
     
@@ -23,9 +28,17 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         displayImageOutlet.image = UIImage(named: img[imgNum])
         preOutlet.isEnabled = false
+        
+        tabelView.reloadData()
 
     }
      
+    struct ContentView: View{
+        var body: some View{
+            Label("Your account",image: "img01")
+                    }
+    }
+    
     @IBAction func preButton(_ sender: Any) {
             imgNum -= 1;
             
@@ -53,4 +66,7 @@ class ViewController: UIViewController {
                 nextOutlet.isEnabled = false
             }
         }
+    
+    
+    
 }
