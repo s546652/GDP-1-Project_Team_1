@@ -40,3 +40,5 @@
 Reasearching on connecting iOS app to either MySQL or SQLite.
 
 <a href="https://medium.com/@joseortizcosta/connecting-ios-app-to-mysql-database-with-swift-5-using-protocol-delegation-and-mvc-architectural-259dc32fcc4b">Connecting iOS App to MySQL Database with Swift 5</a><br>
+
+Going to implement the research parts in Xcode, and also have to try migrating SQLite to Azure
