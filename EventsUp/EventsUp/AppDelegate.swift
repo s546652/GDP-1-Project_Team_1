@@ -6,6 +6,11 @@
 //
 
 import UIKit
+import SQLite3
+
+var dbQueue:OpaquePointer?
+
+var dbURL = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as String
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,6 +19,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        dbQueue = createAndOpenDatabase()
+        
+        if(createAttendeeTable() == false){
+            
+            print("Error in creating table")
+            
+        }
+        else{
+            
+            print("Attendee Table created")
+            
+        }
         return true
     }
 
@@ -29,6 +47,56 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the user discards a scene session.
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
+    }
+    
+    func createAndOpenDatabase() -> OpaquePointer? {
+        var db: OpaquePointer?
+        
+        let url = NSURL(fileURLWithPath: dbURL)
+        
+        if let pathComponenent = url.appendingPathComponent("EventsUp.sqlite")
+        {
+            let filePath = pathComponenent.path
+            if sqlite3_open(filePath, &db) == SQLITE_OK
+            {
+                print("Succesfully opened the Database at \(filePath)")
+                
+                return db;
+            }
+            else{
+                
+                print("Could not open the Database")
+                
+            }
+            
+            
+        }
+        else{
+            
+            print("File path is not available")
+        }
+        
+        return db;
+    }
+    
+    func createAttendeeTable() -> Bool {
+        var aRetval : Bool = false
+        
+        let createAttendees = sqlite3_exec(dbQueue, "Create table if not exists E_ATTENDEES(Attendee_Id INTEGER PRIMARY KEY AUTOINCREMENT, Password TEXT NOT NULL, SID TEXT, Name TEXT NOT NULL, FName TEXT NOT NULL, EmailId TEXT NOT NULL  UNIQUE, PhoneNUmber TEXT NOT NULL UNIQUE, DOB TEXT NOT NULL)", nil, nil, nil)
+        
+        if(createAttendees != SQLITE_OK){
+            
+            print("Not able to create table")
+            aRetval = false
+            
+        }
+        else{
+            
+            aRetval = true
+        }
+        
+        return aRetval
+        
     }
 
 
