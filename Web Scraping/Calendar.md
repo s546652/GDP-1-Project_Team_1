@@ -66,6 +66,69 @@ for a in s:
 
 
 ```python
+def func():
+    from selenium import webdriver
+    from time import sleep
+    from selenium.webdriver.chrome.service import Service
+    from selenium.webdriver.support.ui import WebDriverWait
+    from selenium.webdriver.support import expected_conditions as EC
+    from selenium.webdriver.support.select import Select
+    from selenium.webdriver.common.action_chains import ActionChains
+    from bs4 import BeautifulSoup
+    import codecs
+    import re
+    from webdriver_manager.chrome import ChromeDriverManager
+    from selenium.webdriver.common.by import By
+    from selenium.webdriver.support import expected_conditions as EC
+
+    driver = webdriver.Chrome(executable_path="/Users/s546761/Documents/chromedriver")
+    driver.get("http://calendar.nwmissouri.edu")
+    sleep(2)
+
+    #f=open("file.txt","w")
+    s=""
+    b=driver.find_elements(By.CLASS_NAME,"event-data")
+    #for i in b:
+        #s+=i.text
+        #print(i)
+    c=driver.find_elements(By.CLASS_NAME,"event-listing-name")#.find_elements(By.TAG_NAME,"a")
+    #print(c)
+    l=[];x=1
+    for i in range(2):
+        c=driver.find_elements(By.CLASS_NAME,"event-listing-name")#.find_elements(By.TAG_NAME,"a")
+        #print(i.find_element(By.TAG_NAME,"a").text)
+        c[i].find_element(By.TAG_NAME,"a").click() 
+        sleep(1)
+        a=driver.find_elements(By.CLASS_NAME,"content")
+        x+=1
+        for j in a:
+            for k in j.text.split("\n"):
+                s+=k+"<br>"
+            s+="<br>"
+        driver.back()
+        sleep(1)
+    from flask import Flask
+
+    app = Flask(__name__)
+
+    @app.route('/')
+    def func():
+        return s
+
+    if __name__ == '__main__':
+        app.run()
+    
+from datetime import datetime
+from threading import Timer
+
+x=datetime.today()
+y=x.replace(day=x.day+1, hour=8, minute=51, second=0, microsecond=0)
+delta_t=y-x
+
+secs=delta_t.seconds+1
+
+t = Timer(secs, func)
+t.start()
 
 ```
 
