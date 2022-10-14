@@ -47,4 +47,4 @@ Reasearching on connecting iOS app to either MySQL or SQLite.
 
 
 **10/14/2022**
-doing research to get free online database.
+doing research to get free online database. To make the database centrailized we need to use online based dataset like cloud get access to it fromo anywhere.
