@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -299,7 +298,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="c1" rowHeight="130" id="6Cx-aI-53o">
-                                        <rect key="frame" x="0.0" y="50" width="327" height="130"/>
+                                        <rect key="frame" x="0.0" y="44.666666030883789" width="327" height="130"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" semanticContentAttribute="forceLeftToRight" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6Cx-aI-53o" id="GDM-aw-9dp">
                                             <rect key="frame" x="0.0" y="0.0" width="327" height="130"/>
@@ -322,7 +321,7 @@
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <prototypes>
                                                         <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="c1" rowHeight="130" id="7Ux-7d-dSV">
-                                                            <rect key="frame" x="0.0" y="50" width="327" height="130"/>
+                                                            <rect key="frame" x="0.0" y="44.666666030883789" width="327" height="130"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" semanticContentAttribute="forceLeftToRight" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7Ux-7d-dSV" id="QsQ-jX-c7b">
                                                                 <rect key="frame" x="0.0" y="0.0" width="327" height="130"/>
@@ -344,7 +343,7 @@
                                                             </tableViewCellContentView>
                                                         </tableViewCell>
                                                         <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="c2" rowHeight="130" id="gAY-b9-Yze">
-                                                            <rect key="frame" x="0.0" y="180" width="327" height="130"/>
+                                                            <rect key="frame" x="0.0" y="174.66666603088379" width="327" height="130"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" semanticContentAttribute="forceLeftToRight" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gAY-b9-Yze" id="i91-j1-tKY">
                                                                 <rect key="frame" x="0.0" y="0.0" width="327" height="130"/>
@@ -372,7 +371,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="c2" rowHeight="130" id="gWZ-vr-ZLt">
-                                        <rect key="frame" x="0.0" y="180" width="327" height="130"/>
+                                        <rect key="frame" x="0.0" y="174.66666603088379" width="327" height="130"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" semanticContentAttribute="forceLeftToRight" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gWZ-vr-ZLt" id="x6u-zq-Oyt">
                                             <rect key="frame" x="0.0" y="0.0" width="327" height="130"/>
@@ -660,13 +659,13 @@
         <segue reference="1A9-dw-qty"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="arrow.backward.circle" catalog="system" width="128" height="123"/>
-        <image name="arrowshape.turn.up.left" catalog="system" width="128" height="104"/>
-        <image name="arrowshape.turn.up.right" catalog="system" width="128" height="104"/>
-        <image name="homekit" catalog="system" width="128" height="104"/>
+        <image name="arrow.backward.circle" catalog="system" width="128" height="121"/>
+        <image name="arrowshape.turn.up.left" catalog="system" width="128" height="106"/>
+        <image name="arrowshape.turn.up.right" catalog="system" width="128" height="106"/>
+        <image name="homekit" catalog="system" width="128" height="106"/>
         <image name="img01" width="1448" height="2048"/>
         <image name="list.bullet.rectangle.portrait" catalog="system" width="115" height="128"/>
-        <image name="person" catalog="system" width="128" height="121"/>
+        <image name="person" catalog="system" width="128" height="117"/>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
