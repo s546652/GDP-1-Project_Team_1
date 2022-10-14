@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -417,101 +418,103 @@
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a40-AX-evt">
-                                <rect key="frame" x="0.0" y="848" width="428" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <items>
-                                    <barButtonItem title="Events" image="list.bullet.rectangle.portrait" catalog="system" id="x1l-VD-PdZ">
-                                        <connections>
-                                            <segue destination="YWl-04-nVT" kind="presentation" modalPresentationStyle="fullScreen" id="1A9-dw-qty"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem title="Home" image="homekit" catalog="system" width="916.5" id="Tv7-HW-CtO">
-                                        <connections>
-                                            <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="pLd-hp-ahC"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem title="Login" image="person" catalog="system" width="298.5" id="ijw-av-tiB">
-                                        <connections>
-                                            <segue destination="lpf-Wp-6MR" kind="presentation" modalPresentationStyle="fullScreen" id="kT4-lt-hov"/>
-                                        </connections>
-                                    </barButtonItem>
-                                </items>
-                            </toolbar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bzr-B3-HKZ">
-                                <rect key="frame" x="155" y="433" width="0.0" height="0.0"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VHy-9D-cwW">
-                                <rect key="frame" x="0.0" y="44" width="428" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="Login" id="U5I-ss-5tP">
-                                        <barButtonItem key="leftBarButtonItem" image="arrow.backward.circle" catalog="system" id="JEx-RR-KEL">
-                                            <connections>
-                                                <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="447-IA-peg"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="SID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kE8-kq-GTm">
-                                <rect key="frame" x="20" y="240" width="388" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GIp-3C-GwH">
-                                <rect key="frame" x="20" y="298" width="388" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xac-Nk-gU3">
-                                <rect key="frame" x="150" y="363" width="129" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="Login">
-                                    <backgroundConfiguration key="background"/>
-                                    <color key="baseBackgroundColor" systemColor="systemMintColor"/>
-                                </buttonConfiguration>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="---------- OR ----------" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SXZ-OQ-3K5">
-                                <rect key="frame" x="75" y="453" width="278" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" systemColor="opaqueSeparatorColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Already an User" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4i9-Nd-JiF">
-                                <rect key="frame" x="154" y="196" width="121" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xzv-iy-aZj">
-                                <rect key="frame" x="157" y="565" width="0.0" height="0.0"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HTq-If-9Qd">
-                                <rect key="frame" x="126" y="550" width="178" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Signup for new acoount"/>
-                                <connections>
-                                    <segue destination="2Ox-gD-QKR" kind="presentation" modalPresentationStyle="fullScreen" id="mMJ-kd-luM"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="f2l-vU-bFD" userLabel="BigContainerSV">
+                                <rect key="frame" x="5" y="64" width="418" height="848"/>
+                                <subviews>
+                                    <navigationBar contentMode="scaleToFill" verticalHuggingPriority="249" translatesAutoresizingMaskIntoConstraints="NO" id="VHy-9D-cwW">
+                                        <rect key="frame" x="0.0" y="0.0" width="418" height="534.33333333333337"/>
+                                        <items>
+                                            <navigationItem title="Login" id="U5I-ss-5tP">
+                                                <barButtonItem key="leftBarButtonItem" image="arrow.backward.circle" catalog="system" id="JEx-RR-KEL">
+                                                    <connections>
+                                                        <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="447-IA-peg"/>
+                                                    </connections>
+                                                </barButtonItem>
+                                            </navigationItem>
+                                        </items>
+                                    </navigationBar>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="4Sn-pX-qD9">
+                                        <rect key="frame" x="0.0" y="534.33333333333337" width="418" height="254.33333333333337"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Already an User" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4i9-Nd-JiF">
+                                                <rect key="frame" x="0.0" y="0.0" width="418" height="35.666666666666664"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="SID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kE8-kq-GTm">
+                                                <rect key="frame" x="0.0" y="43.666666666666629" width="418" height="35.666666666666657"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GIp-3C-GwH">
+                                                <rect key="frame" x="0.0" y="87.333333333333258" width="418" height="35.666666666666657"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xac-Nk-gU3">
+                                                <rect key="frame" x="0.0" y="131" width="418" height="36"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="tinted" title="Login">
+                                                    <backgroundConfiguration key="background"/>
+                                                    <color key="baseBackgroundColor" systemColor="tintColor"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="---------- OR ----------" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SXZ-OQ-3K5">
+                                                <rect key="frame" x="0.0" y="175" width="418" height="35.666666666666657"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" systemColor="opaqueSeparatorColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HTq-If-9Qd">
+                                                <rect key="frame" x="0.0" y="218.66666666666663" width="418" height="35.666666666666657"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Signup for new acoount"/>
+                                                <connections>
+                                                    <segue destination="2Ox-gD-QKR" kind="presentation" modalPresentationStyle="fullScreen" id="mMJ-kd-luM"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a40-AX-evt">
+                                        <rect key="frame" x="0.0" y="788.66666666666663" width="418" height="59.333333333333371"/>
+                                        <items>
+                                            <barButtonItem title="Events" image="list.bullet.rectangle.portrait" catalog="system" id="x1l-VD-PdZ">
+                                                <connections>
+                                                    <segue destination="YWl-04-nVT" kind="presentation" modalPresentationStyle="fullScreen" id="1A9-dw-qty"/>
+                                                </connections>
+                                            </barButtonItem>
+                                            <barButtonItem title="Home" image="homekit" catalog="system" width="916.5" id="Tv7-HW-CtO">
+                                                <connections>
+                                                    <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="pLd-hp-ahC"/>
+                                                </connections>
+                                            </barButtonItem>
+                                            <barButtonItem title="Login" image="person" catalog="system" width="298.5" id="ijw-av-tiB">
+                                                <connections>
+                                                    <segue destination="lpf-Wp-6MR" kind="presentation" modalPresentationStyle="fullScreen" id="kT4-lt-hov"/>
+                                                </connections>
+                                            </barButtonItem>
+                                        </items>
+                                    </toolbar>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="a40-AX-evt" firstAttribute="top" relation="lessThanOrEqual" secondItem="4Sn-pX-qD9" secondAttribute="bottom" constant="5" id="6LM-Dc-LBy"/>
+                                    <constraint firstItem="4Sn-pX-qD9" firstAttribute="leading" relation="lessThanOrEqual" secondItem="f2l-vU-bFD" secondAttribute="leadingMargin" constant="5" id="AOm-Uy-8le"/>
+                                    <constraint firstItem="4Sn-pX-qD9" firstAttribute="top" relation="lessThanOrEqual" secondItem="VHy-9D-cwW" secondAttribute="bottom" constant="5" id="FI4-Yc-XDd"/>
+                                    <constraint firstItem="4Sn-pX-qD9" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="f2l-vU-bFD" secondAttribute="trailingMargin" constant="5" id="x33-tj-2J1"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="CAk-Oq-kuS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="CAk-Oq-kuS" firstAttribute="trailing" secondItem="f2l-vU-bFD" secondAttribute="trailing" constant="5" id="87p-Tv-7OH"/>
+                            <constraint firstItem="4Sn-pX-qD9" firstAttribute="height" secondItem="CAk-Oq-kuS" secondAttribute="height" multiplier="0.3" id="DrC-BM-1Ut"/>
+                            <constraint firstItem="f2l-vU-bFD" firstAttribute="leading" secondItem="CAk-Oq-kuS" secondAttribute="leading" constant="5" id="qF1-yL-CM9"/>
+                            <constraint firstItem="f2l-vU-bFD" firstAttribute="bottom" secondItem="CAk-Oq-kuS" secondAttribute="bottom" constant="20" id="rax-3S-roI"/>
+                            <constraint firstItem="a40-AX-evt" firstAttribute="height" secondItem="CAk-Oq-kuS" secondAttribute="height" multiplier="0.07" id="sWv-UB-7hS"/>
+                            <constraint firstItem="f2l-vU-bFD" firstAttribute="top" secondItem="CAk-Oq-kuS" secondAttribute="top" constant="20" id="zDe-5n-HIB"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7fs-1J-cQZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -654,9 +657,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="9WI-wQ-x32"/>
+        <segue reference="CLu-Sd-XRw"/>
         <segue reference="pLd-hp-ahC"/>
-        <segue reference="1A9-dw-qty"/>
+        <segue reference="r3p-SM-d0z"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="arrow.backward.circle" catalog="system" width="128" height="121"/>
@@ -672,8 +675,8 @@
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemMintColor">
-            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
