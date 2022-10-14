@@ -44,3 +44,7 @@ Reasearching on connecting iOS app to either MySQL or SQLite.
 <p>Going to implement the research parts in Xcode, and also have to try migrating SQLite to Azure.</p>
 
 <a href="https://learn.microsoft.com/en-us/azure/azure-sql/database/migrate-sqlite-db-to-azure-sql-serverless-offline-tutorial?view=azuresql">How to migrate your SQLite database to Azure SQL Database serverless</a><br>
+
+
+**10/14/2022**
+doing research to get free online database.
