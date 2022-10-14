@@ -8,6 +8,8 @@
 import UIKit
 import SQLite3
 
+var dbQueue:OpaquePointer?
+
 var dbURL = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as String
 
 @main
@@ -17,6 +19,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        dbQueue = createAndOpenDatabase()
+        
+        if(createAttendeeTable() == false){
+            
+            print("Error in creating table")
+            
+        }
+        else{
+            
+            print("Attendee Table created")
+            
+        }
         return true
     }
 
@@ -62,6 +77,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         return db;
+    }
+    
+    func createAttendeeTable() -> Bool {
+        var aRetval : Bool = false
+        
+        let createAttendees = sqlite3_exec(dbQueue, "Create table if not exists E_ATTENDEES(Attendee_Id INTEGER PRIMARY KEY AUTOINCREMENT, Password TEXT NOT NULL, SID TEXT, Name TEXT NOT NULL, FName TEXT NOT NULL, EmailId TEXT NOT NULL  UNIQUE, PhoneNUmber TEXT NOT NULL UNIQUE, DOB TEXT NOT NULL)", nil, nil, nil)
+        
+        if(createAttendees != SQLITE_OK){
+            
+            print("Not able to create table")
+            aRetval = false
+            
+        }
+        else{
+            
+            aRetval = true
+        }
+        
+        return aRetval
+        
     }
 
 
