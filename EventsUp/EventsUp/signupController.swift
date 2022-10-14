@@ -65,7 +65,7 @@ class signupControllerViewController: UIViewController {
             }
             if(phNo.text!.isEmpty == false){
                 var phno:Int
-                phno = (Int)phNo.text!
+              //  phno = (Int)phNo.text!
             }
         }
         

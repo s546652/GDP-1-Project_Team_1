@@ -421,18 +421,6 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="f2l-vU-bFD" userLabel="BigContainerSV">
                                 <rect key="frame" x="5" y="64" width="418" height="848"/>
                                 <subviews>
-                                    <navigationBar contentMode="scaleToFill" verticalHuggingPriority="249" translatesAutoresizingMaskIntoConstraints="NO" id="VHy-9D-cwW">
-                                        <rect key="frame" x="0.0" y="0.0" width="418" height="534.33333333333337"/>
-                                        <items>
-                                            <navigationItem title="Login" id="U5I-ss-5tP">
-                                                <barButtonItem key="leftBarButtonItem" image="arrow.backward.circle" catalog="system" id="JEx-RR-KEL">
-                                                    <connections>
-                                                        <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="447-IA-peg"/>
-                                                    </connections>
-                                                </barButtonItem>
-                                            </navigationItem>
-                                        </items>
-                                    </navigationBar>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="4Sn-pX-qD9">
                                         <rect key="frame" x="0.0" y="534.33333333333337" width="418" height="254.33333333333337"/>
                                         <subviews>
@@ -444,11 +432,6 @@
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="SID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kE8-kq-GTm">
                                                 <rect key="frame" x="0.0" y="43.666666666666629" width="418" height="35.666666666666657"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GIp-3C-GwH">
-                                                <rect key="frame" x="0.0" y="87.333333333333258" width="418" height="35.666666666666657"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
@@ -476,6 +459,24 @@
                                             </button>
                                         </subviews>
                                     </stackView>
+                                    <navigationBar contentMode="scaleToFill" verticalHuggingPriority="249" translatesAutoresizingMaskIntoConstraints="NO" id="VHy-9D-cwW">
+                                        <rect key="frame" x="0.0" y="0.0" width="418" height="534.33333333333337"/>
+                                        <items>
+                                            <navigationItem id="U5I-ss-5tP">
+                                                <nil key="title"/>
+                                                <barButtonItem key="leftBarButtonItem" image="arrow.backward.circle" catalog="system" id="JEx-RR-KEL">
+                                                    <connections>
+                                                        <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="447-IA-peg"/>
+                                                    </connections>
+                                                </barButtonItem>
+                                                <textField key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" id="GIp-3C-GwH">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </navigationItem>
+                                        </items>
+                                    </navigationBar>
                                     <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a40-AX-evt">
                                         <rect key="frame" x="0.0" y="788.66666666666663" width="418" height="59.333333333333371"/>
                                         <items>
@@ -559,7 +560,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Date of Birth" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jnm-44-Se9">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" toolTip="MM/DD/YYYY" borderStyle="roundedRect" placeholder="Date of Birth" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jnm-44-Se9">
                                 <rect key="frame" x="85" y="411" width="258" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -571,28 +572,18 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="---------- OR ----------" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P2z-sC-lIH">
-                                <rect key="frame" x="75" y="588" width="278" height="14"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" systemColor="opaqueSeparatorColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Efd-cM-iSi">
-                                <rect key="frame" x="173" y="502" width="84" height="35"/>
+                                <rect key="frame" x="172" y="658" width="84" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Sign Up"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S5g-Kr-ONu">
-                                <rect key="frame" x="182" y="659" width="66" height="35"/>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jn5-Fb-nuK">
+                                <rect key="frame" x="85" y="495" width="258" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Login"/>
-                                <connections>
-                                    <segue destination="lpf-Wp-6MR" kind="presentation" modalPresentationStyle="fullScreen" id="9WI-wQ-x32"/>
-                                </connections>
-                            </button>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ZEe-Y4-sUh"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -657,9 +648,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="CLu-Sd-XRw"/>
+        <segue reference="85u-8C-qAc"/>
         <segue reference="pLd-hp-ahC"/>
-        <segue reference="r3p-SM-d0z"/>
+        <segue reference="1A9-dw-qty"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="arrow.backward.circle" catalog="system" width="128" height="121"/>
