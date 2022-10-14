@@ -134,7 +134,35 @@ t.start()
 
 
 ```python
+from flask import Flask, request, jsonify
+import sys
+# Workaround - otherwise doesn't work in windows service.
+cli = sys.modules['flask.cli']
+cli.show_server_banner = lambda *x: None
 
+app = Flask(__name__)
+
+# ... business logic endpoints are skipped.
+
+@app.route("/shutdown", methods=['GET'])
+def shutdown():
+    shutdown_func = request.environ.get('werkzeug.server.shutdown')
+    if shutdown_func is None:
+        raise RuntimeError('Not running werkzeug')
+    shutdown_func()
+    return "Shutting down..."
+
+
+def start():
+    app.run(threaded=True)
+
+
+def stop():
+    import requests
+    resp = requests.get('/shutdown')
+
+if __name__ == '__main__':
+    app.run()
 ```
 
 
