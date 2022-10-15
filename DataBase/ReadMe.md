@@ -48,3 +48,5 @@ Reasearching on connecting iOS app to either MySQL or SQLite.
 
 **10/14/2022**
 doing research to get free online database. To make the database centrailized we need to use online based dataset like cloud get access to it fromo anywhere. Most of the database searched offer 1 month free subscription or 1GB of data free. 
+
+<p>Able to create and open database & create attendee table and have to work on inserting data into DB through Sign-in page.<p>
