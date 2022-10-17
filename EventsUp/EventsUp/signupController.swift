@@ -10,6 +10,7 @@ import SQLite3
 import SwiftUI
 
 
+
 class signupControllerViewController: UIViewController {
     
     
@@ -87,9 +88,9 @@ class signupControllerViewController: UIViewController {
               //  phno = (Int)phNo.text!
             }
             
-            var insert = "INSERT INTO E_ATTENDEES (Attendee_Id,Password,LName,FName,EmailId,PhoneNUmber,DOB) VALUES (?, ?);"
+            var insert = "INSERT INTO E_ATTENDEES (Attendee_Id,Password,Name,FName,EmailId,PhoneNUmber,DOB) VALUES (002,?, ?, ?, ?, ?, ?);"
             var insertStat : OpaquePointer?
-            
+            print("insert 1")
             if(sqlite3_prepare_v2(dbQueue, insert, -1, &insertStat, nil)) == SQLITE_OK {
                 sqlite3_bind_text(insertStat, 1, password.text ?? "", -1,sqlite_TRANSIENT)
                 sqlite3_bind_text(insertStat, 2, lName.text ?? "", -1,sqlite_TRANSIENT)
@@ -97,13 +98,15 @@ class signupControllerViewController: UIViewController {
                 sqlite3_bind_text(insertStat, 4, email.text ?? "", -1,sqlite_TRANSIENT)
                 sqlite3_bind_text(insertStat, 5, phNo.text ?? "", -1,sqlite_TRANSIENT)
                 sqlite3_bind_text(insertStat, 6, dob.text ?? "", -1,sqlite_TRANSIENT)
+                print("insert2")
                 
                 if(sqlite3_step(insertStat)) == SQLITE_DONE{
                     
-                    lName.text = " "
+                    lName.text = "testing Roshni"
                     
                     lName.becomeFirstResponder()
                     print("Success")
+                    
                 }
                 else{
                     print("error in data to table")
@@ -114,34 +117,66 @@ class signupControllerViewController: UIViewController {
             }
             
             
-            let selectStatementString = "SELECT Attendee_Id,Password,LName,FName,EmailId,PhoneNUmber,DOB FROM E_ATTENDEES"
+            let selectStatementString = "SELECT Attendee_Id,Password,Name,FName,EmailId,PhoneNUmber,DOB FROM E_ATTENDEES"
+            
+            let tablecount = "SELECT COUNT FROM E_ATTENDEES"
             
             var selectStatemetnQuery :  OpaquePointer?
             
             var sShowData = ""
             
-           /* if sqlite3_prepare_v2(dbQueue, selectStatemetnQuery, -1, &selectStatemetnQuery, nil) == SQLITE_OK
+           if sqlite3_prepare_v2(dbQueue, selectStatementString, -1, &selectStatemetnQuery, nil) == SQLITE_OK
             {
                 while sqlite3_step(selectStatemetnQuery) == SQLITE_ROW {
                     
                     sShowData += String(cString: sqlite3_column_text(selectStatemetnQuery, 0)) + "\t\t" +
-                    String(cString: sqlite3_column_text(selectStatemetnQuery, 1)) + String(cString: sqlite3_column_text(selectStatemetnQuery, 2)) + "\t\t" +
-                    String(cString: sqlite3_column_text(selectStatemetnQuery, 3)) + "\t\t" +
-                    String(cString: sqlite3_column_text(selectStatemetnQuery, 4)) + "\t\t" +
-                    String(cString: sqlite3_column_text(selectStatemetnQuery, 5)) + "\n"
-                }
+                                 String(cString: sqlite3_column_text(selectStatemetnQuery, 1)) + "\t\t" +
+                                 String(cString: sqlite3_column_text(selectStatemetnQuery, 2)) + "\t\t" +
+                                String(cString: sqlite3_column_text(selectStatemetnQuery, 3)) + "\t\t" +
+                                String(cString: sqlite3_column_text(selectStatemetnQuery, 4)) + "\t\t" +
+                                String(cString: sqlite3_column_text(selectStatemetnQuery, 5)) + "\n"
+                    }
+               
+             //  sShowData += String(cString: sqlit)
                 
                 sqlite3_finalize(selectStatemetnQuery)
             }
+            print("selecting data")
+            print(sShowData)
             
             fName.text = sShowData ?? ""
+            
+            
+            int count = 0;
+                int retVal;
+                const char *sqlQuery = &quot;SELECT COUNT(*) FROM Contacts&quot;;
+                sqlite3_stmt *query = nil;
+
+                if ((retVal =sqlite3_prepare_v2(dbHandle, sqlQuery, -1, &amp;query, NULL)) == SQLITE_OK) {
+                int queryResult = sqlite3_step(query);
+                if (queryResult == SQLITE_ROW) {
+                    count = sqlite3_column_int(query, 0);
+                        NSLog(@&quot;Succesfully selected row count %d  &quot;,count) ;
+                    }
+                    else {
+                        NSLog(@&quot;Failed to selected row count &quot;) ;
+                    }
+                    sqlite3_reset(query);
+                    sqlite3_finalize(query);
+
+                }
+                else {
+                    NSLog(@&quot;Failure in preparing SELECT statement with result %d&quot;,retVal) ;
+                }
+            
+            
         }
         else{
             print("enter fname and lname")
-        }*/
+        }
         
     }
     
-    }
+   // }
 
 }

@@ -82,11 +82,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func createAttendeeTable() -> Bool {
         var aRetval : Bool = false
         
-        /*let createAttendees = sqlite3_exec(dbQueue, "Create table if not exists E_ATTENDEES(Attendee_Id INTEGER PRIMARY KEY AUTOINCREMENT, Password TEXT NOT NULL, SID TEXT, LName TEXT NOT NULL, FName TEXT NOT NULL, EmailId TEXT NOT NULL  UNIQUE, PhoneNUmber TEXT NOT NULL UNIQUE, DOB TEXT NOT NULL)", nil, nil, nil)*/
+        /*let createAttendees = sqlite3_exec(dbQueue, "Create table if not exists E_ATTENDEES(Attendee_Id INTEGER PRIMARY KEY AUTOINCREMENT, Password TEXT NOT NULL, SID TEXT, Name TEXT NOT NULL, FName TEXT NOT NULL, EmailId TEXT NOT NULL  UNIQUE, PhoneNUmber TEXT NOT NULL UNIQUE, DOB TEXT NOT NULL)", nil, nil, nil)*/
         
-        //removed sid
+        //removed sidv removed id
         
-        let createAttendees = sqlite3_exec(dbQueue, "Create table if not exists E_ATTENDEES(Attendee_Id INTEGER PRIMARY KEY AUTOINCREMENT, Password TEXT NOT NULL,  LName TEXT NOT NULL, FName TEXT NOT NULL, EmailId TEXT NOT NULL  UNIQUE, PhoneNUmber TEXT NOT NULL UNIQUE, DOB TEXT NOT NULL)", nil, nil, nil)
+        let createAttendees = sqlite3_exec(dbQueue, "Create table if not exists E_ATTENDEES( Password TEXT NOT NULL,  Name TEXT NOT NULL, FName TEXT NOT NULL, EmailId TEXT NOT NULL  UNIQUE, PhoneNUmber TEXT NOT NULL UNIQUE, DOB TEXT NOT NULL)", nil, nil, nil)
         
         
         if(createAttendees != SQLITE_OK){
