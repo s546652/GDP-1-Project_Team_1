@@ -661,9 +661,10 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="mG4-pZ-Wag"/>
-        <segue reference="Sny-5G-6lT"/>
-        <segue reference="kgG-g7-eX4"/>
+        <segue reference="Ct9-EM-LJD"/>
+        <segue reference="Vql-pa-VZM"/>
+        <segue reference="0dD-sb-G0Y"/>
+        <segue reference="H8E-IJ-oNP"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="arrow.backward.circle" catalog="system" width="128" height="121"/>
