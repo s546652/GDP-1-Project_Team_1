@@ -74,11 +74,11 @@
             <objects>
                 <viewController id="YWl-04-nVT" customClass="EventsListController" customModule="EventsUp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="n4m-hx-RwK">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="24F-Di-kI2">
-                                <rect key="frame" x="0.0" y="794" width="428" height="44"/>
+                                <rect key="frame" x="0.0" y="848" width="428" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem title="Events" image="list.bullet.rectangle.portrait" catalog="system" id="uJG-PZ-aIl">
@@ -227,11 +227,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="EventsUp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YXW-gs-Kwf">
-                                <rect key="frame" x="0.0" y="794" width="428" height="44"/>
+                                <rect key="frame" x="0.0" y="848" width="428" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem title="Events" image="list.bullet.rectangle.portrait" catalog="system" id="KXl-ff-QWF">
@@ -402,7 +402,7 @@
             <objects>
                 <viewController id="iYX-sW-wjd" customClass="LoginController" customModule="EventsUp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RJ9-hq-wCo">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hle-A7-l8D">
@@ -412,24 +412,24 @@
                                     <navigationItem title="Events List" id="GT2-Es-RU5">
                                         <barButtonItem key="leftBarButtonItem" image="arrow.backward.circle" catalog="system" id="jkB-o6-tFs">
                                             <connections>
-                                                <segue destination="BYZ-38-t0r" kind="presentation" id="IKF-aI-YBU"/>
+                                                <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="IKF-aI-YBU"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="12U-o7-7FI">
-                                <rect key="frame" x="0.0" y="794" width="428" height="44"/>
+                                <rect key="frame" x="0.0" y="848" width="428" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem title="Events" image="list.bullet.rectangle.portrait" catalog="system" id="wX9-x6-d7u">
                                         <connections>
-                                            <segue destination="YWl-04-nVT" kind="presentation" id="H8E-IJ-oNP"/>
+                                            <segue destination="YWl-04-nVT" kind="presentation" modalPresentationStyle="fullScreen" id="H8E-IJ-oNP"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem title="Home" image="homekit" catalog="system" width="916.5" id="6mH-Vd-0fU">
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="presentation" id="0dD-sb-G0Y"/>
+                                            <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="0dD-sb-G0Y"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem title="Login" image="person" catalog="system" width="298.5" id="Rjf-7r-zKb"/>
@@ -492,10 +492,10 @@
             </objects>
             <point key="canvasLocation" x="797.66355140186909" y="79.697624190064801"/>
         </scene>
-        <!--View Controller-->
+        <!--Signup Controller View Controller-->
         <scene sceneID="x7W-8X-yzX">
             <objects>
-                <viewController id="2Ox-gD-QKR" sceneMemberID="viewController">
+                <viewController id="2Ox-gD-QKR" customClass="signupControllerViewController" customModule="EventsUp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vD8-oH-LRr">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -506,41 +506,44 @@
                                 <items>
                                     <barButtonItem title="Events" image="list.bullet.rectangle.portrait" catalog="system" id="M7V-Xd-5dK">
                                         <connections>
-                                            <segue destination="YWl-04-nVT" kind="presentation" id="kgG-g7-eX4"/>
+                                            <segue destination="YWl-04-nVT" kind="presentation" modalPresentationStyle="fullScreen" id="kgG-g7-eX4"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem title="Home" image="homekit" catalog="system" width="916.5" id="93O-9k-pbi">
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="presentation" id="Sny-5G-6lT"/>
+                                            <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="Sny-5G-6lT"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem title="Login" image="person" catalog="system" width="298.5" id="mxj-I4-TdM">
                                         <connections>
-                                            <segue destination="iYX-sW-wjd" kind="presentation" id="Vql-pa-VZM"/>
+                                            <segue destination="iYX-sW-wjd" kind="presentation" modalPresentationStyle="fullScreen" id="Vql-pa-VZM"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
                             </toolbar>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fEf-b4-Bfm">
-                                <rect key="frame" x="85" y="228" width="258" height="34"/>
+                                <rect key="frame" x="85" y="161" width="258" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Pk-QZ-FgJ">
-                                <rect key="frame" x="85" y="353" width="258" height="34"/>
+                                <rect key="frame" x="85" y="294" width="258" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField toolTip="MM/DD/YYYY" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Date of Birth" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jnm-44-Se9">
-                                <rect key="frame" x="85" y="411" width="258" height="34"/>
+                                <rect key="frame" x="85" y="363" width="258" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="toolTip:" destination="2Ox-gD-QKR" eventType="valueChanged" id="oA4-Fr-gly"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xoj-4k-enz">
-                                <rect key="frame" x="85" y="293" width="258" height="34"/>
+                                <rect key="frame" x="85" y="230" width="258" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -550,9 +553,12 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Sign Up"/>
+                                <connections>
+                                    <action selector="Submit:" destination="2Ox-gD-QKR" eventType="touchUpInside" id="oPv-Wo-9Ez"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jn5-Fb-nuK">
-                                <rect key="frame" x="85" y="495" width="258" height="34"/>
+                                <rect key="frame" x="85" y="433" width="258" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -564,16 +570,37 @@
                                     <navigationItem title="Signup" id="cxp-UG-j1Q">
                                         <barButtonItem key="leftBarButtonItem" image="arrow.backward.circle" catalog="system" id="psL-d2-acc">
                                             <connections>
-                                                <segue destination="iYX-sW-wjd" kind="presentation" id="mG4-pZ-Wag"/>
+                                                <segue destination="iYX-sW-wjd" kind="presentation" modalPresentationStyle="fullScreen" id="mG4-pZ-Wag"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <textField toolTip="MM/DD/YYYY" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="50H-AM-qEk">
+                                <rect key="frame" x="85" y="494" width="258" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField toolTip="MM/DD/YYYY" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Re-entre Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cjK-mD-T45">
+                                <rect key="frame" x="85" y="548" width="258" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ZEe-Y4-sUh"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="dob" destination="Jnm-44-Se9" id="SHn-aU-BqU"/>
+                        <outlet property="email" destination="3Pk-QZ-FgJ" id="PYR-yZ-Now"/>
+                        <outlet property="fName" destination="fEf-b4-Bfm" id="f96-s4-nTI"/>
+                        <outlet property="lName" destination="xoj-4k-enz" id="VB7-Cb-NoX"/>
+                        <outlet property="password" destination="50H-AM-qEk" id="W3o-He-KkR"/>
+                        <outlet property="phNo" destination="Jn5-Fb-nuK" id="PDL-nQ-mwW"/>
+                        <outlet property="re_enterPassword" destination="cjK-mD-T45" id="TvB-xa-NVT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kZH-Mk-2tA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

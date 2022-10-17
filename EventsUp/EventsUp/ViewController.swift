@@ -24,6 +24,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var nextOutlet: UIButton!
     
     override func viewDidLoad() {
+        print("test view")
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         displayImageOutlet.image = UIImage(named: img[imgNum])

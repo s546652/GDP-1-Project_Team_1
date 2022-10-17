@@ -6,11 +6,14 @@
 //
 
 import UIKit
+import SQLite3
+import SwiftUI
+
 
 class signupControllerViewController: UIViewController {
     
     
-    
+    let sqlite_TRANSIENT = unsafeBitCast(-1, to: sqlite3_destructor_type.self)
     @IBOutlet weak var fName: UITextField!
     
     
@@ -20,6 +23,7 @@ class signupControllerViewController: UIViewController {
     @IBOutlet weak var email: UITextField!
 
     
+    @IBOutlet weak var dob: UITextField!
     @IBOutlet weak var phNo: UITextField!
     
     @IBOutlet weak var password: UITextField!
@@ -29,12 +33,16 @@ class signupControllerViewController: UIViewController {
     @IBOutlet weak var re_enterPassword: UITextField!
     
     override func viewDidLoad() {
+        print("akjbvak")
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
 
+    @IBAction func Test(_ sender: UIButton) {
+        print("testttt")
+    }
     /*
     // MARK: - Navigation
 
@@ -47,7 +55,18 @@ class signupControllerViewController: UIViewController {
     @IBOutlet weak var emailError: UILabel!
     
     var stdtAcc = false
+    
+    @IBAction func toolTip(_ sender: Any) {
+        print("let see")
+        print(dob.toolTip)
+    }
+    
     @IBAction func Submit(_ sender: Any) {
+        
+        print("test")
+        
+        print("let see")
+        print(dob.toolTip)
         
         if(fName.text!.isEmpty == false && lName.text!.isEmpty == false){
             // field in attended entity to store value in first name and last name
@@ -67,10 +86,62 @@ class signupControllerViewController: UIViewController {
                 var phno:Int
               //  phno = (Int)phNo.text!
             }
+            
+            var insert = "INSERT INTO E_ATTENDEES (Attendee_Id,Password,LName,FName,EmailId,PhoneNUmber,DOB) VALUES (?, ?);"
+            var insertStat : OpaquePointer?
+            
+            if(sqlite3_prepare_v2(dbQueue, insert, -1, &insertStat, nil)) == SQLITE_OK {
+                sqlite3_bind_text(insertStat, 1, password.text ?? "", -1,sqlite_TRANSIENT)
+                sqlite3_bind_text(insertStat, 2, lName.text ?? "", -1,sqlite_TRANSIENT)
+                sqlite3_bind_text(insertStat, 3, fName.text ?? "", -1,sqlite_TRANSIENT)
+                sqlite3_bind_text(insertStat, 4, email.text ?? "", -1,sqlite_TRANSIENT)
+                sqlite3_bind_text(insertStat, 5, phNo.text ?? "", -1,sqlite_TRANSIENT)
+                sqlite3_bind_text(insertStat, 6, dob.text ?? "", -1,sqlite_TRANSIENT)
+                
+                if(sqlite3_step(insertStat)) == SQLITE_DONE{
+                    
+                    lName.text = " "
+                    
+                    lName.becomeFirstResponder()
+                    print("Success")
+                }
+                else{
+                    print("error in data to table")
+                }
+                
+                
+                sqlite3_finalize(insertStat)
+            }
+            
+            
+            let selectStatementString = "SELECT Attendee_Id,Password,LName,FName,EmailId,PhoneNUmber,DOB FROM E_ATTENDEES"
+            
+            var selectStatemetnQuery :  OpaquePointer?
+            
+            var sShowData = ""
+            
+           /* if sqlite3_prepare_v2(dbQueue, selectStatemetnQuery, -1, &selectStatemetnQuery, nil) == SQLITE_OK
+            {
+                while sqlite3_step(selectStatemetnQuery) == SQLITE_ROW {
+                    
+                    sShowData += String(cString: sqlite3_column_text(selectStatemetnQuery, 0)) + "\t\t" +
+                    String(cString: sqlite3_column_text(selectStatemetnQuery, 1)) + String(cString: sqlite3_column_text(selectStatemetnQuery, 2)) + "\t\t" +
+                    String(cString: sqlite3_column_text(selectStatemetnQuery, 3)) + "\t\t" +
+                    String(cString: sqlite3_column_text(selectStatemetnQuery, 4)) + "\t\t" +
+                    String(cString: sqlite3_column_text(selectStatemetnQuery, 5)) + "\n"
+                }
+                
+                sqlite3_finalize(selectStatemetnQuery)
+            }
+            
+            fName.text = sShowData ?? ""
         }
+        else{
+            print("enter fname and lname")
+        }*/
         
     }
     
-    
+    }
 
 }
