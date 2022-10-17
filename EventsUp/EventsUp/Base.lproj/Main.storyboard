@@ -74,11 +74,11 @@
             <objects>
                 <viewController id="YWl-04-nVT" customClass="EventsListController" customModule="EventsUp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="n4m-hx-RwK">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="24F-Di-kI2">
-                                <rect key="frame" x="0.0" y="794" width="428" height="44"/>
+                                <rect key="frame" x="0.0" y="848" width="428" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem title="Events" image="list.bullet.rectangle.portrait" catalog="system" id="uJG-PZ-aIl">
@@ -227,11 +227,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="EventsUp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YXW-gs-Kwf">
-                                <rect key="frame" x="0.0" y="794" width="428" height="44"/>
+                                <rect key="frame" x="0.0" y="848" width="428" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem title="Events" image="list.bullet.rectangle.portrait" catalog="system" id="KXl-ff-QWF">
@@ -402,7 +402,7 @@
             <objects>
                 <viewController id="iYX-sW-wjd" customClass="LoginController" customModule="EventsUp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RJ9-hq-wCo">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hle-A7-l8D">
@@ -412,24 +412,24 @@
                                     <navigationItem title="Events List" id="GT2-Es-RU5">
                                         <barButtonItem key="leftBarButtonItem" image="arrow.backward.circle" catalog="system" id="jkB-o6-tFs">
                                             <connections>
-                                                <segue destination="BYZ-38-t0r" kind="presentation" id="IKF-aI-YBU"/>
+                                                <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="IKF-aI-YBU"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="12U-o7-7FI">
-                                <rect key="frame" x="0.0" y="794" width="428" height="44"/>
+                                <rect key="frame" x="0.0" y="848" width="428" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem title="Events" image="list.bullet.rectangle.portrait" catalog="system" id="wX9-x6-d7u">
                                         <connections>
-                                            <segue destination="YWl-04-nVT" kind="presentation" id="H8E-IJ-oNP"/>
+                                            <segue destination="YWl-04-nVT" kind="presentation" modalPresentationStyle="fullScreen" id="H8E-IJ-oNP"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem title="Home" image="homekit" catalog="system" width="916.5" id="6mH-Vd-0fU">
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="presentation" id="0dD-sb-G0Y"/>
+                                            <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="0dD-sb-G0Y"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem title="Login" image="person" catalog="system" width="298.5" id="Rjf-7r-zKb"/>
@@ -506,17 +506,17 @@
                                 <items>
                                     <barButtonItem title="Events" image="list.bullet.rectangle.portrait" catalog="system" id="M7V-Xd-5dK">
                                         <connections>
-                                            <segue destination="YWl-04-nVT" kind="presentation" id="kgG-g7-eX4"/>
+                                            <segue destination="YWl-04-nVT" kind="presentation" modalPresentationStyle="fullScreen" id="kgG-g7-eX4"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem title="Home" image="homekit" catalog="system" width="916.5" id="93O-9k-pbi">
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="presentation" id="Sny-5G-6lT"/>
+                                            <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="Sny-5G-6lT"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem title="Login" image="person" catalog="system" width="298.5" id="mxj-I4-TdM">
                                         <connections>
-                                            <segue destination="iYX-sW-wjd" kind="presentation" id="Vql-pa-VZM"/>
+                                            <segue destination="iYX-sW-wjd" kind="presentation" modalPresentationStyle="fullScreen" id="Vql-pa-VZM"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -564,7 +564,7 @@
                                     <navigationItem title="Signup" id="cxp-UG-j1Q">
                                         <barButtonItem key="leftBarButtonItem" image="arrow.backward.circle" catalog="system" id="psL-d2-acc">
                                             <connections>
-                                                <segue destination="iYX-sW-wjd" kind="presentation" id="mG4-pZ-Wag"/>
+                                                <segue destination="iYX-sW-wjd" kind="presentation" modalPresentationStyle="fullScreen" id="mG4-pZ-Wag"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -634,9 +634,10 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="mG4-pZ-Wag"/>
-        <segue reference="Sny-5G-6lT"/>
-        <segue reference="kgG-g7-eX4"/>
+        <segue reference="Ct9-EM-LJD"/>
+        <segue reference="Vql-pa-VZM"/>
+        <segue reference="0dD-sb-G0Y"/>
+        <segue reference="H8E-IJ-oNP"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="arrow.backward.circle" catalog="system" width="128" height="121"/>
