@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,21 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IHg-bV-ltz">
-                                <rect key="frame" x="-5" y="848" width="428" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <items>
-                                    <barButtonItem title="Events" image="list.bullet.rectangle.portrait" catalog="system" id="uEV-3M-jxb"/>
-                                    <barButtonItem title="Home" image="homekit" catalog="system" width="916.5" id="9lE-YY-1R7">
-                                        <connections>
-                                            <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="EZN-6E-4P3"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem title="Login" image="person" catalog="system" width="298.5" id="ngH-JT-LZQ"/>
-                                </items>
-                            </toolbar>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p3C-So-SOA">
-                                <rect key="frame" x="0.0" y="38" width="428" height="44"/>
+                                <rect key="frame" x="-1" y="38" width="429" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Event Details" id="SNv-zj-nRS">
@@ -49,8 +37,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome to rec and enjoy the fun games and get a shot to win prizes." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nfs-wG-ke3">
-                                <rect key="frame" x="47" y="587" width="299" height="127"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome to rec and enjoy the fun games and get a shot to win prizes." textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nfs-wG-ke3">
+                                <rect key="frame" x="65" y="524" width="299" height="127"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 <nil key="textColor"/>
@@ -60,6 +48,35 @@
                                 <rect key="frame" x="64" y="285" width="291" height="195"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$5.49" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MC5-Hp-oUA">
+                                <rect key="frame" x="69" y="686" width="65" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ua-hE-JUN">
+                                <rect key="frame" x="156" y="679" width="118" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Get A Ticket"/>
+                                <connections>
+                                    <segue destination="fVl-3t-Bcr" kind="presentation" modalPresentationStyle="fullScreen" id="BHA-fD-fdE"/>
+                                </connections>
+                            </button>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IHg-bV-ltz">
+                                <rect key="frame" x="2" y="848" width="427" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem title="Events" image="list.bullet.rectangle.portrait" catalog="system" id="uEV-3M-jxb"/>
+                                    <barButtonItem title="Home" image="homekit" catalog="system" width="916.5" id="9lE-YY-1R7">
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="EZN-6E-4P3"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Login" image="person" catalog="system" width="298.5" id="ngH-JT-LZQ"/>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Snv-QR-ij5"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -78,7 +95,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="24F-Di-kI2">
-                                <rect key="frame" x="0.0" y="848" width="428" height="44"/>
+                                <rect key="frame" x="-1" y="847" width="428" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem title="Events" image="list.bullet.rectangle.portrait" catalog="system" id="uJG-PZ-aIl">
@@ -95,7 +112,7 @@
                                 </items>
                             </toolbar>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FsR-u9-1qR">
-                                <rect key="frame" x="0.0" y="44" width="428" height="44"/>
+                                <rect key="frame" x="-1" y="44" width="428" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Events List" id="z0U-cc-y3Z">
@@ -231,7 +248,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YXW-gs-Kwf">
-                                <rect key="frame" x="0.0" y="848" width="428" height="44"/>
+                                <rect key="frame" x="-1" y="847" width="429" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem title="Events" image="list.bullet.rectangle.portrait" catalog="system" id="KXl-ff-QWF">
@@ -252,7 +269,7 @@
                                 </items>
                             </toolbar>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wXR-eH-QMS">
-                                <rect key="frame" x="0.0" y="44" width="428" height="44"/>
+                                <rect key="frame" x="-1" y="44" width="429" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="EventsUp" id="cCw-pF-EwA"/>
@@ -286,7 +303,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="c1" rowHeight="130" id="6Cx-aI-53o">
-                                        <rect key="frame" x="0.0" y="44.666666030883789" width="327" height="130"/>
+                                        <rect key="frame" x="0.0" y="50" width="327" height="130"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" semanticContentAttribute="forceLeftToRight" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6Cx-aI-53o" id="GDM-aw-9dp">
                                             <rect key="frame" x="0.0" y="0.0" width="327" height="130"/>
@@ -309,7 +326,7 @@
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <prototypes>
                                                         <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="c1" rowHeight="130" id="7Ux-7d-dSV">
-                                                            <rect key="frame" x="0.0" y="44.666666030883789" width="327" height="130"/>
+                                                            <rect key="frame" x="0.0" y="50" width="327" height="130"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" semanticContentAttribute="forceLeftToRight" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7Ux-7d-dSV" id="QsQ-jX-c7b">
                                                                 <rect key="frame" x="0.0" y="0.0" width="327" height="130"/>
@@ -331,7 +348,7 @@
                                                             </tableViewCellContentView>
                                                         </tableViewCell>
                                                         <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="c2" rowHeight="130" id="gAY-b9-Yze">
-                                                            <rect key="frame" x="0.0" y="174.66666603088379" width="327" height="130"/>
+                                                            <rect key="frame" x="0.0" y="180" width="327" height="130"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" semanticContentAttribute="forceLeftToRight" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gAY-b9-Yze" id="i91-j1-tKY">
                                                                 <rect key="frame" x="0.0" y="0.0" width="327" height="130"/>
@@ -359,7 +376,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="c2" rowHeight="130" id="gWZ-vr-ZLt">
-                                        <rect key="frame" x="0.0" y="174.66666603088379" width="327" height="130"/>
+                                        <rect key="frame" x="0.0" y="180" width="327" height="130"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" semanticContentAttribute="forceLeftToRight" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gWZ-vr-ZLt" id="x6u-zq-Oyt">
                                             <rect key="frame" x="0.0" y="0.0" width="327" height="130"/>
@@ -406,7 +423,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hle-A7-l8D">
-                                <rect key="frame" x="0.0" y="44" width="428" height="44"/>
+                                <rect key="frame" x="-1" y="44" width="428" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Events List" id="GT2-Es-RU5">
@@ -419,7 +436,7 @@
                                 </items>
                             </navigationBar>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="12U-o7-7FI">
-                                <rect key="frame" x="0.0" y="848" width="428" height="44"/>
+                                <rect key="frame" x="-1" y="847" width="428" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem title="Events" image="list.bullet.rectangle.portrait" catalog="system" id="wX9-x6-d7u">
@@ -501,7 +518,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tbj-th-Jb9">
-                                <rect key="frame" x="0.0" y="836" width="428" height="44"/>
+                                <rect key="frame" x="-1" y="835" width="428" height="45"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem title="Events" image="list.bullet.rectangle.portrait" catalog="system" id="M7V-Xd-5dK">
@@ -564,7 +581,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Iff-7F-ta2">
-                                <rect key="frame" x="0.0" y="44" width="428" height="44"/>
+                                <rect key="frame" x="-1" y="44" width="428" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Signup" id="cxp-UG-j1Q">
@@ -606,16 +623,92 @@
             </objects>
             <point key="canvasLocation" x="1726" y="80"/>
         </scene>
-        <!--View Controller-->
+        <!--Payemnt Controller-->
+        <scene sceneID="5RY-ci-k12">
+            <objects>
+                <viewController id="fVl-3t-Bcr" customClass="PayemntController" customModule="EventsUp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yk2-6I-Iyz">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Fk-2r-X7a">
+                                <rect key="frame" x="-1" y="47" width="429" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Payment" id="Mdy-5v-Pwq">
+                                        <barButtonItem key="leftBarButtonItem" image="arrow.backward.circle" catalog="system" id="aCV-zE-VWq">
+                                            <connections>
+                                                <segue destination="L0k-Hl-h2j" kind="presentation" modalPresentationStyle="fullScreen" id="105-Ci-dg6"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PKT-uc-y8d">
+                                <rect key="frame" x="1" y="848" width="427" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem title="Events" image="list.bullet.rectangle.portrait" catalog="system" id="DFp-67-2Ab">
+                                        <connections>
+                                            <segue destination="YWl-04-nVT" kind="presentation" modalPresentationStyle="fullScreen" id="vRH-s8-fbs"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Home" image="homekit" catalog="system" width="916.5" id="F1p-l1-mke">
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="esH-x2-cSa"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Login" image="person" catalog="system" width="298.5" id="lao-hM-xss">
+                                        <connections>
+                                            <segue destination="iYX-sW-wjd" kind="presentation" modalPresentationStyle="fullScreen" id="JN7-Lf-PjX"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i5C-dz-RkH">
+                                <rect key="frame" x="193" y="224" width="0.0" height="0.0"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="slU-Sj-1OO">
+                                <rect key="frame" x="55" y="207" width="297" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Billing Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mSE-ei-17o">
+                                <rect key="frame" x="55" y="277" width="297" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o7h-S2-7hH">
+                                <rect key="frame" x="55" y="339" width="297" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="-- Select A Payment Method--"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="CoA-ZW-H1g"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GV5-qC-wpd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1787.3831775700933" y="833.90928725701951"/>
+        </scene>
+        <!--Event Detailed Controller-->
         <scene sceneID="AlO-zp-vQ0">
             <objects>
-                <viewController id="IUl-Wj-YIZ" sceneMemberID="viewController">
+                <viewController id="IUl-Wj-YIZ" customClass="EventDetailedController" customModule="EventsUp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HTE-Lu-omA">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z5z-3L-qRB">
-                                <rect key="frame" x="-5" y="848" width="428" height="44"/>
+                                <rect key="frame" x="-5" y="847" width="427" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem title="Events" image="list.bullet.rectangle.portrait" catalog="system" id="MYI-V3-nOe"/>
@@ -624,7 +717,7 @@
                                 </items>
                             </toolbar>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q44-zS-8CA">
-                                <rect key="frame" x="0.0" y="38" width="428" height="44"/>
+                                <rect key="frame" x="-1" y="38" width="429" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Event Details" id="zp8-uS-VKw">
@@ -661,19 +754,19 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Ct9-EM-LJD"/>
-        <segue reference="Vql-pa-VZM"/>
-        <segue reference="0dD-sb-G0Y"/>
-        <segue reference="H8E-IJ-oNP"/>
+        <segue reference="JN7-Lf-PjX"/>
+        <segue reference="esH-x2-cSa"/>
+        <segue reference="vRH-s8-fbs"/>
+        <segue reference="105-Ci-dg6"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="arrow.backward.circle" catalog="system" width="128" height="121"/>
-        <image name="arrowshape.turn.up.left" catalog="system" width="128" height="106"/>
-        <image name="arrowshape.turn.up.right" catalog="system" width="128" height="106"/>
-        <image name="homekit" catalog="system" width="128" height="106"/>
+        <image name="arrow.backward.circle" catalog="system" width="128" height="123"/>
+        <image name="arrowshape.turn.up.left" catalog="system" width="128" height="104"/>
+        <image name="arrowshape.turn.up.right" catalog="system" width="128" height="104"/>
+        <image name="homekit" catalog="system" width="128" height="104"/>
         <image name="img01" width="1448" height="2048"/>
         <image name="list.bullet.rectangle.portrait" catalog="system" width="115" height="128"/>
-        <image name="person" catalog="system" width="128" height="117"/>
+        <image name="person" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
