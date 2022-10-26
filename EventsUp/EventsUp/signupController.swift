@@ -144,32 +144,32 @@ class signupControllerViewController: UIViewController {
             print("selecting data")
             print(sShowData)
             
-            fName.text = sShowData ?? ""
-            
-            
-            int count = 0;
-                int retVal;
-                const char *sqlQuery = &quot;SELECT COUNT(*) FROM Contacts&quot;;
-                sqlite3_stmt *query = nil;
-
-                if ((retVal =sqlite3_prepare_v2(dbHandle, sqlQuery, -1, &amp;query, NULL)) == SQLITE_OK) {
-                int queryResult = sqlite3_step(query);
-                if (queryResult == SQLITE_ROW) {
-                    count = sqlite3_column_int(query, 0);
-                        NSLog(@&quot;Succesfully selected row count %d  &quot;,count) ;
-                    }
-                    else {
-                        NSLog(@&quot;Failed to selected row count &quot;) ;
-                    }
-                    sqlite3_reset(query);
-                    sqlite3_finalize(query);
-
-                }
-                else {
-                    NSLog(@&quot;Failure in preparing SELECT statement with result %d&quot;,retVal) ;
-                }
-            
-            
+//            fName.text = sShowData ?? ""
+//            
+//            
+//            int count = 0;
+//                int retVal;
+//                const char * sqlQuery = &quot;SELECT COUNT(*) FROM Contacts&quot;
+//                sqlite3_stmt * query = nil;
+//
+//                if ((retVal = sqlite3_prepare_v2(dbHandle, sqlQuery, -1, &amp;query, NULL)) == SQLITE_OK) {
+//                int queryResult = sqlite3_step(query);
+//                if (queryResult == SQLITE_ROW) {
+//                    count = sqlite3_column_int(query, 0);
+//                        NSLog(@&quot;Succesfully selected row count %d  &quot;,count) ;
+//                    }
+//                    else {
+//                        NSLog(@&quot;Failed to selected row count &quot;) ;
+//                    }
+//                    sqlite3_reset(query);
+//                    sqlite3_finalize(query);
+//
+//                }
+//                else {
+//                    NSLog(@&quot;Failure in preparing SELECT statement with result %d&quot;,retVal) ;
+//                }
+//            
+//            
         }
         else{
             print("enter fname and lname")
