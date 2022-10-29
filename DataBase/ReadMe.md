@@ -53,3 +53,5 @@ doing research to get free online database. To make the database centrailized we
  
  **10/28/2022**
  Trying to connect AWS-RDS to PGAdmin but unable to connect due to connectivity issues.
+
+ <p>Installed MySQL server and workbench. Created tables and ER diagram in the workbench and synced the ER with tables.<p>
