@@ -19,6 +19,7 @@
 		F5A77A5428E79076001307B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5A77A5228E79076001307B3 /* Main.storyboard */; };
 		F5A77A5628E79078001307B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5A77A5528E79078001307B3 /* Assets.xcassets */; };
 		F5A77A5928E79078001307B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5A77A5728E79078001307B3 /* LaunchScreen.storyboard */; };
+		F66ECD68290CC10800D89F73 /* MySQLDriver in Frameworks */ = {isa = PBXBuildFile; productRef = F66ECD67290CC10800D89F73 /* MySQLDriver */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F66ECD68290CC10800D89F73 /* MySQLDriver in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +103,9 @@
 			dependencies = (
 			);
 			name = EventsUp;
+			packageProductDependencies = (
+				F66ECD67290CC10800D89F73 /* MySQLDriver */,
+			);
 			productName = EventsUp;
 			productReference = F5A77A4928E79076001307B3 /* EventsUp.app */;
 			productType = "com.apple.product-type.application";
@@ -129,6 +134,9 @@
 				Base,
 			);
 			mainGroup = F5A77A4028E79076001307B3;
+			packageReferences = (
+				F66ECD66290CC10800D89F73 /* XCRemoteSwiftPackageReference "MySqlSwiftNative" */,
+			);
 			productRefGroup = F5A77A4A28E79076001307B3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -380,6 +388,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F66ECD66290CC10800D89F73 /* XCRemoteSwiftPackageReference "MySqlSwiftNative" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mcorega/MySqlSwiftNative.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F66ECD67290CC10800D89F73 /* MySQLDriver */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F66ECD66290CC10800D89F73 /* XCRemoteSwiftPackageReference "MySqlSwiftNative" */;
+			productName = MySQLDriver;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F5A77A4128E79076001307B3 /* Project object */;
 }

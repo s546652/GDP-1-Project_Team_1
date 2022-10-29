@@ -6,6 +6,7 @@
 //
 import UIKit
 import SwiftUI
+import MySQLDriver
 
 class ViewController: UIViewController {
      
@@ -29,7 +30,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         displayImageOutlet.image = UIImage(named: img[imgNum])
         preOutlet.isEnabled = false
-        
+        connectionTest()
         tabelView.reloadData()
 
     }
@@ -70,4 +71,29 @@ class ViewController: UIViewController {
     
     
     
+}
+
+
+extension ViewController{
+    
+    func connectionTest(){
+        let con = MySQL.Connection()
+        //let db_name = "database-4"
+        let db_name = "EventsUp"
+        
+        do{
+          // open a new connection
+            try
+                
+                con.open("localhost", user: "root", passwd: "Skr@329532")
+                print("Connection is succesfull")
+                
+            
+      }
+     catch (let e) {
+         print("Error Message")
+          print(e)
+    }
+            
+    }
 }
