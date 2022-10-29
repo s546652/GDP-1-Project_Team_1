@@ -11,21 +11,162 @@ import UIKit
 class PayemntController: UIViewController {
     
     
-
     override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+            super.viewDidLoad()
+            
+            self.usernameTF.layer.borderColor = UIColor.red.cgColor
+            self.usernameTF.layer.borderWidth = 1
+            
+            self.addressTF.layer.borderColor = UIColor.red.cgColor
+            self.addressTF.layer.borderWidth = 1
+            
+            self.cardNameTF.isEnabled = false
+            self.cardNumberTF.isEnabled = false
+            self.expiryDateTF.isEnabled = false
+            self.ssnTF.isEnabled = false
+            self.submit.isEnabled = false
+            
+            self.cardNumberTF.isEnabled = false
+            self.expiryDateTF.isEnabled = false
+            self.ssnTF.isEnabled = false
+            self.cardNameTF.isEnabled = false
+            self.submit.isEnabled = false
+            // Do any additional setup after loading the view.
+        }
+        
+        
+    @IBAction func username(_ sender: UITextField) {
+        if(self.usernameTF.text != ""){
+            self.usernameTF.layer.borderColor = UIColor.green.cgColor
+            self.usernameTF.layer.borderWidth = 1
+        }
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        
+    @IBAction func address(_ sender: UITextField) {
+        if(self.addressTF.text != ""){
+            self.addressTF.layer.borderColor = UIColor.green.cgColor
+            self.addressTF.layer.borderWidth = 1
+        }
     }
-    */
+    
+    
+    @IBAction func cardnumber(_ sender: UITextField) {
+        self.cardNumberTF.layer.borderColor = UIColor.green.cgColor
+        self.cardNumberTF.layer.borderWidth = 1
+    }
+    
+    
+      
+        
+    @IBAction func expirydate(_ sender: UITextField) {
+        self.expiryDateTF.layer.borderColor = UIColor.green.cgColor
+        self.expiryDateTF.layer.borderWidth = 1
+    }
+    
+    
+    @IBAction func ssn(_ sender: UITextField) {
+        self.ssnTF.layer.borderColor = UIColor.green.cgColor
+        self.ssnTF.layer.borderWidth = 1
+    }
+    
+    
+        
+    @IBAction func cardname(_ sender: UITextField) {
+        self.cardNameTF.layer.borderColor = UIColor.green.cgColor
+        self.cardNameTF.layer.borderWidth = 1
+    
+    }
+    
+        
+        
+    @IBOutlet weak var usernameTF: UITextField!
+    
+  
+    @IBOutlet weak var addressTF: UITextField!
+    
+    
+    @IBOutlet weak var cardNumberTF: UITextField!
+    
+    
+    @IBOutlet weak var expiryDateTF: UITextField!
+    
+    
+    @IBOutlet weak var ssnTF: UITextField!
+    
+    
+    @IBOutlet weak var cardNameTF: UITextField!
+    
+    
+    
+        
+        
+        @IBAction func debitcardBTN(_ sender: UIButton) {
+            self.credicard.isEnabled = false
+            self.cardNumberTF.isEnabled = true
+            self.expiryDateTF.isEnabled = true
+            self.ssnTF.isEnabled = true
+            self.cardNameTF.isEnabled = true
+            self.submit.isEnabled = true
+            
+            self.cardNumberTF.layer.borderColor = UIColor.red.cgColor
+            self.cardNumberTF.layer.borderWidth = 1
+            
+            self.expiryDateTF.layer.borderColor = UIColor.red.cgColor
+            self.expiryDateTF.layer.borderWidth = 1
+            
+            self.ssnTF.layer.borderColor = UIColor.red.cgColor
+            self.ssnTF.layer.borderWidth = 1
+            
+            self.cardNameTF.layer.borderColor = UIColor.red.cgColor
+            self.cardNameTF.layer.borderWidth = 1
+        }
+        
+        
+        @IBAction func creditCardBTN(_ sender: UIButton) {
+            self.debitcard.isEnabled = false
+            self.cardNumberTF.isEnabled = true
+            self.expiryDateTF.isEnabled = true
+            self.ssnTF.isEnabled = true
+            self.cardNameTF.isEnabled = true
+            self.submit.isEnabled = true
+            
+            self.cardNumberTF.layer.borderColor = UIColor.red.cgColor
+            self.cardNumberTF.layer.borderWidth = 1
+            
+            self.expiryDateTF.layer.borderColor = UIColor.red.cgColor
+            self.expiryDateTF.layer.borderWidth = 1
+            
+            self.ssnTF.layer.borderColor = UIColor.red.cgColor
+            self.ssnTF.layer.borderWidth = 1
+            
+            self.cardNameTF.layer.borderColor = UIColor.red.cgColor
+            self.cardNameTF.layer.borderWidth = 1
+        }
+        
+        
+        @IBAction func submitBTN(_ sender: UIButton) {
+            
+                }
+        
+        @IBOutlet weak var credicard: UIButton!
+        
+        @IBOutlet weak var debitcard: UIButton!
+        
+        @IBOutlet weak var submit: UIButton!
+        
+        
+        
+        
+        /*
+        // MARK: - Navigation
+
+        // In a storyboard-based application, you will often want to do a little preparation before navigation
+        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            // Get the new view controller using segue.destination.
+            // Pass the selected object to the new view controller.
+        }
+        */
+
 
 }
