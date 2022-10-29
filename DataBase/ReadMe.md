@@ -50,3 +50,6 @@ Reasearching on connecting iOS app to either MySQL or SQLite.
 doing research to get free online database. To make the database centrailized we need to use online based dataset like cloud get access to it fromo anywhere. Most of the database searched offer 1 month free subscription or 1GB of data free. 
 
 <p>Able to create and open database & create attendee table and have to work on inserting data into DB through Sign-in page.<p>
+ 
+ **10/28/2022**
+ Trying to connect AWS-RDS to PGAdmin but unable to connect due to connectivity issues.
