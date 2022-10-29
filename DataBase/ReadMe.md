@@ -55,3 +55,4 @@ doing research to get free online database. To make the database centrailized we
  Trying to connect AWS-RDS to PGAdmin but unable to connect due to connectivity issues.
 
  <p>Installed MySQL server and workbench. Created tables and ER diagram in the workbench and synced the ER with tables.<p>
+ <p>Able to make connection between iOS app and local MySQL. Trying to connect MySQL workbench and AWS RDS.<p>
