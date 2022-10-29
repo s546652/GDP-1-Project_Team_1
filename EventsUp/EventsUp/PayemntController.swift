@@ -146,7 +146,13 @@ class PayemntController: UIViewController {
         
         
         @IBAction func submitBTN(_ sender: UIButton) {
-            
+            let mess = "Congratulations "
+                    let name = (self.cardNameTF.text)?.capitalized
+                    let prnt = mess+name!
+                    let alert = UIAlertController(title: prnt, message: "Transaction Successful", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+                    self.present(alert, animated: true)
+
                 }
         
         @IBOutlet weak var credicard: UIButton!
