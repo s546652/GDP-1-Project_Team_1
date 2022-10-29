@@ -43,6 +43,7 @@ class PayemntController: UIViewController {
     }
     
         
+  
     @IBAction func address(_ sender: UITextField) {
         if(self.addressTF.text != ""){
             self.addressTF.layer.borderColor = UIColor.green.cgColor
@@ -146,7 +147,7 @@ class PayemntController: UIViewController {
         
         
         @IBAction func submitBTN(_ sender: UIButton) {
-            let mess = "Congratulations "
+                    let mess = "Congratulations "
                     let name = (self.cardNameTF.text)?.capitalized
                     let prnt = mess+name!
                     let alert = UIAlertController(title: prnt, message: "Transaction Successful", preferredStyle: .alert)

@@ -690,6 +690,9 @@
                                         <rect key="frame" x="0.0" y="63.333333333333343" width="388" height="55.333333333333343"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="address:" destination="fVl-3t-Bcr" eventType="editingChanged" id="ygB-Op-ESu"/>
+                                        </connections>
                                     </textField>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="bLA-aU-nqX">
                                         <rect key="frame" x="0.0" y="126.66666666666664" width="388" height="55.333333333333329"/>
@@ -798,6 +801,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="addressTF" destination="fO5-1m-nWy" id="YxA-ha-yi2"/>
                         <outlet property="cardNameTF" destination="8ut-dU-jJc" id="wb5-Cq-sLB"/>
                         <outlet property="cardNumberTF" destination="rpr-Xf-2bQ" id="x0K-RG-m81"/>
                         <outlet property="credicard" destination="CeI-fh-pfP" id="zqr-UX-Kuv"/>
