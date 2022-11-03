@@ -85,8 +85,8 @@ extension ViewController{
           // open a new connection
             try
                 
-                con.open("localhost", user: "root", passwd: "Skr@329532")
-                print("Connection is succesfull")
+            con.open("database-1.ckgk7kfbawvv.us-east-2.rds.amazonaws.com", user: "admin", passwd: "admin123")
+            print("Connection is succesfull")
                 
             
       }
