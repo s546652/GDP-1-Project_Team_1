@@ -1,5 +1,12 @@
 # GDP-1-Project_Team_1 -- EventsUp
 
+[Team Details](https://github.com/s546652/GDP-1-Project_Team_1/edit/main/ReadMe.md#team-details)
+
+[Project Features](https://github.com/s546652/GDP-1-Project_Team_1/edit/main/ReadMe.md#project-features)
+
+[Project Description](https://github.com/s546652/GDP-1-Project_Team_1/edit/main/ReadMe.md#project-description)
+
+
 ### Team Details
 |Name               |  SId       | Role                 |
 |-------------------|------------|----------------------|
@@ -8,6 +15,20 @@
 |Naveen Gundu       | S546960    | Payment and E-pass   | 
 |Rajitha Bandaru    | S546904    | Database and Testing |
 |Sreyas Mallypally  | S546761    | Functionality and UI |
+
+
+### Project Features
+
+- Home Page 
+  -   Displays the details of recent events and tab button at the bottm of the screen taking the user to the Events List page , home screen and login page.
+- Event Dispaly 
+   - Using our application, user will be able to see the all the events which are going to happen in the university.
+- Event Registration
+   - Once the user is interested in attending the event he/she can click on the checkout button and register for the event.
+- Login 
+   - We are trying to use email address as an identifier for nwstudents at the time of registration. 
+
+### Project Description
 
 
 For our Graduate Directed Project we decided to work on an application which is going to show up all the events that are going to take place in the university.
