@@ -1,5 +1,15 @@
 # GDP-1-Project_Team_1 -- EventsUp
 
+### Team Details
+|Name               |  SId       | Role                 |
+|-------------------|------------|----------------------|
+|Roshni Gagenapally | S546652    | UI and Functionality |
+|Madhuri Nagulapally| S547043    | Database and E-pass  | 
+|Naveen Gundu       | S546960    | Payment and E-pass   | 
+|Rajitha Bandaru    | S546904    | Database and Testing |
+|Sreyas Mallypally  | S546761    | Functionality and UI |
+
+
 For our Graduate Directed Project we decided to work on an application which is going to show up all the events that are going to take place in the university.
 After some internal discussions we thought of developing the applicaition using ***IOS***. 
 
