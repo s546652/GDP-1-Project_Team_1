@@ -58,17 +58,11 @@ class signupControllerViewController: UIViewController {
     var stdtAcc = false
     
     @IBAction func toolTip(_ sender: Any) {
-        print("let see")
-        print(dob.toolTip)
+     
     }
     
     @IBAction func Submit(_ sender: Any) {
-        
-        print("test")
-        
-        print("let see")
-        print(dob.toolTip)
-        
+    
         if(fName.text!.isEmpty == false && lName.text!.isEmpty == false){
             // field in attended entity to store value in first name and last name
             if(email.text!.isEmpty == false){
@@ -144,46 +138,6 @@ class signupControllerViewController: UIViewController {
             print("selecting data")
             print(sShowData)
             
-//<<<<<<< HEAD
-           // fName.text = sShowData ?? ""
-            
-            
-//            int count = 0;
-//                int retVal;
-//                const char *sqlQuery = &quot;SELECT COUNT(*) FROM Contacts&quot;;
-//                sqlite3_stmt *query = nil;
-//
-//                if ((retVal =sqlite3_prepare_v2(dbHandle, sqlQuery, -1, &amp;query, NULL)) == SQLITE_OK) {
-//=======
-//            fName.text = sShowData ?? ""
-//            
-//            
-//            int count = 0;
-//                int retVal;
-//                const char * sqlQuery = &quot;SELECT COUNT(*) FROM Contacts&quot;
-//                sqlite3_stmt * query = nil;
-//
-//                if ((retVal = sqlite3_prepare_v2(dbHandle, sqlQuery, -1, &amp;query, NULL)) == SQLITE_OK) {
-//>>>>>>> a162626195ba5b783e32c8de2e6761335b4859bf
-//                int queryResult = sqlite3_step(query);
-//                if (queryResult == SQLITE_ROW) {
-//                    count = sqlite3_column_int(query, 0);
-//                        NSLog(@&quot;Succesfully selected row count %d  &quot;,count) ;
-//                    }
-//                    else {
-//                        NSLog(@&quot;Failed to selected row count &quot;) ;
-//                    }
-//                    sqlite3_reset(query);
-//                    sqlite3_finalize(query);
-//
-//                }
-//                else {
-//                    NSLog(@&quot;Failure in preparing SELECT statement with result %d&quot;,retVal) ;
-//                }
-
-//            
-//            
-//>>>>>>> a162626195ba5b783e32c8de2e6761335b4859bf
         }
         else{
             print("enter fname and lname")

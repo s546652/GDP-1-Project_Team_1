@@ -41,6 +41,7 @@ class ViewController: UIViewController {
                     }
     }
     
+    @IBOutlet weak var tableView: UITableView!
     @IBAction func preButton(_ sender: Any) {
             imgNum -= 1;
             
