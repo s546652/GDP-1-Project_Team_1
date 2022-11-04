@@ -56,3 +56,6 @@ doing research to get free online database. To make the database centrailized we
 
  <p>Installed MySQL server and workbench. Created tables and ER diagram in the workbench and synced the ER with tables.<p>
  <p>Able to make connection between iOS app and local MySQL. Trying to connect MySQL workbench and AWS RDS.<p>
+
+ **11/04/2022**
+ <p>Faced issues in connecting MySQL workbench and iOS app with AWS RDS. Created different region Database instances in AWS RDS for making the succesfull connection.<p>
