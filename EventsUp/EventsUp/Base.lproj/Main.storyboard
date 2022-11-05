@@ -436,7 +436,7 @@
                                 <rect key="frame" x="0.0" y="40" width="428" height="846"/>
                                 <subviews>
                                     <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hle-A7-l8D">
-                                        <rect key="frame" x="0.0" y="0.0" width="448" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="428" height="50"/>
                                         <items>
                                             <navigationItem title="Events List" id="GT2-Es-RU5">
                                                 <barButtonItem key="leftBarButtonItem" image="arrow.backward.circle" catalog="system" id="jkB-o6-tFs">
@@ -559,7 +559,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="12U-o7-7FI">
-                                        <rect key="frame" x="0.0" y="796" width="448" height="50"/>
+                                        <rect key="frame" x="0.0" y="796" width="428" height="50"/>
                                         <items>
                                             <barButtonItem title="Events" image="list.bullet.rectangle.portrait" catalog="system" id="wX9-x6-d7u">
                                                 <connections>
@@ -619,22 +619,32 @@
                                         <rect key="frame" x="0.0" y="0.0" width="388" height="32.666666666666664"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="fnameTF:" destination="2Ox-gD-QKR" eventType="editingChanged" id="zdC-IJ-yPi"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xoj-4k-enz">
                                         <rect key="frame" x="0.0" y="52.666666666666686" width="388" height="32.333333333333343"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="lnameTF:" destination="2Ox-gD-QKR" eventType="editingChanged" id="SpZ-d8-2rO"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Pk-QZ-FgJ">
                                         <rect key="frame" x="0.0" y="105" width="388" height="32.666666666666657"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="emailTF:" destination="2Ox-gD-QKR" eventType="editingChanged" id="K4p-1F-dYv"/>
+                                        </connections>
                                     </textField>
                                     <textField toolTip="MM/DD/YYYY" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Date of Birth" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jnm-44-Se9">
                                         <rect key="frame" x="0.0" y="157.66666666666669" width="388" height="32.333333333333343"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
+                                            <action selector="dobTF:" destination="2Ox-gD-QKR" eventType="editingChanged" id="Lq9-9a-kAR"/>
                                             <action selector="toolTip:" destination="2Ox-gD-QKR" eventType="valueChanged" id="oA4-Fr-gly"/>
                                         </connections>
                                     </textField>
@@ -642,16 +652,25 @@
                                         <rect key="frame" x="0.0" y="210" width="388" height="32.666666666666657"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="phnumTF:" destination="2Ox-gD-QKR" eventType="editingChanged" id="Nko-sy-qyM"/>
+                                        </connections>
                                     </textField>
                                     <textField toolTip="MM/DD/YYYY" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="50H-AM-qEk">
                                         <rect key="frame" x="0.0" y="262.66666666666663" width="388" height="32.333333333333314"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="psswrdTF:" destination="2Ox-gD-QKR" eventType="editingChanged" id="Uwd-Vj-XP1"/>
+                                        </connections>
                                     </textField>
                                     <textField toolTip="MM/DD/YYYY" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Re-entre Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cjK-mD-T45">
                                         <rect key="frame" x="0.0" y="315" width="388" height="32.666666666666686"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="repassTF:" destination="2Ox-gD-QKR" eventType="editingChanged" id="vQf-0T-0s0"/>
+                                        </connections>
                                     </textField>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="F5S-Q9-qVo">
                                         <rect key="frame" x="0.0" y="367.66666666666663" width="388" height="32.333333333333314"/>
@@ -953,10 +972,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="yEr-ff-K9G"/>
         <segue reference="Vov-Pc-cse"/>
-        <segue reference="0dD-sb-G0Y"/>
-        <segue reference="H8E-IJ-oNP"/>
+        <segue reference="4Xm-OA-zzD"/>
+        <segue reference="5TO-5N-BD1"/>
         <segue reference="105-Ci-dg6"/>
     </inferredMetricsTieBreakers>
     <resources>

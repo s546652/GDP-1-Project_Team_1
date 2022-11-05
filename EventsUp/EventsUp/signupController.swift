@@ -37,6 +37,24 @@ class signupControllerViewController: UIViewController {
         print("akjbvak")
         super.viewDidLoad()
 
+        self.fName.layer.borderColor = UIColor.red.cgColor
+        self.fName.layer.borderWidth = 1
+        
+        self.lName.layer.borderColor = UIColor.red.cgColor
+        self.lName.layer.borderWidth = 1
+        self.dob.layer.borderColor = UIColor.red.cgColor
+        self.dob.layer.borderWidth = 1
+        
+        self.email.layer.borderColor = UIColor.red.cgColor
+        self.email.layer.borderWidth = 1
+        self.phNo.layer.borderColor = UIColor.red.cgColor
+        self.phNo.layer.borderWidth = 1
+        
+        self.password.layer.borderColor = UIColor.red.cgColor
+        self.password.layer.borderWidth = 1
+        self.re_enterPassword.layer.borderColor = UIColor.red.cgColor
+        self.re_enterPassword.layer.borderWidth = 1
+        
         // Do any additional setup after loading the view.
     }
     
@@ -56,6 +74,71 @@ class signupControllerViewController: UIViewController {
     @IBOutlet weak var emailError: UILabel!
     
     var stdtAcc = false
+    
+    
+    @IBAction func fnameTF(_ sender: UITextField) {
+        if(self.fName.text != ""){
+            self.fName.layer.borderColor = UIColor.green.cgColor
+            self.fName.layer.borderWidth = 1
+        }
+    }
+    
+    
+    @IBAction func lnameTF(_ sender: UITextField) {
+        if(self.lName.text != ""){
+            self.lName.layer.borderColor = UIColor.green.cgColor
+            self.lName.layer.borderWidth = 1
+        }
+    }
+    
+    
+    
+    @IBAction func emailTF(_ sender: UITextField) {
+        if(self.email.text != ""){
+            self.email.layer.borderColor = UIColor.green.cgColor
+            self.email.layer.borderWidth = 1
+        }
+    }
+    
+    
+    
+    @IBAction func phnumTF(_ sender: UITextField) {
+        if(self.phNo.text != ""){
+            self.phNo.layer.borderColor = UIColor.green.cgColor
+            self.phNo.layer.borderWidth = 1
+        }
+    }
+    
+    
+    
+    @IBAction func psswrdTF(_ sender: UITextField) {
+        if(self.password.text != ""){
+            self.password.layer.borderColor = UIColor.green.cgColor
+            self.password.layer.borderWidth = 1
+        }
+    }
+    
+    
+    @IBAction func repassTF(_ sender: UITextField) {
+        if(self.re_enterPassword.text != ""){
+            self.re_enterPassword.layer.borderColor = UIColor.green.cgColor
+            self.re_enterPassword.layer.borderWidth = 1
+        }
+    }
+    
+    
+    
+    @IBAction func dobTF(_ sender: UITextField) {
+        if(self.dob.text != ""){
+            self.dob.layer.borderColor = UIColor.green.cgColor
+            self.dob.layer.borderWidth = 1
+        }
+    }
+    
+    
+    
+    
+    
     
     @IBAction func toolTip(_ sender: Any) {
         print("let see")
