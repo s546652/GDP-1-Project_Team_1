@@ -7,7 +7,34 @@
 
 import UIKit
 
-class EventsListController: UIViewController {
+class event{
+    var eName: String?
+    var eData: String?
+    
+    init(ename: String, edata: String) {
+        self.eName = ename
+        self.eData = edata
+    }
+}
+
+class EventsListController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print("test")
+        return 2
+        
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        var cell = tableViewOutlet.dequeueReusableCell(withIdentifier: "reuseableCell", for: indexPath)
+        
+        //populate cell
+        
+        cell.textLabel?.text = events[indexPath.row].eName
+        
+        //return cell
+        return cell
+    }
+    var events = [event]()
     
     @IBOutlet weak var dateOutlet: UILabel!
     
@@ -19,9 +46,17 @@ class EventsListController: UIViewController {
     @IBOutlet weak var eventThreeOutlet: UIButton!
     
     
+    @IBOutlet weak var tableViewOutlet: UITableView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        tableViewOutlet.delegate = self
+        tableViewOutlet.dataSource = self
+        
+        let p1 = event(ename: "Late Night At Rec", edata: "10/10/2022")
+        events.append(p1)
+        
         // Do any additional setup after loading the view.
     }
     

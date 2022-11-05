@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     
    
     
-    @IBOutlet weak var tabelView: UITableView!
+  //  @IBOutlet weak var tabelView: UITableView!
     
     
     @IBOutlet weak var displayImageOutlet: UIImageView!
@@ -31,7 +31,7 @@ class ViewController: UIViewController {
         displayImageOutlet.image = UIImage(named: img[imgNum])
         preOutlet.isEnabled = false
         connectionTest()
-        tabelView.reloadData()
+       // tabelView.reloadData()
 
     }
      
@@ -41,6 +41,7 @@ class ViewController: UIViewController {
                     }
     }
     
+    @IBOutlet weak var tableView: UITableView!
     @IBAction func preButton(_ sender: Any) {
             imgNum -= 1;
             
