@@ -63,3 +63,4 @@ doing research to get free online database. To make the database centrailized we
  <p>Tried connecting iOS app and MySQL workbench with newly created AWS RDS database insatnce and able to make the connection successfully and exported the tables from MySQL workbench to AWS RDS.<p>
   
   <p>Failing to connect PGadmin to AWS-RDS due to some time out issues.</p>
+  <p>Researching on how to do connection by following multiple online tutorials.</p>
