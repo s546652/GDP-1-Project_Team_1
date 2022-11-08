@@ -8,10 +8,12 @@ import UIKit
 import SwiftUI
 import MySQLDriver
 
+
+
 class ViewController: UIViewController {
      
     var imgNum = 0
-    
+    var data:d!
    
     
   //  @IBOutlet weak var tabelView: UITableView!
@@ -70,6 +72,20 @@ class ViewController: UIViewController {
             }
         }
     
+    
+    @IBAction func eventListButton(_ sender: UIBarButtonItem) {
+        print("test")
+        callAPI()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        var tran = segue.identifier
+        if tran == "eventsDetails"{
+            var destination = segue.destination as! EventsDetailListViewController
+            destination.testdata = "testing data"
+            
+        }
+    }
     
     
 }
