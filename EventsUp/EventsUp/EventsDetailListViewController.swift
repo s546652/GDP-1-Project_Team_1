@@ -6,18 +6,52 @@
 //
 
 import UIKit
+@available(iOS 16.0, *)
+class EventsDetailListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
-class EventsDetailListViewController: UIViewController {
+        return eventsArray.capacity
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        var cell = tabelViewOutlet.dequeueReusableCell(withIdentifier: "reuseableCell", for: indexPath)
+        print(eventsArray.capacity)
+        print(eventsArray[0].eventName)
+        print(testArray[0].eventDate)
+        cell.textLabel?.text = "t"
+        
+        return cell
+    }
+   
 
+//    var event:Event!
     var testdata=""
     
-    @IBOutlet weak var labelOutlet: UILabel!
+    var events = eventsArray
+    
+    @IBOutlet weak var tabelViewOutlet: UITableView!
+   // @IBOutlet weak var labelOutlet: UILabel!
+   
+    var evnts = [Event]()
+
+    
+
+    @IBOutlet weak var cellOutlet: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        labelOutlet.text = testdata
+        print(d)
+        print("test")
+       // callAPI()
+        callAPI()
+        for e in eventsArray{
+        }
+        tabelViewOutlet.delegate = self
+        tabelViewOutlet .dataSource = self
+        
         // Do any additional setup after loading the view.
     }
+    
     
 
     /*
