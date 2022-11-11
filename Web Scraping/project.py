@@ -67,7 +67,7 @@ def func():
                     d=driver.find_element(By.XPATH,'''//*[@id="calendar_control"]/table/tbody/tr[1]/td[3]/a''')
                     d.click()
                 
-    from flask import Flask, redirect, url_for, request
+   from flask import Flask, redirect, url_for, request
 
     app = Flask(__name__)
 
@@ -78,4 +78,16 @@ def func():
     if __name__ == '__main__':
         app.run(threaded=True)
     
-  
+    
+    
+from datetime import datetime
+from threading import Timer
+
+x=datetime.today()
+y=x.replace(day=x.day+1, hour=16, minute=2, second=0, microsecond=0)
+delta_t=y-x
+
+secs=delta_t.seconds+1
+
+t = Timer(secs, func)
+t.start()
