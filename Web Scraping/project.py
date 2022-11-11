@@ -67,4 +67,15 @@ def func():
                     d=driver.find_element(By.XPATH,'''//*[@id="calendar_control"]/table/tbody/tr[1]/td[3]/a''')
                     d.click()
                 
-   
+    from flask import Flask, redirect, url_for, request
+
+    app = Flask(__name__)
+
+    @app.route('/')
+    def func():
+        return s
+
+    if __name__ == '__main__':
+        app.run(threaded=True)
+    
+  
