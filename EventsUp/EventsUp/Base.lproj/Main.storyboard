@@ -105,7 +105,7 @@
                                 <items>
                                     <barButtonItem title="Events" image="list.bullet.rectangle.portrait" catalog="system" id="uJG-PZ-aIl">
                                         <connections>
-                                            <segue destination="YWl-04-nVT" kind="presentation" modalPresentationStyle="fullScreen" id="NtF-7S-g0X"/>
+                                            <segue destination="IUl-Wj-YIZ" kind="show" id="x2e-Zd-k2A"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem title="Home" image="homekit" catalog="system" width="916.5" id="iw6-I4-cgS">
@@ -785,11 +785,11 @@
             <objects>
                 <viewController id="IUl-Wj-YIZ" customClass="EventDetailedController" customModule="EventsUp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HTE-Lu-omA">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="869"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z5z-3L-qRB">
-                                <rect key="frame" x="-12" y="843" width="427" height="45"/>
+                                <rect key="frame" x="-12" y="786" width="427" height="45"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem title="Events" image="list.bullet.rectangle.portrait" catalog="system" id="MYI-V3-nOe"/>
@@ -813,21 +813,28 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="img01" translatesAutoresizingMaskIntoConstraints="NO" id="RRO-0w-dmT">
+                                <rect key="frame" x="64" y="285" width="291" height="195"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hs0-0W-QbT">
+                                <rect key="frame" x="171" y="676" width="78" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Submit"/>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome to rec and enjoy the fun games and get a shot to win prizes." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gi8-st-h4d">
-                                <rect key="frame" x="47" y="587" width="299" height="127"/>
+                                <rect key="frame" x="65" y="513" width="299" height="127"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="img01" translatesAutoresizingMaskIntoConstraints="NO" id="RRO-0w-dmT">
-                                <rect key="frame" x="64" y="285" width="291" height="195"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5o9-s0-Lut"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="B9P-Jc-b0o"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vk7-kD-iaK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -853,8 +860,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="IKF-aI-YBU"/>
-        <segue reference="em6-4j-2iN"/>
+        <segue reference="hCq-P1-ZyW"/>
+        <segue reference="lkL-Gv-34g"/>
         <segue reference="H8E-IJ-oNP"/>
         <segue reference="kFb-oR-Afu"/>
     </inferredMetricsTieBreakers>
