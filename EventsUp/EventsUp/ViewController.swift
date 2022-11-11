@@ -13,7 +13,7 @@ import MySQLDriver
 class ViewController: UIViewController {
      
     var imgNum = 0
-    var data:d!
+    //var data:d!
    
     
   //  @IBOutlet weak var tabelView: UITableView!
