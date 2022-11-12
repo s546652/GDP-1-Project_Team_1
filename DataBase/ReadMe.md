@@ -64,3 +64,6 @@ doing research to get free online database. To make the database centrailized we
   
   <p>Failing to connect PGadmin to AWS-RDS due to some time out issues.</p>
   <p>Researching on how to do connection by following multiple online tutorials.</p>
+
+  **11/11/2022**
+  <p>Researhing on how to perform MySQL CRUD operations in iOS app using Swift.</p>
