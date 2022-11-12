@@ -34,15 +34,39 @@ class PayemntController: UIViewController {
             // Do any additional setup after loading the view.
         }
         
-        
+    @IBOutlet weak var UsernameLBL: UILabel!
+    
     @IBAction func username(_ sender: UITextField) {
         if(self.usernameTF.text != ""){
-            self.usernameTF.layer.borderColor = UIColor.green.cgColor
-            self.usernameTF.layer.borderWidth = 1
-        }
+                    
+                }
+                
+                if let fullName = self.usernameTF.text
+                {
+                    if let errorMessage = invalidUserName(fullName)
+                    {
+                        usernameTF.shake()
+                        UsernameLBL.text = errorMessage
+                    }
+
+                    else{
+                        UsernameLBL.isHidden = true
+                        self.usernameTF.layer.borderColor = UIColor.green.cgColor
+                        self.usernameTF.layer.borderWidth = 1
+                    }
+                }
     }
     
+    func invalidUserName(_ value: String)->String?
+    {
+        let set = CharacterSet(charactersIn: value)
+        if !CharacterSet.letters.isSuperset(of: set){
+            return "Name must be only characters"
+        }
         
+        return nil
+    }
+
   
     @IBAction func address(_ sender: UITextField) {
         if(self.addressTF.text != ""){
@@ -176,4 +200,16 @@ class PayemntController: UIViewController {
         */
 
 
+}
+
+extension UITextField {
+    func shake() {
+        let animation = CABasicAnimation(keyPath: "position")
+        animation.duration = 0.05
+        animation.repeatCount = 5
+        animation.autoreverses = true
+        animation.fromValue = CGPoint(x: self.center.x - 4.0, y: self.center.y)
+        animation.toValue = CGPoint(x: self.center.x + 4.0, y: self.center.y)
+        layer.add(animation, forKey: "position")
+    }
 }

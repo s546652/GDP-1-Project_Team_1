@@ -9,15 +9,15 @@ import UIKit
 @available(iOS 16.0, *)
 class EventsDetailListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-
-        return eventsArray.capacity
+        return 1
+        //return eventsArray.capacity
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell = tabelViewOutlet.dequeueReusableCell(withIdentifier: "reuseableCell", for: indexPath)
-        print(eventsArray.capacity)
-        print(eventsArray[0].eventName)
-        print(testArray[0].eventDate)
+//        print(eventsArray.capacity)
+//        print(eventsArray[0].eventName)
+//        print(testArray[0].eventDate)
         cell.textLabel?.text = "t"
         
         return cell
@@ -27,12 +27,12 @@ class EventsDetailListViewController: UIViewController, UITableViewDelegate, UIT
 //    var event:Event!
     var testdata=""
     
-    var events = eventsArray
+    //var events = eventsArray
     
     @IBOutlet weak var tabelViewOutlet: UITableView!
    // @IBOutlet weak var labelOutlet: UILabel!
    
-    var evnts = [Event]()
+   // var evnts = [Event]()
 
     
 
@@ -44,8 +44,8 @@ class EventsDetailListViewController: UIViewController, UITableViewDelegate, UIT
         print("test")
        // callAPI()
         callAPI()
-        for e in eventsArray{
-        }
+//        for e in eventsArray{
+//        }
         tabelViewOutlet.delegate = self
         tabelViewOutlet .dataSource = self
         
