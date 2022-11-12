@@ -61,7 +61,7 @@ class PayemntController: UIViewController {
     {
         let set = CharacterSet(charactersIn: value)
         if !CharacterSet.letters.isSuperset(of: set){
-            return "Name must be only characters"
+            return "Name must be only letters"
         }
         
         return nil
@@ -75,12 +75,41 @@ class PayemntController: UIViewController {
         }
     }
     
+  
+    @IBOutlet weak var cardnumLBL: UILabel!
     
     @IBAction func cardnumber(_ sender: UITextField) {
-        self.cardNumberTF.layer.borderColor = UIColor.green.cgColor
-        self.cardNumberTF.layer.borderWidth = 1
+                
+                if let cardNum = self.cardNumberTF.text
+                {
+                    if let errorMessage = invalidphnNum(cardNum)
+                    {
+                        cardNumberTF.shake()
+                        cardnumLBL.text = errorMessage
+                    }
+
+                    else{
+                        cardnumLBL.isHidden = true
+                        self.cardNumberTF.layer.borderColor = UIColor.green.cgColor
+                        self.cardNumberTF.layer.borderWidth = 1
+                    }
+                }
+
     }
     
+    func invalidphnNum(_ value: String)->String?
+    {
+        let set = CharacterSet(charactersIn: value)
+        if !CharacterSet.decimalDigits.isSuperset(of: set){
+            return "Card Numbers must be only digits"
+        }
+        
+        if value.count != 16{
+            return "Card Numbers must be 10 digits"
+        }
+        
+        return nil
+    }
     
       
         
