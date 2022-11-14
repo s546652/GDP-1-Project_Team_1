@@ -15,6 +15,9 @@ class EventsDetailListViewController: UIViewController, UITableViewDelegate, UIT
         return date.count
     }
     var date:[String] = ["test"]
+    var des:[String] = ["test"]
+    let recordTimes: KeyValuePairs = ["test1":"test"]
+    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell = tabelViewOutlet.dequeueReusableCell(withIdentifier: "reuseableCell", for: indexPath)
@@ -23,13 +26,11 @@ class EventsDetailListViewController: UIViewController, UITableViewDelegate, UIT
     }
    
 
-//    var event:Event!
     var testdata=""
     
     var events = eventsArray
     
     @IBOutlet weak var tabelViewOutlet: UITableView!
-   // @IBOutlet weak var labelOutlet: UILabel!
    
     var evnts = [Event]()
 
@@ -39,25 +40,46 @@ class EventsDetailListViewController: UIViewController, UITableViewDelegate, UIT
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        for e in eventsArray{
-        }
         tabelViewOutlet.delegate = self
         tabelViewOutlet .dataSource = self
         
         for a in dd["Date and Time"]! {
             if(date.count > 0 && date.contains(a) == false ){
-                //print(a.self)
-               // cell.textLabel?.text = a.self
                 date.append(a)//(a, at: date.index(after: date.endIndex))
             }
         }
-        for d in date {
-            print(d)
-        }
-        // Do any additional setup after loading the view.
     }
+    var segData:[String]!
+   // var des:[String] = dd["Description"] ?? !
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        var data:String!
+        var eN:String!
+        let trans = segue.identifier
+        if trans == "eventDetailWithSegue" {
+            let des = segue.destination as! EventDetailsWithDateViewController
+            
+            var test = date[(tabelViewOutlet.indexPathForSelectedRow?.row)!]
+            var inOfDate =  dd["Date and Time"]?.index(of: test)
+            for en in dd["Event Name"]!{
+                var enIndes = dd["Event Name"]?.index(of: en)
+                print(enIndes , inOfDate)
+                
+                if enIndes! == inOfDate! {
+                    eN = en
+                }
+            }
+           for des in dd["Description"]! {
+               var te = dd["Description"]?.index(of: des)
+               
+               if te! == inOfDate! {
+                   data = des
+            }
+            }
+            des.event = "\(eN!)\n\(data!)"
+            
+        }
+    }
 
     /*
     // MARK: - Navigation
