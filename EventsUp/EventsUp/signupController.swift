@@ -146,6 +146,33 @@ class signupControllerViewController: UIViewController {
     
     @IBAction func Submit(_ sender: Any) {
     
+        if(fName.text!.isEmpty || lName.text!.isEmpty || email.text!.isEmpty || dob.text!.isEmpty || phNo.text!.isEmpty || password.text!.isEmpty || re_enterPassword.text!.isEmpty){
+            if(fName.text!.isEmpty){
+                fName.shake()
+            }
+            if(lName.text!.isEmpty){
+                lName.shake()
+            }
+            if(email.text!.isEmpty){
+                email.shake()
+            }
+            if(dob.text!.isEmpty){
+                dob.shake()
+            }
+            if(phNo.text!.isEmpty){
+                phNo.shake()
+            }
+            if(password.text!.isEmpty){
+                password.shake()
+            }
+            if(re_enterPassword.text!.isEmpty){
+                re_enterPassword.shake()
+            }
+            
+            
+        }
+        
+        
         if(fName.text!.isEmpty == false && lName.text!.isEmpty == false){
             // field in attended entity to store value in first name and last name
             if(email.text!.isEmpty == false){
@@ -230,3 +257,4 @@ class signupControllerViewController: UIViewController {
     }
 
 }
+

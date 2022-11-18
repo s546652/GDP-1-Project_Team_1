@@ -80,11 +80,11 @@ class ViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         var tran = segue.identifier
-        if tran == "eventsDetails"{
-            var destination = segue.destination as! EventsDetailListViewController
-            destination.testdata = "testing data"
-            
-        }
+//        if tran == "eventsDetails"{
+//            var destination = segue.destination as! EventsDetailListViewController
+//            destination.testdata = "testing data"
+//            
+//        }
     }
     
     
