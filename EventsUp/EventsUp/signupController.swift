@@ -26,6 +26,9 @@ class signupControllerViewController: UIViewController {
 
     
     @IBOutlet weak var dob: UITextField!
+
+    @IBOutlet weak var sid: UITextField!
+    
     @IBOutlet weak var phNo: UITextField!
     
     @IBOutlet weak var password: UITextField!
@@ -192,7 +195,10 @@ class signupControllerViewController: UIViewController {
                 var phno:Int
               //  phno = (Int)phNo.text!
             }
-            
+            var studentid:String!
+            if(sid.text!.isEmpty == false){
+                studentid = sid.text
+            }
                let con = MySQL.Connection()
         let db_name = "EventsUp"
         
