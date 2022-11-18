@@ -165,6 +165,7 @@ class signupControllerViewController: UIViewController {
               //  phno = (Int)phNo.text!
             }
             
+            
             var insert = "INSERT INTO E_ATTENDEES (Attendee_Id,Password,Name,FName,EmailId,PhoneNUmber,DOB) VALUES (002,?, ?, ?, ?, ?, ?);"
             var insertStat : OpaquePointer?
             print("insert 1")

@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p3C-So-SOA">
-                                <rect key="frame" x="-6" y="38" width="431" height="44"/>
+                                <rect key="frame" x="-8" y="38" width="430" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Event Details" id="SNv-zj-nRS">
@@ -66,7 +66,7 @@
                                 </connections>
                             </button>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IHg-bV-ltz">
-                                <rect key="frame" x="-3" y="843" width="429" height="46"/>
+                                <rect key="frame" x="-5" y="843" width="430" height="46"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem title="Events" image="list.bullet.rectangle.portrait" catalog="system" id="uEV-3M-jxb"/>
@@ -100,7 +100,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="24F-Di-kI2">
-                                <rect key="frame" x="-6" y="842" width="428" height="44"/>
+                                <rect key="frame" x="-7" y="840" width="427" height="43"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem title="Events" image="list.bullet.rectangle.portrait" catalog="system" id="uJG-PZ-aIl">
@@ -121,7 +121,7 @@
                                 </items>
                             </toolbar>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FsR-u9-1qR">
-                                <rect key="frame" x="-6" y="44" width="428" height="44"/>
+                                <rect key="frame" x="-7" y="44" width="427" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Events List" id="z0U-cc-y3Z">
@@ -240,7 +240,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YXW-gs-Kwf">
-                                <rect key="frame" x="-6" y="842" width="429" height="44"/>
+                                <rect key="frame" x="-8" y="840" width="430" height="43"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem title="Events" image="list.bullet.rectangle.portrait" catalog="system" id="KXl-ff-QWF">
@@ -262,7 +262,7 @@
                                 </items>
                             </toolbar>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wXR-eH-QMS">
-                                <rect key="frame" x="-6" y="44" width="429" height="44"/>
+                                <rect key="frame" x="-8" y="44" width="430" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="EventsUp" id="cCw-pF-EwA"/>
@@ -596,7 +596,7 @@
                                 </constraints>
                             </stackView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7tB-Tu-CS0">
-                                <rect key="frame" x="-1" y="849" width="427" height="40"/>
+                                <rect key="frame" x="-2" y="846" width="427" height="40"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem title="Events" image="list.bullet.rectangle.portrait" catalog="system" id="XFT-rf-KzF">
@@ -819,7 +819,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z5z-3L-qRB">
-                                <rect key="frame" x="-11" y="843" width="427" height="46"/>
+                                <rect key="frame" x="-14" y="843" width="427" height="46"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem title="Events" image="list.bullet.rectangle.portrait" catalog="system" id="MYI-V3-nOe"/>
@@ -828,7 +828,7 @@
                                 </items>
                             </toolbar>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q44-zS-8CA">
-                                <rect key="frame" x="-6" y="38" width="431" height="44"/>
+                                <rect key="frame" x="-8" y="38" width="430" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Event Details" id="zp8-uS-VKw">
@@ -879,7 +879,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HW2-qj-akT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="93" y="929"/>
+            <point key="canvasLocation" x="-695" y="1223"/>
         </scene>
         <!--Events Detail List View Controller-->
         <scene sceneID="u3m-IX-TmT">
@@ -889,25 +889,76 @@
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wds-yL-fNs">
-                                <rect key="frame" x="121" y="245" width="153" height="132"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="hJg-aO-mpi">
+                                <rect key="frame" x="0.0" y="91" width="428" height="801"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="reuseableCell" rowHeight="46" id="ZTC-ni-USl">
+                                        <rect key="frame" x="0.0" y="50" width="428" height="46"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZTC-ni-USl" id="tGA-K6-skg">
+                                            <rect key="frame" x="0.0" y="0.0" width="428" height="46"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="OcT-ZB-YCX" kind="show" identifier="eventDetailWithSegue" id="su5-Z2-wuL"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fvf-Af-0W6"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fvf-Af-0W6" firstAttribute="trailing" secondItem="hJg-aO-mpi" secondAttribute="trailing" id="AcG-MR-qF2"/>
+                            <constraint firstItem="fvf-Af-0W6" firstAttribute="bottom" secondItem="hJg-aO-mpi" secondAttribute="bottom" id="ndO-Gk-bA5"/>
+                            <constraint firstItem="hJg-aO-mpi" firstAttribute="leading" secondItem="fvf-Af-0W6" secondAttribute="leading" id="ysC-D3-99W"/>
+                            <constraint firstItem="hJg-aO-mpi" firstAttribute="top" secondItem="fvf-Af-0W6" secondAttribute="top" id="zDC-pe-Sbh"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="rIJ-pH-d6V"/>
                     <connections>
-                        <outlet property="labelOutlet" destination="Wds-yL-fNs" id="3N8-KW-u1O"/>
+                        <outlet property="tabelViewOutlet" destination="hJg-aO-mpi" id="UYH-EC-wmu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lAW-lR-oEH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1533.6448598130839" y="928.50971922246231"/>
+            <point key="canvasLocation" x="1024.7663551401868" y="1222.6781857451406"/>
+        </scene>
+        <!--Tes View Controller-->
+        <scene sceneID="g9P-23-3dw">
+            <objects>
+                <viewController id="OcT-ZB-YCX" customClass="tesViewController" customModule="EventsUp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fHd-OA-TV3">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="shb-JB-DbT">
+                                <rect key="frame" x="0.0" y="91" width="428" height="835"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="luV-EK-Htz"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="shb-JB-DbT" firstAttribute="top" secondItem="luV-EK-Htz" secondAttribute="top" id="3Gm-b3-nYL"/>
+                            <constraint firstItem="shb-JB-DbT" firstAttribute="leading" secondItem="luV-EK-Htz" secondAttribute="leading" id="4r1-Om-I4J"/>
+                            <constraint firstAttribute="bottom" secondItem="shb-JB-DbT" secondAttribute="bottom" id="Q6P-Ef-SCU"/>
+                            <constraint firstItem="luV-EK-Htz" firstAttribute="trailing" secondItem="shb-JB-DbT" secondAttribute="trailing" id="fET-wT-vSr"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="5nm-Du-Nq0"/>
+                    <connections>
+                        <outlet property="textViewOutlet" destination="shb-JB-DbT" id="7AN-cS-cpy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lwn-oc-chz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2489.7196261682243" y="1222.6781857451406"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
@@ -929,6 +980,9 @@
         <image name="person" catalog="system" width="128" height="121"/>
         <image name="square.and.arrow.up.circle.fill" catalog="system" width="128" height="123"/>
         <image name="square.and.arrow.up.on.square" catalog="system" width="119" height="128"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

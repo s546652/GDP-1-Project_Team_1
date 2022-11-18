@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		260E922328F4D5E60020B79F /* signupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260E922228F4D5E60020B79F /* signupController.swift */; };
+		263791CF2925264900B2A9E5 /* tesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263791CE2925264900B2A9E5 /* tesViewController.swift */; };
 		2690BBAE28F0D73500C74A1F /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2690BBAD28F0D73500C74A1F /* TableViewController.swift */; };
 		26AD9F7828EA5CFF0017E297 /* EventsListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26AD9F7728EA5CFF0017E297 /* EventsListController.swift */; };
 		26F717FB291888B4009B2BE1 /* Calendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F717FA291888B4009B2BE1 /* Calendar.swift */; };
@@ -26,6 +27,7 @@
 
 /* Begin PBXFileReference section */
 		260E922228F4D5E60020B79F /* signupController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signupController.swift; sourceTree = "<group>"; };
+		263791CE2925264900B2A9E5 /* tesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tesViewController.swift; sourceTree = "<group>"; };
 		2690BBAD28F0D73500C74A1F /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		26AD9F7728EA5CFF0017E297 /* EventsListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsListController.swift; sourceTree = "<group>"; };
 		26F717FA291888B4009B2BE1 /* Calendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calendar.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 				F50DA3962908B8CD00342EDA /* EventDetailedController.swift */,
 				26F717FA291888B4009B2BE1 /* Calendar.swift */,
 				26F717FC29188A0A009B2BE1 /* EventsDetailListViewController.swift */,
+				263791CE2925264900B2A9E5 /* tesViewController.swift */,
 			);
 			path = EventsUp;
 			sourceTree = "<group>";
@@ -171,6 +174,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				26F717FD29188A0A009B2BE1 /* EventsDetailListViewController.swift in Sources */,
+				263791CF2925264900B2A9E5 /* tesViewController.swift in Sources */,
 				F5A77A5128E79076001307B3 /* ViewController.swift in Sources */,
 				2690BBAE28F0D73500C74A1F /* TableViewController.swift in Sources */,
 				260E922328F4D5E60020B79F /* signupController.swift in Sources */,
