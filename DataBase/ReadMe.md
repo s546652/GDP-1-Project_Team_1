@@ -69,4 +69,4 @@ doing research to get free online database. To make the database centrailized we
   <p>Researhing on how to perform MySQL CRUD operations in iOS app using Swift.</p>
 
   **11/18/2022**
-  <p>Implemented insert operation in SignUp page and able to insert the data into MySQL locally but facing issues while trying to insert the data into AWS RDS</p>
+  <p>Implemented insert operation in SignUp page and able to insert the data into MySQL locally but facing issues while trying to insert the data into AWS RDS. Trying to resolve the got packets out of order error and checkuing the name of the database in thw AWS RDS DB instance.</p>
