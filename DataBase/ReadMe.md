@@ -67,3 +67,6 @@ doing research to get free online database. To make the database centrailized we
 
   **11/11/2022**
   <p>Researhing on how to perform MySQL CRUD operations in iOS app using Swift.</p>
+
+  **11/18/2022**
+  <p>Implemented insert operation in SignUp page and able to insert the data into MySQL locally but facing issues while trying to insert the data into AWS RDS</p>
