@@ -15,7 +15,6 @@
 		F5B7CCB6293137600073E295 /* Calendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B7CCB5293137600073E295 /* Calendar.swift */; };
 		F5B7CCB8293137760073E295 /* EventsDetailListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B7CCB7293137760073E295 /* EventsDetailListViewController.swift */; };
 		F5B7CCBA293137940073E295 /* tesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B7CCB9293137940073E295 /* tesViewController.swift */; };
-		F5BB1FC32926FA9A00FD6615 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BB1FC22926FA9A00FD6615 /* SignUpVC.swift */; };
 		F5BB1FC52926FACD00FD6615 /* EventListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BB1FC42926FACD00FD6615 /* EventListController.swift */; };
 		F5BB1FC72926FB4600FD6615 /* EventDetailListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BB1FC62926FB4600FD6615 /* EventDetailListVC.swift */; };
 		F5E52EE92926B9470026E1A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E52EE82926B9470026E1A3 /* AppDelegate.swift */; };
@@ -36,7 +35,6 @@
 		F5B7CCB5293137600073E295 /* Calendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calendar.swift; sourceTree = "<group>"; };
 		F5B7CCB7293137760073E295 /* EventsDetailListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsDetailListViewController.swift; sourceTree = "<group>"; };
 		F5B7CCB9293137940073E295 /* tesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tesViewController.swift; sourceTree = "<group>"; };
-		F5BB1FC22926FA9A00FD6615 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		F5BB1FC42926FACD00FD6615 /* EventListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListController.swift; sourceTree = "<group>"; };
 		F5BB1FC62926FB4600FD6615 /* EventDetailListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailListVC.swift; sourceTree = "<group>"; };
 		F5E52EE52926B9470026E1A3 /* EventsUpNew.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EventsUpNew.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,7 +86,6 @@
 				F5E52EF32926B9490026E1A3 /* LaunchScreen.storyboard */,
 				F5E52EF62926B9490026E1A3 /* Info.plist */,
 				F5E52EFC2926DCEA0026E1A3 /* LoginVC.swift */,
-				F5BB1FC22926FA9A00FD6615 /* SignUpVC.swift */,
 				F5BB1FC42926FACD00FD6615 /* EventListController.swift */,
 				F5BB1FC62926FB4600FD6615 /* EventDetailListVC.swift */,
 				F5B7CCAB2931347F0073E295 /* LoginController.swift */,
@@ -184,7 +181,6 @@
 				F5E52EFD2926DCEA0026E1A3 /* LoginVC.swift in Sources */,
 				F5B7CCB2293134DB0073E295 /* PayemntController.swift in Sources */,
 				F5B7CCAC2931347F0073E295 /* LoginController.swift in Sources */,
-				F5BB1FC32926FA9A00FD6615 /* SignUpVC.swift in Sources */,
 				F5B7CCB6293137600073E295 /* Calendar.swift in Sources */,
 				F5B7CCAE293134AB0073E295 /* TableViewController.swift in Sources */,
 				F5B7CCB42931350A0073E295 /* EventDetailedController.swift in Sources */,

@@ -179,10 +179,10 @@
             </objects>
             <point key="canvasLocation" x="3749.2307692307691" y="536.72985781990519"/>
         </scene>
-        <!--Sign UpVC-->
+        <!--Signup Controller-->
         <scene sceneID="2HP-2Z-a6x">
             <objects>
-                <viewController id="cLj-mD-fqg" customClass="SignUpVC" customModule="EventsUpNew" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="cLj-mD-fqg" customClass="signupController" customModule="EventsUpNew" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jWW-74-f8N">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -194,36 +194,57 @@
                                         <rect key="frame" x="0.0" y="0.0" width="350" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="fnameTF:" destination="cLj-mD-fqg" eventType="editingChanged" id="Iww-Q3-dwX"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BSX-dQ-lJe">
                                         <rect key="frame" x="0.0" y="42" width="350" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="lnameTF:" destination="cLj-mD-fqg" eventType="editingChanged" id="4F6-jU-EHg"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e5r-8z-wWT">
                                         <rect key="frame" x="0.0" y="84" width="350" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="emailTF:" destination="cLj-mD-fqg" eventType="editingChanged" id="zIS-5i-B6g"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Date of Birth" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TcX-vY-nWI">
                                         <rect key="frame" x="0.0" y="126" width="350" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="dobTF:" destination="cLj-mD-fqg" eventType="editingChanged" id="1p8-Sr-YuJ"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BKv-0h-Cpm">
                                         <rect key="frame" x="0.0" y="168" width="350" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="phnumTD:" destination="cLj-mD-fqg" eventType="editingChanged" id="hXy-NE-cUQ"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4JQ-hR-gGc">
                                         <rect key="frame" x="0.0" y="210" width="350" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="psswrdTF:" destination="cLj-mD-fqg" eventType="editingChanged" id="y6X-YH-R4P"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Re-enter Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vte-CP-Yas">
                                         <rect key="frame" x="0.0" y="252" width="350" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="repassTF:" destination="cLj-mD-fqg" eventType="editingChanged" id="8T8-8G-DGu"/>
+                                        </connections>
                                     </textField>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="qBY-eL-I8M">
                                         <rect key="frame" x="0.0" y="294" width="350" height="34.333333333333314"/>
@@ -238,6 +259,9 @@
                                                 <rect key="frame" x="119.33333333333334" y="0.0" width="111.33333333333334" height="34.333333333333336"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="SignUp"/>
+                                                <connections>
+                                                    <action selector="Submit:" destination="cLj-mD-fqg" eventType="touchUpInside" id="rNT-DH-TON"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xUG-NA-JmF">
                                                 <rect key="frame" x="238.66666666666671" y="0.0" width="111.33333333333334" height="34.333333333333336"/>
@@ -260,6 +284,15 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="F1C-o8-3XS"/>
+                    <connections>
+                        <outlet property="dob" destination="TcX-vY-nWI" id="bXV-xZ-Luy"/>
+                        <outlet property="email" destination="e5r-8z-wWT" id="fXu-eS-q7B"/>
+                        <outlet property="fName" destination="zMh-HH-CdM" id="1zy-d4-nj9"/>
+                        <outlet property="lName" destination="BSX-dQ-lJe" id="MCx-NN-mpQ"/>
+                        <outlet property="password" destination="4JQ-hR-gGc" id="nfX-h8-DxA"/>
+                        <outlet property="phNo" destination="BKv-0h-Cpm" id="RSk-Hc-7XX"/>
+                        <outlet property="re_enterPassword" destination="vte-CP-Yas" id="CZg-9H-w7b"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ipY-hR-NUG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -426,7 +459,8 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="2u0-5K-fUD"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.94236451387405396" green="0.84880334138870239" blue="0.74970096349716187" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" systemColor="tintColor"/>
                         <constraints>
                             <constraint firstItem="VGa-jS-mfh" firstAttribute="centerY" secondItem="4Iy-8s-4oZ" secondAttribute="centerY" id="9bX-kV-IcM"/>
                             <constraint firstItem="VGa-jS-mfh" firstAttribute="top" secondItem="2u0-5K-fUD" secondAttribute="top" constant="175" id="H3C-Ss-JrJ"/>
@@ -451,6 +485,9 @@
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
