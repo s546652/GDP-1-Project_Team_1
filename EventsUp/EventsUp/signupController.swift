@@ -204,8 +204,7 @@ class signupControllerViewController: UIViewController {
             
             do{
                 // open a new connection
-                try
-                con.open("localhost", user: "root", passwd: "Skr@329532")
+                  try con.open("database-1.ckgk7kfbawvv.us-east-2.rds.amazonaws.com", user: "admin", passwd: "admin123", dbname: "EventsUp")
                 print("Connection is succesfull")
                 // con.use for the database name
                 // but in the instance which we created we are not seeing a database name so figuring out.
