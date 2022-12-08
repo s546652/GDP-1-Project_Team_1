@@ -195,10 +195,10 @@ class signupControllerViewController: UIViewController {
                 var phno:Int
                 //  phno = (Int)phNo.text!
             }
-            var studentid:String!
-            if(sid.text!.isEmpty == false){
+         //   var studentid:String!
+           /* if(sid.text!.isEmpty == false){
                 studentid = sid.text
-            }
+            }*/
             let con = MySQL.Connection()
             let db_name = "EventsUp"
             
@@ -211,6 +211,10 @@ class signupControllerViewController: UIViewController {
                 try con.use("EventsUp")
                 let ins_stmt = try con.prepare("INSERT INTO ATTENDEE(Password, SID, LName, FName,EmailId,PhoneNumber,DOB) VALUES(?,?,?,?,?,?,?)")
                 try ins_stmt.exec([password.text!,"s546652", lName.text!, fName.text!, email.text!, phNo.text!, dob.text!])
+                
+                
+                let select_stmt = try con.prepare("SELECT Password, SID, LName, FName,EmailId,PhoneNumber,DOB FROM ATTENDEE ")
+                try con.close()
             }
             catch (let e) {
                 print("Error Message")
