@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>847375042611-bd1au4gkt2tahi0oep4saqk84mq29paq.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.847375042611-bd1au4gkt2tahi0oep4saqk84mq29paq</string>
+	<key>API_KEY</key>
+	<string>AIzaSyApr7yW1-kRMytvCE803vdKMO5BZ9wlG6I</string>
+	<key>GCM_SENDER_ID</key>
+	<string>847375042611</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>edu.northwest.EventsUp</string>
+	<key>PROJECT_ID</key>
+	<string>eventsup-d6893</string>
+	<key>STORAGE_BUCKET</key>
+	<string>eventsup-d6893.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:847375042611:ios:5381f5d9b6c54fd3807b46</string>
+</dict>
+</plist>
