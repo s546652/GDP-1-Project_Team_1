@@ -70,3 +70,6 @@ doing research to get free online database. To make the database centrailized we
 
   **11/18/2022**
   <p>Implemented insert operation in SignUp page and able to insert the data into MySQL locally but facing issues while trying to insert the data into AWS RDS. Trying to resolve the got packets out of order error and checkuing the name of the database in thw AWS RDS DB instance.</p>
+  
+    **01/22/2023**
+<p> We have terminated theIDea to use firebase because we where charged for data storage, as an alternative we are using Firebase as database and trying to figure out hwo to implement CURD operations
