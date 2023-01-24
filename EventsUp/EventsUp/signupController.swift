@@ -149,83 +149,12 @@ class signupControllerViewController: UIViewController {
     }
     
     @IBAction func Submit(_ sender: Any) {
+       @IBAction func Submit(_ sender: Any) {
         
-        if(fName.text!.isEmpty || lName.text!.isEmpty || email.text!.isEmpty || dob.text!.isEmpty || phNo.text!.isEmpty || password.text!.isEmpty || re_enterPassword.text!.isEmpty){
-            if(fName.text!.isEmpty){
-                fName.shake()
+        Auth.auth().createUser(withEmail: email.text!, password: password.text!){Result, error in
+            if error != nil {
+                print(error!.localizedDescription)
             }
-            if(lName.text!.isEmpty){
-                lName.shake()
-            }
-            if(email.text!.isEmpty){
-                email.shake()
-            }
-            if(dob.text!.isEmpty){
-                dob.shake()
-            }
-            if(phNo.text!.isEmpty){
-                phNo.shake()
-            }
-            if(password.text!.isEmpty){
-                password.shake()
-            }
-            if(re_enterPassword.text!.isEmpty){
-                re_enterPassword.shake()
-            }
-            
-            
         }
-        
-        
-        if(fName.text!.isEmpty == false && lName.text!.isEmpty == false){
-            // field in attended entity to store value in first name and last name
-            if(email.text!.isEmpty == false){
-                if(email.text!.hasSuffix("@nwmissouri.edu")){
-                    stdtAcc = true
-                    //store in email field
-                }
-                else if(email.text!.contains("@") && email.text!.contains(".")){
-                    //field in db to store data from email
-                }
-                else{
-                    emailError.text! = "Please enter correct email"
-                }
-            }
-            if(phNo.text!.isEmpty == false){
-                var phno:Int
-                //  phno = (Int)phNo.text!
-            }
-         //   var studentid:String!
-           /* if(sid.text!.isEmpty == false){
-                studentid = sid.text
-            }*/
-            let con = MySQL.Connection()
-            let db_name = "EventsUp"
-            
-            do{
-                // open a new connection
-                  try con.open("database-1.ckgk7kfbawvv.us-east-2.rds.amazonaws.com", user: "admin", passwd: "admin123", dbname: "EventsUp")
-                print("Connection is succesfull")
-                // con.use for the database name
-                // but in the instance which we created we are not seeing a database name so figuring out.
-                try con.use("EventsUp")
-                let ins_stmt = try con.prepare("INSERT INTO ATTENDEE(Password, SID, LName, FName,EmailId,PhoneNumber,DOB) VALUES(?,?,?,?,?,?,?)")
-                try ins_stmt.exec([password.text!,"s546652", lName.text!, fName.text!, email.text!, phNo.text!, dob.text!])
-                
-                
-                let select_stmt = try con.prepare("SELECT Password, SID, LName, FName,EmailId,PhoneNumber,DOB FROM ATTENDEE ")
-                try con.close()
-            }
-            catch (let e) {
-                print("Error Message")
-                print(e)
-            }
-            
-            
-      
-            
-        }
-        
-    }
-    
-}
+    } 
+   
