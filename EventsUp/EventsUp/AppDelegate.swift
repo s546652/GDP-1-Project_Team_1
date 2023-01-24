@@ -7,6 +7,8 @@
 
 import UIKit
 import SQLite3
+import Firebase
+
 
 var dbQueue:OpaquePointer?
 
@@ -15,7 +17,9 @@ var dbURL = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainM
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+override init() {
+       FirebaseApp.configure()
+   }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
