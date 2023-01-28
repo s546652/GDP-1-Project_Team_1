@@ -20,7 +20,7 @@ class LoginVC: UIViewController {
     }
     
      
-    @IBAction func sigBTN(_ sender: UIButton) {
+    @IBAction func signBTN(_ sender: UIButton) {
         self.performSegue(withIdentifier: "logintosignup", sender: self)
     }
     
