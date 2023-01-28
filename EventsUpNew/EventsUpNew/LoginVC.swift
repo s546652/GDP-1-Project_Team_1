@@ -19,6 +19,12 @@ class LoginVC: UIViewController {
         self.performSegue(withIdentifier: "logintosignup", sender: self)
     }
     
+     
+    @IBAction func sigBTN(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "logintosignup", sender: self)
+    }
+    
+    
     /*
     // MARK: - Navigation
 
