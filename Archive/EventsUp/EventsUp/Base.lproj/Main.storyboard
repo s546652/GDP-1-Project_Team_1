@@ -55,7 +55,7 @@
                                 <rect key="frame" x="150" y="595" width="128" height="128"/>
                             </imageView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YXW-gs-Kwf">
-                                <rect key="frame" x="-9" y="841" width="431" height="45"/>
+                                <rect key="frame" x="-11" y="838" width="429" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem title="Events" image="list.bullet.rectangle.portrait" catalog="system" id="KXl-ff-QWF">
@@ -76,6 +76,15 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YtN-ik-8vq">
+                                <rect key="frame" x="280" y="114" width="84" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Wishlist"/>
+                                <connections>
+                                    <segue destination="pbG-0S-Ufx" kind="presentation" modalPresentationStyle="fullScreen" id="0QN-CK-MMi"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.91911533703173576" green="1" blue="0.9426514851798643" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -101,7 +110,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="273" y="623"/>
+            <point key="canvasLocation" x="271.96261682242988" y="622.67818574514047"/>
         </scene>
         <!--Login Controller-->
         <scene sceneID="Hqg-Xu-2Q7">
@@ -191,14 +200,6 @@
             </objects>
             <point key="canvasLocation" x="2831.7757009345792" y="622.67818574514047"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="LVc-Su-mE8">
-            <objects>
-                <viewController id="kL0-gY-sQq" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="uFY-pL-VeL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3894" y="1399"/>
-        </scene>
         <!--Signup Controller View Controller-->
         <scene sceneID="x7W-8X-yzX">
             <objects>
@@ -276,7 +277,7 @@
                                 </constraints>
                             </stackView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7tB-Tu-CS0">
-                                <rect key="frame" x="-4" y="849" width="428" height="42"/>
+                                <rect key="frame" x="-5" y="848" width="424" height="38"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem title="Events" image="list.bullet.rectangle.portrait" catalog="system" id="XFT-rf-KzF">
@@ -319,6 +320,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kZH-Mk-2tA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2725" y="1639"/>
+        </scene>
+        <!--Check OutTVC-->
+        <scene sceneID="urX-wN-pFC">
+            <objects>
+                <tableViewController id="pbG-0S-Ufx" customClass="CheckOutTVC" customModule="EventsUp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="bRZ-uq-g0x">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="yJI-2H-txd">
+                                <rect key="frame" x="0.0" y="50" width="428" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yJI-2H-txd" id="lWg-1O-guE">
+                                    <rect key="frame" x="0.0" y="0.0" width="428" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="pbG-0S-Ufx" id="DUd-eB-ien"/>
+                            <outlet property="delegate" destination="pbG-0S-Ufx" id="9hp-2I-Fnf"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="urL-pd-obP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1559" y="-6"/>
         </scene>
         <!--Payemnt Controller-->
         <scene sceneID="5RY-ci-k12">
@@ -531,7 +560,7 @@
                                 </items>
                             </navigationBar>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bKE-s0-zlt">
-                                <rect key="frame" x="-11" y="841" width="434" height="48"/>
+                                <rect key="frame" x="-15" y="841" width="434" height="43"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem title="Events" image="list.bullet.rectangle.portrait" catalog="system" id="ksh-Tt-j8C">
@@ -677,12 +706,11 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="714-2y-dq3"/>
-        <segue reference="ymV-9V-WCZ"/>
-        <segue reference="Slk-Dx-wUX"/>
-        <segue reference="0dD-sb-G0Y"/>
-        <segue reference="8cZ-1Y-eET"/>
-        <segue reference="DKY-kv-e2C"/>
+        <segue reference="su5-Z2-wuL"/>
+        <segue reference="bKn-Yu-Aun"/>
+        <segue reference="wnV-wv-OKb"/>
+        <segue reference="em6-4j-2iN"/>
+        <segue reference="I7u-ye-830"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="arrow.backward.circle" catalog="system" width="128" height="123"/>
@@ -693,6 +721,9 @@
         <image name="person" catalog="system" width="128" height="121"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>

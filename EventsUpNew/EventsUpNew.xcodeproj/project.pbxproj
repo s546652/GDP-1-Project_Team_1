@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F503363429878045003E81EA /* file.swift in Sources */ = {isa = PBXBuildFile; fileRef = F503363329878045003E81EA /* file.swift */; };
 		F5B7CCAC2931347F0073E295 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B7CCAB2931347F0073E295 /* LoginController.swift */; };
 		F5B7CCAE293134AB0073E295 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B7CCAD293134AB0073E295 /* TableViewController.swift */; };
 		F5B7CCB0293134C20073E295 /* signupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B7CCAF293134C20073E295 /* signupController.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F503363329878045003E81EA /* file.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = file.swift; sourceTree = "<group>"; };
 		F5B7CCAB2931347F0073E295 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		F5B7CCAD293134AB0073E295 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		F5B7CCAF293134C20073E295 /* signupController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signupController.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 		F5E52EDC2926B9470026E1A3 = {
 			isa = PBXGroup;
 			children = (
+				F503363329878045003E81EA /* file.swift */,
 				F5E52EE72926B9470026E1A3 /* EventsUpNew */,
 				F5E52EE62926B9470026E1A3 /* Products */,
 			);
@@ -144,6 +147,9 @@
 				Base,
 			);
 			mainGroup = F5E52EDC2926B9470026E1A3;
+			packageReferences = (
+				F5033635298780A8003E81EA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = F5E52EE62926B9470026E1A3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -178,6 +184,7 @@
 				F5B7CCBA293137940073E295 /* tesViewController.swift in Sources */,
 				F5E52EE92926B9470026E1A3 /* AppDelegate.swift in Sources */,
 				F5BB1FC72926FB4600FD6615 /* EventDetailListVC.swift in Sources */,
+				F503363429878045003E81EA /* file.swift in Sources */,
 				F5E52EFD2926DCEA0026E1A3 /* LoginVC.swift in Sources */,
 				F5B7CCB2293134DB0073E295 /* PayemntController.swift in Sources */,
 				F5B7CCAC2931347F0073E295 /* LoginController.swift in Sources */,
@@ -400,6 +407,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F5033635298780A8003E81EA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = F5E52EDD2926B9470026E1A3 /* Project object */;
 }

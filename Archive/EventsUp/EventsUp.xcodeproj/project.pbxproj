@@ -19,6 +19,7 @@
 		F50DA3952908B89800342EDA /* PayemntController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50DA3942908B89800342EDA /* PayemntController.swift */; };
 		F50DA3972908B8CD00342EDA /* EventDetailedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50DA3962908B8CD00342EDA /* EventDetailedController.swift */; };
 		F5186A5A28E8F4F800806FAB /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5186A5928E8F4F800806FAB /* LoginController.swift */; };
+		F58B9CD92989A9BE00DD1075 /* CheckOutTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58B9CD82989A9BE00DD1075 /* CheckOutTVC.swift */; };
 		F5A77A4D28E79076001307B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A77A4C28E79076001307B3 /* AppDelegate.swift */; };
 		F5A77A4F28E79076001307B3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A77A4E28E79076001307B3 /* SceneDelegate.swift */; };
 		F5A77A5128E79076001307B3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A77A5028E79076001307B3 /* ViewController.swift */; };
@@ -39,6 +40,7 @@
 		F50DA3942908B89800342EDA /* PayemntController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayemntController.swift; sourceTree = "<group>"; };
 		F50DA3962908B8CD00342EDA /* EventDetailedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailedController.swift; sourceTree = "<group>"; };
 		F5186A5928E8F4F800806FAB /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		F58B9CD82989A9BE00DD1075 /* CheckOutTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckOutTVC.swift; sourceTree = "<group>"; };
 		F5A77A4928E79076001307B3 /* EventsUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EventsUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5A77A4C28E79076001307B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F5A77A4E28E79076001307B3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 				26F717FA291888B4009B2BE1 /* Calendar.swift */,
 				26F717FC29188A0A009B2BE1 /* EventsDetailListViewController.swift */,
 				263791CE2925264900B2A9E5 /* tesViewController.swift */,
+				F58B9CD82989A9BE00DD1075 /* CheckOutTVC.swift */,
 			);
 			path = EventsUp;
 			sourceTree = "<group>";
@@ -191,6 +194,7 @@
 				260E922328F4D5E60020B79F /* signupController.swift in Sources */,
 				26AD9F7828EA5CFF0017E297 /* EventsListController.swift in Sources */,
 				F50DA3972908B8CD00342EDA /* EventDetailedController.swift in Sources */,
+				F58B9CD92989A9BE00DD1075 /* CheckOutTVC.swift in Sources */,
 				F50DA3952908B89800342EDA /* PayemntController.swift in Sources */,
 				F5186A5A28E8F4F800806FAB /* LoginController.swift in Sources */,
 				F5A77A4D28E79076001307B3 /* AppDelegate.swift in Sources */,
