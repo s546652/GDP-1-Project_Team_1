@@ -155,6 +155,25 @@ class signupControllerViewController: UIViewController {
             if error != nil {
                 print(error!.localizedDescription)
             }
+            else {
+                var a = ["test"]
+                print("test $$$$$")
+                let db = Firestore.firestore()
+                let ref = db.collection("User").document(self.email.text!)
+                print("test $$$$$ 4444444")
+                print(ref)
+                print(" print(test $$$$$)")
+                ref.setData(["fname":self.fName.text!,"lname":self.lName.text!,"username":self.email.text!,"password":self.password.text!]){error in
+                    if let error = error {
+                        print(error.localizedDescription)
+                    }
+                    else{
+                        print("check")
+                    }
+                }
+                
+            }                                                                    
+                                                                                 
         }
     }
 }
