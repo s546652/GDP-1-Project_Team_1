@@ -796,7 +796,6 @@
         <!--View Controller-->
         <scene sceneID="7Vk-6i-ybq">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yev-05-u8O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="ro6-Ry-yO4" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TGB-t0-W7t">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="869"/>
@@ -885,6 +884,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="nJQ-0c-qyN"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yev-05-u8O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-10888" y="3743"/>
         </scene>
@@ -928,6 +928,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="6qH-se-QL2" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dbv-Pc-D3l">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -988,6 +989,121 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aln-D9-kEo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-7242" y="4138"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="YTa-Q7-7HA">
+            <objects>
+                <viewController id="I8m-zd-T1Z" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pZj-BR-ab0">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="wKS-QK-9El">
+                                <rect key="frame" x="20" y="319" width="388" height="288.33333333333326"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Full Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="br7-66-bn9">
+                                        <rect key="frame" x="0.0" y="0.0" width="388" height="34.333333333333336"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="username:" destination="fVl-3t-Bcr" eventType="editingChanged" id="V0s-i8-1S6"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cJb-OD-Yqn">
+                                        <rect key="frame" x="0.0" y="42.333333333333314" width="388" height="34.333333333333343"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="address:" destination="fVl-3t-Bcr" eventType="editingChanged" id="5kE-VD-QB2"/>
+                                        </connections>
+                                    </textField>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="WWj-r7-Eru">
+                                        <rect key="frame" x="0.0" y="84.666666666666686" width="388" height="34.333333333333343"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wyh-Cu-7hH" userLabel="Button">
+                                                <rect key="frame" x="0.0" y="0.0" width="190" height="34.333333333333336"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Debit Card"/>
+                                                <connections>
+                                                    <action selector="debitcardBTN:" destination="fVl-3t-Bcr" eventType="touchUpInside" id="9Mx-M1-JtP"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zeo-yi-bFg">
+                                                <rect key="frame" x="198" y="0.0" width="190" height="34.333333333333336"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Credit Card"/>
+                                                <connections>
+                                                    <action selector="creditCardBTN:" destination="fVl-3t-Bcr" eventType="touchUpInside" id="j70-hg-3ua"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Card Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OpL-gD-qXD">
+                                        <rect key="frame" x="0.0" y="126.99999999999999" width="388" height="34.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="cardnumber:" destination="fVl-3t-Bcr" eventType="editingChanged" id="yyJ-Mv-LYD"/>
+                                        </connections>
+                                    </textField>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="WCC-nv-Adt">
+                                        <rect key="frame" x="0.0" y="169.33333333333331" width="388" height="34.333333333333343"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Expiry Date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cKj-fa-KxA">
+                                                <rect key="frame" x="0.0" y="0.0" width="190" height="34.333333333333336"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="expirydate:" destination="fVl-3t-Bcr" eventType="editingChanged" id="P6l-d5-0pN"/>
+                                                </connections>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Security Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OHh-s1-QDa">
+                                                <rect key="frame" x="198" y="0.0" width="190" height="34.333333333333336"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="ssn:" destination="fVl-3t-Bcr" eventType="editingChanged" id="lfE-Rf-Gla"/>
+                                                </connections>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name on Card" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NCQ-dX-Xw4">
+                                        <rect key="frame" x="0.0" y="211.66666666666663" width="388" height="34.333333333333343"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="cardname:" destination="fVl-3t-Bcr" eventType="editingChanged" id="hIi-g1-JII"/>
+                                        </connections>
+                                    </textField>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="bAS-hx-ljL">
+                                        <rect key="frame" x="0.0" y="254.00000000000003" width="388" height="34.333333333333343"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z6D-kY-e9S">
+                                                <rect key="frame" x="0.0" y="0.0" width="388" height="34.333333333333336"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Submit"/>
+                                                <connections>
+                                                    <action selector="submitBTN:" destination="fVl-3t-Bcr" eventType="touchUpInside" id="wiD-dO-aSk"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="0cJ-g8-fEN"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="wKS-QK-9El" firstAttribute="centerX" secondItem="pZj-BR-ab0" secondAttribute="centerX" id="5Tp-hx-it6"/>
+                            <constraint firstItem="0cJ-g8-fEN" firstAttribute="trailing" secondItem="wKS-QK-9El" secondAttribute="trailing" constant="20" id="D42-SQ-w1V"/>
+                            <constraint firstItem="wKS-QK-9El" firstAttribute="centerY" secondItem="pZj-BR-ab0" secondAttribute="centerY" id="bjt-C3-8ea"/>
+                            <constraint firstItem="wKS-QK-9El" firstAttribute="leading" secondItem="0cJ-g8-fEN" secondAttribute="leading" constant="20" id="p5R-p6-Gpe"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OpF-Q4-VKV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-7242" y="4870"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="bGl-4v-Znv">
@@ -1077,13 +1193,12 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ohg-CX-Zw1"/>
         <segue reference="HXc-qg-Tdt"/>
-        <segue reference="su5-Z2-wuL"/>
-        <segue reference="bKn-Yu-Aun"/>
+        <segue reference="ymV-9V-WCZ"/>
+        <segue reference="Gas-hM-fzS"/>
         <segue reference="wnV-wv-OKb"/>
-        <segue reference="em6-4j-2iN"/>
-        <segue reference="fEh-qw-nmN"/>
+        <segue reference="NIp-M5-Mn6"/>
+        <segue reference="puO-ds-rl5"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="arrow.backward.circle" catalog="system" width="128" height="123"/>
