@@ -51,9 +51,6 @@
                                     <action selector="nextButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ogi-kT-Pe3"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UEJ-sS-q7Q">
-                                <rect key="frame" x="150" y="595" width="128" height="128"/>
-                            </imageView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YXW-gs-Kwf">
                                 <rect key="frame" x="-13" y="836" width="429" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
@@ -91,10 +88,7 @@
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="a8f-YU-8Vi" secondAttribute="trailing" constant="45" id="7bp-sV-MlF"/>
                             <constraint firstItem="a8f-YU-8Vi" firstAttribute="centerY" secondItem="A8G-on-9AW" secondAttribute="centerY" id="9WN-Mn-akK"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UEJ-sS-q7Q" secondAttribute="trailing" constant="150" id="AdK-g0-vOP"/>
-                            <constraint firstItem="UEJ-sS-q7Q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="150" id="H4K-ks-T7e"/>
                             <constraint firstItem="a8f-YU-8Vi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="45" id="IfI-3R-1qW"/>
-                            <constraint firstItem="UEJ-sS-q7Q" firstAttribute="top" secondItem="a8f-YU-8Vi" secondAttribute="top" constant="80" id="KV1-db-UlV"/>
                             <constraint firstItem="kqz-jD-gRc" firstAttribute="leading" secondItem="A8G-on-9AW" secondAttribute="trailing" constant="274" id="drK-jF-GUN"/>
                             <constraint firstItem="a8f-YU-8Vi" firstAttribute="centerY" secondItem="kqz-jD-gRc" secondAttribute="centerY" id="sb3-ce-2xh"/>
                             <constraint firstItem="a8f-YU-8Vi" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="203" id="x0F-Tk-t7W"/>
@@ -103,7 +97,6 @@
                     <navigationItem key="navigationItem" id="kYm-YN-dVR"/>
                     <connections>
                         <outlet property="displayImageOutlet" destination="a8f-YU-8Vi" id="yzv-NN-Fbm"/>
-                        <outlet property="imageOutlet" destination="UEJ-sS-q7Q" id="YiL-Hd-uZ8"/>
                         <outlet property="nextOutlet" destination="kqz-jD-gRc" id="70C-6w-2VZ"/>
                         <outlet property="preOutlet" destination="A8G-on-9AW" id="TS1-yq-Nf5"/>
                     </connections>
@@ -560,7 +553,7 @@
                                 </items>
                             </navigationBar>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bKE-s0-zlt">
-                                <rect key="frame" x="-16" y="839" width="434" height="45"/>
+                                <rect key="frame" x="-17" y="838" width="435" height="46"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem title="Events" image="list.bullet.rectangle.portrait" catalog="system" id="ksh-Tt-j8C">
@@ -1244,12 +1237,13 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="714-2y-dq3"/>
         <segue reference="HXc-qg-Tdt"/>
         <segue reference="ymV-9V-WCZ"/>
         <segue reference="bKn-Yu-Aun"/>
         <segue reference="wnV-wv-OKb"/>
         <segue reference="em6-4j-2iN"/>
-        <segue reference="puO-ds-rl5"/>
+        <segue reference="DKY-kv-e2C"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="arrow.backward.circle" catalog="system" width="128" height="123"/>
