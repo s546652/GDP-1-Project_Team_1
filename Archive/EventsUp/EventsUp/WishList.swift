@@ -8,12 +8,12 @@
 import Foundation
 import SwiftUI
 
-struct WishList: Identifiable {
-    var id: ObjectIdentifier
+struct WishList {
+   // var id: ObjectIdentifier
     
     
-    var EventName : String
-    var EventDate : String
-    var user : String
-    var userId: String
+    var EventName : String?
+    var EventDate : String?
+    var user : String?
+    var userId: String?
 }
