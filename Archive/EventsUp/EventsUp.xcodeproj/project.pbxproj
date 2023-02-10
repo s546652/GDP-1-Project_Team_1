@@ -20,6 +20,9 @@
 		F50DA3972908B8CD00342EDA /* EventDetailedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50DA3962908B8CD00342EDA /* EventDetailedController.swift */; };
 		F5186A5A28E8F4F800806FAB /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5186A5928E8F4F800806FAB /* LoginController.swift */; };
 		F58B9CD92989A9BE00DD1075 /* CheckOutTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58B9CD82989A9BE00DD1075 /* CheckOutTVC.swift */; };
+		F58BE1B02994CB3F005CB283 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58BE1AF2994CB3F005CB283 /* HomeVC.swift */; };
+		F58BE1BA2995CDFA005CB283 /* EventsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58BE1B92995CDFA005CB283 /* EventsTVC.swift */; };
+		F58BE1BC2995D342005CB283 /* WishlistTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58BE1BB2995D342005CB283 /* WishlistTVC.swift */; };
 		F5A77A4D28E79076001307B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A77A4C28E79076001307B3 /* AppDelegate.swift */; };
 		F5A77A4F28E79076001307B3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A77A4E28E79076001307B3 /* SceneDelegate.swift */; };
 		F5A77A5128E79076001307B3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A77A5028E79076001307B3 /* ViewController.swift */; };
@@ -41,6 +44,9 @@
 		F50DA3962908B8CD00342EDA /* EventDetailedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailedController.swift; sourceTree = "<group>"; };
 		F5186A5928E8F4F800806FAB /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		F58B9CD82989A9BE00DD1075 /* CheckOutTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckOutTVC.swift; sourceTree = "<group>"; };
+		F58BE1AF2994CB3F005CB283 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		F58BE1B92995CDFA005CB283 /* EventsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsTVC.swift; sourceTree = "<group>"; };
+		F58BE1BB2995D342005CB283 /* WishlistTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistTVC.swift; sourceTree = "<group>"; };
 		F5A77A4928E79076001307B3 /* EventsUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EventsUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5A77A4C28E79076001307B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F5A77A4E28E79076001307B3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +71,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F58BE1AE2994CAD2005CB283 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				F58BE1AF2994CB3F005CB283 /* HomeVC.swift */,
+				F58BE1B92995CDFA005CB283 /* EventsTVC.swift */,
+				F58BE1BB2995D342005CB283 /* WishlistTVC.swift */,
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		F5A77A4028E79076001307B3 = {
 			isa = PBXGroup;
 			children = (
@@ -84,6 +100,7 @@
 		F5A77A4B28E79076001307B3 /* EventsUp */ = {
 			isa = PBXGroup;
 			children = (
+				F58BE1AE2994CAD2005CB283 /* New Group */,
 				F5A77A4C28E79076001307B3 /* AppDelegate.swift */,
 				F5A77A4E28E79076001307B3 /* SceneDelegate.swift */,
 				F5A77A5028E79076001307B3 /* ViewController.swift */,
@@ -187,7 +204,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F58BE1BC2995D342005CB283 /* WishlistTVC.swift in Sources */,
 				26F717FD29188A0A009B2BE1 /* EventsDetailListViewController.swift in Sources */,
+				F58BE1BA2995CDFA005CB283 /* EventsTVC.swift in Sources */,
+				F58BE1B02994CB3F005CB283 /* HomeVC.swift in Sources */,
 				263791CF2925264900B2A9E5 /* tesViewController.swift in Sources */,
 				F5A77A5128E79076001307B3 /* ViewController.swift in Sources */,
 				2690BBAE28F0D73500C74A1F /* TableViewController.swift in Sources */,
