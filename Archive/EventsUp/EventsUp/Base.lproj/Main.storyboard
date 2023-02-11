@@ -193,6 +193,21 @@
             </objects>
             <point key="canvasLocation" x="2831.7757009345792" y="622.67818574514047"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="05b-sM-YCY">
+            <objects>
+                <viewController id="a6H-gO-zud" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mUC-jm-S4i">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="ww5-pW-N3h"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TN7-qf-km3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4681" y="573"/>
+        </scene>
         <!--Signup Controller View Controller-->
         <scene sceneID="x7W-8X-yzX">
             <objects>
@@ -270,7 +285,7 @@
                                 </constraints>
                             </stackView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7tB-Tu-CS0">
-                                <rect key="frame" x="-12" y="844" width="425" height="37"/>
+                                <rect key="frame" x="-13" y="844" width="426" height="37"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem title="Events" image="list.bullet.rectangle.portrait" catalog="system" id="XFT-rf-KzF">
@@ -1259,7 +1274,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ohg-CX-Zw1"/>
         <segue reference="HXc-qg-Tdt"/>
         <segue reference="ymV-9V-WCZ"/>
         <segue reference="bKn-Yu-Aun"/>
