@@ -23,6 +23,7 @@
 		F58BE1B02994CB3F005CB283 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58BE1AF2994CB3F005CB283 /* HomeVC.swift */; };
 		F58BE1BA2995CDFA005CB283 /* EventsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58BE1B92995CDFA005CB283 /* EventsTVC.swift */; };
 		F58BE1BC2995D342005CB283 /* WishlistTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58BE1BB2995D342005CB283 /* WishlistTVC.swift */; };
+		F58BE1BE2995DA4C005CB283 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58BE1BD2995DA4C005CB283 /* LoginVC.swift */; };
 		F5A77A4D28E79076001307B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A77A4C28E79076001307B3 /* AppDelegate.swift */; };
 		F5A77A4F28E79076001307B3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A77A4E28E79076001307B3 /* SceneDelegate.swift */; };
 		F5A77A5128E79076001307B3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A77A5028E79076001307B3 /* ViewController.swift */; };
@@ -47,6 +48,7 @@
 		F58BE1AF2994CB3F005CB283 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		F58BE1B92995CDFA005CB283 /* EventsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsTVC.swift; sourceTree = "<group>"; };
 		F58BE1BB2995D342005CB283 /* WishlistTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistTVC.swift; sourceTree = "<group>"; };
+		F58BE1BD2995DA4C005CB283 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		F5A77A4928E79076001307B3 /* EventsUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EventsUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5A77A4C28E79076001307B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F5A77A4E28E79076001307B3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 				F58BE1AF2994CB3F005CB283 /* HomeVC.swift */,
 				F58BE1B92995CDFA005CB283 /* EventsTVC.swift */,
 				F58BE1BB2995D342005CB283 /* WishlistTVC.swift */,
+				F58BE1BD2995DA4C005CB283 /* LoginVC.swift */,
 			);
 			path = "New Group";
 			sourceTree = "<group>";
@@ -208,6 +211,7 @@
 				26F717FD29188A0A009B2BE1 /* EventsDetailListViewController.swift in Sources */,
 				F58BE1BA2995CDFA005CB283 /* EventsTVC.swift in Sources */,
 				F58BE1B02994CB3F005CB283 /* HomeVC.swift in Sources */,
+				F58BE1BE2995DA4C005CB283 /* LoginVC.swift in Sources */,
 				263791CF2925264900B2A9E5 /* tesViewController.swift in Sources */,
 				F5A77A5128E79076001307B3 /* ViewController.swift in Sources */,
 				2690BBAE28F0D73500C74A1F /* TableViewController.swift in Sources */,

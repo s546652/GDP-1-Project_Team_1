@@ -786,10 +786,10 @@
             </objects>
             <point key="canvasLocation" x="-10888" y="4555"/>
         </scene>
-        <!--View Controller-->
+        <!--LoginVC-->
         <scene sceneID="7Vk-6i-ybq">
             <objects>
-                <viewController id="ro6-Ry-yO4" sceneMemberID="viewController">
+                <viewController id="ro6-Ry-yO4" customClass="LoginVC" customModule="EventsUp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TGB-t0-W7t">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="869"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
