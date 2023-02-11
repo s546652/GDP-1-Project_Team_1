@@ -52,7 +52,7 @@
                                 </connections>
                             </button>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YXW-gs-Kwf">
-                                <rect key="frame" x="-15" y="832" width="429" height="44"/>
+                                <rect key="frame" x="-16" y="832" width="429" height="43"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem title="Events" image="list.bullet.rectangle.portrait" catalog="system" id="KXl-ff-QWF">
@@ -270,7 +270,7 @@
                                 </constraints>
                             </stackView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7tB-Tu-CS0">
-                                <rect key="frame" x="-11" y="845" width="425" height="37"/>
+                                <rect key="frame" x="-12" y="844" width="425" height="37"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem title="Events" image="list.bullet.rectangle.portrait" catalog="system" id="XFT-rf-KzF">
@@ -553,7 +553,7 @@
                                 </items>
                             </navigationBar>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bKE-s0-zlt">
-                                <rect key="frame" x="-22" y="836" width="437" height="46"/>
+                                <rect key="frame" x="-23" y="836" width="437" height="45"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem title="Events" image="list.bullet.rectangle.portrait" catalog="system" id="ksh-Tt-j8C">
@@ -821,6 +821,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="Login"/>
                                                 <connections>
+                                                    <action selector="LoginBTN:" destination="ro6-Ry-yO4" eventType="touchUpInside" id="D3a-rk-xXa"/>
                                                     <segue destination="6qH-se-QL2" kind="presentation" modalPresentationStyle="fullScreen" id="yt5-zn-J1t"/>
                                                 </connections>
                                             </button>
@@ -1258,6 +1259,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="ohg-CX-Zw1"/>
         <segue reference="HXc-qg-Tdt"/>
         <segue reference="ymV-9V-WCZ"/>
         <segue reference="bKn-Yu-Aun"/>
