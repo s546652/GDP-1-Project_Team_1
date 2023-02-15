@@ -7,30 +7,75 @@
 
 import UIKit
 import Firebase
+import AVFoundation
 
 class LoginVC: UIViewController {
 
     @IBAction func LoginBTN(_ sender: UIButton) {
+        
+        performSegue(withIdentifier: "logintohome", sender: self)
         // Create new Alert
         var dialogMessage = UIAlertController(title: "Success", message: "You are succesfully logged in", preferredStyle: .alert)
         
         // Create OK button with action handler
         let ok = UIAlertAction(title: "OK", style: .default, handler: { (action) -> Void in
             print("Ok button tapped")
+            
          })
         
         //Add OK button to a dialog message
         dialogMessage.addAction(ok)
+        
 
         // Present Alert to
         self.present(dialogMessage, animated: true, completion: nil)
+        print(1)
+        performSegue(withIdentifier: "logintohome", sender: self)
+        
     }
     
+    @IBOutlet weak var logoIV: UIImageView!
+    
+    @IBOutlet var videoLayerUV: UIView!
+    
+    @IBOutlet weak var EmailTF: UITextField!
+    
+    @IBAction func PasswordTF(_ sender: UITextField) {
+    }
+    
+    @IBAction func SignupBTN(_ sender: UIButton) {
+        print(1)
+    }
+    
+    
+    @IBOutlet weak var OrLabel: UILabel!
+    
+    @IBOutlet weak var MainStack: UIStackView!
+    
+    func playVideo()
+    {
+        guard let path = Bundle.main.path(forResource: "Day One at Northwest", ofType: "mp4") else
+        {
+            return
+        }
+        
+        let player = AVPlayer(url: URL(fileURLWithPath: path))
+        let playerLayer = AVPlayerLayer(player: player)
+        playerLayer.frame = self.view.bounds
+        playerLayer.videoGravity = .resizeAspectFill
+        self.videoLayerUV.layer.addSublayer(playerLayer)
+        
+        player.play()
+        
+        videoLayerUV.bringSubviewToFront(logoIV)
+        videoLayerUV.bringSubviewToFront(MainStack)
+        
+    }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        playVideo()
     }
 
     /*

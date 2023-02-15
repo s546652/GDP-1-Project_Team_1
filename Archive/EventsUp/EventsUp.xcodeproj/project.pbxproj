@@ -19,6 +19,7 @@
 		F50DA3952908B89800342EDA /* PayemntController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50DA3942908B89800342EDA /* PayemntController.swift */; };
 		F50DA3972908B8CD00342EDA /* EventDetailedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50DA3962908B8CD00342EDA /* EventDetailedController.swift */; };
 		F5186A5A28E8F4F800806FAB /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5186A5928E8F4F800806FAB /* LoginController.swift */; };
+		F51D6199299C7099008C8944 /* Day One at Northwest.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F51D6196299C66EF008C8944 /* Day One at Northwest.mp4 */; };
 		F58B9CD92989A9BE00DD1075 /* CheckOutTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58B9CD82989A9BE00DD1075 /* CheckOutTVC.swift */; };
 		F58BE1B02994CB3F005CB283 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58BE1AF2994CB3F005CB283 /* HomeVC.swift */; };
 		F58BE1BA2995CDFA005CB283 /* EventsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58BE1B92995CDFA005CB283 /* EventsTVC.swift */; };
@@ -44,6 +45,7 @@
 		F50DA3942908B89800342EDA /* PayemntController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayemntController.swift; sourceTree = "<group>"; };
 		F50DA3962908B8CD00342EDA /* EventDetailedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailedController.swift; sourceTree = "<group>"; };
 		F5186A5928E8F4F800806FAB /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		F51D6196299C66EF008C8944 /* Day One at Northwest.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Day One at Northwest.mp4"; path = "../../../../../Downloads/Day One at Northwest.mp4"; sourceTree = "<group>"; };
 		F58B9CD82989A9BE00DD1075 /* CheckOutTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckOutTVC.swift; sourceTree = "<group>"; };
 		F58BE1AF2994CB3F005CB283 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		F58BE1B92995CDFA005CB283 /* EventsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsTVC.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 				F5A77A5228E79076001307B3 /* Main.storyboard */,
 				F5A77A5528E79078001307B3 /* Assets.xcassets */,
 				2630EE98297F868300D69900 /* GoogleService-Info.plist */,
+				F51D6196299C66EF008C8944 /* Day One at Northwest.mp4 */,
 				F5A77A5728E79078001307B3 /* LaunchScreen.storyboard */,
 				F5A77A5A28E79078001307B3 /* Info.plist */,
 				F5186A5928E8F4F800806FAB /* LoginController.swift */,
@@ -197,6 +200,7 @@
 				F5A77A5928E79078001307B3 /* LaunchScreen.storyboard in Resources */,
 				F5A77A5628E79078001307B3 /* Assets.xcassets in Resources */,
 				F5A77A5428E79076001307B3 /* Main.storyboard in Resources */,
+				F51D6199299C7099008C8944 /* Day One at Northwest.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
