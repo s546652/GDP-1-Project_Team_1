@@ -1,17 +1,22 @@
 //
-//  signupController.swift
-//  EventsUpNew
+//  signupControllerViewController.swift
+//  EventsUp
 //
-//  Created by Gundu,Naveen Kumar on 11/25/22.
+//  Created by Gagenapally,Roshni Damodar Reddy on 10/10/22.
 //
 
 import UIKit
+import SQLite3
+import SwiftUI
+import MySQLDriver
+import Firebase
 
-class signupController: UIViewController {
 
+
+class signupControllerViewController: UIViewController {
     
-    //let sqlite_TRANSIENT = unsafeBitCast(-1, to: sqlite3_destructor_type.self)
     
+    let sqlite_TRANSIENT = unsafeBitCast(-1, to: sqlite3_destructor_type.self)
     @IBOutlet weak var fName: UITextField!
     
     
@@ -75,6 +80,7 @@ class signupController: UIViewController {
     
     var stdtAcc = false
     
+    
     @IBAction func fnameTF(_ sender: UITextField) {
         if(self.fName.text != ""){
             self.fName.layer.borderColor = UIColor.green.cgColor
@@ -89,9 +95,9 @@ class signupController: UIViewController {
             self.lName.layer.borderWidth = 1
         }
     }
-
     
-
+    
+    
     @IBAction func emailTF(_ sender: UITextField) {
         if(self.email.text != ""){
             self.email.layer.borderColor = UIColor.green.cgColor
@@ -116,7 +122,6 @@ class signupController: UIViewController {
             self.password.layer.borderWidth = 1
         }
     }
-
     
     
     @IBAction func repassTF(_ sender: UITextField) {
@@ -125,7 +130,7 @@ class signupController: UIViewController {
             self.re_enterPassword.layer.borderWidth = 1
         }
     }
-
+    
     
     
     @IBAction func dobTF(_ sender: UITextField) {
@@ -146,165 +151,26 @@ class signupController: UIViewController {
     
     @IBAction func Submit(_ sender: Any) {
         
-        if(fName.text!.isEmpty || lName.text!.isEmpty || email.text!.isEmpty || dob.text!.isEmpty || phNo.text!.isEmpty || password.text!.isEmpty || re_enterPassword.text!.isEmpty){
-            if(fName.text!.isEmpty){
-                fName.shake()
+        Auth.auth().createUser(withEmail: email.text!, password: password.text!){Result, error in
+            if error != nil {
+                print(error!.localizedDescription)
             }
-            if(lName.text!.isEmpty){
-                lName.shake()
+            else {
+                var a = ["test"]
+                print("test $$$$$")
+                let db = Firestore.firestore()
+                //let db = Firestore.firestore()
+                let ref = db.collection("User").document(self.email.text!)
+                ref.setData(["fname":self.fName.text!,"lname":self.lName.text!,"username":self.email.text!,"password":self.password.text!]){error in
+                    if let error = error {
+                        print(error.localizedDescription)
+                    }
+                    else{
+                        print("check")
+                    }
+                }
             }
-            if(email.text!.isEmpty){
-                email.shake()
-            }
-            if(dob.text!.isEmpty){
-                dob.shake()
-            }
-            if(phNo.text!.isEmpty){
-                phNo.shake()
-            }
-            if(password.text!.isEmpty){
-                password.shake()
-            }
-            if(re_enterPassword.text!.isEmpty){
-                re_enterPassword.shake()
-            }
-            
-            
         }
         
-        
-        if(fName.text!.isEmpty == false && lName.text!.isEmpty == false){
-            // field in attended entity to store value in first name and last name
-            if(email.text!.isEmpty == false){
-                if(email.text!.hasSuffix("@nwmissouri.edu")){
-                    stdtAcc = true
-                    //store in email field
-                }
-                else if(email.text!.contains("@") && email.text!.contains(".")){
-                    //field in db to store data from email
-                }
-                else{
-                    emailError.text! = "Please enter correct email"
-                }
-            }
-            if(phNo.text!.isEmpty == false){
-                var phno:Int
-                //  phno = (Int)phNo.text!
-            }
-            var studentid:String!
-            if(sid.text!.isEmpty == false){
-                studentid = sid.text
-            }
-            //let con = MySQL.Connection()
-            let db_name = "EventsUp"
-            
-            
-            
-            //Commented by Naveen
-//            do{
-//                // open a new connection
-//                try
-//                con.open("localhost", user: "root", passwd: "Skr@329532")
-//                print("Connection is succesfull")
-//                try con.use("EventsUp")
-//                let ins_stmt = try con.prepare("INSERT INTO ATTENDEE(Password, SID, LName, FName,EmailId,PhoneNumber,DOB) VALUES(?,?,?,?,?,?,?)")
-//                try ins_stmt.exec([password.text!,"s546652", lName.text!, fName.text!, email.text!, phNo.text!, dob.text!])
-//            }
-//            catch (let e) {
-//                print("Error Message")
-//                print(e)
-//            }
-            
-            
-            
-            
-            
-            
-            //             var insert = "INSERT INTO E_ATTENDEES (Attendee_Id,Password,Name,FName,EmailId,PhoneNUmber,DOB) VALUES (002,?, ?, ?, ?, ?, ?);"
-            //             var insertStat : OpaquePointer?
-            //             print("insert 1")
-            //             if(sqlite3_prepare_v2(dbQueue, insert, -1, &insertStat, nil)) == SQLITE_OK {
-            //                 sqlite3_bind_text(insertStat, 1, password.text ?? "", -1,sqlite_TRANSIENT)
-            //                 sqlite3_bind_text(insertStat, 2, lName.text ?? "", -1,sqlite_TRANSIENT)
-            //                 sqlite3_bind_text(insertStat, 3, fName.text ?? "", -1,sqlite_TRANSIENT)
-            //                 sqlite3_bind_text(insertStat, 4, email.text ?? "", -1,sqlite_TRANSIENT)
-            //                 sqlite3_bind_text(insertStat, 5, phNo.text ?? "", -1,sqlite_TRANSIENT)
-            //                 sqlite3_bind_text(insertStat, 6, dob.text ?? "", -1,sqlite_TRANSIENT)
-            //                 print("insert2")
-            
-            //                 if(sqlite3_step(insertStat)) == SQLITE_DONE{
-            
-            //                     lName.text = "testing Roshni"
-            
-            //                     lName.becomeFirstResponder()
-            //                     print("Success")
-            
-            //                 }
-            //                 else{
-            //                     print("error in data to table")
-            //                 }
-            
-            
-            //                 sqlite3_finalize(insertStat)
-            //             }
-            
-            
-            //             let selectStatementString = "SELECT Attendee_Id,Password,Name,FName,EmailId,PhoneNUmber,DOB FROM E_ATTENDEES"
-            
-            //             let tablecount = "SELECT COUNT FROM E_ATTENDEES"
-            
-            //             var selectStatemetnQuery :  OpaquePointer?
-            
-            //             var sShowData = ""
-            
-            //            if sqlite3_prepare_v2(dbQueue, selectStatementString, -1, &selectStatemetnQuery, nil) == SQLITE_OK
-            //             {
-            //                 while sqlite3_step(selectStatemetnQuery) == SQLITE_ROW {
-            
-            //                     sShowData += String(cString: sqlite3_column_text(selectStatemetnQuery, 0)) + "\t\t" +
-            //                                  String(cString: sqlite3_column_text(selectStatemetnQuery, 1)) + "\t\t" +
-            //                                  String(cString: sqlite3_column_text(selectStatemetnQuery, 2)) + "\t\t" +
-            //                                 String(cString: sqlite3_column_text(selectStatemetnQuery, 3)) + "\t\t" +
-            //                                 String(cString: sqlite3_column_text(selectStatemetnQuery, 4)) + "\t\t" +
-            //                                 String(cString: sqlite3_column_text(selectStatemetnQuery, 5)) + "\n"
-            //                     }
-            
-            //              //  sShowData += String(cString: sqlit)
-            
-            //                 sqlite3_finalize(selectStatemetnQuery)
-            //             }
-            //             print("selecting data")
-            //             print(sShowData)
-            
-            //         }
-            //         else{
-            //             print("enter fname and lname")
-            //         }
-            
-        }
-        
-    }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-}
-
-extension UITextField {
-    func shake() {
-        let animation = CABasicAnimation(keyPath: "position")
-        animation.duration = 0.05
-        animation.repeatCount = 5
-        animation.autoreverses = true
-        animation.fromValue = CGPoint(x: self.center.x - 4.0, y: self.center.y)
-        animation.toValue = CGPoint(x: self.center.x + 4.0, y: self.center.y)
-        layer.add(animation, forKey: "position")
     }
 }
