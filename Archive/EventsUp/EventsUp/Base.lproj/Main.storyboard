@@ -1287,7 +1287,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="680-WA-alh">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" id="680-WA-alh">
                                 <rect key="frame" x="0.0" y="50" width="428" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="680-WA-alh" id="jiG-Kn-d2T">
@@ -1305,6 +1305,10 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Events" id="cFe-h2-s7H"/>
+                    <connections>
+                        <outlet property="tabelViewOutlet" destination="eVg-st-1WH" id="IoD-c1-XTC"/>
+                        <outlet property="view" destination="eVg-st-1WH" id="AhW-iI-Yxp"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bqi-9z-XYL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1386,11 +1390,11 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="xLs-7D-eXE"/>
-        <segue reference="ymV-9V-WCZ"/>
-        <segue reference="bKn-Yu-Aun"/>
+        <segue reference="su5-Z2-wuL"/>
+        <segue reference="BLW-GB-cKS"/>
         <segue reference="wnV-wv-OKb"/>
-        <segue reference="em6-4j-2iN"/>
-        <segue reference="fEh-qw-nmN"/>
+        <segue reference="pBe-5G-BgD"/>
+        <segue reference="I7u-ye-830"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="arrow.backward.circle" catalog="system" width="128" height="123"/>

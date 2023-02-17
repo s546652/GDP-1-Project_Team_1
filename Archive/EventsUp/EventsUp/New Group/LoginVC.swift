@@ -100,7 +100,7 @@ class LoginVC: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: .now()+5){
             self.animation()
         }
-        //self.animation()
+        self.animation()
     }
     
     func animation(){
