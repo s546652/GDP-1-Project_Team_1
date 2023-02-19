@@ -157,13 +157,9 @@ class signupControllerViewController: UIViewController {
             }
             else {
                 var a = ["test"]
-                print("test $$$$$")
                 let db = Firestore.firestore()
                 let ref = db.collection("User").document(self.email.text!)
-                print("test $$$$$ 4444444")
-                print(ref)
-                print(" print(test $$$$$)")
-                ref.setData(["fname":self.fName.text!,"lname":self.lName.text!,"username":self.email.text!,"password":self.password.text!]){error in
+                ref.setData(["fname":self.fName.text!,"lname":self.lName.text!,"username":self.email.text!,"password":self.password.text!,"DOB":self.dob.text!,"PhoneNumber":self.phNo.text!]){error in
                     if let error = error {
                         print(error.localizedDescription)
                     }
@@ -171,9 +167,7 @@ class signupControllerViewController: UIViewController {
                         print("check")
                     }
                 }
-                
-            }                                                                    
-                                                                                 
+            }
         }
     }
 }
