@@ -20,14 +20,41 @@ class LoginController: UIViewController {
     
     
     @IBAction func loginBTN(_ sender: Any) {
-        Auth.auth().signIn(withEmail: emailOutlet.text!, password: passwordOutlet.text!){Result, error in
-            if error != nil {
-                print(error!.localizedDescription)
-            }
-            else {
-                print("logged in")
+        if(!emailOutlet.text!.isEmpty && !passwordOutlet.text!.isEmpty) {
+            db = Firestore.firestore()
+            
+            
+            Auth.auth().signIn(withEmail: emailOutlet.text!, password: passwordOutlet.text!){Result, error in
+                if error != nil {
+                    print(error!.localizedDescription)
+                    print("inside auth eror")
+                    self.errorLogin = false
+                    print("inside auth eror",self.errorLogin)
+                }
+                else {
+                    print("inside auth true")
+                    self.wishlitsOutlet.isEnabled = true
+                    self.gobalUsername = self.emailOutlet.text!
+                    print(self.gobalUsername)
+                    if(self.errorLogin){
+                        print("inside errorLogin true")
+                        self.performSegue(withIdentifier: "loginSegue", sender: self)
+                    }
+                }
             }
         }
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            let trans = segue.identifier
+                if trans == "wishlistsegue" {
+                    let des = segue.destination as! wishListControllerViewController
+                    des.username = self.gobalUsername
+                }
+        else if trans == "loginSegue" {
+                let des = segue.destination as! EventsDetailListViewController
+                des.gUsername = emailOutlet.text!
+              
+            }
     }
     
     /*
