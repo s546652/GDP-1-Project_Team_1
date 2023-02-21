@@ -34,7 +34,6 @@
 		F5A77A5428E79076001307B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5A77A5228E79076001307B3 /* Main.storyboard */; };
 		F5A77A5628E79078001307B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5A77A5528E79078001307B3 /* Assets.xcassets */; };
 		F5A77A5928E79078001307B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5A77A5728E79078001307B3 /* LaunchScreen.storyboard */; };
-		F5B184CD29A5535A009EDF43 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = F5B184CC29A5535A009EDF43 /* Lottie */; };
 		F66ECD68290CC10800D89F73 /* MySQLDriver in Frameworks */ = {isa = PBXBuildFile; productRef = F66ECD67290CC10800D89F73 /* MySQLDriver */; };
 /* End PBXBuildFile section */
 
@@ -76,7 +75,6 @@
 				F66ECD68290CC10800D89F73 /* MySQLDriver in Frameworks */,
 				2630EE95297F850F00D69900 /* FirebaseAuth in Frameworks */,
 				2630EE97297F850F00D69900 /* FirebaseFirestore in Frameworks */,
-				F5B184CD29A5535A009EDF43 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,7 +150,6 @@
 				F66ECD67290CC10800D89F73 /* MySQLDriver */,
 				2630EE94297F850F00D69900 /* FirebaseAuth */,
 				2630EE96297F850F00D69900 /* FirebaseFirestore */,
-				F5B184CC29A5535A009EDF43 /* Lottie */,
 			);
 			productName = EventsUp;
 			productReference = F5A77A4928E79076001307B3 /* EventsUp.app */;
@@ -185,7 +182,6 @@
 			packageReferences = (
 				F66ECD66290CC10800D89F73 /* XCRemoteSwiftPackageReference "MySqlSwiftNative" */,
 				2630EE93297F850E00D69900 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
-				F5B184CB29A5535A009EDF43 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			productRefGroup = F5A77A4A28E79076001307B3 /* Products */;
 			projectDirPath = "";
@@ -463,14 +459,6 @@
 				minimumVersion = 9.0.0;
 			};
 		};
-		F5B184CB29A5535A009EDF43 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 4.0.0;
-			};
-		};
 		F66ECD66290CC10800D89F73 /* XCRemoteSwiftPackageReference "MySqlSwiftNative" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/mcorega/MySqlSwiftNative.git";
@@ -491,11 +479,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2630EE93297F850E00D69900 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestore;
-		};
-		F5B184CC29A5535A009EDF43 /* Lottie */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = F5B184CB29A5535A009EDF43 /* XCRemoteSwiftPackageReference "lottie-ios" */;
-			productName = Lottie;
 		};
 		F66ECD67290CC10800D89F73 /* MySQLDriver */ = {
 			isa = XCSwiftPackageProductDependency;
