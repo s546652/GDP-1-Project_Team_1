@@ -41,6 +41,8 @@ class LoginVC: UIViewController {
         print(1)
         performSegue(withIdentifier: "logintohome", sender: self)
         
+        
+        
     }
     
     //@IBOutlet weak var logoIV: UIImageView!
@@ -75,7 +77,7 @@ class LoginVC: UIViewController {
         self.videoLayerUV.layer.addSublayer(playerLayer)
         
         player.play()
-        
+        player.isMuted = true
        // videoLayerUV.bringSubviewToFront(logoIV)
         videoLayerUV.bringSubviewToFront(MainStack)
         
@@ -87,7 +89,7 @@ class LoginVC: UIViewController {
         
         view.addSubview(imageView)
         DispatchQueue.main.asyncAfter(deadline: .now()+10){
-            self.performSegue(withIdentifier: "segue", sender: self)
+            //self.performSegue(withIdentifier: "segue", sender: self)
         }
 
         playVideo()
