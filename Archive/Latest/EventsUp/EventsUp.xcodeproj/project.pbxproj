@@ -35,6 +35,8 @@
 		F55E4AB929A58870007E5850 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5A77A5528E79078001307B3 /* Assets.xcassets */; };
 		F55E4ABB29A58923007E5850 /* Day One at Northwest.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F55E4ABA29A58909007E5850 /* Day One at Northwest.mp4 */; };
 		F55E4ABD29A5AD31007E5850 /* EventsDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55E4ABC29A5AD31007E5850 /* EventsDetailVC.swift */; };
+		F55E4ABF29A5C7EB007E5850 /* PaymentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55E4ABE29A5C7EB007E5850 /* PaymentVC.swift */; };
+		F55E4AC129A5CAAF007E5850 /* UserProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55E4AC029A5CAAF007E5850 /* UserProfileVC.swift */; };
 		F5A77A4D28E79076001307B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A77A4C28E79076001307B3 /* AppDelegate.swift */; };
 		F5A77A4F28E79076001307B3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A77A4E28E79076001307B3 /* SceneDelegate.swift */; };
 		F5A77A5128E79076001307B3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A77A5028E79076001307B3 /* ViewController.swift */; };
@@ -69,6 +71,8 @@
 		F55E4AB729A583C0007E5850 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		F55E4ABA29A58909007E5850 /* Day One at Northwest.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Day One at Northwest.mp4"; sourceTree = "<group>"; };
 		F55E4ABC29A5AD31007E5850 /* EventsDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsDetailVC.swift; sourceTree = "<group>"; };
+		F55E4ABE29A5C7EB007E5850 /* PaymentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentVC.swift; sourceTree = "<group>"; };
+		F55E4AC029A5CAAF007E5850 /* UserProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileVC.swift; sourceTree = "<group>"; };
 		F5A77A4928E79076001307B3 /* EventsUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EventsUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5A77A4C28E79076001307B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F5A77A4E28E79076001307B3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -101,6 +105,8 @@
 				F55E4AB529A583A6007E5850 /* WishlistTVC.swift */,
 				F55E4AB729A583C0007E5850 /* LoginVC.swift */,
 				F55E4ABC29A5AD31007E5850 /* EventsDetailVC.swift */,
+				F55E4ABE29A5C7EB007E5850 /* PaymentVC.swift */,
+				F55E4AC029A5CAAF007E5850 /* UserProfileVC.swift */,
 			);
 			name = "New Group";
 			sourceTree = "<group>";
@@ -251,6 +257,7 @@
 				F55E4AB229A5836F007E5850 /* HomeVC.swift in Sources */,
 				260E922328F4D5E60020B79F /* signupController.swift in Sources */,
 				26AD9F7828EA5CFF0017E297 /* EventsListController.swift in Sources */,
+				F55E4ABF29A5C7EB007E5850 /* PaymentVC.swift in Sources */,
 				264F965F298A0F0D00573A24 /* WishList.swift in Sources */,
 				F55E4ABD29A5AD31007E5850 /* EventsDetailVC.swift in Sources */,
 				26247E2829881A44001BCE1E /* wishListControllerViewController.swift in Sources */,
@@ -260,6 +267,7 @@
 				F5A77A4D28E79076001307B3 /* AppDelegate.swift in Sources */,
 				264F96B22990B17C00573A24 /* wishlistService.swift in Sources */,
 				F5A77A4F28E79076001307B3 /* SceneDelegate.swift in Sources */,
+				F55E4AC129A5CAAF007E5850 /* UserProfileVC.swift in Sources */,
 				266A5A5529A2C80900F2935D /* CalendarData.swift in Sources */,
 				26F717FB291888B4009B2BE1 /* Calendar.swift in Sources */,
 				264F9663298A15EE00573A24 /* WishListView.swift in Sources */,
