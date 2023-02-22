@@ -48,6 +48,9 @@ class EventsDetailListViewController: UIViewController, UITableViewDelegate, UIT
     
     
     @IBAction func wishListBTN(_ sender: Any) {
+        
+        
+        
         self.performSegue(withIdentifier: "seguewishlist", sender: self)
     }
     

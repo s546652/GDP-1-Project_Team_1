@@ -164,13 +164,28 @@ class signupControllerViewController: UIViewController {
                 ref.setData(["fname":self.fName.text!,"lname":self.lName.text!,"username":self.email.text!,"password":self.password.text!,"DOB":self.dob.text!,"PhoneNumber":self.phNo.text!]){error in
                     if let error = error {
                         print(error.localizedDescription)
+                        
+                        
                     }
                     else{
                         print("check")
+                        var dialogMessage = UIAlertController(title: "Confirm", message: "Are you sure you want to create an Account?", preferredStyle: .alert)
+                        
+                        // Create OK button with action handler
+                        let ok = UIAlertAction(title: "OK", style: .default, handler: { (action) -> Void in
+                            print("Ok button tapped")
+                         })
+                        
+                        //Add OK button to a dialog message
+                        dialogMessage.addAction(ok)
+
+                        // Present Alert to
+                        self.present(dialogMessage, animated: true, completion: nil)
                     }
                 }
             }
         }
+        // Create new Alert
         
     }
 }

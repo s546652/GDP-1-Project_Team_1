@@ -32,6 +32,7 @@ class EventsListController: UIViewController, UITableViewDelegate, UITableViewDa
     
     @IBOutlet weak var dataTableView: UITableView!
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         var t:[String]!
         db = Firestore.firestore()
