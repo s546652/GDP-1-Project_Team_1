@@ -43,18 +43,40 @@ class LoginController: UIViewController {
                     print("inside auth eror",self.errorLogin)
                 }
                 else {
+                    
                     print("inside auth true")
                     self.wishlitsOutlet.isEnabled = true
                     self.gobalUsername = self.emailOutlet.text!
                     print(self.gobalUsername)
+                   
                     if(self.errorLogin){
                         print("inside errorLogin true")
                        // self.performSegue(withIdentifier: "loginSegue", sender: self)
+                        
+                        
+                        
                         self.performSegue(withIdentifier: "calendarDataSegue", sender: self)
+                        
+                        
+                        
+                       
                     }
                 }
             }
         }
+        // Create new Alert
+//        var dialogMessage = UIAlertController(title: "Confirm", message: "Are you sure you want to login ?", preferredStyle: .alert)
+//
+//        // Create OK button with action handler
+//        let ok = UIAlertAction(title: "OK", style: .default, handler: { (action) -> Void in
+//            print("Ok button tapped")
+//         })
+//
+//        //Add OK button to a dialog message
+//        dialogMessage.addAction(ok)
+//
+//        // Present Alert to
+//        self.present(dialogMessage, animated: true, completion: nil)
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
             let trans = segue.identifier

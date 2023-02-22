@@ -29,6 +29,21 @@ class UserAccPageViewController: UIViewController {
         db.collection("User").document(EmailAddress.text!).delete()
         Auth.auth().currentUser?.delete()
         
+        
+        // Create new Alert
+        var dialogMessage = UIAlertController(title: "Confirm", message: "Are you sure you want to delete this?", preferredStyle: .alert)
+        
+        // Create OK button with action handler
+        let ok = UIAlertAction(title: "OK", style: .default, handler: { (action) -> Void in
+            print("Ok button tapped")
+         })
+        
+        //Add OK button to a dialog message
+        dialogMessage.addAction(ok)
+
+        // Present Alert to
+        self.present(dialogMessage, animated: true, completion: nil)
+        
     }
     @IBAction func logoutAccount(_ sender: Any) {
         db = Firestore.firestore()
