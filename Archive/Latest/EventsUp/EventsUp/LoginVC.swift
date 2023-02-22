@@ -10,7 +10,8 @@ import Firebase
 import AVFoundation
 
 class LoginVC: UIViewController {
-    
+    var db: Firestore!
+    var errorLogin = true
     var imageView: UIImageView = {
         
         let imageView = UIImageView(frame: CGRect(x:0, y:0, width: 150, height: 150))
@@ -19,28 +20,62 @@ class LoginVC: UIViewController {
     }()
     
     
-
+    
     @IBAction func LoginBTN(_ sender: UIButton) {
         
-        performSegue(withIdentifier: "logintohome", sender: self)
-        // Create new Alert
-        var dialogMessage = UIAlertController(title: "Success", message: "You are succesfully logged in", preferredStyle: .alert)
         
-        // Create OK button with action handler
-        let ok = UIAlertAction(title: "OK", style: .default, handler: { (action) -> Void in
-            print("Ok button tapped")
-            
-         })
         
-        //Add OK button to a dialog message
-        dialogMessage.addAction(ok)
+        print("inside login button",EmailTF.text!,EmailTF.text!.isEmpty,PasswordTF.text!,!PasswordTF.text!.isEmpty)
         
-
-        // Present Alert to
-        self.present(dialogMessage, animated: true, completion: nil)
-        print(1)
-        performSegue(withIdentifier: "logintohome", sender: self)
+        if(!EmailTF.text!.isEmpty && !PasswordTF.text!.isEmpty) {
+           
+            db = Firestore.firestore()
+            Auth.auth().signIn(withEmail: EmailTF.text!, password: PasswordTF.text!){Result, error in
+                if error != nil {
+                    print(error!.localizedDescription)
+                    print("inside auth eror")
+                    self.errorLogin = false
+                    print("inside auth eror",self.errorLogin)
+                }
+                else {
+                    
+                    print("inside auth true")
+                    
+                    if(self.errorLogin){
+                        print("inside errorLogin true")
+                        // self.performSegue(withIdentifier: "loginSegue", sender: self)
+                        
+                        
+                        
+                        self.performSegue(withIdentifier: "logintohome", sender: self)
+                        
+                        
+                        
+                        
+                    }
+                }
+            }
+        }
         
+        //        performSegue(withIdentifier: "logintohome", sender: self)
+        //        // Create new Alert
+        //        var dialogMessage = UIAlertController(title: "Success", message: "You are succesfully logged in", preferredStyle: .alert)
+        //
+        //        // Create OK button with action handler
+        //        let ok = UIAlertAction(title: "OK", style: .default, handler: { (action) -> Void in
+        //            print("Ok button tapped")
+        //
+        //         })
+        //
+        //        //Add OK button to a dialog message
+        //        dialogMessage.addAction(ok)
+        //
+        //
+        //        // Present Alert to
+        //        self.present(dialogMessage, animated: true, completion: nil)
+        //        print(1)
+        //        performSegue(withIdentifier: "logintohome", sender: self)
+        //
         
         
     }
@@ -50,9 +85,9 @@ class LoginVC: UIViewController {
     @IBOutlet var videoLayerUV: UIView!
     
     @IBOutlet weak var EmailTF: UITextField!
+    @IBOutlet weak var PasswordTF: UITextField!
     
-    @IBAction func PasswordTF(_ sender: UITextField) {
-    }
+    
     
     @IBAction func SignupBTN(_ sender: UIButton) {
         print(1)
@@ -78,7 +113,7 @@ class LoginVC: UIViewController {
         
         player.play()
         player.isMuted = true
-       // videoLayerUV.bringSubviewToFront(logoIV)
+        // videoLayerUV.bringSubviewToFront(logoIV)
         videoLayerUV.bringSubviewToFront(MainStack)
         
     }
@@ -91,7 +126,7 @@ class LoginVC: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: .now()+10){
             //self.performSegue(withIdentifier: "segue", sender: self)
         }
-
+        
         playVideo()
         
     }
@@ -115,15 +150,15 @@ class LoginVC: UIViewController {
             self.imageView.alpha = 0
         }
     }
-
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }

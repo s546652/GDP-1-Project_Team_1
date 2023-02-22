@@ -64,7 +64,7 @@
                                 <rect key="frame" x="150" y="595" width="128" height="128"/>
                             </imageView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YXW-gs-Kwf">
-                                <rect key="frame" x="-14" y="836" width="429" height="45"/>
+                                <rect key="frame" x="-15" y="836" width="429" height="45"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem title="Events" image="list.bullet.rectangle.portrait" catalog="system" id="KXl-ff-QWF">
@@ -293,7 +293,7 @@
                                 </constraints>
                             </stackView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7tB-Tu-CS0">
-                                <rect key="frame" x="-10" y="845" width="426" height="43"/>
+                                <rect key="frame" x="-11" y="845" width="426" height="43"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem title="Events" image="list.bullet.rectangle.portrait" catalog="system" id="XFT-rf-KzF">
@@ -559,7 +559,7 @@
                                 </items>
                             </navigationBar>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bKE-s0-zlt">
-                                <rect key="frame" x="-17" y="838" width="434" height="44"/>
+                                <rect key="frame" x="-18" y="838" width="434" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem title="Events" image="list.bullet.rectangle.portrait" catalog="system" id="ksh-Tt-j8C">
@@ -714,14 +714,14 @@
                                 <rect key="frame" x="20" y="271" width="388" height="568"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="vQH-k1-uCC">
-                                        <rect key="frame" x="0.0" y="0.0" width="388" height="128"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="388" height="50"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <color key="textColor" systemColor="labelColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="I9f-QD-YZh">
-                                        <rect key="frame" x="0.0" y="233" width="388" height="102"/>
+                                        <rect key="frame" x="0.0" y="155" width="388" height="102"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="102" id="ahl-So-KTK"/>
@@ -731,7 +731,7 @@
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="IbN-V2-lRF">
-                                        <rect key="frame" x="0.0" y="440" width="388" height="128"/>
+                                        <rect key="frame" x="0.0" y="362" width="388" height="206"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <color key="textColor" systemColor="labelColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -980,11 +980,11 @@
             <objects>
                 <viewController id="rNN-vo-tyr" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cEx-Yg-uJe">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="869"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Fhi-Fz-Tlm">
-                                <rect key="frame" x="20" y="299" width="388" height="328.33333333333326"/>
+                                <rect key="frame" x="20" y="270.33333333333337" width="388" height="328.33333333333337"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="P1a-QE-rKy">
                                         <rect key="frame" x="0.0" y="0.0" width="388" height="34"/>
@@ -1017,12 +1017,12 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Re-enter Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="39Q-aS-OUL">
-                                        <rect key="frame" x="0.0" y="252" width="388" height="34"/>
+                                        <rect key="frame" x="0.0" y="252.00000000000006" width="388" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="YT3-e8-uUo">
-                                        <rect key="frame" x="0.0" y="294" width="388" height="34.333333333333314"/>
+                                        <rect key="frame" x="0.0" y="294.00000000000006" width="388" height="34.333333333333314"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lA6-jv-7d0">
                                                 <rect key="frame" x="0.0" y="0.0" width="124" height="34.333333333333336"/>
@@ -1062,18 +1062,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="my5-Ch-c4a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-10888" y="4555"/>
+            <point key="canvasLocation" x="-12171" y="3743"/>
         </scene>
         <!--LoginVC-->
         <scene sceneID="jmn-h1-DWz">
             <objects>
                 <viewController id="C8i-gM-4Nn" customClass="LoginVC" customModule="EventsUp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="X3S-bO-oeo">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="869"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="fLQ-Sn-HOe">
-                                <rect key="frame" x="20" y="322" width="388" height="282"/>
+                                <rect key="frame" x="20" y="293.66666666666669" width="388" height="282.00000000000006"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="6g7-v9-cYb">
                                         <rect key="frame" x="0.0" y="0.0" width="388" height="282"/>
@@ -1087,9 +1087,6 @@
                                                 <rect key="frame" x="0.0" y="58" width="388" height="50"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
-                                                <connections>
-                                                    <action selector="PasswordTF:" destination="C8i-gM-4Nn" eventType="editingDidEnd" id="GHp-vZ-mJY"/>
-                                                </connections>
                                             </textField>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="hPD-AK-2nU">
                                                 <rect key="frame" x="0.0" y="116" width="388" height="50"/>
@@ -1124,7 +1121,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ozk-XA-uQO">
-                                                <rect key="frame" x="0.0" y="232" width="388" height="50"/>
+                                                <rect key="frame" x="0.0" y="231.99999999999994" width="388" height="50"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Asw-df-xzd">
                                                         <rect key="frame" x="0.0" y="0.0" width="124" height="50"/>
@@ -1168,6 +1165,7 @@
                         <outlet property="EmailTF" destination="8A7-6O-JF7" id="7A5-NC-RRa"/>
                         <outlet property="MainStack" destination="fLQ-Sn-HOe" id="gyd-bh-pxl"/>
                         <outlet property="OrLabel" destination="fhP-Ih-vLD" id="HOv-ah-zl9"/>
+                        <outlet property="PasswordTF" destination="isD-lz-l0s" id="NwO-Yf-ALY"/>
                         <outlet property="videoLayerUV" destination="X3S-bO-oeo" id="RV9-HM-ssQ"/>
                     </connections>
                 </viewController>
@@ -1569,7 +1567,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="vzh-LX-Qha"/>
         <segue reference="YOw-2c-hj9"/>
-        <segue reference="ZaW-Rz-cvl"/>
+        <segue reference="ZB1-zF-JgJ"/>
         <segue reference="su5-Z2-wuL"/>
         <segue reference="BLW-GB-cKS"/>
         <segue reference="IKF-aI-YBU"/>
