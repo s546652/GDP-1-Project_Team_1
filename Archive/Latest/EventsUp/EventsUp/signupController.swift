@@ -169,19 +169,17 @@ class signupControllerViewController: UIViewController {
                     }
                     else{
                         print("check")
-                        var dialogMessage = UIAlertController(title: "Confirm", message: "Are you sure you want to create an Account?", preferredStyle: .alert)
-                        
-                        // Create OK button with action handler
-                        let ok = UIAlertAction(title: "OK", style: .default, handler: { (action) -> Void in
-                            print("Ok button tapped")
-                         })
-                        
-                        //Add OK button to a dialog message
-                        dialogMessage.addAction(ok)
-
-                        // Present Alert to
-                        self.present(dialogMessage, animated: true, completion: nil)
-                    }
+                        let defaultAction = UIAlertAction(title: "Ok",
+                                                style: .default) { (action) in
+                            print("test")
+                          //  self.performSegue(withIdentifier: "logintohome", sender: self)
+                           }
+                          let alert = UIAlertController(title: "Details",
+                                 message: "Signup Successfull",
+                                 preferredStyle: .alert)
+                           alert.addAction(defaultAction)
+                           self.present(alert, animated: true) {
+                           }                    }
                 }
             }
         }

@@ -64,7 +64,7 @@
                                 <rect key="frame" x="150" y="595" width="128" height="128"/>
                             </imageView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YXW-gs-Kwf">
-                                <rect key="frame" x="-15" y="836" width="429" height="45"/>
+                                <rect key="frame" x="-15" y="835" width="427" height="46"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem title="Events" image="list.bullet.rectangle.portrait" catalog="system" id="KXl-ff-QWF">
@@ -293,7 +293,7 @@
                                 </constraints>
                             </stackView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7tB-Tu-CS0">
-                                <rect key="frame" x="-11" y="845" width="426" height="43"/>
+                                <rect key="frame" x="-12" y="844" width="426" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem title="Events" image="list.bullet.rectangle.portrait" catalog="system" id="XFT-rf-KzF">
@@ -559,7 +559,7 @@
                                 </items>
                             </navigationBar>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bKE-s0-zlt">
-                                <rect key="frame" x="-18" y="838" width="434" height="44"/>
+                                <rect key="frame" x="-20" y="837" width="434" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem title="Events" image="list.bullet.rectangle.portrait" catalog="system" id="ksh-Tt-j8C">
@@ -1103,7 +1103,6 @@
                                                         <buttonConfiguration key="configuration" style="filled" title="Login"/>
                                                         <connections>
                                                             <action selector="LoginBTN:" destination="C8i-gM-4Nn" eventType="touchUpInside" id="WSl-pE-oXe"/>
-                                                            <segue destination="ZvX-wE-vLQ" kind="presentation" identifier="logintohome" modalPresentationStyle="fullScreen" id="MsS-92-xWv"/>
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7jp-zb-FH3">
@@ -1167,6 +1166,7 @@
                         <outlet property="OrLabel" destination="fhP-Ih-vLD" id="HOv-ah-zl9"/>
                         <outlet property="PasswordTF" destination="isD-lz-l0s" id="NwO-Yf-ALY"/>
                         <outlet property="videoLayerUV" destination="X3S-bO-oeo" id="RV9-HM-ssQ"/>
+                        <segue destination="ZvX-wE-vLQ" kind="presentation" identifier="logintohome" modalPresentationStyle="fullScreen" id="Ieo-tQ-BQQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mhy-Bu-lRS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

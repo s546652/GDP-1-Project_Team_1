@@ -36,48 +36,46 @@ class LoginVC: UIViewController {
                     print("inside auth eror")
                     self.errorLogin = false
                     print("inside auth eror",self.errorLogin)
+                    
+            
+                    let defaultAction = UIAlertAction(title: "Ok",
+                                            style: .default) { (action) in
+                       
+                        // Respond to user selection of the action.
+                       }
+//                       let cancelAction = UIAlertAction(title: "Disagree",
+//                                            style: .cancel) { (action) in
+//                        // Respond to user selection of the action.
+//                       }
+//
+                       // Create and configure the alert controller.
+                       let alert = UIAlertController(title: "Please cross-check the details",
+                             message:error!.localizedDescription ,
+                             preferredStyle: .alert)
+                       alert.addAction(defaultAction)
+                       self.present(alert, animated: true) {
+                          // The alert was presented
+                       }
+                   
                 }
                 else {
-                    
-                    print("inside auth true")
-                    
+                                        
                     if(self.errorLogin){
-                        print("inside errorLogin true")
-                        // self.performSegue(withIdentifier: "loginSegue", sender: self)
-                        
-                        
-                        
-                        self.performSegue(withIdentifier: "logintohome", sender: self)
-                        
-                        
-                        
-                        
+                        let defaultAction = UIAlertAction(title: "Ok",
+                                                style: .default) { (action) in
+                            print("test")
+                            self.performSegue(withIdentifier: "logintohome", sender: self)
+                           }
+                          let alert = UIAlertController(title: "Details",
+                                 message: "Successfull login",
+                                 preferredStyle: .alert)
+                           alert.addAction(defaultAction)
+                           self.present(alert, animated: true) {
+                           }
                     }
                 }
             }
         }
-        
-        //        performSegue(withIdentifier: "logintohome", sender: self)
-        //        // Create new Alert
-        //        var dialogMessage = UIAlertController(title: "Success", message: "You are succesfully logged in", preferredStyle: .alert)
-        //
-        //        // Create OK button with action handler
-        //        let ok = UIAlertAction(title: "OK", style: .default, handler: { (action) -> Void in
-        //            print("Ok button tapped")
-        //
-        //         })
-        //
-        //        //Add OK button to a dialog message
-        //        dialogMessage.addAction(ok)
-        //
-        //
-        //        // Present Alert to
-        //        self.present(dialogMessage, animated: true, completion: nil)
-        //        print(1)
-        //        performSegue(withIdentifier: "logintohome", sender: self)
-        //
-        
-        
     }
     
     //@IBOutlet weak var logoIV: UIImageView!
