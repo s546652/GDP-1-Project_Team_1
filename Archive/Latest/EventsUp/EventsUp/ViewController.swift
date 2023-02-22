@@ -29,7 +29,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         print("test view")
-        super.viewDidLoad()
+        //super.viewDidLoad
         // Do any additional setup after loading the view.
         displayImageOutlet.image = UIImage(named: img[imgNum])
         preOutlet.isEnabled = false

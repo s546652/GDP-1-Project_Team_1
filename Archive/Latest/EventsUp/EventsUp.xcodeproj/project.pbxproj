@@ -28,11 +28,17 @@
 		26F717FD29188A0A009B2BE1 /* EventsDetailListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F717FC29188A0A009B2BE1 /* EventsDetailListViewController.swift */; };
 		F50DA3952908B89800342EDA /* PayemntController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50DA3942908B89800342EDA /* PayemntController.swift */; };
 		F5186A5A28E8F4F800806FAB /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5186A5928E8F4F800806FAB /* LoginController.swift */; };
+		F55E4AB229A5836F007E5850 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55E4AB129A5836F007E5850 /* HomeVC.swift */; };
+		F55E4AB429A58393007E5850 /* EventsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55E4AB329A58393007E5850 /* EventsTVC.swift */; };
+		F55E4AB629A583A6007E5850 /* WishlistTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55E4AB529A583A6007E5850 /* WishlistTVC.swift */; };
+		F55E4AB829A583C0007E5850 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55E4AB729A583C0007E5850 /* LoginVC.swift */; };
+		F55E4AB929A58870007E5850 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5A77A5528E79078001307B3 /* Assets.xcassets */; };
+		F55E4ABB29A58923007E5850 /* Day One at Northwest.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F55E4ABA29A58909007E5850 /* Day One at Northwest.mp4 */; };
+		F55E4ABD29A5AD31007E5850 /* EventsDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55E4ABC29A5AD31007E5850 /* EventsDetailVC.swift */; };
 		F5A77A4D28E79076001307B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A77A4C28E79076001307B3 /* AppDelegate.swift */; };
 		F5A77A4F28E79076001307B3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A77A4E28E79076001307B3 /* SceneDelegate.swift */; };
 		F5A77A5128E79076001307B3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A77A5028E79076001307B3 /* ViewController.swift */; };
 		F5A77A5428E79076001307B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5A77A5228E79076001307B3 /* Main.storyboard */; };
-		F5A77A5628E79078001307B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5A77A5528E79078001307B3 /* Assets.xcassets */; };
 		F5A77A5928E79078001307B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5A77A5728E79078001307B3 /* LaunchScreen.storyboard */; };
 		F66ECD68290CC10800D89F73 /* MySQLDriver in Frameworks */ = {isa = PBXBuildFile; productRef = F66ECD67290CC10800D89F73 /* MySQLDriver */; };
 /* End PBXBuildFile section */
@@ -57,6 +63,12 @@
 		26F717FC29188A0A009B2BE1 /* EventsDetailListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsDetailListViewController.swift; sourceTree = "<group>"; };
 		F50DA3942908B89800342EDA /* PayemntController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayemntController.swift; sourceTree = "<group>"; };
 		F5186A5928E8F4F800806FAB /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		F55E4AB129A5836F007E5850 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		F55E4AB329A58393007E5850 /* EventsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsTVC.swift; sourceTree = "<group>"; };
+		F55E4AB529A583A6007E5850 /* WishlistTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistTVC.swift; sourceTree = "<group>"; };
+		F55E4AB729A583C0007E5850 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		F55E4ABA29A58909007E5850 /* Day One at Northwest.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Day One at Northwest.mp4"; sourceTree = "<group>"; };
+		F55E4ABC29A5AD31007E5850 /* EventsDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsDetailVC.swift; sourceTree = "<group>"; };
 		F5A77A4928E79076001307B3 /* EventsUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EventsUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5A77A4C28E79076001307B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F5A77A4E28E79076001307B3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +93,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F55E4AB029A58335007E5850 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				F55E4AB129A5836F007E5850 /* HomeVC.swift */,
+				F55E4AB329A58393007E5850 /* EventsTVC.swift */,
+				F55E4AB529A583A6007E5850 /* WishlistTVC.swift */,
+				F55E4AB729A583C0007E5850 /* LoginVC.swift */,
+				F55E4ABC29A5AD31007E5850 /* EventsDetailVC.swift */,
+			);
+			name = "New Group";
+			sourceTree = "<group>";
+		};
 		F5A77A4028E79076001307B3 = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +125,7 @@
 		F5A77A4B28E79076001307B3 /* EventsUp */ = {
 			isa = PBXGroup;
 			children = (
+				F55E4AB029A58335007E5850 /* New Group */,
 				F5A77A4C28E79076001307B3 /* AppDelegate.swift */,
 				F5A77A4E28E79076001307B3 /* SceneDelegate.swift */,
 				F5A77A5028E79076001307B3 /* ViewController.swift */,
@@ -108,6 +133,7 @@
 				263E36F929A349490023794B /* CalendarEventDetailDesViewController.swift */,
 				F5A77A5228E79076001307B3 /* Main.storyboard */,
 				F5A77A5528E79078001307B3 /* Assets.xcassets */,
+				F55E4ABA29A58909007E5850 /* Day One at Northwest.mp4 */,
 				2630EE98297F868300D69900 /* GoogleService-Info.plist */,
 				F5A77A5728E79078001307B3 /* LaunchScreen.storyboard */,
 				F5A77A5A28E79078001307B3 /* Info.plist */,
@@ -199,8 +225,9 @@
 			files = (
 				2630EE99297F868300D69900 /* GoogleService-Info.plist in Resources */,
 				F5A77A5928E79078001307B3 /* LaunchScreen.storyboard in Resources */,
-				F5A77A5628E79078001307B3 /* Assets.xcassets in Resources */,
+				F55E4AB929A58870007E5850 /* Assets.xcassets in Resources */,
 				F5A77A5428E79076001307B3 /* Main.storyboard in Resources */,
+				F55E4ABB29A58923007E5850 /* Day One at Northwest.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,18 +247,23 @@
 				263E36FA29A349490023794B /* CalendarEventDetailDesViewController.swift in Sources */,
 				2690BBAE28F0D73500C74A1F /* TableViewController.swift in Sources */,
 				264F96B02990B0B400573A24 /* wishlistFirebase.swift in Sources */,
+				F55E4AB829A583C0007E5850 /* LoginVC.swift in Sources */,
+				F55E4AB229A5836F007E5850 /* HomeVC.swift in Sources */,
 				260E922328F4D5E60020B79F /* signupController.swift in Sources */,
 				26AD9F7828EA5CFF0017E297 /* EventsListController.swift in Sources */,
 				264F965F298A0F0D00573A24 /* WishList.swift in Sources */,
+				F55E4ABD29A5AD31007E5850 /* EventsDetailVC.swift in Sources */,
 				26247E2829881A44001BCE1E /* wishListControllerViewController.swift in Sources */,
 				F50DA3952908B89800342EDA /* PayemntController.swift in Sources */,
 				F5186A5A28E8F4F800806FAB /* LoginController.swift in Sources */,
+				F55E4AB629A583A6007E5850 /* WishlistTVC.swift in Sources */,
 				F5A77A4D28E79076001307B3 /* AppDelegate.swift in Sources */,
 				264F96B22990B17C00573A24 /* wishlistService.swift in Sources */,
 				F5A77A4F28E79076001307B3 /* SceneDelegate.swift in Sources */,
 				266A5A5529A2C80900F2935D /* CalendarData.swift in Sources */,
 				26F717FB291888B4009B2BE1 /* Calendar.swift in Sources */,
 				264F9663298A15EE00573A24 /* WishListView.swift in Sources */,
+				F55E4AB429A58393007E5850 /* EventsTVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
