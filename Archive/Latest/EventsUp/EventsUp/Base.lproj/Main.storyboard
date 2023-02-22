@@ -1087,6 +1087,9 @@
                                                 <rect key="frame" x="0.0" y="58" width="388" height="50"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="editChange:" destination="C8i-gM-4Nn" eventType="editingDidEnd" id="bEV-Ie-7Sx"/>
+                                                </connections>
                                             </textField>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="hPD-AK-2nU">
                                                 <rect key="frame" x="0.0" y="116" width="388" height="50"/>

@@ -11,6 +11,8 @@ import AVFoundation
 
 class LoginVC: UIViewController {
     var db: Firestore!
+    var email:String = ""
+    var pass:String = ""
     var errorLogin = true
     var imageView: UIImageView = {
         
@@ -25,7 +27,7 @@ class LoginVC: UIViewController {
         
         
         
-        print("inside login button",EmailTF.text!,EmailTF.text!.isEmpty,PasswordTF.text!,!PasswordTF.text!.isEmpty)
+        print("inside login button",EmailTF.text!,!EmailTF.text!.isEmpty,PasswordTF.text!,!PasswordTF.text!.isEmpty)
         
         if(!EmailTF.text!.isEmpty && !PasswordTF.text!.isEmpty) {
            
@@ -40,7 +42,8 @@ class LoginVC: UIViewController {
             
                     let defaultAction = UIAlertAction(title: "Ok",
                                             style: .default) { (action) in
-                       
+                        self.email = self.EmailTF.text!
+                        self.pass = self.PasswordTF.text!
                         // Respond to user selection of the action.
                        }
 //                       let cancelAction = UIAlertAction(title: "Disagree",
@@ -61,6 +64,7 @@ class LoginVC: UIViewController {
                 else {
                                         
                     if(self.errorLogin){
+                        print("test login tru case",self.errorLogin)
                         let defaultAction = UIAlertAction(title: "Ok",
                                                 style: .default) { (action) in
                             print("test")
@@ -148,6 +152,14 @@ class LoginVC: UIViewController {
             self.imageView.alpha = 0
         }
     }
+    
+    @IBAction func editChange(_ sender: Any) {
+        if (EmailTF.text! != email && PasswordTF.text! != pass){
+           
+        }
+    }
+    
+  
     
     /*
      // MARK: - Navigation
