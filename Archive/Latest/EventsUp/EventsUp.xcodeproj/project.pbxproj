@@ -22,6 +22,7 @@
 		264F96B22990B17C00573A24 /* wishlistService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264F96B12990B17C00573A24 /* wishlistService.swift */; };
 		266A5A5529A2C80900F2935D /* CalendarData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266A5A5429A2C80900F2935D /* CalendarData.swift */; };
 		266A5A9C29A2D47500F2935D /* UserAccPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266A5A9B29A2D47500F2935D /* UserAccPageViewController.swift */; };
+		266DE80929A719FF001E513D /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266DE80829A719FF001E513D /* SignUpVC.swift */; };
 		2690BBAE28F0D73500C74A1F /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2690BBAD28F0D73500C74A1F /* TableViewController.swift */; };
 		26AD9F7828EA5CFF0017E297 /* EventsListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26AD9F7728EA5CFF0017E297 /* EventsListController.swift */; };
 		26F717FB291888B4009B2BE1 /* Calendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F717FA291888B4009B2BE1 /* Calendar.swift */; };
@@ -61,6 +62,7 @@
 		264F96B12990B17C00573A24 /* wishlistService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wishlistService.swift; sourceTree = "<group>"; };
 		266A5A5429A2C80900F2935D /* CalendarData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarData.swift; sourceTree = "<group>"; };
 		266A5A9B29A2D47500F2935D /* UserAccPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccPageViewController.swift; sourceTree = "<group>"; };
+		266DE80829A719FF001E513D /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		2690BBAD28F0D73500C74A1F /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		26AD9F7728EA5CFF0017E297 /* EventsListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsListController.swift; sourceTree = "<group>"; };
 		26F717FA291888B4009B2BE1 /* Calendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calendar.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				F55E4ABE29A5C7EB007E5850 /* PaymentVC.swift */,
 				F55E4AC729A66F4B007E5850 /* 31737-savings-dollar.json */,
 				F55E4AC029A5CAAF007E5850 /* UserProfileVC.swift */,
+				266DE80829A719FF001E513D /* SignUpVC.swift */,
 			);
 			name = "New Group";
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 				F5186A5A28E8F4F800806FAB /* LoginController.swift in Sources */,
 				F55E4AB629A583A6007E5850 /* WishlistTVC.swift in Sources */,
 				F5A77A4D28E79076001307B3 /* AppDelegate.swift in Sources */,
+				266DE80929A719FF001E513D /* SignUpVC.swift in Sources */,
 				264F96B22990B17C00573A24 /* wishlistService.swift in Sources */,
 				F5A77A4F28E79076001307B3 /* SceneDelegate.swift in Sources */,
 				F55E4AC129A5CAAF007E5850 /* UserProfileVC.swift in Sources */,

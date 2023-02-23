@@ -6,9 +6,24 @@
 //
 
 import UIKit
+import Firebase
+//import FirebaseFirestoreSwift
+import FirebaseFirestore
+
 
 class WishlistTVC: UITableViewController {
+    var username:String!
+    var ename:[String] = ["x"]
+    var db: Firestore!
+    var size: Int = 0
+    var records:WishList!
+    
+   
+   
+    
 
+    @IBOutlet weak var cellOutlet: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -31,29 +46,64 @@ class WishlistTVC: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+        
+        var t:String!
+        db = Firestore.firestore()
+        print("username --- ",username!)
+        db.collection("WishList").whereField("User", isEqualTo: username!)
+            .getDocuments() { [self] (querySnapshot, err) in
+                if let err = err {
+                    print("Error getting documents: \(err)")
+                } else {
+                    print(555,querySnapshot!.documents.count)
+                    size = querySnapshot!.documents.count
+                    for document in querySnapshot!.documents {
+                        t = document.documentID
+                        print(t)
+                        if(t!.isEmpty == false){
+                            ename.append(t)
+                    }
+                  }
+                    cellOutlet.reloadData()
+                }
+               // print(ename)
+        }
+        print("size of the list is \(size)")
+        cellOutlet.delegate = self
+        cellOutlet.delegate = self
+   // }
+    
+   
     }
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
+//    override func numberOfSections(in tableView: UITableView) -> Int {
+//        #warning Incomplete implementation, return the number of sections
+//       return 0
+//    }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+       // return 0
+        print(ename.count-1,size)
+        return ename.count-1
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+//
+//        // Configure the cell...
+//
+//        return cell
+        var cell = cellOutlet.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        print(ename[indexPath.row+1].self)
+        cell.textLabel?.text = ename[indexPath.row+1].self
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
