@@ -50,8 +50,9 @@ class WishlistTVC: UITableViewController {
         
         var t:String!
         db = Firestore.firestore()
-        print("username --- ",username!)
-        db.collection("WishList").whereField("User", isEqualTo: username!)
+        Auth.auth().currentUser?.email
+        print("username --- ", Auth.auth().currentUser?.email!)
+        db.collection("WishList").whereField("User", isEqualTo:  (Auth.auth().currentUser?.email!)!)
             .getDocuments() { [self] (querySnapshot, err) in
                 if let err = err {
                     print("Error getting documents: \(err)")

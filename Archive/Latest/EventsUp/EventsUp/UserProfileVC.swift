@@ -57,8 +57,9 @@ class UserProfileVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+       print("inisde user profile vc",(Auth.auth().currentUser?.email!)!)
         db = Firestore.firestore()
+        usernames = (Auth.auth().currentUser?.email!)!
         db.collection("User").whereField("username", isEqualTo: usernames)
             .getDocuments() { [self] (querySnapshot, err) in
                 if let err = err {
