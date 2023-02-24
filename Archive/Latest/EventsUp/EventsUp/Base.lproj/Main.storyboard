@@ -64,7 +64,7 @@
                                 <rect key="frame" x="150" y="595" width="128" height="128"/>
                             </imageView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YXW-gs-Kwf">
-                                <rect key="frame" x="-19" y="833" width="426" height="46"/>
+                                <rect key="frame" x="-19" y="833" width="425" height="46"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem title="Events" image="list.bullet.rectangle.portrait" catalog="system" id="KXl-ff-QWF">
@@ -293,7 +293,7 @@
                                 </constraints>
                             </stackView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7tB-Tu-CS0">
-                                <rect key="frame" x="-17" y="841" width="426" height="43"/>
+                                <rect key="frame" x="-18" y="840" width="426" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem title="Events" image="list.bullet.rectangle.portrait" catalog="system" id="XFT-rf-KzF">
@@ -559,7 +559,7 @@
                                 </items>
                             </navigationBar>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bKE-s0-zlt">
-                                <rect key="frame" x="-25" y="833" width="434" height="43"/>
+                                <rect key="frame" x="-26" y="833" width="434" height="42"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem title="Events" image="list.bullet.rectangle.portrait" catalog="system" id="ksh-Tt-j8C">
@@ -1493,6 +1493,9 @@
                                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                                     <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="wishListBTN:" destination="rZt-fj-G2M" eventType="touchUpInside" id="KDI-dk-bCA"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fr8-BK-mrm">
                                                 <rect key="frame" x="198" y="0.0" width="190" height="34.333333333333336"/>
@@ -1525,7 +1528,7 @@
                         <outlet property="DateOutlet" destination="pL2-HQ-QN7" id="3XW-7o-fOx"/>
                         <outlet property="EventDescOutlet" destination="EOf-i0-0wE" id="Zck-PI-BQP"/>
                         <outlet property="EventNameOutlet" destination="WLM-0c-pb6" id="RAd-P6-Sn1"/>
-                        <segue destination="EVA-fv-DXo" kind="presentation" modalPresentationStyle="fullScreen" id="YOw-2c-hj9"/>
+                        <segue destination="EVA-fv-DXo" kind="presentation" identifier="wishListSegue" modalPresentationStyle="fullScreen" id="YOw-2c-hj9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vQn-Ya-GpG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

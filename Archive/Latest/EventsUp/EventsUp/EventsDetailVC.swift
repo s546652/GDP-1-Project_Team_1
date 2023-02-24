@@ -6,7 +6,8 @@
 //
 
 import UIKit
-
+import Firebase
+import FirebaseFirestore
 class EventsDetailVC: UIViewController {
 
     var date = ""
@@ -24,7 +25,7 @@ class EventsDetailVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-print(date,name,desc)
+//print(date,name,desc)
         DateOutlet.text = date
         EventNameOutlet.text = name
         EventDescOutlet.text = desc
@@ -32,6 +33,33 @@ print(date,name,desc)
     }
     
 
+    @IBAction func wishListBTN(_ sender: Any) {
+       // var a = [event,"test"]
+        let db = Firestore.firestore()
+        let ref = db.collection("WishList").document(name)
+        print(ref,(Auth.auth().currentUser?.email!)!)
+        ref.setData(["EventName": name,"EventDesc":date,"User": (Auth.auth().currentUser?.email!)!,"EventDate":desc]){error in
+            if let error = error {
+                print(error.localizedDescription)
+            }
+            else{
+                
+                let defaultAction = UIAlertAction(title: "Ok",
+                                        style: .default) { (action) in
+                   
+                    // Respond to user selection of the action.
+                   }
+             let alert = UIAlertController(title: "Event added into your wishlist",
+                         message:"" ,
+                         preferredStyle: .alert)
+                   alert.addAction(defaultAction)
+                   self.present(alert, animated: true) {
+                      // The alert was presented
+                   }
+               // print((Auth.auth().currentUser?.email!)!)
+            }
+        }
+    }
     
 
     /*

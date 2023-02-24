@@ -27,14 +27,14 @@ class WishlistTVC: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let gradientLayer = CAGradientLayer()
-        gradientLayer.frame = view.bounds
-        gradientLayer.colors = [
-            UIColor.systemBlue.cgColor,
-            UIColor.systemOrange.cgColor,
-            UIColor.systemTeal.cgColor,
-        ]
-        view.layer.addSublayer(gradientLayer)
+       // let gradientLayer = CAGradientLayer()
+//        gradientLayer.frame = view.bounds
+//        gradientLayer.colors = [
+//            UIColor.systemBlue.cgColor,
+//            UIColor.systemOrange.cgColor,
+//            UIColor.systemTeal.cgColor,
+//        ]
+       // view.layer.addSublayer(gradientLayer)
         
         let backgroundImageView = UIImageView(frame: view.frame)
         backgroundImageView.image = UIImage(named: "background")
@@ -50,8 +50,8 @@ class WishlistTVC: UITableViewController {
         
         var t:String!
         db = Firestore.firestore()
-        Auth.auth().currentUser?.email
-        print("username --- ", Auth.auth().currentUser?.email!)
+      
+        //print("username --- ", Auth.auth().currentUser?.email!)
         db.collection("WishList").whereField("User", isEqualTo:  (Auth.auth().currentUser?.email!)!)
             .getDocuments() { [self] (querySnapshot, err) in
                 if let err = err {
@@ -61,7 +61,7 @@ class WishlistTVC: UITableViewController {
                     size = querySnapshot!.documents.count
                     for document in querySnapshot!.documents {
                         t = document.documentID
-                        print(t)
+                      //  print(t)
                         if(t!.isEmpty == false){
                             ename.append(t)
                     }

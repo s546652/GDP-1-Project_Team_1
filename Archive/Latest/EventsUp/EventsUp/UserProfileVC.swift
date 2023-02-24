@@ -25,7 +25,6 @@ class UserProfileVC: UIViewController {
   
     @IBAction func deleteAccount(_ sender: Any) {
         db = Firestore.firestore()
-        
         db.collection("User").document(EmailAddress.text!).delete()
         Auth.auth().currentUser?.delete()
     }
