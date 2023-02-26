@@ -27,6 +27,19 @@ class UserProfileVC: UIViewController {
         db = Firestore.firestore()
         db.collection("User").document(EmailAddress.text!).delete()
         Auth.auth().currentUser?.delete()
+       
+        let defaultAction = UIAlertAction(title: "Ok",
+                                style: .default) { (action) in
+           // wishListSegue
+            self.performSegue(withIdentifier: "logoutSegue", sender: Any?.self)            // Respond to user selection of the action.
+           }
+     let alert = UIAlertController(title: "User Account Deleted",
+                 message:"" ,
+                 preferredStyle: .alert)
+           alert.addAction(defaultAction)
+           self.present(alert, animated: true) {
+              // The alert was presented
+           }
     }
     
     @IBAction func logoutAccount(_ sender: Any) {
@@ -40,6 +53,7 @@ class UserProfileVC: UIViewController {
         let ok = UIAlertAction(title: "OK", style: .default, handler: { (action) -> Void in
             do {
             try Auth.auth().signOut()
+                self.performSegue(withIdentifier: "logoutSegue", sender: Any?.self)
             } catch let signOutError as NSError {
               print("Error signing out: %@", signOutError)
             }
