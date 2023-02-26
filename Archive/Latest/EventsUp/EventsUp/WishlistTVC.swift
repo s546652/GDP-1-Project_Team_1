@@ -71,6 +71,7 @@ class WishlistTVC: UITableViewController {
                // print(ename)
         }
         print("size of the list is \(size)")
+        cellOutlet.reloadData()
         cellOutlet.delegate = self
         cellOutlet.delegate = self
    // }
