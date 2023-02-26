@@ -46,7 +46,8 @@ class EventsDetailVC: UIViewController {
                 
                 let defaultAction = UIAlertAction(title: "Ok",
                                         style: .default) { (action) in
-                   
+                   // wishListSegue
+                    self.performSegue(withIdentifier: "wishListSegue", sender: Any?.self)
                     // Respond to user selection of the action.
                    }
              let alert = UIAlertController(title: "Event added into your wishlist",
