@@ -46,6 +46,7 @@
 		F5A77A5428E79076001307B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5A77A5228E79076001307B3 /* Main.storyboard */; };
 		F5A77A5928E79078001307B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5A77A5728E79078001307B3 /* LaunchScreen.storyboard */; };
 		F5C9F57229AD9E7600D5CB1A /* AdminVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C9F57129AD9E7600D5CB1A /* AdminVC.swift */; };
+		F5C9F57429ADAEC600D5CB1A /* login.json in Resources */ = {isa = PBXBuildFile; fileRef = F5C9F57329ADAEC600D5CB1A /* login.json */; };
 		F66ECD68290CC10800D89F73 /* MySQLDriver in Frameworks */ = {isa = PBXBuildFile; productRef = F66ECD67290CC10800D89F73 /* MySQLDriver */; };
 /* End PBXBuildFile section */
 
@@ -88,6 +89,7 @@
 		F5A77A5828E79078001307B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F5A77A5A28E79078001307B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F5C9F57129AD9E7600D5CB1A /* AdminVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminVC.swift; sourceTree = "<group>"; };
+		F5C9F57329ADAEC600D5CB1A /* login.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = login.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				F55E4ABC29A5AD31007E5850 /* EventsDetailVC.swift */,
 				F55E4ABE29A5C7EB007E5850 /* PaymentVC.swift */,
 				F55E4AC729A66F4B007E5850 /* 31737-savings-dollar.json */,
+				F5C9F57329ADAEC600D5CB1A /* login.json */,
 				F55E4AC029A5CAAF007E5850 /* UserProfileVC.swift */,
 				266DE80829A719FF001E513D /* SignUpVC.swift */,
 				F5C9F57129AD9E7600D5CB1A /* AdminVC.swift */,
@@ -247,6 +250,7 @@
 				F55E4AB929A58870007E5850 /* Assets.xcassets in Resources */,
 				F55E4AC829A66F4B007E5850 /* 31737-savings-dollar.json in Resources */,
 				F5A77A5428E79076001307B3 /* Main.storyboard in Resources */,
+				F5C9F57429ADAEC600D5CB1A /* login.json in Resources */,
 				F55E4ABB29A58923007E5850 /* Day One at Northwest.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
