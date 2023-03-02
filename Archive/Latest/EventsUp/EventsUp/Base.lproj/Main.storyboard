@@ -64,7 +64,7 @@
                                 <rect key="frame" x="150" y="595" width="128" height="128"/>
                             </imageView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YXW-gs-Kwf">
-                                <rect key="frame" x="-29" y="826" width="428" height="49"/>
+                                <rect key="frame" x="-31" y="824" width="427" height="50"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem title="Events" image="list.bullet.rectangle.portrait" catalog="system" id="KXl-ff-QWF">
@@ -293,7 +293,7 @@
                                 </constraints>
                             </stackView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7tB-Tu-CS0">
-                                <rect key="frame" x="-30" y="827" width="424" height="49"/>
+                                <rect key="frame" x="-33" y="825" width="425" height="51"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem title="Events" image="list.bullet.rectangle.portrait" catalog="system" id="XFT-rf-KzF">
@@ -559,7 +559,7 @@
                                 </items>
                             </navigationBar>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bKE-s0-zlt">
-                                <rect key="frame" x="-34" y="824" width="431" height="39"/>
+                                <rect key="frame" x="-36" y="824" width="430" height="38"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem title="Events" image="list.bullet.rectangle.portrait" catalog="system" id="ksh-Tt-j8C">
@@ -1078,18 +1078,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="my5-Ch-c4a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-10888" y="4575"/>
+            <point key="canvasLocation" x="-13288" y="4648"/>
         </scene>
         <!--LoginVC-->
         <scene sceneID="jmn-h1-DWz">
             <objects>
                 <viewController id="C8i-gM-4Nn" customClass="LoginVC" customModule="EventsUp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="X3S-bO-oeo">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="869"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="fLQ-Sn-HOe">
-                                <rect key="frame" x="20" y="293.66666666666669" width="388" height="282.00000000000006"/>
+                                <rect key="frame" x="20" y="322" width="388" height="282"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="6g7-v9-cYb">
                                         <rect key="frame" x="0.0" y="0.0" width="388" height="282"/>
@@ -1135,7 +1135,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ozk-XA-uQO">
-                                                <rect key="frame" x="0.0" y="231.99999999999994" width="388" height="50"/>
+                                                <rect key="frame" x="0.0" y="232" width="388" height="50"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hOV-NW-tcS">
                                                         <rect key="frame" x="0.0" y="0.0" width="124" height="50"/>
@@ -1186,7 +1186,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mhy-Bu-lRS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-10888.317757009345" y="3742.5485961123113"/>
+            <point key="canvasLocation" x="-12088" y="3743"/>
         </scene>
         <!--Home-->
         <scene sceneID="RK1-Vx-Ohu">
@@ -1248,7 +1248,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h6U-i7-be3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-10888.317757009345" y="3004.5356371490284"/>
+            <point key="canvasLocation" x="-12087" y="2964"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="CkZ-gp-hPs">
@@ -1743,7 +1743,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CGW-Fz-Zbx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-8547" y="4891"/>
+            <point key="canvasLocation" x="-10978" y="4648"/>
         </scene>
         <!--Home-->
         <scene sceneID="aDi-bk-gzg">
@@ -1781,7 +1781,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="srM-GZ-QNB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-9918" y="4891"/>
+            <point key="canvasLocation" x="-9918" y="4648"/>
         </scene>
         <!--AdminVC-->
         <scene sceneID="pZE-ng-w6C">
@@ -1844,17 +1844,33 @@
                     </view>
                     <connections>
                         <outlet property="LoginIV" destination="DMs-yj-F9f" id="Gcb-gr-4T7"/>
+                        <segue destination="R9l-0o-gUN" kind="showDetail" identifier="AdminDetailSegue" id="Kz2-88-37x"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7tO-B0-Haa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-11929" y="3743"/>
+            <point key="canvasLocation" x="-12042" y="4648"/>
+        </scene>
+        <!--Admin DetailVC-->
+        <scene sceneID="r2G-kY-2v0">
+            <objects>
+                <viewController id="R9l-0o-gUN" customClass="AdminDetailVC" customModule="EventsUp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="taU-AQ-6dU">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="869"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="c2G-Jv-K9a"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b19-vT-dSy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-12042" y="5571"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="dmX-sh-i4H"/>
         <segue reference="YOw-2c-hj9"/>
-        <segue reference="ZB1-zF-JgJ"/>
+        <segue reference="OdP-PO-gTO"/>
         <segue reference="su5-Z2-wuL"/>
         <segue reference="BLW-GB-cKS"/>
         <segue reference="IKF-aI-YBU"/>
