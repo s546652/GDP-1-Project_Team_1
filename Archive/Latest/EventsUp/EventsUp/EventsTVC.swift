@@ -108,8 +108,9 @@ class EventsTVC: UITableViewController {
     @IBOutlet var dataTableView: UITableView!
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell = dataTableView.dequeueReusableCell(withIdentifier: "calendardatacell", for: indexPath)
+        let cell = dataTableView.dequeueReusableCell(withIdentifier: "calendardatacell", for: indexPath)
         cell.textLabel?.text = ename[indexPath.row+1].self//"text"
+        cell.detailTextLabel?.text = edate[indexPath.row+1].self
         return cell
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

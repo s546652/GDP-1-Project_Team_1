@@ -103,6 +103,7 @@ class WishlistTVC: UITableViewController {
         var cell = cellOutlet.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         print(ename[indexPath.row+1].self)
         cell.textLabel?.text = ename[indexPath.row+1].self
+       // cell.detailTextLabel?.text = edate[indexPath.row+1].self
         return cell
     }
     
