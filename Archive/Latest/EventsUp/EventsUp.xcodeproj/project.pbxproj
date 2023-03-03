@@ -25,6 +25,7 @@
 		266DE80929A719FF001E513D /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266DE80829A719FF001E513D /* SignUpVC.swift */; };
 		2690BBAE28F0D73500C74A1F /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2690BBAD28F0D73500C74A1F /* TableViewController.swift */; };
 		26AD9F7828EA5CFF0017E297 /* EventsListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26AD9F7728EA5CFF0017E297 /* EventsListController.swift */; };
+		26E7ED1629B03BC3008719A3 /* AdminDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E7ED1529B03BC3008719A3 /* AdminDetailVC.swift */; };
 		26F717FB291888B4009B2BE1 /* Calendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F717FA291888B4009B2BE1 /* Calendar.swift */; };
 		26F717FD29188A0A009B2BE1 /* EventsDetailListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F717FC29188A0A009B2BE1 /* EventsDetailListViewController.swift */; };
 		F50DA3952908B89800342EDA /* PayemntController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50DA3942908B89800342EDA /* PayemntController.swift */; };
@@ -67,6 +68,7 @@
 		266DE80829A719FF001E513D /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		2690BBAD28F0D73500C74A1F /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		26AD9F7728EA5CFF0017E297 /* EventsListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsListController.swift; sourceTree = "<group>"; };
+		26E7ED1529B03BC3008719A3 /* AdminDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminDetailVC.swift; sourceTree = "<group>"; };
 		26F717FA291888B4009B2BE1 /* Calendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calendar.swift; sourceTree = "<group>"; };
 		26F717FC29188A0A009B2BE1 /* EventsDetailListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsDetailListViewController.swift; sourceTree = "<group>"; };
 		F50DA3942908B89800342EDA /* PayemntController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayemntController.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				F55E4AC029A5CAAF007E5850 /* UserProfileVC.swift */,
 				266DE80829A719FF001E513D /* SignUpVC.swift */,
 				F5C9F57129AD9E7600D5CB1A /* AdminVC.swift */,
+				26E7ED1529B03BC3008719A3 /* AdminDetailVC.swift */,
 			);
 			name = "New Group";
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 				263E36FA29A349490023794B /* CalendarEventDetailDesViewController.swift in Sources */,
 				2690BBAE28F0D73500C74A1F /* TableViewController.swift in Sources */,
 				264F96B02990B0B400573A24 /* wishlistFirebase.swift in Sources */,
+				26E7ED1629B03BC3008719A3 /* AdminDetailVC.swift in Sources */,
 				F55E4AB829A583C0007E5850 /* LoginVC.swift in Sources */,
 				F5C9F57229AD9E7600D5CB1A /* AdminVC.swift in Sources */,
 				F55E4AB229A5836F007E5850 /* HomeVC.swift in Sources */,
