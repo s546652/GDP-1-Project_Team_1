@@ -70,27 +70,34 @@ class UserProfileVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       print("inisde user profile vc",(Auth.auth().currentUser?.email!)!)
         db = Firestore.firestore()
-        usernames = (Auth.auth().currentUser?.email!)!
-        db.collection("User").whereField("username", isEqualTo: usernames)
-            .getDocuments() { [self] (querySnapshot, err) in
-                if let err = err {
-                    print("Error getting documents: \(err)")
-                } else {
-                    print(555,querySnapshot!.documents.count)
-                    for document in querySnapshot!.documents {
-                        print(document.data().keys)
-                        print(document.get("username"),123456789)
-                        EmailAddress.text! = document.get("username")! as! String
-                        FirstName.text! = document.get("fname")! as! String
-                        LastName.text! = document.get("lname")! as! String
-                        PhoneNumber.text! = document.get("PhoneNumber")! as! String
-                        DOB.text! = document.get("DOB")! as! String
+        if Auth.auth().currentUser != nil {
+            print("inisde user profile vc",(Auth.auth().currentUser?.email!)!)
+           // db = Firestore.firestore()
+            usernames = (Auth.auth().currentUser?.email!)!
+            db.collection("User").whereField("username", isEqualTo: usernames)
+                .getDocuments() { [self] (querySnapshot, err) in
+                    if let err = err {
+                        print("Error getting documents: \(err)")
+                    } else {
+                        print(555,querySnapshot!.documents.count)
+                        for document in querySnapshot!.documents {
+                            print(document.data().keys)
+                            print(document.get("username"),123456789)
+                            EmailAddress.text! = document.get("username")! as! String
+                            FirstName.text! = document.get("fname")! as! String
+                            LastName.text! = document.get("lname")! as! String
+                            PhoneNumber.text! = document.get("PhoneNumber")! as! String
+                            DOB.text! = document.get("DOB")! as! String
+                        }
                     }
-                  }
                 }
-        
+        }
+        else {
+            print("UserProfile")
+            self.performSegue(withIdentifier: "logoutSegue", sender: (Any).self)
+
+        }
     }
     
 
