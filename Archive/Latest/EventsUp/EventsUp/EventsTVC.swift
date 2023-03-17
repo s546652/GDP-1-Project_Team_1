@@ -15,47 +15,54 @@ class EventsTVC: UITableViewController {
         super.viewDidLoad()
         var t:[String]!
         db = Firestore.firestore()
-        db.collection("data")
-            .getDocuments() { [self] (querySnapshot, err) in
-                if let err = err {
-                    print("Error getting documents: \(err)")
-                } else {
-                    print(555,querySnapshot!.documents.count)
-                    size = querySnapshot!.documents.count
-                    for document in querySnapshot!.documents {
-                        t = document.get("name") as! [String]
-                        if(t!.isEmpty == false){
-                            for x in t! {
-                                if(x.isEmpty == false){
-                                    ename.append(x)
-                                }
-                            }
-                        }
-                        //for storing date
-                       var eventDate = document.get("date") as! [String]
-                        print(eventDate)
-                        if(eventDate.isEmpty == false){
-                            for x in eventDate {
-                                if(x.isEmpty == false){
-                                    edate.append(x)
-                                }
-                            }
-                        }
-                        // for storing desc
-                        var eventDesc = document.get("description") as! [String]
-                        if(eventDesc.isEmpty == false){
-                            for x in eventDesc {
-                                if(x.isEmpty == false){
-                                    edesc.append(x)
-                                }
-                            }
-                        }
-                    }
-                    dataTableView.reloadData()
-                }
-                
-            }
         
+        if Auth.auth().currentUser != nil {
+            db.collection("data")
+                .getDocuments() { [self] (querySnapshot, err) in
+                    if let err = err {
+                        print("Error getting documents: \(err)")
+                    } else {
+                        print(555,querySnapshot!.documents.count)
+                        size = querySnapshot!.documents.count
+                        for document in querySnapshot!.documents {
+                            t = document.get("name") as! [String]
+                            if(t!.isEmpty == false){
+                                for x in t! {
+                                    if(x.isEmpty == false){
+                                        ename.append(x)
+                                    }
+                                }
+                            }
+                            //for storing date
+                            var eventDate = document.get("date") as! [String]
+                            print(eventDate)
+                            if(eventDate.isEmpty == false){
+                                for x in eventDate {
+                                    if(x.isEmpty == false){
+                                        edate.append(x)
+                                    }
+                                }
+                            }
+                            // for storing desc
+                            var eventDesc = document.get("description") as! [String]
+                            if(eventDesc.isEmpty == false){
+                                for x in eventDesc {
+                                    if(x.isEmpty == false){
+                                        edesc.append(x)
+                                    }
+                                }
+                            }
+                        }
+                        dataTableView.reloadData()
+                    }
+                    
+                }
+        }
+        else {
+            print("EventsTVC")
+            self.performSegue(withIdentifier: "logoutSegue", sender: (Any).self)
+
+        }
         print("size of the list is \(ename.count)")
         print("------------Desc-----------")
         print(edesc)

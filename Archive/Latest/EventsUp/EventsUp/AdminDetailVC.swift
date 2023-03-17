@@ -50,12 +50,9 @@ class AdminDetailVC: UIViewController {
     
   
     @IBAction func button(_ sender: Any) {
-        print("inside button")
+
         let storageRef = Storage.storage().reference()
-        print("whats inside storageRef ",storageRef)
         let imageData = UIImage(named: "img6")?.jpegData(compressionQuality: 0.8)
-    //    let imagetest = logo
-        print("whats inside imageData", imageData)
         let fileRef = storageRef.child("images/\(UUID().uuidString).jpg")
         print("inside fileRef", fileRef)
         guard imageData != nil else {

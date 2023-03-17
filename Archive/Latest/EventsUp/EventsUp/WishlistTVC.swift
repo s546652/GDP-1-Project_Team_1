@@ -52,30 +52,36 @@ class WishlistTVC: UITableViewController {
         db = Firestore.firestore()
       
         //print("username --- ", Auth.auth().currentUser?.email!)
-        db.collection("WishList").whereField("User", isEqualTo:  (Auth.auth().currentUser?.email!)!)
-            .getDocuments() { [self] (querySnapshot, err) in
-                if let err = err {
-                    print("Error getting documents: \(err)")
-                } else {
-                    print(555,querySnapshot!.documents.count)
-                    size = querySnapshot!.documents.count
-                    for document in querySnapshot!.documents {
-                        t = document.documentID
-                      //  print(t)
-                        if(t!.isEmpty == false){
-                            ename.append(t)
+        if Auth.auth().currentUser != nil {
+            db.collection("WishList").whereField("User", isEqualTo:  (Auth.auth().currentUser?.email!)!)
+                .getDocuments() { [self] (querySnapshot, err) in
+                    if let err = err {
+                        print("Error getting documents: \(err)")
+                    } else {
+                        print(555,querySnapshot!.documents.count)
+                        size = querySnapshot!.documents.count
+                        for document in querySnapshot!.documents {
+                            t = document.documentID
+                            //  print(t)
+                            if(t!.isEmpty == false){
+                                ename.append(t)
+                            }
+                        }
+                        cellOutlet.reloadData()
                     }
-                  }
-                    cellOutlet.reloadData()
+                    // print(ename)
                 }
-               // print(ename)
+            print("size of the list is \(size)")
+            cellOutlet.reloadData()
+            cellOutlet.delegate = self
+            cellOutlet.delegate = self
+            // }
         }
-        print("size of the list is \(size)")
-        cellOutlet.reloadData()
-        cellOutlet.delegate = self
-        cellOutlet.delegate = self
-   // }
-    
+        else {
+            print("wishlist")
+            self.performSegue(withIdentifier: "logoutSegue", sender: (Any).self)
+
+        }
    
     }
 
