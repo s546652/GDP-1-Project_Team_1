@@ -18,11 +18,12 @@ var dbQueue:OpaquePointer?
 var dbURL = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as String
 
 @main
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
  
     @StateObject var dataManager = DataManager()
     override init() {
        FirebaseApp.configure()
+        
        // SceneDelegate().sceneDidEnterBackground(UIScene.didEnterBackgroundNotification)
    }
 
@@ -38,23 +39,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         print("inside the unit method",application.applicationState)
+        self.registerLocalNotification()
         let state = UIApplication.shared.applicationState
         print("state of the app ",state)
             if state == .background {
                 print("App in Background",TimeInterval.self)
-                
-                //MARK: - if you want to perform come action when app in background this will execute
-                //Handel you code here
+  
             }
         else if state == .active{
-                //MARK: - if you want to perform come action when app in foreground this will execute
-                //Handel you code here
+               
             }
 
         return true
     }
 
-    // MARK: UISceneSession Lifecycle
+    
 
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
         // Called when a new scene session is being created.
@@ -71,6 +70,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         print("inside the unit method",application.applicationState)
 
     }
+    func registerLocalNotification() {
+        let center = UNUserNotificationCenter.current()
+        center.delegate = self
+        center.requestAuthorization(options: [.alert, .sound]) { (granted, error) in
+            // Enable or disable features based on authorization.
+            if error != nil {
+                print("Request authorization failed!")
+            } else {
+                print("Request authorization succeeded!")
+            }
+        }
+    }
+    //Handle Notification Center Delegate methods
+        func userNotificationCenter(_ center: UNUserNotificationCenter,
+                                    willPresent notification: UNNotification,
+                                    withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+            completionHandler([.alert, .sound])
+        }
     
 //    func createAndOpenDatabase() -> OpaquePointer? {
 //        var db: OpaquePointer?
