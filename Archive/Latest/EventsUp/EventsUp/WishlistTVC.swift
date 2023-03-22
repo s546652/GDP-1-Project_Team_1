@@ -24,6 +24,34 @@ class WishlistTVC: UITableViewController {
 
     @IBOutlet weak var cellOutlet: UITableView!
     
+    override func viewWillAppear(_ animated: Bool) {
+      
+        var t:String!
+        db = Firestore.firestore()
+
+      //  if Auth.auth().currentUser != nil {
+            db.collection("WishList").whereField("User", isEqualTo:  (Auth.auth().currentUser?.email!)!)
+                .getDocuments() { [self] (querySnapshot, err) in
+                    if let err = err {
+                        print("Error getting documents: \(err)")
+                    } else {
+                        print(555,querySnapshot!.documents.count)
+                        size = querySnapshot!.documents.count
+                        for document in querySnapshot!.documents {
+                            t = document.documentID
+                            //  print(t)
+                            if(t!.isEmpty == false && !(ename.contains(t!))){
+                                
+                                ename.append(t)
+                            }
+                        }
+                    cellOutlet.reloadData()
+                    }
+              //  }
+            print("size of the list is \(size)")
+        }
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -48,7 +76,7 @@ class WishlistTVC: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
         
-        var t:String!
+    /*    var t:String!
         db = Firestore.firestore()
       
         //print("username --- ", Auth.auth().currentUser?.email!)
@@ -75,13 +103,16 @@ class WishlistTVC: UITableViewController {
             cellOutlet.reloadData()
             cellOutlet.delegate = self
             cellOutlet.delegate = self
+            cellOutlet.refreshControl
             // }
         }
-        else {
-            print("wishlist")
-            self.performSegue(withIdentifier: "logoutSegue", sender: (Any).self)
+        else {*/
+            //print("wishlist")
+            //self.performSegue(withIdentifier: "logoutSegue", sender: (Any).self)
 
-        }
+      //  }
+        cellOutlet.delegate = self
+        cellOutlet.delegate = self
    
     }
 
@@ -101,15 +132,10 @@ class WishlistTVC: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-//
-//        // Configure the cell...
-//
-//        return cell
+
         var cell = cellOutlet.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         print(ename[indexPath.row+1].self)
         cell.textLabel?.text = ename[indexPath.row+1].self
-       // cell.detailTextLabel?.text = edate[indexPath.row+1].self
         return cell
     }
     
