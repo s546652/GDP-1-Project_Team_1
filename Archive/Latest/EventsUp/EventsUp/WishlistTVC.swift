@@ -7,7 +7,6 @@
 
 import UIKit
 import Firebase
-//import FirebaseFirestoreSwift
 import FirebaseFirestore
 
 
@@ -30,7 +29,6 @@ class WishlistTVC: UITableViewController {
         var t:String!
         db = Firestore.firestore()
 
-      //  if Auth.auth().currentUser != nil {
             db.collection("WishList").whereField("User", isEqualTo:  (Auth.auth().currentUser?.email!)!)
                 .getDocuments() { [self] (querySnapshot, err) in
                     if let err = err {
@@ -40,7 +38,6 @@ class WishlistTVC: UITableViewController {
                         size = querySnapshot!.documents.count
                         for document in querySnapshot!.documents {
                             t = document.documentID
-                            //  print(t)
                             if(t!.isEmpty == false && !(ename.contains(t!))){
                                 
                                 ename.append(t)
@@ -48,7 +45,6 @@ class WishlistTVC: UITableViewController {
                         }
                     cellOutlet.reloadData()
                     }
-              //  }
             print("size of the list is \(size)")
         }
         
@@ -56,14 +52,7 @@ class WishlistTVC: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       // let gradientLayer = CAGradientLayer()
-//        gradientLayer.frame = view.bounds
-//        gradientLayer.colors = [
-//            UIColor.systemBlue.cgColor,
-//            UIColor.systemOrange.cgColor,
-//            UIColor.systemTeal.cgColor,
-//        ]
-       // view.layer.addSublayer(gradientLayer)
+
         
         let backgroundImageView = UIImageView(frame: view.frame)
         backgroundImageView.image = UIImage(named: "background")
@@ -77,41 +66,6 @@ class WishlistTVC: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
         
-    /*    var t:String!
-        db = Firestore.firestore()
-      
-        //print("username --- ", Auth.auth().currentUser?.email!)
-        if Auth.auth().currentUser != nil {
-            db.collection("WishList").whereField("User", isEqualTo:  (Auth.auth().currentUser?.email!)!)
-                .getDocuments() { [self] (querySnapshot, err) in
-                    if let err = err {
-                        print("Error getting documents: \(err)")
-                    } else {
-                        print(555,querySnapshot!.documents.count)
-                        size = querySnapshot!.documents.count
-                        for document in querySnapshot!.documents {
-                            t = document.documentID
-                            //  print(t)
-                            if(t!.isEmpty == false){
-                                ename.append(t)
-                            }
-                        }
-                        cellOutlet.reloadData()
-                    }
-                    // print(ename)
-                }
-            print("size of the list is \(size)")
-            cellOutlet.reloadData()
-            cellOutlet.delegate = self
-            cellOutlet.delegate = self
-            cellOutlet.refreshControl
-            // }
-        }
-        else {*/
-            //print("wishlist")
-            //self.performSegue(withIdentifier: "logoutSegue", sender: (Any).self)
-
-      //  }
         cellOutlet.delegate = self
         cellOutlet.delegate = self
    

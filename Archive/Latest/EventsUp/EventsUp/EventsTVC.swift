@@ -45,11 +45,36 @@ class EventsTVC: UITableViewController {
                             }
                             // for storing desc
                             var eventDesc = document.get("description") as! [String]
+                            print(eventDesc)
                             if(eventDesc.isEmpty == false){
                                 for x in eventDesc {
                                     if(x.isEmpty == false){
                                         edesc.append(x)
                                     }
+                                }
+                            }
+                        }
+                        for index in 0..<11 {
+                            let i = edate[index]
+                            
+                            if i.contains("@") == true && i.contains("Register") == false && i != "x"{
+                                print(index)
+                                var datearr = i.split(separator: "@")
+                                let trimmed = datearr[0].replacingOccurrences(of: "\\s+$", with: "", options: .regularExpression)
+                                //Tuesday, March 14, 2023
+                                let timeArr = datearr[1].split(separator: "-")
+                                let removeLastSpace = timeArr[0].replacingOccurrences(of: "\\s+$", with: "", options: .regularExpression) //2:00 pm
+                               let finalDateStr = trimmed + removeLastSpace
+                                //Tuesday, March 14, 2023 2:00 pm
+                                let date = self.convertStringToDate(dateStr: finalDateStr)
+                                UNUserNotificationCenter.current().scheduleNotification(identifier: "\(index)", date: date, title: ename[index], body: edesc[index])
+                            }else if i.contains("Register") == false {
+                                print(index)
+                                if i != "x" {
+                              let date = "Friday, March 24, 2023 09:09 AM"
+                                    //let date = i + " 08:00 AM"
+                                    let converteDdate = self.convertStringToDate(dateStr: date)
+                                    UNUserNotificationCenter.current().scheduleNotification(identifier: "\(index)", date: converteDdate, title: ename[index], body: edesc[index])
                                 }
                             }
                         }
@@ -81,12 +106,7 @@ class EventsTVC: UITableViewController {
         
     }
 
-    // MARK: - Table view data source
-
-//    override func numberOfSections(in tableView: UITableView) -> Int {
-//        // #warning Incomplete implementation, return the number of sections
-//        return 0
-//    }
+ 
     
     
     
@@ -118,7 +138,8 @@ class EventsTVC: UITableViewController {
         let cell = dataTableView.dequeueReusableCell(withIdentifier: "calendardatacell", for: indexPath)
         cell.textLabel?.text = ename[indexPath.row+1].self//"text"
         cell.detailTextLabel?.text = edate[indexPath.row+1].self
-        return cell
+        print("DATE=============\(edate[indexPath.row])")
+         return cell
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "calendarDetailsSegue", sender: indexPath.row)
@@ -149,7 +170,9 @@ class EventsTVC: UITableViewController {
 
     }
     
-    
+    func setupLocalNotification() {
+        
+    }
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 //        var data:String!
 //        var eN:String!
@@ -220,7 +243,36 @@ class EventsTVC: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
-    
+    func convertStringToDate(dateStr: String) -> Date {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "EEEE, MMMM d, yyyy hh:mm a"
+        //Tuesday, March 14, 2023 2:00 pm
+
+        dateFormatter.timeZone = TimeZone.current
+        // (abbreviation: "GMT+0:00")
+        let dateFromString = dateFormatter.date(from: dateStr)
+        let modifiedDate = Calendar.current.date(byAdding: .minute, value: -5, to: dateFromString!)!
+        print("modifiedDate \(modifiedDate)")
+        print("dateFromString: ", dateFromString!)
+        return modifiedDate
+    }
  
 
+}
+extension UNUserNotificationCenter {
+    func scheduleNotification(identifier: String, date: Date, title:String, body:String) {
+        let content = UNMutableNotificationContent()
+        content.title = title
+        content.body = body
+        let dateComponents = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: date)
+        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)
+
+        let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
+        self.add(request) {(error) in
+            if error != nil {
+                print (error)
+            }else {
+            }
+        }
+    }
 }
