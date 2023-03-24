@@ -71,7 +71,7 @@ class EventsTVC: UITableViewController {
                             }else if i.contains("Register") == false {
                                 print(index)
                                 if i != "x" {
-                              let date = "Thursday, March 23, 2023 07:59 PM"
+                              let date = "Friday, March 24, 2023 09:09 AM"
                                     //let date = i + " 08:00 AM"
                                     let converteDdate = self.convertStringToDate(dateStr: date)
                                     UNUserNotificationCenter.current().scheduleNotification(identifier: "\(index)", date: converteDdate, title: ename[index], body: edesc[index])
