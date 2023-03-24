@@ -50,7 +50,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         if(startTime != nil && endTime != nil){
             var i = endTime - startTime
             print("vale of i = ",i)
-            if Double(i) >= 0.25 && Auth.auth().currentUser != nil{
+            if Double(i) >= 3.25 && Auth.auth().currentUser != nil{
                 print("i greater than 10")
                 print("user details ",Auth.auth().currentUser)
                 do {
