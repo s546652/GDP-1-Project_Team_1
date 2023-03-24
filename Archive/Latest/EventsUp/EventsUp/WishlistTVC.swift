@@ -14,6 +14,7 @@ import FirebaseFirestore
 class WishlistTVC: UITableViewController {
     var username:String!
     var ename:[String] = ["x"]
+    var edate:[String] = ["x"]
     var db: Firestore!
     var size: Int = 0
     var records:WishList!
@@ -136,6 +137,7 @@ class WishlistTVC: UITableViewController {
         var cell = cellOutlet.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         print(ename[indexPath.row+1].self)
         cell.textLabel?.text = ename[indexPath.row+1].self
+      //  cell.detailTextLabel?.text = edate[indexPath.row+1].self
         return cell
     }
     

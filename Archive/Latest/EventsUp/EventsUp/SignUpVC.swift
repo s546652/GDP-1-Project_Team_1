@@ -165,9 +165,16 @@ class SignUpVC: UIViewController {
                             print("test")
                           //  self.performSegue(withIdentifier: "logintohome", sender: self)
                            }
+//                        let animationView = LottieAnimationView(name: "104368-thank-you")
+//                        animationView.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
+//                        animationView.contentMode = .scaleAspectFit
+//                        animationView.loopMode = .loop
+//                        animationView.play()
+
                           let alert = UIAlertController(title: "Details",
                                  message: "Signup Successfull",
                                  preferredStyle: .alert)
+//                           alert.view.addSubview(animationView)
                            alert.addAction(defaultAction)
                            self.present(alert, animated: true) {
                            }                    }

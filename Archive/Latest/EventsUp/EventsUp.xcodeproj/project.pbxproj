@@ -74,6 +74,7 @@
 		F5C9F57229AD9E7600D5CB1A /* AdminVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C9F57129AD9E7600D5CB1A /* AdminVC.swift */; };
 		F5C9F57429ADAEC600D5CB1A /* login.json in Resources */ = {isa = PBXBuildFile; fileRef = F5C9F57329ADAEC600D5CB1A /* login.json */; };
 		F5F3AE1529CD188C005FD102 /* 104759-login.json in Resources */ = {isa = PBXBuildFile; fileRef = F5F3AE1429CD188C005FD102 /* 104759-login.json */; };
+		F5F3AE1729CD1E4C005FD102 /* 104368-thank-you.json in Resources */ = {isa = PBXBuildFile; fileRef = F5F3AE1629CD1E4C005FD102 /* 104368-thank-you.json */; };
 		F66ECD68290CC10800D89F73 /* MySQLDriver in Frameworks */ = {isa = PBXBuildFile; productRef = F66ECD67290CC10800D89F73 /* MySQLDriver */; };
 /* End PBXBuildFile section */
 
@@ -119,6 +120,7 @@
 		F5C9F57129AD9E7600D5CB1A /* AdminVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminVC.swift; sourceTree = "<group>"; };
 		F5C9F57329ADAEC600D5CB1A /* login.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = login.json; sourceTree = "<group>"; };
 		F5F3AE1429CD188C005FD102 /* 104759-login.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "104759-login.json"; sourceTree = "<group>"; };
+		F5F3AE1629CD1E4C005FD102 /* 104368-thank-you.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "104368-thank-you.json"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +170,7 @@
 				F55E4AB329A58393007E5850 /* EventsTVC.swift */,
 				F55E4AB529A583A6007E5850 /* WishlistTVC.swift */,
 				F55E4AB729A583C0007E5850 /* LoginVC.swift */,
+				F5F3AE1629CD1E4C005FD102 /* 104368-thank-you.json */,
 				F55E4ABC29A5AD31007E5850 /* EventsDetailVC.swift */,
 				F55E4ABE29A5C7EB007E5850 /* PaymentVC.swift */,
 				F55E4AC729A66F4B007E5850 /* 31737-savings-dollar.json */,
@@ -331,6 +334,7 @@
 				F5A77A5928E79078001307B3 /* LaunchScreen.storyboard in Resources */,
 				F55E4AB929A58870007E5850 /* Assets.xcassets in Resources */,
 				F55E4AC829A66F4B007E5850 /* 31737-savings-dollar.json in Resources */,
+				F5F3AE1729CD1E4C005FD102 /* 104368-thank-you.json in Resources */,
 				F5A77A5428E79076001307B3 /* Main.storyboard in Resources */,
 				F5C9F57429ADAEC600D5CB1A /* login.json in Resources */,
 				F55E4ABB29A58923007E5850 /* Day One at Northwest.mp4 in Resources */,
