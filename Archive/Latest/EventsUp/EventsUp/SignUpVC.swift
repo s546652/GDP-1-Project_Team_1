@@ -8,6 +8,7 @@
 import UIKit
 import SwiftUI
 import Firebase
+import Lottie
 
 class SignUpVC: UIViewController {
     @IBOutlet weak var fName: UITextField!
@@ -53,7 +54,16 @@ class SignUpVC: UIViewController {
         self.re_enterPassword.layer.borderWidth = 1
         
       
+        let animationView = LottieAnimationView()
+                let animation = LottieAnimation.named("104759-login")
+                animationView.animation = animation
+                animationView.loopMode = .loop
+                animationView.frame = view.bounds
+        animationView.alpha = 0.25
 
+                view.layer.addSublayer(animationView.layer)
+                animationView.play()
+        
         // Do any additional setup after loading the view.
     }
     
