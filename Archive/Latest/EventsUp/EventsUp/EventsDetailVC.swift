@@ -36,9 +36,10 @@ class EventsDetailVC: UIViewController {
        // var a = [event,"test"]
         let db = Firestore.firestore()
         print(name)
+        var text = "/"
         if (name.contains("/")){
-           var ind =  name.firstIndex(of: "/")
-            name.remove(at: ind!)
+            name.removeAll(where: {text.contains($0)})
+          //  name.remove(at: ind!)
             
         }
         let ref = db.collection("WishList").document(name)
