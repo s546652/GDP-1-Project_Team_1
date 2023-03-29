@@ -25,7 +25,6 @@ class EventsDetailVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//print(date,name,desc)
         DateOutlet.text = date
         EventNameOutlet.text = name
         EventDescOutlet.text = desc
@@ -36,10 +35,16 @@ class EventsDetailVC: UIViewController {
     @IBAction func wishListBTN(_ sender: Any) {
        // var a = [event,"test"]
         let db = Firestore.firestore()
+        print(name)
+        if (name.contains("/")){
+           var ind =  name.firstIndex(of: "/")
+            name.remove(at: ind!)
+            
+        }
         let ref = db.collection("WishList").document(name)
         if Auth.auth().currentUser != nil {
             print(ref,(Auth.auth().currentUser?.email!)!)
-            ref.setData(["EventName": name,"EventDesc":date,"User": (Auth.auth().currentUser?.email!)!,"EventDate":desc]){error in
+            ref.setData(["EventName": name,"EventDate":date,"User": (Auth.auth().currentUser?.email!)!,"EventDesc":desc]){error in
                 if let error = error {
                     print(error.localizedDescription)
                 }
@@ -58,7 +63,6 @@ class EventsDetailVC: UIViewController {
                     self.present(alert, animated: true) {
                         // The alert was presented
                     }
-                    // print((Auth.auth().currentUser?.email!)!)
                 }
             }
         }
