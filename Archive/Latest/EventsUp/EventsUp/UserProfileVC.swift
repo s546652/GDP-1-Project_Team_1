@@ -9,6 +9,7 @@ import UIKit
 import FirebaseFirestore
 import FirebaseAuth
 import Firebase
+import AVFAudio
 
 class UserProfileVC: UIViewController {
     var db: Firestore!
@@ -24,6 +25,7 @@ class UserProfileVC: UIViewController {
 
   
     @IBAction func deleteAccount(_ sender: Any) {
+        playSound()
         db = Firestore.firestore()
         db.collection("User").document(EmailAddress.text!).delete()
         Auth.auth().currentUser?.delete()
@@ -42,7 +44,24 @@ class UserProfileVC: UIViewController {
            }
     }
     
+    var player: AVAudioPlayer!
+    
+    func playSound(){
+        let url = Bundle.main.url(forResource: "crumple-03-40747", withExtension: "mp3")
+        player = try! AVAudioPlayer(contentsOf: url!)
+        player!.play()
+    }
+    
+    func logOutSound(){
+        let url = Bundle.main.url(forResource: "metallic-door-shut-98740", withExtension: "mp3")
+        player = try! AVAudioPlayer(contentsOf: url!)
+        player!.play()
+    }
+    
+    
+    
     @IBAction func logoutAccount(_ sender: Any) {
+        logOutSound()
         db = Firestore.firestore()
         //alert
         

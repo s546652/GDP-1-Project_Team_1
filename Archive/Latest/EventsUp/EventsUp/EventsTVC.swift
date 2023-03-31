@@ -9,10 +9,30 @@ import UIKit
 import Firebase
 import FirebaseFirestore
 
-class EventsTVC: UITableViewController {
+class EventsTVC: UIViewController, UITableViewDelegate,UITableViewDataSource, UISearchBarDelegate {
 
+    override func viewWillAppear(_ animated: Bool) {
+        let backgroundImageView = UIImageView(frame: view.frame)
+        backgroundImageView.image = UIImage(named: "background")
+        backgroundImageView.alpha = 0.2
+       // view.addSubview(backgroundImageView)
+        
+    }
+    
+    
+    @IBOutlet weak var search: UISearchBar!
+    
+    
+    @IBOutlet weak var tableView: UITableView!
+    
+    var searchData:[String]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        search.delegate=self
+        tableView.delegate=self
+        tableView.dataSource=self
+        searchData=ename
         var t:[String]!
         db = Firestore.firestore()
         
@@ -78,7 +98,7 @@ class EventsTVC: UITableViewController {
                                 }
                             }
                         }
-                        dataTableView.reloadData()
+                        tableView.reloadData()
                     }
                     
                 }
@@ -95,13 +115,12 @@ class EventsTVC: UITableViewController {
         print(ename)
         print("------------date-----------")
         print(edate)
-        dataTableView.delegate = self
-        dataTableView .dataSource = self
+        
 //
-        let backgroundImageView = UIImageView(frame: view.frame)
-        backgroundImageView.image = UIImage(named: "background")
-        backgroundImageView.alpha = 0.2
-        view.addSubview(backgroundImageView)
+//        let backgroundImageView = UIImageView(frame: view.frame)
+//        backgroundImageView.image = UIImage(named: "background")
+//        backgroundImageView.alpha = 0.2
+//        view.addSubview(backgroundImageView)
 
         
     }
@@ -113,16 +132,28 @@ class EventsTVC: UITableViewController {
     var db: Firestore!
     var size: Int = 0
     var test:[String]!
-    var ename:[String] = ["x"]
-    var edate:[String] = ["x"]
-    var edesc:[String] = ["x"]
+    var ename:[String] = [""]
+    var edate:[String] = [""]
+    var edesc:[String] = [""]
     
+    func searchBar(_ search: UISearchBar, textDidChange searchText: String) {
+        searchData = searchText.isEmpty ? ename : ename.filter({(dataString: String) -> Bool in
+            return dataString.range(of: searchText, options: .caseInsensitive) != nil
+        })
+
+        tableView.reloadData()
+    }
 
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         print("the number of records in ename",ename.count-1,edate.count-1,edesc.count-1,size)
-        return ename.count-1
+            //return ename.count
+            return searchData.count
+        
+        
     }
 
     var date:[String] = ["test"]
@@ -132,16 +163,14 @@ class EventsTVC: UITableViewController {
     var testdata=""
     
     
-    @IBOutlet var dataTableView: UITableView!
-    
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = dataTableView.dequeueReusableCell(withIdentifier: "calendardatacell", for: indexPath)
-        cell.textLabel?.text = ename[indexPath.row+1].self//"text"
-        cell.detailTextLabel?.text = edate[indexPath.row+1].self
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "calendardatacell", for: indexPath)
+        cell.textLabel?.text = searchData[indexPath.row].self//"text"
+        cell.detailTextLabel?.text = edate[indexPath.row].self
         print("DATE=============\(edate[indexPath.row])")
          return cell
     }
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "calendarDetailsSegue", sender: indexPath.row)
     }
     var segData:[String]!
@@ -153,15 +182,15 @@ class EventsTVC: UITableViewController {
             
             print("inside calendarDetailsSegue")
             let des = segue.destination as! EventsDetailVC
-            var test = ename[(dataTableView.indexPathForSelectedRow?.row)!]
+            var test = ename[(tableView.indexPathForSelectedRow?.row)!]
             print("testing",edate[8])
-            des.desc = edesc[(dataTableView.indexPathForSelectedRow?.row)!+1]
-            print("type of ",type(of: (dataTableView.indexPathForSelectedRow?.row)!+1))
-            var indes = (dataTableView.indexPathForSelectedRow?.row)!+1
+            des.desc = edesc[(tableView.indexPathForSelectedRow?.row)!+1]
+            print("type of ",type(of: (tableView.indexPathForSelectedRow?.row)!+1))
+            var indes = (tableView.indexPathForSelectedRow?.row)!+1
             print(ename[indes],edate[indes],edesc[indes])
-            des.date = edate[(dataTableView.indexPathForSelectedRow?.row)!+1]
-            des.name = ename[(dataTableView.indexPathForSelectedRow?.row)!+1]
-            print((dataTableView.indexPathForSelectedRow?.row)!+1)
+            des.date = edate[(tableView.indexPathForSelectedRow?.row)!+1]
+            des.name = ename[(tableView.indexPathForSelectedRow?.row)!+1]
+            print((tableView.indexPathForSelectedRow?.row)!+1)
             print("descc : ",des.desc)
             print("name :",des.name)
             print("date :",des.date)

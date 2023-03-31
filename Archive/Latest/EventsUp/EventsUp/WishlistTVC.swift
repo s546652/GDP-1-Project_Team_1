@@ -41,6 +41,7 @@ class WishlistTVC: UITableViewController {
                             if(t!.isEmpty == false && !(ename.contains(t!))){
                                 
                                 ename.append(t)
+                                
                             }
                         }
                     cellOutlet.reloadData()

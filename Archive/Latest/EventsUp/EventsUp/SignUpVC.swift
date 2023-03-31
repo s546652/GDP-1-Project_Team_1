@@ -11,6 +11,12 @@ import Firebase
 import Lottie
 
 class SignUpVC: UIViewController {
+    
+    var dateString:String!
+    
+    @IBOutlet weak var datePicker: UIDatePicker!
+    
+    
     @IBOutlet weak var fName: UITextField!
     
     
@@ -31,9 +37,19 @@ class SignUpVC: UIViewController {
     
     
     @IBOutlet weak var re_enterPassword: UITextField!
+    
+    @objc func datePickerChanged(picker: UIDatePicker) {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MM/dd/YYYY"
+        dateString=dateFormatter.string(from: picker.date)
+        print(dateString)
+    }
  
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let date = datePicker
+        datePicker.addTarget(self, action: #selector(datePickerChanged(picker:)), for: .valueChanged)
         
         self.fName.layer.borderColor = UIColor.red.cgColor
         self.fName.layer.borderWidth = 1
@@ -59,7 +75,7 @@ class SignUpVC: UIViewController {
                 animationView.animation = animation
                 animationView.loopMode = .loop
                 animationView.frame = view.bounds
-        animationView.alpha = 0.25
+                animationView.alpha = 0.25
 
                 view.layer.addSublayer(animationView.layer)
                 animationView.play()
@@ -152,7 +168,7 @@ class SignUpVC: UIViewController {
                 let db = Firestore.firestore()
                 //let db = Firestore.firestore()
                 let ref = db.collection("User").document(self.email.text!)
-                ref.setData(["fname":self.fName.text!,"lname":self.lName.text!,"username":self.email.text!,"password":self.password.text!,"DOB":self.dob.text!,"PhoneNumber":self.phNo.text!]){error in
+                ref.setData(["fname":self.fName.text!,"lname":self.lName.text!,"username":self.email.text!,"password":self.password.text!,"DOB":self.dateString!,"PhoneNumber":self.phNo.text!]){error in
                     if let error = error {
                         print(error.localizedDescription)
                         
