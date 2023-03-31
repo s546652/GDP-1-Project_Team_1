@@ -66,11 +66,11 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        collectionView.register(PhotoCollectionViewCell.self, forCellWithReuseIdentifier: PhotoCollectionViewCell.identifier)
-        collectionView.delegate = self
-        collectionView.dataSource = self
-        view.addSubview(collectionView)
-        
+//        collectionView.register(PhotoCollectionViewCell.self, forCellWithReuseIdentifier: PhotoCollectionViewCell.identifier)
+//        collectionView.delegate = self
+//        collectionView.dataSource = self
+//        view.addSubview(collectionView)
+//        
         
         // Set the initial image in the UIImageView
         imageView1.image = images1.first as? UIImage

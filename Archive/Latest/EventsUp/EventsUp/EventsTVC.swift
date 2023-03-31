@@ -9,7 +9,7 @@ import UIKit
 import Firebase
 import FirebaseFirestore
 
-class EventsTVC: UIViewController, UITableViewDelegate,UITableViewDataSource, UISearchBarDelegate {
+class EventsTVC: UIViewController, UITableViewDelegate,UITableViewDataSource {
 
     override func viewWillAppear(_ animated: Bool) {
         let backgroundImageView = UIImageView(frame: view.frame)
@@ -20,19 +20,18 @@ class EventsTVC: UIViewController, UITableViewDelegate,UITableViewDataSource, UI
     }
     
     
-    @IBOutlet weak var search: UISearchBar!
     
     
     @IBOutlet weak var tableView: UITableView!
     
-    var searchData:[String]!
+    //var searchData:[String]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        search.delegate=self
+        //search.delegate=self
         tableView.delegate=self
         tableView.dataSource=self
-        searchData=ename
+        //searchData=ename
         var t:[String]!
         db = Firestore.firestore()
         
@@ -116,11 +115,11 @@ class EventsTVC: UIViewController, UITableViewDelegate,UITableViewDataSource, UI
         print("------------date-----------")
         print(edate)
         
-//
-//        let backgroundImageView = UIImageView(frame: view.frame)
-//        backgroundImageView.image = UIImage(named: "background")
-//        backgroundImageView.alpha = 0.2
-//        view.addSubview(backgroundImageView)
+
+        let backgroundImageView = UIImageView(frame: view.frame)
+        backgroundImageView.image = UIImage(named: "background")
+        backgroundImageView.alpha = 0.2
+        view.addSubview(backgroundImageView)
 
         
     }
@@ -136,13 +135,13 @@ class EventsTVC: UIViewController, UITableViewDelegate,UITableViewDataSource, UI
     var edate:[String] = [""]
     var edesc:[String] = [""]
     
-    func searchBar(_ search: UISearchBar, textDidChange searchText: String) {
-        searchData = searchText.isEmpty ? ename : ename.filter({(dataString: String) -> Bool in
-            return dataString.range(of: searchText, options: .caseInsensitive) != nil
-        })
-
-        tableView.reloadData()
-    }
+//    func searchBar(_ search: UISearchBar, textDidChange searchText: String) {
+//        searchData = searchText.isEmpty ? ename : ename.filter({(dataString: String) -> Bool in
+//            return dataString.range(of: searchText, options: .caseInsensitive) != nil
+//        })
+//
+//        tableView.reloadData()
+//    }
 
     
     
@@ -151,7 +150,7 @@ class EventsTVC: UIViewController, UITableViewDelegate,UITableViewDataSource, UI
         // #warning Incomplete implementation, return the number of rows
         print("the number of records in ename",ename.count-1,edate.count-1,edesc.count-1,size)
             //return ename.count
-            return searchData.count
+            return ename.count-1
         
         
     }
@@ -165,7 +164,7 @@ class EventsTVC: UIViewController, UITableViewDelegate,UITableViewDataSource, UI
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "calendardatacell", for: indexPath)
-        cell.textLabel?.text = searchData[indexPath.row].self//"text"
+        cell.textLabel?.text = ename[indexPath.row+1].self//"text"
         cell.detailTextLabel?.text = edate[indexPath.row].self
         print("DATE=============\(edate[indexPath.row])")
          return cell

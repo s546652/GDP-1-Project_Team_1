@@ -22,10 +22,18 @@ class LoginVC: UIViewController {
     }()
     
     
+    var player: AVAudioPlayer!
+    
+    func playSound(){
+        let url = Bundle.main.url(forResource: "short-success-sound-glockenspiel-treasure-video-game-6346", withExtension: "mp3")
+        player = try! AVAudioPlayer(contentsOf: url!)
+        player!.play()
+    }
+    
     
     @IBAction func LoginBTN(_ sender: UIButton) {
         
-        
+        playSound()
         
         print("inside login button",EmailTF.text!,!EmailTF.text!.isEmpty,PasswordTF.text!,!PasswordTF.text!.isEmpty)
         

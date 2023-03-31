@@ -64,7 +64,7 @@
                                 <rect key="frame" x="150" y="595" width="128" height="128"/>
                             </imageView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YXW-gs-Kwf">
-                                <rect key="frame" x="-41" y="816" width="429" height="51"/>
+                                <rect key="frame" x="-42" y="816" width="429" height="50"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem title="Events" image="list.bullet.rectangle.portrait" catalog="system" id="KXl-ff-QWF">
@@ -293,7 +293,7 @@
                                 </constraints>
                             </stackView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7tB-Tu-CS0">
-                                <rect key="frame" x="-44" y="819" width="429" height="54"/>
+                                <rect key="frame" x="-44" y="819" width="429" height="53"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem title="Events" image="list.bullet.rectangle.portrait" catalog="system" id="XFT-rf-KzF">
@@ -559,7 +559,7 @@
                                 </items>
                             </navigationBar>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bKE-s0-zlt">
-                                <rect key="frame" x="-46" y="817" width="434" height="40"/>
+                                <rect key="frame" x="-46" y="816" width="433" height="40"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem title="Events" image="list.bullet.rectangle.portrait" catalog="system" id="ksh-Tt-j8C">
@@ -1409,8 +1409,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="428" height="843"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="yUk-8c-CD8">
-                                <rect key="frame" x="20" y="233" width="388" height="590"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="yUk-8c-CD8">
+                                <rect key="frame" x="20" y="191" width="388" height="632"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="calendardatacell" textLabel="WFp-9z-lc8" detailTextLabel="xvZ-ud-F3d" style="IBUITableViewCellStyleSubtitle" id="7IK-wS-OFY">
@@ -1442,29 +1442,19 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="vMd-22-VbE">
-                                <rect key="frame" x="20" y="111" width="428" height="56"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="km2-cN-LPh" id="gb4-7Z-Veu"/>
-                                </connections>
-                            </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="lBV-zR-Z23"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="vMd-22-VbE" firstAttribute="leading" secondItem="lBV-zR-Z23" secondAttribute="leading" constant="20" id="BWb-qY-1nb"/>
-                            <constraint firstItem="vMd-22-VbE" firstAttribute="trailing" secondItem="lBV-zR-Z23" secondAttribute="trailing" constant="20" id="GDh-70-obM"/>
+                            <constraint firstItem="yUk-8c-CD8" firstAttribute="top" secondItem="lBV-zR-Z23" secondAttribute="top" constant="20" id="SsH-Pg-a3L"/>
                             <constraint firstItem="lBV-zR-Z23" firstAttribute="trailing" secondItem="yUk-8c-CD8" secondAttribute="trailing" constant="20" id="a2x-sm-1cZ"/>
                             <constraint firstItem="yUk-8c-CD8" firstAttribute="leading" secondItem="lBV-zR-Z23" secondAttribute="leading" constant="20" id="d2H-Hf-TnM"/>
-                            <constraint firstItem="vMd-22-VbE" firstAttribute="top" secondItem="lBV-zR-Z23" secondAttribute="top" constant="20" id="gzU-ku-sYJ"/>
                             <constraint firstItem="yUk-8c-CD8" firstAttribute="top" secondItem="lBV-zR-Z23" secondAttribute="top" constant="100" id="n7U-vt-i81"/>
                             <constraint firstItem="lBV-zR-Z23" firstAttribute="bottom" secondItem="yUk-8c-CD8" secondAttribute="bottom" constant="20" id="rxk-p2-lG7"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Events" id="M8n-bS-NvF"/>
                     <connections>
-                        <outlet property="search" destination="vMd-22-VbE" id="eH9-Ri-aI6"/>
                         <outlet property="tableView" destination="yUk-8c-CD8" id="S6H-hj-eLh"/>
                     </connections>
                 </viewController>

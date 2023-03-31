@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		260E922328F4D5E60020B79F /* signupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260E922228F4D5E60020B79F /* signupController.swift */; };
 		26247E2829881A44001BCE1E /* wishListControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26247E2729881A44001BCE1E /* wishListControllerViewController.swift */; };
-		2630EE99297F868300D69900 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2630EE98297F868300D69900 /* GoogleService-Info.plist */; };
 		263791CF2925264900B2A9E5 /* tesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263791CE2925264900B2A9E5 /* tesViewController.swift */; };
 		263E36FA29A349490023794B /* CalendarEventDetailDesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263E36F929A349490023794B /* CalendarEventDetailDesViewController.swift */; };
 		264F965F298A0F0D00573A24 /* WishList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264F965E298A0F0D00573A24 /* WishList.swift */; };
@@ -76,6 +75,8 @@
 		F5D59E4229D6B6F90015BA9A /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D59E4129D6B6F90015BA9A /* PhotoCollectionViewCell.swift */; };
 		F5D59E4529D6C4D70015BA9A /* crumple-03-40747.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F5D59E4429D6C4D70015BA9A /* crumple-03-40747.mp3 */; };
 		F5D59E4729D6CA4E0015BA9A /* metallic-door-shut-98740.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F5D59E4629D6CA4E0015BA9A /* metallic-door-shut-98740.mp3 */; };
+		F5D59E4929D6CD2A0015BA9A /* short-success-sound-glockenspiel-treasure-video-game-6346.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F5D59E4829D6CD2A0015BA9A /* short-success-sound-glockenspiel-treasure-video-game-6346.mp3 */; };
+		F5D59E4B29D721AB0015BA9A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F5D59E4A29D721AA0015BA9A /* GoogleService-Info.plist */; };
 		F5F3AE1529CD188C005FD102 /* 104759-login.json in Resources */ = {isa = PBXBuildFile; fileRef = F5F3AE1429CD188C005FD102 /* 104759-login.json */; };
 		F5F3AE1729CD1E4C005FD102 /* 104368-thank-you.json in Resources */ = {isa = PBXBuildFile; fileRef = F5F3AE1629CD1E4C005FD102 /* 104368-thank-you.json */; };
 		F66ECD68290CC10800D89F73 /* MySQLDriver in Frameworks */ = {isa = PBXBuildFile; productRef = F66ECD67290CC10800D89F73 /* MySQLDriver */; };
@@ -84,7 +85,6 @@
 /* Begin PBXFileReference section */
 		260E922228F4D5E60020B79F /* signupController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signupController.swift; sourceTree = "<group>"; };
 		26247E2729881A44001BCE1E /* wishListControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wishListControllerViewController.swift; sourceTree = "<group>"; };
-		2630EE98297F868300D69900 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		263791CE2925264900B2A9E5 /* tesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tesViewController.swift; sourceTree = "<group>"; };
 		263E36F929A349490023794B /* CalendarEventDetailDesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarEventDetailDesViewController.swift; sourceTree = "<group>"; };
 		264F965E298A0F0D00573A24 /* WishList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishList.swift; sourceTree = "<group>"; };
@@ -125,6 +125,8 @@
 		F5D59E4129D6B6F90015BA9A /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		F5D59E4429D6C4D70015BA9A /* crumple-03-40747.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "crumple-03-40747.mp3"; sourceTree = "<group>"; };
 		F5D59E4629D6CA4E0015BA9A /* metallic-door-shut-98740.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "metallic-door-shut-98740.mp3"; sourceTree = "<group>"; };
+		F5D59E4829D6CD2A0015BA9A /* short-success-sound-glockenspiel-treasure-video-game-6346.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "short-success-sound-glockenspiel-treasure-video-game-6346.mp3"; sourceTree = "<group>"; };
+		F5D59E4A29D721AA0015BA9A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F5F3AE1429CD188C005FD102 /* 104759-login.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "104759-login.json"; sourceTree = "<group>"; };
 		F5F3AE1629CD1E4C005FD102 /* 104368-thank-you.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "104368-thank-you.json"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -219,9 +221,9 @@
 				26AD9F7728EA5CFF0017E297 /* EventsListController.swift */,
 				263E36F929A349490023794B /* CalendarEventDetailDesViewController.swift */,
 				F5A77A5228E79076001307B3 /* Main.storyboard */,
+				F5D59E4A29D721AA0015BA9A /* GoogleService-Info.plist */,
 				F5A77A5528E79078001307B3 /* Assets.xcassets */,
 				F55E4ABA29A58909007E5850 /* Day One at Northwest.mp4 */,
-				2630EE98297F868300D69900 /* GoogleService-Info.plist */,
 				F5A77A5728E79078001307B3 /* LaunchScreen.storyboard */,
 				F5A77A5A28E79078001307B3 /* Info.plist */,
 				F5186A5928E8F4F800806FAB /* LoginController.swift */,
@@ -246,6 +248,7 @@
 		F5D59E4329D6C4410015BA9A /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				F5D59E4829D6CD2A0015BA9A /* short-success-sound-glockenspiel-treasure-video-game-6346.mp3 */,
 				F5D59E4429D6C4D70015BA9A /* crumple-03-40747.mp3 */,
 				F5D59E4629D6CA4E0015BA9A /* metallic-door-shut-98740.mp3 */,
 			);
@@ -346,11 +349,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2630EE99297F868300D69900 /* GoogleService-Info.plist in Resources */,
 				F5F3AE1529CD188C005FD102 /* 104759-login.json in Resources */,
 				F5D59E4729D6CA4E0015BA9A /* metallic-door-shut-98740.mp3 in Resources */,
+				F5D59E4929D6CD2A0015BA9A /* short-success-sound-glockenspiel-treasure-video-game-6346.mp3 in Resources */,
 				F5A77A5928E79078001307B3 /* LaunchScreen.storyboard in Resources */,
 				F55E4AB929A58870007E5850 /* Assets.xcassets in Resources */,
+				F5D59E4B29D721AB0015BA9A /* GoogleService-Info.plist in Resources */,
 				F55E4AC829A66F4B007E5850 /* 31737-savings-dollar.json in Resources */,
 				F5F3AE1729CD1E4C005FD102 /* 104368-thank-you.json in Resources */,
 				F5A77A5428E79076001307B3 /* Main.storyboard in Resources */,
