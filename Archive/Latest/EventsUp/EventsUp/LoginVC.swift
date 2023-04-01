@@ -70,8 +70,9 @@ class LoginVC: UIViewController {
                    
                 }
                 else {
-                                        
-                    if(self.errorLogin){
+                    print("hi")
+             //  if(self.errorLogin){
+                    print("bye")
                         print("test login tru case",self.errorLogin)
                         let defaultAction = UIAlertAction(title: "Ok",
                                                 style: .default) { (action) in
@@ -85,7 +86,7 @@ class LoginVC: UIViewController {
                            self.present(alert, animated: true) {
                            }
                     }
-                }
+           // }
             }
         }
     }
