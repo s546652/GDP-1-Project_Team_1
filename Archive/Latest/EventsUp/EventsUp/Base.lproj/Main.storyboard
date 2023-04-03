@@ -64,7 +64,7 @@
                                 <rect key="frame" x="150" y="595" width="128" height="128"/>
                             </imageView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YXW-gs-Kwf">
-                                <rect key="frame" x="-42" y="816" width="429" height="50"/>
+                                <rect key="frame" x="-44" y="816" width="430" height="50"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem title="Events" image="list.bullet.rectangle.portrait" catalog="system" id="KXl-ff-QWF">
@@ -293,7 +293,7 @@
                                 </constraints>
                             </stackView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7tB-Tu-CS0">
-                                <rect key="frame" x="-44" y="819" width="429" height="53"/>
+                                <rect key="frame" x="-46" y="818" width="430" height="53"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem title="Events" image="list.bullet.rectangle.portrait" catalog="system" id="XFT-rf-KzF">
@@ -559,7 +559,7 @@
                                 </items>
                             </navigationBar>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bKE-s0-zlt">
-                                <rect key="frame" x="-46" y="816" width="433" height="40"/>
+                                <rect key="frame" x="-48" y="814" width="433" height="40"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem title="Events" image="list.bullet.rectangle.portrait" catalog="system" id="ksh-Tt-j8C">
@@ -990,26 +990,52 @@
                                         <rect key="frame" x="0.0" y="0.0" width="388" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="fnameCheck:" destination="rNN-vo-tyr" eventType="editingChanged" id="fdp-hR-xMj"/>
+                                            <action selector="fnameTF:" destination="rNN-vo-tyr" eventType="editingDidEnd" id="EA3-SD-nhR"/>
+                                            <action selector="fnameTFA:" destination="rNN-vo-tyr" eventType="editingChanged" id="0h4-v4-o8N"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8it-Ik-TIP">
                                         <rect key="frame" x="0.0" y="42" width="388" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="fnameTFA:" destination="rNN-vo-tyr" eventType="editingChanged" id="jQA-p5-RdD"/>
+                                            <action selector="lnameCheck:" destination="rNN-vo-tyr" eventType="editingChanged" id="6cE-sW-xS5"/>
+                                            <action selector="lnameTF:" destination="rNN-vo-tyr" eventType="editingDidEnd" id="Jda-Ys-cSD"/>
+                                            <action selector="lnameTFA:" destination="rNN-vo-tyr" eventType="editingChanged" id="330-Bw-p5N"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HyJ-rx-4db">
                                         <rect key="frame" x="0.0" y="84" width="388" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="emailCheck:" destination="rNN-vo-tyr" eventType="editingChanged" id="3X8-vv-B8P"/>
+                                            <action selector="emailTF:" destination="rNN-vo-tyr" eventType="editingDidEnd" id="PM4-rN-822"/>
+                                            <action selector="emailTFA:" destination="rNN-vo-tyr" eventType="editingChanged" id="971-uk-S0t"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="SID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wbi-pq-5N4">
                                         <rect key="frame" x="0.0" y="126" width="388" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="sidCheck:" destination="rNN-vo-tyr" eventType="editingChanged" id="0c4-Il-oYt"/>
+                                            <action selector="sidTF:" destination="rNN-vo-tyr" eventType="editingDidEnd" id="ZH0-kq-Tg3"/>
+                                            <action selector="sidTFA:" destination="rNN-vo-tyr" eventType="editingChanged" id="LXq-gp-Wby"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Date of Birth" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZVs-S6-xUJ">
                                         <rect key="frame" x="0.0" y="168" width="388" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="dobCheck:" destination="rNN-vo-tyr" eventType="editingChanged" id="tSp-Cl-jSQ"/>
+                                            <action selector="dobTF:" destination="rNN-vo-tyr" eventType="editingDidEnd" id="j94-OM-HzG"/>
+                                            <action selector="dobTFA:" destination="rNN-vo-tyr" eventType="editingChanged" id="pPw-R6-oba"/>
+                                        </connections>
                                     </textField>
                                     <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="cyK-1x-d6F">
                                         <rect key="frame" x="0.0" y="210" width="388" height="50"/>
@@ -1018,16 +1044,31 @@
                                         <rect key="frame" x="0.0" y="268" width="388" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="phnumCheck:" destination="rNN-vo-tyr" eventType="editingChanged" id="zwf-4D-0r4"/>
+                                            <action selector="phnumTF:" destination="rNN-vo-tyr" eventType="editingDidEnd" id="jME-It-IIY"/>
+                                            <action selector="phnumTFA:" destination="rNN-vo-tyr" eventType="editingChanged" id="JDp-h6-coM"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YIG-Mv-vhn">
                                         <rect key="frame" x="0.0" y="310" width="388" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <connections>
+                                            <action selector="psswrdCheck:" destination="rNN-vo-tyr" eventType="editingChanged" id="X36-JX-a8w"/>
+                                            <action selector="psswrdTF:" destination="rNN-vo-tyr" eventType="editingDidEnd" id="KGy-tf-GrW"/>
+                                            <action selector="psswrdTFA:" destination="rNN-vo-tyr" eventType="editingChanged" id="Ycg-MQ-ekr"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Re-enter Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="39Q-aS-OUL">
                                         <rect key="frame" x="0.0" y="352" width="388" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <connections>
+                                            <action selector="repassCheck:" destination="rNN-vo-tyr" eventType="editingChanged" id="Urq-v3-RQj"/>
+                                            <action selector="repassTF:" destination="rNN-vo-tyr" eventType="editingDidEnd" id="9b3-Oj-jcV"/>
+                                            <action selector="repassTFA:" destination="rNN-vo-tyr" eventType="editingChanged" id="b6H-IV-1vc"/>
+                                        </connections>
                                     </textField>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="YT3-e8-uUo">
                                         <rect key="frame" x="0.0" y="394" width="388" height="34.333333333333314"/>

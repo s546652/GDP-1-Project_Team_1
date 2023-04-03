@@ -115,23 +115,44 @@ class LoginVC: UIViewController {
         {
             return
         }
-        
+
         let player = AVPlayer(url: URL(fileURLWithPath: path))
         let playerLayer = AVPlayerLayer(player: player)
         playerLayer.frame = self.view.bounds
         playerLayer.videoGravity = .resizeAspectFill
         self.videoLayerUV.layer.addSublayer(playerLayer)
-        
+
+
         player.play()
         player.isMuted = true
         // videoLayerUV.bringSubviewToFront(logoIV)
         videoLayerUV.bringSubviewToFront(MainStack)
-        
+
+
     }
+    
+    
+//    override func viewDidAppear(_ animated: Bool) {
+//        super.viewDidAppear(animated)
+//
+//
+//        let player = AVPlayer(url: URL(fileURLWithPath: Bundle.main.path(forResource: "Day One at Northwest", ofType: "mp4")!))
+//        let layer = AVPlayerLayer(player: player)
+//        layer.frame = view.bounds
+//        layer.videoGravity = .resizeAspectFill
+//        view.layer.addSublayer(layer)
+//        player.volume = 0
+//        player.play()
+//
+//
+//    }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+
+        
         
         view.addSubview(imageView)
         DispatchQueue.main.asyncAfter(deadline: .now()+10){
