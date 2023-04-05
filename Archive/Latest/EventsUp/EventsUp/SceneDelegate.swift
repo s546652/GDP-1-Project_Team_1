@@ -34,11 +34,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
 
     func sceneDidBecomeActive(_ scene: UIScene) {
-        db = Firestore.firestore()
-        Auth.auth().currentUser
-        // Called when the scene has moved from an inactive state to an active state.
-        // Use this method to restart any tasks that were paused (or not yet started) when the scene was inactive.
-        print("sceneDidBecomeActive")
+       
+    }
+
+    func sceneWillResignActive(_ scene: UIScene) {
+        // Called when the scene will move from an active state to an inactive state.
+        // This may occur due to temporary interruptions (ex. an incoming phone call).
+        print("sceneWillEnterForeground")
         let date = Date()
         let calendar = Calendar.current
         let hour = calendar.component(.hour, from: date)
@@ -51,35 +53,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             var i = endTime - startTime
             print("vale of i = ",i)
             if Double(i) >= 0.25 && Auth.auth().currentUser != nil{
-                print("i greater than 10")
-                print("user details ",Auth.auth().currentUser)
-                do {
-                try Auth.auth().signOut()
-                    print("user details ",Auth.auth().currentUser)
-                    exit(0)
-                //    UserProfileVC.logoutAccount(UserProfileVC)
-
-                } catch let signOutError as NSError {
-                  print("Error signing out: %@", signOutError)
-                    
-                }
+                exit(0)
             }
         }
-    }
-
-    func sceneWillResignActive(_ scene: UIScene) {
-        // Called when the scene will move from an active state to an inactive state.
-        // This may occur due to temporary interruptions (ex. an incoming phone call).
-        print("sceneWillResignActive")
-        
+       
         
     }
 
     func sceneWillEnterForeground(_ scene: UIScene) {
         // Called as the scene transitions from the background to the foreground.
         // Use this method to undo the changes made on entering the background.
-        print("sceneWillEnterForeground")
-       
+      
     }
 
     func sceneDidEnterBackground(_ scene: UIScene) {
