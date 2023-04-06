@@ -103,11 +103,30 @@ extension WishlistTVC {
      {
          let deleteAction = UIContextualAction(style: .normal, title:  "Delete", handler: { (ac:UIContextualAction, view:UIView, success:(Bool) -> Void) in
              success(true)
-             self.deleteWishList(index: indexPath.row)
+             self.showActionSheet(index: indexPath.row)
          })
          deleteAction.backgroundColor = .red
 
          return UISwipeActionsConfiguration(actions: [deleteAction])
      }
+    
+    func showActionSheet(index: Int) {
+        let alert = UIAlertController(title: "Alert!", message: "Would you like to delete?", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Delete", style: .destructive , handler:{ (UIAlertAction)in
+            self.deleteWishList(index: index)
+        }))
+        
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler:{ (UIAlertAction)in
+            print("User click Dismiss button")
+        }))
+
+        
+        
+
+        self.present(alert, animated: true, completion: {
+            print("completion block")
+        })
+    }
 }
 
