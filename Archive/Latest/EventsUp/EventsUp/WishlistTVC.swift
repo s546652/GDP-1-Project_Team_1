@@ -50,6 +50,18 @@ class WishlistTVC: UITableViewController {
         }
         
     }
+    
+    
+    func deleteWishList(index:Int) {
+        let name = ename[index + 1]
+        self.db.collection("WishList").document(name).delete()
+        self.ename.remove(at: index + 1)
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -143,3 +155,20 @@ class WishlistTVC: UITableViewController {
     */
 
 }
+extension WishlistTVC {
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    override func tableView(_ tableView: UITableView,
+                    trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration?
+     {
+         let deleteAction = UIContextualAction(style: .normal, title:  "Delete", handler: { (ac:UIContextualAction, view:UIView, success:(Bool) -> Void) in
+             success(true)
+             self.deleteWishList(index: indexPath.row)
+         })
+         deleteAction.backgroundColor = .red
+
+         return UISwipeActionsConfiguration(actions: [deleteAction])
+     }
+}
+
