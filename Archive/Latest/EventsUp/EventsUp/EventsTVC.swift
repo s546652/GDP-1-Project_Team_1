@@ -9,17 +9,28 @@ import UIKit
 import Firebase
 import FirebaseFirestore
 
-class EventsTVC: UIViewController, UITableViewDelegate,UITableViewDataSource {
+class EventsTVC: UIViewController, UITableViewDelegate,UITableViewDataSource, UISearchBarDelegate {
 
     override func viewWillAppear(_ animated: Bool) {
         let backgroundImageView = UIImageView(frame: view.frame)
         backgroundImageView.image = UIImage(named: "background")
         backgroundImageView.alpha = 0.2
-       // view.addSubview(backgroundImageView)
+       view.addSubview(backgroundImageView)
         
     }
     
+    var searchName:[String]!
+        var searchdate:String!
+        var searchdesc:String!
+    //    var sdate:[String]!
+    //    var searchD:[String]!
+    //    var x=0
     
+    
+    @IBOutlet weak var search: UISearchBar!
+    
+    
+    @IBOutlet weak var searchDate: UISearchBar!
     
     
     @IBOutlet weak var tableView: UITableView!
@@ -28,10 +39,11 @@ class EventsTVC: UIViewController, UITableViewDelegate,UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //search.delegate=self
+        search.delegate=self
+        searchDate.delegate=self
         tableView.delegate=self
         tableView.dataSource=self
-        //searchData=ename
+        searchName=ename
         var t:[String]!
         db = Firestore.firestore()
         
@@ -97,6 +109,29 @@ class EventsTVC: UIViewController, UITableViewDelegate,UITableViewDataSource {
                                 }
                             }
                         }
+                        //for i in 0..<edate.count{
+                       //                           sdate[i]=DateConversion(var: edate[i])
+                       //                        }
+                                               for i in 0..<ename.count{
+                                                   if(i<10){
+                                                       ename[i]="00"+String(i)+ename[i]
+                                                       edate[i]="00"+String(i)+edate[i]
+                                                       edesc[i]="00"+String(i)+edesc[i]
+                                                   }
+                                                   else if(i>=10 && i<100){
+                                                       ename[i]="0"+String(i)+ename[i]
+                                                       edate[i]="0"+String(i)+edate[i]
+                                                       edesc[i]="0"+String(i)+edesc[i]
+                                                   }
+                                                   else if(i>=100){
+                                                       ename[i]=String(i)+ename[i]
+                                                       edate[i]=String(i)+edate[i]
+                                                       edesc[i]=String(i)+edesc[i]
+                                                   }
+                                               }
+                                               
+                                               searchName=ename
+
                         tableView.reloadData()
                     }
                     
@@ -123,6 +158,28 @@ class EventsTVC: UIViewController, UITableViewDelegate,UITableViewDataSource {
 
         
     }
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+            if searchBar==search{
+                searchName = searchText.isEmpty ? ename : ename.filter({(dataString: String) -> Bool in
+                    return dataString.range(of: searchText, options: .caseInsensitive) != nil
+                })
+            }
+    //        if searchBar==searchDate{
+    //            x=1
+    //            searchD = searchText.isEmpty ? sdate : sdate.filter({(dataString: String) -> Bool in
+    //                return dataString.range(of: searchText, options: .caseInsensitive) != nil
+    //            })
+    //        }
+            tableView.reloadData()
+        }
+        
+        func numberOfSections(in tableView: UITableView) -> Int {
+            return 1
+        }
+
+        func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+            return ""
+        }
 
  
     
@@ -150,7 +207,7 @@ class EventsTVC: UIViewController, UITableViewDelegate,UITableViewDataSource {
         // #warning Incomplete implementation, return the number of rows
         print("the number of records in ename",ename.count-1,edate.count-1,edesc.count-1,size)
             //return ename.count
-            return ename.count-1
+            return searchName.count-1
         
         
     }
@@ -163,12 +220,20 @@ class EventsTVC: UIViewController, UITableViewDelegate,UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "calendardatacell", for: indexPath)
-        cell.textLabel?.text = ename[indexPath.row+1].self//"text"
-        cell.detailTextLabel?.text = edate[indexPath.row].self
-        print("DATE=============\(edate[indexPath.row])")
-         return cell
-    }
+           let cell = tableView.dequeueReusableCell(withIdentifier: "calendardatacell", for: indexPath)
+           cell.textLabel?.text = ename[indexPath.row+1].self//"text"
+           cell.detailTextLabel?.text = edate[indexPath.row].self
+           for i in 0..<ename.count{
+               if searchName[indexPath.row+1].prefix(upTo: String.Index(encodedOffset: 3))==edate[i].prefix(upTo: String.Index(encodedOffset: 3)){
+                   searchdate=String(edate[i].suffix(from: String.Index(encodedOffset: 3)))
+               }
+           }
+           cell.textLabel?.text = String(searchName[indexPath.row+1].suffix(from: String.Index(encodedOffset: 3)))
+           cell.detailTextLabel?.text = searchdate.self
+           print("DATE=============\(edate[indexPath.row])")
+        
+           return cell
+       }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "calendarDetailsSegue", sender: indexPath.row)
     }
@@ -185,6 +250,16 @@ class EventsTVC: UIViewController, UITableViewDelegate,UITableViewDataSource {
             print("testing",edate[8])
             des.desc = edesc[(tableView.indexPathForSelectedRow?.row)!+1]
             print("type of ",type(of: (tableView.indexPathForSelectedRow?.row)!+1))
+            for i in 0..<ename.count{
+            if searchName[(tableView.indexPathForSelectedRow?.row)!+1].prefix(upTo: String.Index(encodedOffset: 3))==edate[i].prefix(upTo: String.Index(encodedOffset: 3)){
+                                searchdate=String(edate[i].suffix(from: String.Index(encodedOffset: 3)))
+                            }
+            if searchName[(tableView.indexPathForSelectedRow?.row)!+1].prefix(upTo: String.Index(encodedOffset: 3))==edesc[i].prefix(upTo: String.Index(encodedOffset: 3)){
+                                searchdesc=String(edesc[i].suffix(from: String.Index(encodedOffset: 3)))
+                            }
+                        }
+            test = searchName[(tableView.indexPathForSelectedRow?.row)!]
+                        des.desc = searchdesc
             var indes = (tableView.indexPathForSelectedRow?.row)!+1
             print(ename[indes],edate[indes],edesc[indes])
             des.date = edate[(tableView.indexPathForSelectedRow?.row)!+1]
@@ -193,10 +268,99 @@ class EventsTVC: UIViewController, UITableViewDelegate,UITableViewDataSource {
             print("descc : ",des.desc)
             print("name :",des.name)
             print("date :",des.date)
+            
+            des.date = searchdate
+                      des.name = String(searchName[(tableView.indexPathForSelectedRow?.row)!+1].suffix(from: String.Index(encodedOffset: 3)))
            
         }
 
     }
+    
+    func DateConversion(var ss:String) -> String{
+            var s:String=ss
+            if(s.contains("@")){
+                s=s.substring(to: s.firstIndex(of: "@")!)
+            }
+            if(s.contains("-")){
+                s=s.substring(to: s.firstIndex(of: "-")!)
+            }
+            if(s.contains(" ")){
+                s=s.replacingOccurrences(of: " ", with: "")
+                //s=s.replacing(" ", with: "")
+            }
+            var l=s.split(separator: ",")
+            l.remove(at: 0)
+            var ss:String=""
+            if(l[0].contains("January")){
+                ss=l[0].replacingOccurrences(of: "January", with: "01/")
+                l[0]=ss.suffix(from: String.Index(encodedOffset: 0))
+                //l[0]=l[0].replacing("January", with: "01/")
+            }
+            if(l[0].contains("February")){
+                ss=l[0].replacingOccurrences(of: "February", with: "02/")
+                l[0]=ss.suffix(from: String.Index(encodedOffset: 0))
+                //l[0]=l[0].replacing("February", with: "02/")
+            }
+            if(l[0].contains("March")){
+                ss=l[0].replacingOccurrences(of: "March", with: "03/")
+                l[0]=ss.suffix(from: String.Index(encodedOffset: 0))
+                //l[0]=l[0].replacing("March", with: "03/")
+            }
+            if(l[0].contains("April")){
+                ss=l[0].replacingOccurrences(of: "April", with: "04/")
+                l[0]=ss.suffix(from: String.Index(encodedOffset: 0))
+                //l[0]=l[0].replacing("April", with: "04/")
+            }
+            if(l[0].contains("May")){
+                ss=l[0].replacingOccurrences(of: "May", with: "05/")
+                l[0]=ss.suffix(from: String.Index(encodedOffset: 0))
+                //l[0]=l[0].replacing("May", with: "05/")
+            }
+            if(l[0].contains("June")){
+                ss=l[0].replacingOccurrences(of: "June", with: "06/")
+                l[0]=ss.suffix(from: String.Index(encodedOffset: 0))
+                //l[0]=l[0].replacing("June", with: "06/")
+            }
+            if(l[0].contains("July")){
+                ss=l[0].replacingOccurrences(of: "July", with: "07/")
+                l[0]=ss.suffix(from: String.Index(encodedOffset: 0))
+                //l[0]=l[0].replacing("July", with: "07/")
+            }
+            if(l[0].contains("August")){
+                ss=l[0].replacingOccurrences(of: "August", with: "08/")
+                l[0]=ss.suffix(from: String.Index(encodedOffset: 0))
+                //l[0]=l[0].replacing("August", with: "08/")
+            }
+            if(l[0].contains("September")){
+                ss=l[0].replacingOccurrences(of: "September", with: "09/")
+                l[0]=ss.suffix(from: String.Index(encodedOffset: 0))
+                //l[0]=l[0].replacing("January", with: "09/")
+            }
+            if(l[0].contains("October")){
+                ss=l[0].replacingOccurrences(of: "October", with: "10/")
+                l[0]=ss.suffix(from: String.Index(encodedOffset: 0))
+                //l[0]=l[0].replacing("October", with: "10/")
+            }
+            if(l[0].contains("November")){
+                ss=l[0].replacingOccurrences(of: "November", with: "11/")
+                l[0]=ss.suffix(from: String.Index(encodedOffset: 0))
+                //l[0]=l[0].replacing("November", with: "11/")
+            }
+            if(l[0].contains("December")){
+                ss=l[0].replacingOccurrences(of: "December", with: "12/")
+                l[0]=ss.suffix(from: String.Index(encodedOffset: 0))
+                //l[0]=l[0].replacing("December", with: "12/")
+            }
+            var d1=l[0]+"/"+l[1]
+            print(d1)
+            
+            let d2 = DateFormatter()
+            d2.dateFormat = "MM/dd/yyyy"
+            print(d2.date(from: String(d1))!)
+            
+            var d=d2.date(from: String(d1))!
+            return String(d1)
+        }
     
     func setupLocalNotification() {
         
