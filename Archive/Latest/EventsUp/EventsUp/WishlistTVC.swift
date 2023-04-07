@@ -24,7 +24,7 @@ class WishlistTVC: UITableViewController {
       
         var t:String!
         db = Firestore.firestore()
-
+        if Auth.auth().currentUser != nil {
             db.collection("WishList").whereField("User", isEqualTo:  (Auth.auth().currentUser?.email!)!)
                 .getDocuments() { [self] (querySnapshot, err) in
                     if let err = err {
@@ -39,9 +39,14 @@ class WishlistTVC: UITableViewController {
                                 
                             }
                         }
-                    cellOutlet.reloadData()
+                        cellOutlet.reloadData()
                     }
-           // print("size of the list is \(size)")
+                    // print("size of the list is \(size)")
+                }
+        }
+        else{
+            self.performSegue(withIdentifier: "logoutSegue", sender: (Any).self)
+
         }
         
     }
@@ -92,6 +97,13 @@ class WishlistTVC: UITableViewController {
                tableView.deleteRows(at: [indexPath], with: .fade)
            }
        }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let tran = segue.identifier
+        if tran == "logoutSegue" {
+            let dest = segue.destination as! LoginVC 
+        }
+    }
 
 }
 extension WishlistTVC {
