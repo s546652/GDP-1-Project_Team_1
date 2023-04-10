@@ -8,6 +8,7 @@
 import UIKit
 import Firebase
 import FirebaseFirestore
+import AVFAudio
 
 
 class WishlistTVC: UITableViewController {
@@ -61,6 +62,14 @@ class WishlistTVC: UITableViewController {
         }
     }
     
+    var player: AVAudioPlayer!
+    
+    func playSound(){
+        let url = Bundle.main.url(forResource: "tap", withExtension: "mp3")
+        player = try! AVAudioPlayer(contentsOf: url!)
+        player!.play()
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -79,6 +88,10 @@ class WishlistTVC: UITableViewController {
         return ename.count-1
     }
 
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        playSound()
+    }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 

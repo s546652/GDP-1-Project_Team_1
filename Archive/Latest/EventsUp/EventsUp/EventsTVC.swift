@@ -8,6 +8,7 @@
 import UIKit
 import Firebase
 import FirebaseFirestore
+import AVFAudio
 
 class EventsTVC: UIViewController, UITableViewDelegate,UITableViewDataSource, UISearchBarDelegate {
 
@@ -212,6 +213,17 @@ class EventsTVC: UIViewController, UITableViewDelegate,UITableViewDataSource, UI
         
     }
 
+    
+    var player: AVAudioPlayer!
+    
+    func playSound(){
+        let url = Bundle.main.url(forResource: "tap", withExtension: "mp3")
+        player = try! AVAudioPlayer(contentsOf: url!)
+        player!.play()
+    }
+    
+    
+    
     var date:[String] = ["test"]
     var des:[String] = ["test"]
     let recordTimes: KeyValuePairs = ["test1":"test"]
@@ -235,7 +247,11 @@ class EventsTVC: UIViewController, UITableViewDelegate,UITableViewDataSource, UI
            return cell
        }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        playSound()
+        
         performSegue(withIdentifier: "calendarDetailsSegue", sender: indexPath.row)
+        
     }
     var segData:[String]!
     

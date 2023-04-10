@@ -77,6 +77,9 @@
 		F5D59E4729D6CA4E0015BA9A /* metallic-door-shut-98740.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F5D59E4629D6CA4E0015BA9A /* metallic-door-shut-98740.mp3 */; };
 		F5D59E4929D6CD2A0015BA9A /* short-success-sound-glockenspiel-treasure-video-game-6346.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F5D59E4829D6CD2A0015BA9A /* short-success-sound-glockenspiel-treasure-video-game-6346.mp3 */; };
 		F5D59E4B29D721AB0015BA9A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F5D59E4A29D721AA0015BA9A /* GoogleService-Info.plist */; };
+		F5D9B80129E3B12B009FF567 /* tap.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F5D9B7FE29E3B12A009FF567 /* tap.mp3 */; };
+		F5D9B80229E3B12B009FF567 /* ok.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F5D9B7FF29E3B12A009FF567 /* ok.mp3 */; };
+		F5D9B80329E3B12B009FF567 /* notification.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F5D9B80029E3B12A009FF567 /* notification.mp3 */; };
 		F5F3AE1529CD188C005FD102 /* 104759-login.json in Resources */ = {isa = PBXBuildFile; fileRef = F5F3AE1429CD188C005FD102 /* 104759-login.json */; };
 		F5F3AE1729CD1E4C005FD102 /* 104368-thank-you.json in Resources */ = {isa = PBXBuildFile; fileRef = F5F3AE1629CD1E4C005FD102 /* 104368-thank-you.json */; };
 		F66ECD68290CC10800D89F73 /* MySQLDriver in Frameworks */ = {isa = PBXBuildFile; productRef = F66ECD67290CC10800D89F73 /* MySQLDriver */; };
@@ -127,6 +130,9 @@
 		F5D59E4629D6CA4E0015BA9A /* metallic-door-shut-98740.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "metallic-door-shut-98740.mp3"; sourceTree = "<group>"; };
 		F5D59E4829D6CD2A0015BA9A /* short-success-sound-glockenspiel-treasure-video-game-6346.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "short-success-sound-glockenspiel-treasure-video-game-6346.mp3"; sourceTree = "<group>"; };
 		F5D59E4A29D721AA0015BA9A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F5D9B7FE29E3B12A009FF567 /* tap.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = tap.mp3; sourceTree = "<group>"; };
+		F5D9B7FF29E3B12A009FF567 /* ok.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ok.mp3; sourceTree = "<group>"; };
+		F5D9B80029E3B12A009FF567 /* notification.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = notification.mp3; sourceTree = "<group>"; };
 		F5F3AE1429CD188C005FD102 /* 104759-login.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "104759-login.json"; sourceTree = "<group>"; };
 		F5F3AE1629CD1E4C005FD102 /* 104368-thank-you.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "104368-thank-you.json"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -248,6 +254,9 @@
 		F5D59E4329D6C4410015BA9A /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				F5D9B80029E3B12A009FF567 /* notification.mp3 */,
+				F5D9B7FF29E3B12A009FF567 /* ok.mp3 */,
+				F5D9B7FE29E3B12A009FF567 /* tap.mp3 */,
 				F5D59E4829D6CD2A0015BA9A /* short-success-sound-glockenspiel-treasure-video-game-6346.mp3 */,
 				F5D59E4429D6C4D70015BA9A /* crumple-03-40747.mp3 */,
 				F5D59E4629D6CA4E0015BA9A /* metallic-door-shut-98740.mp3 */,
@@ -351,7 +360,10 @@
 			files = (
 				F5F3AE1529CD188C005FD102 /* 104759-login.json in Resources */,
 				F5D59E4729D6CA4E0015BA9A /* metallic-door-shut-98740.mp3 in Resources */,
+				F5D9B80129E3B12B009FF567 /* tap.mp3 in Resources */,
 				F5D59E4929D6CD2A0015BA9A /* short-success-sound-glockenspiel-treasure-video-game-6346.mp3 in Resources */,
+				F5D9B80229E3B12B009FF567 /* ok.mp3 in Resources */,
+				F5D9B80329E3B12B009FF567 /* notification.mp3 in Resources */,
 				F5A77A5928E79078001307B3 /* LaunchScreen.storyboard in Resources */,
 				F55E4AB929A58870007E5850 /* Assets.xcassets in Resources */,
 				F5D59E4B29D721AB0015BA9A /* GoogleService-Info.plist in Resources */,
