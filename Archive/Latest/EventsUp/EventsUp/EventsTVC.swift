@@ -21,11 +21,12 @@ class EventsTVC: UIViewController, UITableViewDelegate,UITableViewDataSource, UI
     }
     
     var searchName:[String]!
+    var sname:String!
         var searchdate:String!
         var searchdesc:String!
-    //    var sdate:[String]!
-    //    var searchD:[String]!
-    //    var x=0
+        var sdate:[String]!
+        var searchD:[String]!
+        var x=0
     
     
     @IBOutlet weak var search: UISearchBar!
@@ -110,27 +111,31 @@ class EventsTVC: UIViewController, UITableViewDelegate,UITableViewDataSource, UI
                                 }
                             }
                         }
-                        //for i in 0..<edate.count{
-                       //                           sdate[i]=DateConversion(var: edate[i])
-                       //                        }
+//                        for i in 0..<edate.count{
+//                                                  sdate[i]=DateConversion(var: edate[i])
+//                                               }
+                        sdate=edate
                                                for i in 0..<ename.count{
                                                    if(i<10){
                                                        ename[i]="00"+String(i)+ename[i]
                                                        edate[i]="00"+String(i)+edate[i]
                                                        edesc[i]="00"+String(i)+edesc[i]
+                                                       sdate[i]="00"+String(i)+edesc[i]
                                                    }
                                                    else if(i>=10 && i<100){
                                                        ename[i]="0"+String(i)+ename[i]
                                                        edate[i]="0"+String(i)+edate[i]
                                                        edesc[i]="0"+String(i)+edesc[i]
+                                                       sdate[i]="0"+String(i)+sdate[i]
                                                    }
                                                    else if(i>=100){
                                                        ename[i]=String(i)+ename[i]
                                                        edate[i]=String(i)+edate[i]
                                                        edesc[i]=String(i)+edesc[i]
+                                                       sdate[i]=String(i)+sdate[i]
                                                    }
                                                }
-                                               
+                                               searchD=sdate
                                                searchName=ename
 
                         tableView.reloadData()
@@ -143,13 +148,6 @@ class EventsTVC: UIViewController, UITableViewDelegate,UITableViewDataSource, UI
             self.performSegue(withIdentifier: "logoutSegue", sender: (Any).self)
 
         }
-        print("size of the list is \(ename.count)")
-        print("------------Desc-----------")
-        print(edesc)
-        print("------------name-----------")
-        print(ename)
-        print("------------date-----------")
-        print(edate)
         
 
         let backgroundImageView = UIImageView(frame: view.frame)
@@ -165,12 +163,12 @@ class EventsTVC: UIViewController, UITableViewDelegate,UITableViewDataSource, UI
                     return dataString.range(of: searchText, options: .caseInsensitive) != nil
                 })
             }
-    //        if searchBar==searchDate{
-    //            x=1
-    //            searchD = searchText.isEmpty ? sdate : sdate.filter({(dataString: String) -> Bool in
-    //                return dataString.range(of: searchText, options: .caseInsensitive) != nil
-    //            })
-    //        }
+            if searchBar==searchDate{
+                x=1
+                searchD = searchText.isEmpty ? sdate : sdate.filter({(dataString: String) -> Bool in
+                    return dataString.range(of: searchText, options: .caseInsensitive) != nil
+                })
+            }
             tableView.reloadData()
         }
         
@@ -193,13 +191,6 @@ class EventsTVC: UIViewController, UITableViewDelegate,UITableViewDataSource, UI
     var edate:[String] = [""]
     var edesc:[String] = [""]
     
-//    func searchBar(_ search: UISearchBar, textDidChange searchText: String) {
-//        searchData = searchText.isEmpty ? ename : ename.filter({(dataString: String) -> Bool in
-//            return dataString.range(of: searchText, options: .caseInsensitive) != nil
-//        })
-//
-//        tableView.reloadData()
-//    }
 
     
     
@@ -233,15 +224,30 @@ class EventsTVC: UIViewController, UITableViewDelegate,UITableViewDataSource, UI
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
            let cell = tableView.dequeueReusableCell(withIdentifier: "calendardatacell", for: indexPath)
-           cell.textLabel?.text = ename[indexPath.row+1].self//"text"
-           cell.detailTextLabel?.text = edate[indexPath.row].self
-           for i in 0..<ename.count{
-               if searchName[indexPath.row+1].prefix(upTo: String.Index(encodedOffset: 3))==edate[i].prefix(upTo: String.Index(encodedOffset: 3)){
-                   searchdate=String(edate[i].suffix(from: String.Index(encodedOffset: 3)))
-               }
-           }
-           cell.textLabel?.text = String(searchName[indexPath.row+1].suffix(from: String.Index(encodedOffset: 3)))
-           cell.detailTextLabel?.text = searchdate.self
+        if x==0{
+            cell.textLabel?.text = ename[indexPath.row+1].self//"text"
+            cell.detailTextLabel?.text = edate[indexPath.row].self
+            for i in 0..<ename.count{
+                if searchName[indexPath.row+1].prefix(upTo: String.Index(encodedOffset: 3))==edate[i].prefix(upTo: String.Index(encodedOffset: 3)){
+                    searchdate=String(edate[i].suffix(from: String.Index(encodedOffset: 3)))
+                }
+            }
+            cell.textLabel?.text = String(searchName[indexPath.row+1].suffix(from: String.Index(encodedOffset: 3)))
+            cell.detailTextLabel?.text = searchdate.self
+        }
+        else if x==1{
+            for i in 0..<edate.count{
+                if searchD[indexPath.row+1].prefix(upTo: String.Index(encodedOffset: 3))==edate[i].prefix(upTo: String.Index(encodedOffset: 3)){
+                    searchdate=String(edate[i].suffix(from: String.Index(encodedOffset: 3)))
+                }
+                if searchD[indexPath.row+1].prefix(upTo: String.Index(encodedOffset: 3))==ename[i].prefix(upTo: String.Index(encodedOffset: 3)){
+                    sname=String(ename[i].suffix(from: String.Index(encodedOffset: 3)))
+                }
+                
+            }
+            cell.textLabel?.text = sname.self
+            cell.detailTextLabel?.text = searchdate.self
+        }
            print("DATE=============\(edate[indexPath.row])")
         
            return cell
@@ -381,76 +387,7 @@ class EventsTVC: UIViewController, UITableViewDelegate,UITableViewDataSource, UI
     func setupLocalNotification() {
         
     }
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        var data:String!
-//        var eN:String!
-//        let trans = segue.identifier
-//        if trans == "eventDetailWithSegue" {
-//            let des = segue.destination as! tesViewController
-//
-//            var test = date[(tabelViewOutlet.indexPathForSelectedRow?.row)!]
-//            var inOfDate =  dd["Date and Time"]?.index(of: test)
-//            for en in dd["Event Name"]!{
-//                var enIndes = dd["Event Name"]?.index(of: en)
-//                if enIndes! == inOfDate! {
-//                    eN = en
-//                }
-//            }
-//           for des in dd["Description"]! {
-//               var te = dd["Description"]?.index(of: des)
-//               if te! == inOfDate! {
-//                   data = des
-//            }
-//            }
-//            des.event = "\(eN!) \(data!)"
-//
-//        }
-//    }
 
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
     func convertStringToDate(dateStr: String) -> Date {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "EEEE, MMMM d, yyyy hh:mm a"
