@@ -11,7 +11,8 @@ import FirebaseFirestore
 import AVFAudio
 
 
-class WishlistTVC: UITableViewController {
+class WishlistTVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
+    
     var username:String!
     var ename:[String] = [""]
     //var edate:[String] = [""]
@@ -19,10 +20,56 @@ class WishlistTVC: UITableViewController {
     var size: Int = 0
     var records:WishList!
     
-    @IBOutlet weak var cellOutlet: UITableView!
+    
+    @IBOutlet weak var tableView: UITableView!
+    
+    
+    @IBOutlet weak var search: UISearchBar!
     
     override func viewWillAppear(_ animated: Bool) {
-      
+        
+        let backgroundImageView = UIImageView(frame: view.frame)
+        backgroundImageView.image = UIImage(named: "background")
+        backgroundImageView.alpha = 0.3
+        view.addSubview(backgroundImageView)
+        
+    }
+    
+    var searchName:[String]!
+    var sname:String!
+        var searchdate:String!
+        var searchdesc:String!
+        var searchD:[String]!
+        var x=0
+    
+    
+    func deleteWishList(index:Int) {
+        let name = ename[index + 1]
+        self.db.collection("WishList").document(name).delete()
+        self.searchName.remove(at: index + 1)
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+    }
+    
+    var player: AVAudioPlayer!
+    
+    func playSound(){
+        let url = Bundle.main.url(forResource: "tap", withExtension: "mp3")
+        player = try! AVAudioPlayer(contentsOf: url!)
+        player!.play()
+    }
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        tableView.delegate = self
+        tableView.dataSource = self
+        search.delegate=self
+        searchName=ename
+        //searchD=edate
+        
+        //searchDate.delegate=self
         var t:String!
         db = Firestore.firestore()
         if Auth.auth().currentUser != nil {
@@ -40,73 +87,53 @@ class WishlistTVC: UITableViewController {
                                 
                             }
                         }
-                        cellOutlet.reloadData()
+                        searchName=ename
+                        tableView.reloadData()
                     }
-                    // print("size of the list is \(size)")
+                    
                 }
         }
         else{
             self.performSegue(withIdentifier: "logoutSegue", sender: (Any).self)
 
         }
-        
-    }
-    
-    
-    func deleteWishList(index:Int) {
-        let name = ename[index + 1]
-        self.db.collection("WishList").document(name).delete()
-        self.ename.remove(at: index + 1)
-        DispatchQueue.main.async {
-            self.tableView.reloadData()
-        }
-    }
-    
-    var player: AVAudioPlayer!
-    
-    func playSound(){
-        let url = Bundle.main.url(forResource: "tap", withExtension: "mp3")
-        player = try! AVAudioPlayer(contentsOf: url!)
-        player!.play()
-    }
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        let backgroundImageView = UIImageView(frame: view.frame)
-        backgroundImageView.image = UIImage(named: "background")
-        backgroundImageView.alpha = 0.3
-        view.addSubview(backgroundImageView)
-        
-        cellOutlet.delegate = self
-        cellOutlet.delegate = self
    
     }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+            if searchBar==search{
+                x=0
+                searchName = searchText.isEmpty ? ename : ename.filter({(dataString: String) -> Bool in
+                    return dataString.range(of: searchText, options: .caseInsensitive) != nil
+                })
+            }
+            tableView.reloadData()
+        }
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //print(ename.count-1,size)
-        return ename.count-1
+        return searchName.count-1
     }
 
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         playSound()
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
-        var cell = cellOutlet.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        var cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         //print(ename[indexPath.row+1].self)
-        cell.textLabel?.text = ename[indexPath.row+1].self
+        cell.textLabel?.text = searchName[indexPath.row+1].self
       //  cell.detailTextLabel?.text = edate[indexPath.row+1].self
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
            if editingStyle == .delete {
                db = Firestore.firestore()
-               ename.remove(at: indexPath.startIndex)
-               db.collection("WishList").document(ename[indexPath.row].self).delete()
+               searchName.remove(at: indexPath.startIndex)
+               db.collection("WishList").document(searchName[indexPath.row].self).delete()
                tableView.deleteRows(at: [indexPath], with: .fade)
            }
        }
@@ -120,10 +147,10 @@ class WishlistTVC: UITableViewController {
 
 }
 extension WishlistTVC {
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
     }
-    override func tableView(_ tableView: UITableView,
+    func tableView(_ tableView: UITableView,
                     trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration?
      {
          let deleteAction = UIContextualAction(style: .normal, title:  "Delete", handler: { (ac:UIContextualAction, view:UIView, success:(Bool) -> Void) in

@@ -30,6 +30,12 @@ class LoginVC: UIViewController {
         player!.play()
     }
     
+    func playSoundOk(){
+        let url = Bundle.main.url(forResource: "ok", withExtension: "mp3")
+        player = try! AVAudioPlayer(contentsOf: url!)
+        player!.play()
+    }
+    
     
     @IBAction func LoginBTN(_ sender: UIButton) {
         
@@ -77,6 +83,7 @@ class LoginVC: UIViewController {
                         let defaultAction = UIAlertAction(title: "Ok",
                                                 style: .default) { (action) in
                             print("test")
+                            self.playSoundOk()
                             self.performSegue(withIdentifier: "logintohome", sender: self)
                            }
                           let alert = UIAlertController(title: "Details",

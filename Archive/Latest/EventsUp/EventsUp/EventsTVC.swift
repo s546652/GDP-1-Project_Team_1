@@ -16,8 +16,7 @@ class EventsTVC: UIViewController, UITableViewDelegate,UITableViewDataSource, UI
         let backgroundImageView = UIImageView(frame: view.frame)
         backgroundImageView.image = UIImage(named: "background")
         backgroundImageView.alpha = 0.2
-       view.addSubview(backgroundImageView)
-        
+        view.addSubview(backgroundImageView)
     }
     
     var searchName:[String]!
