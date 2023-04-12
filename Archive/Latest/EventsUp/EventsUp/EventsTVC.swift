@@ -4,7 +4,6 @@
 //
 //  Created by Gundu,Naveen Kumar on 2/9/23.
 //
-
 import UIKit
 import Firebase
 import FirebaseFirestore
@@ -21,10 +20,10 @@ class EventsTVC: UIViewController, UITableViewDelegate,UITableViewDataSource, UI
     
     var searchName:[String]!
     var sname:String!
-        var searchdate:String!
-        var searchdesc:String!
-        var searchD:[String]!
-        var x=0
+    var searchdate:String!
+    var searchdesc:String!
+    var searchD:[String]!
+    var x=0
     
     
     @IBOutlet weak var search: UISearchBar!
@@ -134,6 +133,7 @@ class EventsTVC: UIViewController, UITableViewDelegate,UITableViewDataSource, UI
                                                searchName=ename
 
                         tableView.reloadData()
+                        //print(searchName.count)
                     }
                     
                 }
@@ -144,13 +144,10 @@ class EventsTVC: UIViewController, UITableViewDelegate,UITableViewDataSource, UI
 
         }
         
-
         let backgroundImageView = UIImageView(frame: view.frame)
         backgroundImageView.image = UIImage(named: "background")
         backgroundImageView.alpha = 0.2
         view.addSubview(backgroundImageView)
-
-        
     }
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
             if searchBar==search{
@@ -175,10 +172,6 @@ class EventsTVC: UIViewController, UITableViewDelegate,UITableViewDataSource, UI
         func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
             return ""
         }
-
- 
-    
-    
     
     var db: Firestore!
     var size: Int = 0
@@ -187,14 +180,8 @@ class EventsTVC: UIViewController, UITableViewDelegate,UITableViewDataSource, UI
     var edate:[String] = [""]
     var edesc:[String] = [""]
     
-
-    
-    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        print("the number of records in ename",ename.count-1,edate.count-1,edesc.count-1,size)
-            //return ename.count
         if x==0{
             return searchName.count-1
         }
@@ -202,7 +189,6 @@ class EventsTVC: UIViewController, UITableViewDelegate,UITableViewDataSource, UI
             return searchD.count-1
         }
     }
-
     
     var player: AVAudioPlayer!
     
@@ -212,23 +198,24 @@ class EventsTVC: UIViewController, UITableViewDelegate,UITableViewDataSource, UI
         player!.play()
     }
     
-    
-    
     var date:[String] = ["test"]
     var des:[String] = ["test"]
     let recordTimes: KeyValuePairs = ["test1":"test"]
-
     var testdata=""
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-           let cell = tableView.dequeueReusableCell(withIdentifier: "calendardatacell", for: indexPath)
+        print("-----------------------123456")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "calendardatacell", for: indexPath)
+        print("-----------------------123456")
         if x==0{
+
             for i in 0..<ename.count{
                 if searchName[indexPath.row+1].prefix(upTo: String.Index(encodedOffset: 3))==edate[i].prefix(upTo: String.Index(encodedOffset: 3)){
                     searchdate=String(edate[i].suffix(from: String.Index(encodedOffset: 3)))
                 }
             }
+            print("in x =0"+String(searchName[indexPath.row+1].suffix(from: String.Index(encodedOffset: 3))))
             cell.textLabel?.text = String(searchName[indexPath.row+1].suffix(from: String.Index(encodedOffset: 3)))
             cell.detailTextLabel?.text = searchdate.self
         }
@@ -241,6 +228,7 @@ class EventsTVC: UIViewController, UITableViewDelegate,UITableViewDataSource, UI
                         sname=String(ename[i].suffix(from: String.Index(encodedOffset: 3)))
                     }
             }
+            print("sname ---"+sname.self)
             cell.textLabel?.text = sname.self
             cell.detailTextLabel?.text = searchdate.self
         }
@@ -399,7 +387,6 @@ class EventsTVC: UIViewController, UITableViewDelegate,UITableViewDataSource, UI
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "EEEE, MMMM d, yyyy hh:mm a"
         //Tuesday, March 14, 2023 2:00 pm
-
         dateFormatter.timeZone = TimeZone.current
         // (abbreviation: "GMT+0:00")
         let dateFromString = dateFormatter.date(from: dateStr)
