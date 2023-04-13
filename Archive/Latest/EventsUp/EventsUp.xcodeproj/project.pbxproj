@@ -52,6 +52,7 @@
 		26E7ED4D29B987FE008719A3 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 26E7ED4C29B987FE008719A3 /* FirebaseStorageCombine-Community */; };
 		26F717FB291888B4009B2BE1 /* Calendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F717FA291888B4009B2BE1 /* Calendar.swift */; };
 		26F717FD29188A0A009B2BE1 /* EventsDetailListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F717FC29188A0A009B2BE1 /* EventsDetailListViewController.swift */; };
+		F50976FB29E8B896003486AB /* NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50976FA29E8B896003486AB /* NewViewController.swift */; };
 		F50DA3952908B89800342EDA /* PayemntController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50DA3942908B89800342EDA /* PayemntController.swift */; };
 		F5186A5A28E8F4F800806FAB /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5186A5928E8F4F800806FAB /* LoginController.swift */; };
 		F55E4AB229A5836F007E5850 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55E4AB129A5836F007E5850 /* HomeVC.swift */; };
@@ -80,6 +81,9 @@
 		F5D9B80129E3B12B009FF567 /* tap.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F5D9B7FE29E3B12A009FF567 /* tap.mp3 */; };
 		F5D9B80229E3B12B009FF567 /* ok.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F5D9B7FF29E3B12A009FF567 /* ok.mp3 */; };
 		F5D9B80329E3B12B009FF567 /* notification.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F5D9B80029E3B12A009FF567 /* notification.mp3 */; };
+		F5D9B80529E89F9E009FF567 /* ViewControllerHOME.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D9B80429E89F9E009FF567 /* ViewControllerHOME.swift */; };
+		F5D9B80C29E8A318009FF567 /* MYCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D9B80A29E8A318009FF567 /* MYCollectionViewCell.swift */; };
+		F5D9B80D29E8A318009FF567 /* MYCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5D9B80B29E8A318009FF567 /* MYCollectionViewCell.xib */; };
 		F5F3AE1529CD188C005FD102 /* 104759-login.json in Resources */ = {isa = PBXBuildFile; fileRef = F5F3AE1429CD188C005FD102 /* 104759-login.json */; };
 		F5F3AE1729CD1E4C005FD102 /* 104368-thank-you.json in Resources */ = {isa = PBXBuildFile; fileRef = F5F3AE1629CD1E4C005FD102 /* 104368-thank-you.json */; };
 		F66ECD68290CC10800D89F73 /* MySQLDriver in Frameworks */ = {isa = PBXBuildFile; productRef = F66ECD67290CC10800D89F73 /* MySQLDriver */; };
@@ -104,6 +108,7 @@
 		26E7ED1529B03BC3008719A3 /* AdminDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminDetailVC.swift; sourceTree = "<group>"; };
 		26F717FA291888B4009B2BE1 /* Calendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calendar.swift; sourceTree = "<group>"; };
 		26F717FC29188A0A009B2BE1 /* EventsDetailListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsDetailListViewController.swift; sourceTree = "<group>"; };
+		F50976FA29E8B896003486AB /* NewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewViewController.swift; sourceTree = "<group>"; };
 		F50DA3942908B89800342EDA /* PayemntController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayemntController.swift; sourceTree = "<group>"; };
 		F5186A5928E8F4F800806FAB /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		F55E4AB129A5836F007E5850 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
@@ -133,6 +138,9 @@
 		F5D9B7FE29E3B12A009FF567 /* tap.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = tap.mp3; sourceTree = "<group>"; };
 		F5D9B7FF29E3B12A009FF567 /* ok.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ok.mp3; sourceTree = "<group>"; };
 		F5D9B80029E3B12A009FF567 /* notification.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = notification.mp3; sourceTree = "<group>"; };
+		F5D9B80429E89F9E009FF567 /* ViewControllerHOME.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerHOME.swift; sourceTree = "<group>"; };
+		F5D9B80A29E8A318009FF567 /* MYCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MYCollectionViewCell.swift; sourceTree = "<group>"; };
+		F5D9B80B29E8A318009FF567 /* MYCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MYCollectionViewCell.xib; sourceTree = "<group>"; };
 		F5F3AE1429CD188C005FD102 /* 104759-login.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "104759-login.json"; sourceTree = "<group>"; };
 		F5F3AE1629CD1E4C005FD102 /* 104368-thank-you.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "104368-thank-you.json"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -196,6 +204,10 @@
 				F5C9F57129AD9E7600D5CB1A /* AdminVC.swift */,
 				26E7ED1529B03BC3008719A3 /* AdminDetailVC.swift */,
 				F5D59E4129D6B6F90015BA9A /* PhotoCollectionViewCell.swift */,
+				F5D9B80429E89F9E009FF567 /* ViewControllerHOME.swift */,
+				F5D9B80A29E8A318009FF567 /* MYCollectionViewCell.swift */,
+				F5D9B80B29E8A318009FF567 /* MYCollectionViewCell.xib */,
+				F50976FA29E8B896003486AB /* NewViewController.swift */,
 			);
 			name = "New Group";
 			sourceTree = "<group>";
@@ -364,6 +376,7 @@
 				F5D59E4929D6CD2A0015BA9A /* short-success-sound-glockenspiel-treasure-video-game-6346.mp3 in Resources */,
 				F5D9B80229E3B12B009FF567 /* ok.mp3 in Resources */,
 				F5D9B80329E3B12B009FF567 /* notification.mp3 in Resources */,
+				F5D9B80D29E8A318009FF567 /* MYCollectionViewCell.xib in Resources */,
 				F5A77A5928E79078001307B3 /* LaunchScreen.storyboard in Resources */,
 				F55E4AB929A58870007E5850 /* Assets.xcassets in Resources */,
 				F5D59E4B29D721AB0015BA9A /* GoogleService-Info.plist in Resources */,
@@ -385,6 +398,7 @@
 			files = (
 				26F717FD29188A0A009B2BE1 /* EventsDetailListViewController.swift in Sources */,
 				264F9665298AB69800573A24 /* UserList.swift in Sources */,
+				F50976FB29E8B896003486AB /* NewViewController.swift in Sources */,
 				264F9661298A10B200573A24 /* DataManager.swift in Sources */,
 				263791CF2925264900B2A9E5 /* tesViewController.swift in Sources */,
 				266A5A9C29A2D47500F2935D /* UserAccPageViewController.swift in Sources */,
@@ -401,6 +415,7 @@
 				26AD9F7828EA5CFF0017E297 /* EventsListController.swift in Sources */,
 				F55E4ABF29A5C7EB007E5850 /* PaymentVC.swift in Sources */,
 				264F965F298A0F0D00573A24 /* WishList.swift in Sources */,
+				F5D9B80529E89F9E009FF567 /* ViewControllerHOME.swift in Sources */,
 				F55E4ABD29A5AD31007E5850 /* EventsDetailVC.swift in Sources */,
 				26247E2829881A44001BCE1E /* wishListControllerViewController.swift in Sources */,
 				F50DA3952908B89800342EDA /* PayemntController.swift in Sources */,
@@ -412,6 +427,7 @@
 				F5A77A4F28E79076001307B3 /* SceneDelegate.swift in Sources */,
 				F55E4AC129A5CAAF007E5850 /* UserProfileVC.swift in Sources */,
 				266A5A5529A2C80900F2935D /* CalendarData.swift in Sources */,
+				F5D9B80C29E8A318009FF567 /* MYCollectionViewCell.swift in Sources */,
 				26F717FB291888B4009B2BE1 /* Calendar.swift in Sources */,
 				264F9663298A15EE00573A24 /* WishListView.swift in Sources */,
 				F55E4AB429A58393007E5850 /* EventsTVC.swift in Sources */,

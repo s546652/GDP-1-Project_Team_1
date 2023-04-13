@@ -32,7 +32,6 @@ class PhotoCollectionViewCell: UICollectionViewCell {
         UIImage(named: "img5"),
         UIImage(named: "img6"),
         UIImage(named: "img7"),
-        UIImage(named: "img8"),
         UIImage(named: "img9"),
         UIImage(named: "img10"),
         UIImage(named: "img11")
