@@ -37,6 +37,15 @@ class EventsTVC: UIViewController, UITableViewDelegate,UITableViewDataSource, UI
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        db = Firestore.firestore()
+        if Auth.auth().currentUser == nil {
+            
+            
+            
+            if ConstantsEventsUP.yourVariable == true {
+                self.performSegue(withIdentifier: "logoutSegue", sender: (Any).self)
+            }
+        }
         search.delegate=self
         searchDate.delegate=self
         tableView.delegate=self

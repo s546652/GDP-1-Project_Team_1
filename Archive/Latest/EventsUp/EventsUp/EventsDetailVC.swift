@@ -9,7 +9,7 @@ import UIKit
 import Firebase
 import FirebaseFirestore
 class EventsDetailVC: UIViewController {
-
+    var db: Firestore!
     var date = ""
     var name = ""
     var desc = ""
@@ -25,6 +25,15 @@ class EventsDetailVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        db = Firestore.firestore()
+        if Auth.auth().currentUser == nil {
+            
+            
+            
+            if ConstantsEventsUP.yourVariable == true {
+                self.performSegue(withIdentifier: "logoutSegue", sender: (Any).self)
+            }
+        }
         DateOutlet.text = date
         EventNameOutlet.text = name
         EventDescOutlet.text = desc

@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseFirestore
 
 class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
@@ -38,8 +40,19 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
     
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         
+        var db: Firestore!
+        db = Firestore.firestore()
+        if Auth.auth().currentUser == nil {
+            
+            
+            
+            if ConstantsEventsUP.yourVariable == true {
+                self.performSegue(withIdentifier: "logoutSegue", sender: (Any).self)
+            }
+        }
         collectionView.register(PhotoCollectionViewCell.self, forCellWithReuseIdentifier: PhotoCollectionViewCell.identifier)
         collectionView.delegate = self
         collectionView.dataSource = self
