@@ -34,13 +34,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
 
     func sceneDidBecomeActive(_ scene: UIScene) {
-       
-    }
-
-    func sceneWillResignActive(_ scene: UIScene) {
-        // Called when the scene will move from an active state to an inactive state.
-        // This may occur due to temporary interruptions (ex. an incoming phone call).
-        print("sceneWillEnterForeground")
+        print("sceneDidBecomeActive")
         let date = Date()
         let calendar = Calendar.current
         let hour = calendar.component(.hour, from: date)
@@ -56,6 +50,28 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 exit(0)
             }
         }
+       
+    }
+
+    func sceneWillResignActive(_ scene: UIScene) {
+        // Called when the scene will move from an active state to an inactive state.
+        // This may occur due to temporary interruptions (ex. an incoming phone call).
+//        print("sceneWillEnterForeground")
+//        let date = Date()
+//        let calendar = Calendar.current
+//        let hour = calendar.component(.hour, from: date)
+//        let minutes = calendar.component(.minute, from: date)
+//        endTime = minutes
+//        print("end time == ",endTime,startTime)
+//        print("user details ",Auth.auth().currentUser)
+//
+//        if(startTime != nil && endTime != nil){
+//            var i = endTime - startTime
+//            print("vale of i = ",i)
+//            if Double(i) >= 0.25 && Auth.auth().currentUser != nil{
+//                exit(0)
+//            }
+//        }
        
         
     }
