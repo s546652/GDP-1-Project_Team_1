@@ -7,12 +7,24 @@
 
 import UIKit
 import Lottie
+import Firebase
+import FirebaseFirestore
+
 
 class PaymentVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        var db: Firestore!
+        db = Firestore.firestore()
+        if Auth.auth().currentUser == nil {
+            
+            
+            
+            if ConstantsEventsUP.yourVariable == true {
+                self.performSegue(withIdentifier: "logoutSegue", sender: (Any).self)
+            }
+        }
         
         let animationView = LottieAnimationView()
                 let animation = LottieAnimation.named("31737-savings-dollar")

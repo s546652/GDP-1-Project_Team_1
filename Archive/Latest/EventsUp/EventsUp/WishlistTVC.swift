@@ -64,6 +64,15 @@ class WishlistTVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        db = Firestore.firestore()
+        if Auth.auth().currentUser == nil {
+            
+            
+            
+            if ConstantsEventsUP.yourVariable == true {
+                self.performSegue(withIdentifier: "logoutSegue", sender: (Any).self)
+            }
+        }
         tableView.delegate = self
         tableView.dataSource = self
         search.delegate=self

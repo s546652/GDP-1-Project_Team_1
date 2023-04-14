@@ -157,8 +157,17 @@ class LoginVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        print("inside login ConstantsEventsUP.yourVariable --- ",ConstantsEventsUP.yourVariable)
 
+        db = Firestore.firestore()
+        if Auth.auth().currentUser == nil {
+            
+            
+            
+            if ConstantsEventsUP.yourVariable == true {
+                self.performSegue(withIdentifier: "logoutSegue", sender: (Any).self)
+            }
+        }
         
         
         view.addSubview(imageView)

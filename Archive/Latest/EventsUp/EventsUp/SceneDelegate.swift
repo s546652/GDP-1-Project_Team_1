@@ -15,7 +15,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
     var startTime:Int!
     var endTime:Int!
-
+//var test:boolean = false
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
@@ -47,10 +47,23 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             var i = endTime - startTime
             print("vale of i = ",i)
             if Double(i) >= 0.25 && Auth.auth().currentUser != nil{
-                exit(0)
+               // self.performSegue(withIdentifier: "logoutSegue", sender: (Any).self)
+                ConstantsEventsUP.yourVariable = true
+                do {
+                try Auth.auth().signOut()
+                //    self.performSegue(withIdentifier: "logoutSegue", sender: Any?.self)
+                } catch let signOutError as NSError {
+                  print("Error signing out: %@", signOutError)
+                }
+                print("in scene ConstantsEventsUP.yourVariable --- ",ConstantsEventsUP.yourVariable)
+               closeApp()
+                // exit(0)
             }
         }
        
+    }
+    func closeApp() {
+   //     UIControl().sendAction(#selector(NSXPCConnection.suspend), to: UIApplication.shared, for: nil)
     }
 
     func sceneWillResignActive(_ scene: UIScene) {

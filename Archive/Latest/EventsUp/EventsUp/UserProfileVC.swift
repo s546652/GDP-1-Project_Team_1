@@ -113,6 +113,7 @@ class UserProfileVC: UIViewController {
         else {
             print("UserProfile")
             self.performSegue(withIdentifier: "logoutSegue", sender: (Any).self)
+            
 
         }
     }
@@ -147,6 +148,15 @@ class UserProfileVC: UIViewController {
 //            self.performSegue(withIdentifier: "logoutSegue", sender: (Any).self)
 //
 //        }
+        db = Firestore.firestore()
+        if Auth.auth().currentUser == nil {
+            
+            
+            
+            if ConstantsEventsUP.yourVariable == true {
+                self.performSegue(withIdentifier: "logoutSegue", sender: (Any).self)
+            }
+        }
     }
     
 

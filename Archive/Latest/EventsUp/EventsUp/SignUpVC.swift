@@ -48,6 +48,14 @@ class SignUpVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+       
+            
+            
+            if ConstantsEventsUP.yourVariable == true {
+                self.performSegue(withIdentifier: "logoutSegue", sender: (Any).self)
+            }
+        
+        
         let date = datePicker
         datePicker.addTarget(self, action: #selector(datePickerChanged(picker:)), for: .valueChanged)
         
