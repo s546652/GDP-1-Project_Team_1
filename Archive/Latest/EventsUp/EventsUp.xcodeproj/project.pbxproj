@@ -11,6 +11,7 @@
 		26247E2829881A44001BCE1E /* wishListControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26247E2729881A44001BCE1E /* wishListControllerViewController.swift */; };
 		263791CF2925264900B2A9E5 /* tesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263791CE2925264900B2A9E5 /* tesViewController.swift */; };
 		263E36FA29A349490023794B /* CalendarEventDetailDesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263E36F929A349490023794B /* CalendarEventDetailDesViewController.swift */; };
+		2647186D29EBB135004E0831 /* ConstantsEventsUP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2647186C29EBB135004E0831 /* ConstantsEventsUP.swift */; };
 		264F965F298A0F0D00573A24 /* WishList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264F965E298A0F0D00573A24 /* WishList.swift */; };
 		264F9661298A10B200573A24 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264F9660298A10B200573A24 /* DataManager.swift */; };
 		264F9663298A15EE00573A24 /* WishListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264F9662298A15EE00573A24 /* WishListView.swift */; };
@@ -94,6 +95,7 @@
 		26247E2729881A44001BCE1E /* wishListControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wishListControllerViewController.swift; sourceTree = "<group>"; };
 		263791CE2925264900B2A9E5 /* tesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tesViewController.swift; sourceTree = "<group>"; };
 		263E36F929A349490023794B /* CalendarEventDetailDesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarEventDetailDesViewController.swift; sourceTree = "<group>"; };
+		2647186C29EBB135004E0831 /* ConstantsEventsUP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantsEventsUP.swift; sourceTree = "<group>"; };
 		264F965E298A0F0D00573A24 /* WishList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishList.swift; sourceTree = "<group>"; };
 		264F9660298A10B200573A24 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		264F9662298A15EE00573A24 /* WishListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListView.swift; sourceTree = "<group>"; };
@@ -208,6 +210,7 @@
 				F5D9B80A29E8A318009FF567 /* MYCollectionViewCell.swift */,
 				F5D9B80B29E8A318009FF567 /* MYCollectionViewCell.xib */,
 				F50976FA29E8B896003486AB /* NewViewController.swift */,
+				2647186C29EBB135004E0831 /* ConstantsEventsUP.swift */,
 			);
 			name = "New Group";
 			sourceTree = "<group>";
@@ -405,6 +408,7 @@
 				F5A77A5128E79076001307B3 /* ViewController.swift in Sources */,
 				263E36FA29A349490023794B /* CalendarEventDetailDesViewController.swift in Sources */,
 				2690BBAE28F0D73500C74A1F /* TableViewController.swift in Sources */,
+				2647186D29EBB135004E0831 /* ConstantsEventsUP.swift in Sources */,
 				264F96B02990B0B400573A24 /* wishlistFirebase.swift in Sources */,
 				F5D59E4229D6B6F90015BA9A /* PhotoCollectionViewCell.swift in Sources */,
 				26E7ED1629B03BC3008719A3 /* AdminDetailVC.swift in Sources */,

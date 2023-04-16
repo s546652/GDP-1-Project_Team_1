@@ -51,9 +51,9 @@ class SignUpVC: UIViewController {
        
             
             
-            if ConstantsEventsUP.yourVariable == true {
-                self.performSegue(withIdentifier: "logoutSegue", sender: (Any).self)
-            }
+//            if ConstantsEventsUP.yourVariable == true {
+//                self.performSegue(withIdentifier: "logoutSegue", sender: (Any).self)
+//            }
         
         
         let date = datePicker

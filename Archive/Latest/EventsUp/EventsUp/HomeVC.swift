@@ -46,12 +46,7 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
         var db: Firestore!
         db = Firestore.firestore()
         if Auth.auth().currentUser == nil {
-            
-            
-            
-            if ConstantsEventsUP.yourVariable == true {
-                self.performSegue(withIdentifier: "logoutSegue", sender: (Any).self)
-            }
+            self.performSegue(withIdentifier: "homeLogout", sender: (Any).self)
         }
         collectionView.register(PhotoCollectionViewCell.self, forCellWithReuseIdentifier: PhotoCollectionViewCell.identifier)
         collectionView.delegate = self

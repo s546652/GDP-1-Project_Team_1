@@ -65,7 +65,7 @@
                                 <rect key="frame" x="150" y="595" width="128" height="128"/>
                             </imageView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YXW-gs-Kwf">
-                                <rect key="frame" x="-53" y="810" width="430" height="49"/>
+                                <rect key="frame" x="-55" y="807" width="430" height="48"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem title="Events" image="list.bullet.rectangle.portrait" catalog="system" id="KXl-ff-QWF">
@@ -294,7 +294,7 @@
                                 </constraints>
                             </stackView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7tB-Tu-CS0">
-                                <rect key="frame" x="-53" y="812" width="430" height="54"/>
+                                <rect key="frame" x="-54" y="810" width="430" height="55"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem title="Events" image="list.bullet.rectangle.portrait" catalog="system" id="XFT-rf-KzF">
@@ -560,7 +560,7 @@
                                 </items>
                             </navigationBar>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bKE-s0-zlt">
-                                <rect key="frame" x="-53" y="807" width="433" height="42"/>
+                                <rect key="frame" x="-57" y="805" width="434" height="41"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem title="Events" image="list.bullet.rectangle.portrait" catalog="system" id="ksh-Tt-j8C">
@@ -981,11 +981,11 @@
             <objects>
                 <viewController id="rNN-vo-tyr" customClass="SignUpVC" customModule="EventsUp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cEx-Yg-uJe">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="869"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Fhi-Fz-Tlm">
-                                <rect key="frame" x="20" y="248.99999999999997" width="388" height="428.33333333333326"/>
+                                <rect key="frame" x="20" y="220.33333333333334" width="388" height="428.33333333333326"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="P1a-QE-rKy">
                                         <rect key="frame" x="0.0" y="0.0" width="388" height="34"/>
@@ -998,7 +998,7 @@
                                         </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8it-Ik-TIP">
-                                        <rect key="frame" x="0.0" y="42" width="388" height="34"/>
+                                        <rect key="frame" x="0.0" y="41.999999999999972" width="388" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
@@ -1009,7 +1009,7 @@
                                         </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HyJ-rx-4db">
-                                        <rect key="frame" x="0.0" y="84" width="388" height="34"/>
+                                        <rect key="frame" x="0.0" y="83.999999999999972" width="388" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
@@ -1019,7 +1019,7 @@
                                         </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="SID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wbi-pq-5N4">
-                                        <rect key="frame" x="0.0" y="126" width="388" height="34"/>
+                                        <rect key="frame" x="0.0" y="125.99999999999997" width="388" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
@@ -1029,7 +1029,7 @@
                                         </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Date of Birth" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZVs-S6-xUJ">
-                                        <rect key="frame" x="0.0" y="168" width="388" height="34"/>
+                                        <rect key="frame" x="0.0" y="167.99999999999997" width="388" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
@@ -1039,7 +1039,7 @@
                                         </connections>
                                     </textField>
                                     <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="cyK-1x-d6F">
-                                        <rect key="frame" x="0.0" y="210" width="388" height="50"/>
+                                        <rect key="frame" x="0.0" y="209.99999999999997" width="388" height="50.000000000000028"/>
                                     </datePicker>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g4Y-5E-P2a">
                                         <rect key="frame" x="0.0" y="268" width="388" height="34"/>
@@ -1226,6 +1226,9 @@
                         <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="EjD-Hl-4vF"/>
+                    <connections>
+                        <segue destination="C8i-gM-4Nn" kind="presentation" identifier="homeLogout" modalPresentationStyle="fullScreen" id="fm0-tv-rvQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NxX-VC-4nl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1379,7 +1382,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" fixedFrame="YES" placeholder="Search By Name" translatesAutoresizingMaskIntoConstraints="NO" id="nPR-Ax-lDE">
-                                <rect key="frame" x="17" y="144" width="219" height="44"/>
+                                <rect key="frame" x="14" y="144" width="219" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -1387,7 +1390,7 @@
                                 </connections>
                             </searchBar>
                             <searchBar contentMode="redraw" fixedFrame="YES" placeholder="Date" translatesAutoresizingMaskIntoConstraints="NO" id="qiz-cv-css">
-                                <rect key="frame" x="236" y="144" width="170" height="44"/>
+                                <rect key="frame" x="233" y="144" width="170" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -1437,6 +1440,7 @@
                         <outlet property="search" destination="nPR-Ax-lDE" id="WCa-md-jyu"/>
                         <outlet property="searchDate" destination="qiz-cv-css" id="A7o-9M-q9d"/>
                         <outlet property="tableView" destination="Vhn-lA-6uI" id="Lgx-rT-kZ7"/>
+                        <segue destination="C8i-gM-4Nn" kind="presentation" identifier="eventsLogout" modalPresentationStyle="fullScreen" id="9BW-Uf-XG9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zQk-aU-7Lu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1620,7 +1624,7 @@
                                 </prototypes>
                             </tableView>
                             <searchBar contentMode="redraw" fixedFrame="YES" placeholder="Search By Name" translatesAutoresizingMaskIntoConstraints="NO" id="f87-Ps-l0m">
-                                <rect key="frame" x="17" y="179" width="389" height="44"/>
+                                <rect key="frame" x="16" y="179" width="389" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -1641,11 +1645,12 @@
                     <connections>
                         <outlet property="search" destination="f87-Ps-l0m" id="dHK-nN-O8F"/>
                         <outlet property="tableView" destination="00V-hN-64G" id="Biu-KL-tyH"/>
+                        <segue destination="C8i-gM-4Nn" kind="presentation" identifier="wishListLogout" modalPresentationStyle="fullScreen" id="jb0-Ni-GsH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wfP-8S-6EW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-8027.1028037383176" y="4137.7969762419007"/>
+            <point key="canvasLocation" x="-7935" y="4138"/>
         </scene>
         <!--User ProfileVC-->
         <scene sceneID="yNk-pD-urb">
@@ -1794,7 +1799,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CGW-Fz-Zbx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-8106" y="4858"/>
+            <point key="canvasLocation" x="-7936" y="4858"/>
         </scene>
         <!--Home-->
         <scene sceneID="aDi-bk-gzg">
@@ -2006,8 +2011,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="Ieo-tQ-BQQ"/>
         <segue reference="2BP-en-RjK"/>
-        <segue reference="Nf3-L4-l4M"/>
+        <segue reference="OdP-PO-gTO"/>
         <segue reference="su5-Z2-wuL"/>
         <segue reference="BLW-GB-cKS"/>
         <segue reference="IKF-aI-YBU"/>

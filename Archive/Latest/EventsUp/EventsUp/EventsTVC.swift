@@ -40,11 +40,12 @@ class EventsTVC: UIViewController, UITableViewDelegate,UITableViewDataSource, UI
         db = Firestore.firestore()
         if Auth.auth().currentUser == nil {
             
+            self.performSegue(withIdentifier: "eventsLogout", sender: (Any).self)
+
             
-            
-            if ConstantsEventsUP.yourVariable == true {
-                self.performSegue(withIdentifier: "logoutSegue", sender: (Any).self)
-            }
+//            if ConstantsEventsUP.yourVariable == true {
+//                self.performSegue(withIdentifier: "logoutSegue", sender: (Any).self)
+//            }
         }
         search.delegate=self
         searchDate.delegate=self
@@ -149,7 +150,7 @@ class EventsTVC: UIViewController, UITableViewDelegate,UITableViewDataSource, UI
         }
         else {
             print("EventsTVC")
-            self.performSegue(withIdentifier: "logoutSegue", sender: (Any).self)
+            self.performSegue(withIdentifier: "eventsLogout", sender: (Any).self)
 
         }
         

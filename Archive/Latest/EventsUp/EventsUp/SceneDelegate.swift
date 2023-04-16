@@ -48,14 +48,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             print("vale of i = ",i)
             if Double(i) >= 0.25 && Auth.auth().currentUser != nil{
                // self.performSegue(withIdentifier: "logoutSegue", sender: (Any).self)
-                ConstantsEventsUP.yourVariable = true
+               // ConstantsEventsUP.yourVariable = true
                 do {
                 try Auth.auth().signOut()
                 //    self.performSegue(withIdentifier: "logoutSegue", sender: Any?.self)
                 } catch let signOutError as NSError {
                   print("Error signing out: %@", signOutError)
                 }
-                print("in scene ConstantsEventsUP.yourVariable --- ",ConstantsEventsUP.yourVariable)
+                //print("in scene ConstantsEventsUP.yourVariable --- ",ConstantsEventsUP.yourVariable)
                closeApp()
                 // exit(0)
             }

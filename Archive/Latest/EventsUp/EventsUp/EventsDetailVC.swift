@@ -30,9 +30,9 @@ class EventsDetailVC: UIViewController {
             
             
             
-            if ConstantsEventsUP.yourVariable == true {
-                self.performSegue(withIdentifier: "logoutSegue", sender: (Any).self)
-            }
+//            if ConstantsEventsUP.yourVariable == true {
+//                self.performSegue(withIdentifier: "logoutSegue", sender: (Any).self)
+//            }
         }
         DateOutlet.text = date
         EventNameOutlet.text = name

@@ -67,11 +67,12 @@ class WishlistTVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
         db = Firestore.firestore()
         if Auth.auth().currentUser == nil {
             
-            
-            
-            if ConstantsEventsUP.yourVariable == true {
-                self.performSegue(withIdentifier: "logoutSegue", sender: (Any).self)
-            }
+                print("UserProfile")
+                self.performSegue(withIdentifier: "wishListLogout", sender: (Any).self)
+                
+
+         //   }
+        
         }
         tableView.delegate = self
         tableView.dataSource = self
@@ -104,7 +105,7 @@ class WishlistTVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
                 }
         }
         else{
-            self.performSegue(withIdentifier: "logoutSegue", sender: (Any).self)
+            self.performSegue(withIdentifier: "wishListLogout", sender: (Any).self)
 
         }
    
@@ -148,12 +149,12 @@ class WishlistTVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
            }
        }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let tran = segue.identifier
-        if tran == "logoutSegue" {
-            let dest = segue.destination as! LoginVC 
-        }
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        let tran = segue.identifier
+//        if tran == "logoutSegue" {
+//            let dest = segue.destination as! LoginVC
+//        }
+//    }
 
 }
 extension WishlistTVC {
