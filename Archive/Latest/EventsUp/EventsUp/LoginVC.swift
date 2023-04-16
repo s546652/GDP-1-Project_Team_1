@@ -138,7 +138,10 @@ class LoginVC: UIViewController {
 
     }
     
-    
+    override func didRotate(from fromInterfaceOrientation: UIInterfaceOrientation) {
+        super.didRotate(from: fromInterfaceOrientation)
+        playVideo()
+    }
 
     
     
