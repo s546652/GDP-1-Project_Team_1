@@ -139,20 +139,7 @@ class LoginVC: UIViewController {
     }
     
     
-//    override func viewDidAppear(_ animated: Bool) {
-//        super.viewDidAppear(animated)
-//
-//
-//        let player = AVPlayer(url: URL(fileURLWithPath: Bundle.main.path(forResource: "Day One at Northwest", ofType: "mp4")!))
-//        let layer = AVPlayerLayer(player: player)
-//        layer.frame = view.bounds
-//        layer.videoGravity = .resizeAspectFill
-//        view.layer.addSublayer(layer)
-//        player.volume = 0
-//        player.play()
-//
-//
-//    }
+
     
     
     override func viewDidLoad() {

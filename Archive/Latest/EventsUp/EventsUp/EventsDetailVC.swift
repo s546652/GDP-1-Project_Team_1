@@ -30,9 +30,9 @@ class EventsDetailVC: UIViewController {
             
             
             
-//            if ConstantsEventsUP.yourVariable == true {
-//                self.performSegue(withIdentifier: "logoutSegue", sender: (Any).self)
-//            }
+          
+                self.performSegue(withIdentifier: "detailLogout", sender: (Any).self)
+           
         }
         DateOutlet.text = date
         EventNameOutlet.text = name
@@ -78,7 +78,7 @@ class EventsDetailVC: UIViewController {
         }
         else {
             print("EventsDEtailVC")
-            self.performSegue(withIdentifier: "logoutSegue", sender: (Any).self)
+            self.performSegue(withIdentifier: "detailLogout", sender: (Any).self)
 
         }
     }

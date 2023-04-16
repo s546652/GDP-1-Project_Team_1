@@ -21,9 +21,9 @@ class PaymentVC: UIViewController {
             
             
             
-//            if ConstantsEventsUP.yourVariable == true {
-//                self.performSegue(withIdentifier: "logoutSegue", sender: (Any).self)
-//            }
+         //   if ConstantsEventsUP.yourVariable == true {
+                self.performSegue(withIdentifier: "paymentLogout", sender: (Any).self)
+         //   }
         }
         
         let animationView = LottieAnimationView()

@@ -1368,6 +1368,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="s3F-rz-lJy"/>
+                    <connections>
+                        <segue destination="C8i-gM-4Nn" kind="presentation" identifier="paymentLogout" modalPresentationStyle="fullScreen" id="Kjc-4N-RG2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ED4-3B-pnE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1554,11 +1557,12 @@
                         <outlet property="DateOutlet" destination="pL2-HQ-QN7" id="3XW-7o-fOx"/>
                         <outlet property="EventDescOutlet" destination="EOf-i0-0wE" id="Zck-PI-BQP"/>
                         <outlet property="EventNameOutlet" destination="WLM-0c-pb6" id="RAd-P6-Sn1"/>
+                        <segue destination="C8i-gM-4Nn" kind="presentation" identifier="detailLogout" modalPresentationStyle="fullScreen" id="bOK-nz-3Ux"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vQn-Ya-GpG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-7242" y="3411"/>
+            <point key="canvasLocation" x="-7016" y="3411"/>
         </scene>
         <!--Events-->
         <scene sceneID="JhQ-d4-wAM">
@@ -2011,9 +2015,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Ieo-tQ-BQQ"/>
-        <segue reference="2BP-en-RjK"/>
-        <segue reference="OdP-PO-gTO"/>
+        <segue reference="vzh-LX-Qha"/>
+        <segue reference="Kjc-4N-RG2"/>
         <segue reference="su5-Z2-wuL"/>
         <segue reference="BLW-GB-cKS"/>
         <segue reference="IKF-aI-YBU"/>
