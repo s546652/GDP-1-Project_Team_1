@@ -26,15 +26,7 @@ class WishlistTVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
     
     @IBOutlet weak var search: UISearchBar!
     
-    override func viewWillAppear(_ animated: Bool) {
-        
-        let backgroundImageView = UIImageView(frame: view.frame)
-        backgroundImageView.image = UIImage(named: "background")
-        backgroundImageView.alpha = 0.3
-        view.addSubview(backgroundImageView)
-        
-    }
-    
+   
     var searchName:[String]!
     var sname:String!
         var searchdate:String!
@@ -59,11 +51,31 @@ class WishlistTVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
         player = try! AVAudioPlayer(contentsOf: url!)
         player!.play()
     }
+    var backgroundImageView:UIImageView? //= UIImageView(frame: UIScreen.main.bounds)
+    override func didRotate(from fromInterfaceOrientation: UIInterfaceOrientation) {
+        super.didRotate(from: fromInterfaceOrientation)
+        backgroundImageView?.removeFromSuperview()
+        backImage()
+        
+        
+    }
     
+    //let backgroundImageView = UIImageView(frame: view.frame)
+    
+    
+    
+    func backImage(){
+        backgroundImageView = UIImageView(frame: view.bounds)
+        backgroundImageView!.image = UIImage(named: "background")
+        backgroundImageView!.alpha = 0.175
+        view.addSubview(backgroundImageView!)
+    }
     
     override func viewDidLoad() {
         
+        backImage()
         super.viewDidLoad()
+        
         db = Firestore.firestore()
         if Auth.auth().currentUser == nil {
             

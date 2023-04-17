@@ -11,12 +11,6 @@ import AVFAudio
 
 class EventsTVC: UIViewController, UITableViewDelegate,UITableViewDataSource, UISearchBarDelegate {
 
-    override func viewWillAppear(_ animated: Bool) {
-        let backgroundImageView = UIImageView(frame: view.frame)
-        backgroundImageView.image = UIImage(named: "background")
-        backgroundImageView.alpha = 0.2
-        view.addSubview(backgroundImageView)
-    }
     
     var searchName:[String]!
     var sname:String!
@@ -34,8 +28,26 @@ class EventsTVC: UIViewController, UITableViewDelegate,UITableViewDataSource, UI
     
     @IBOutlet weak var tableView: UITableView!
     
+    var backgroundImageView:UIImageView? //= UIImageView(frame: UIScreen.main.bounds)
+    override func didRotate(from fromInterfaceOrientation: UIInterfaceOrientation) {
+        super.didRotate(from: fromInterfaceOrientation)
+        backgroundImageView?.removeFromSuperview()
+        backImage()
+        
+        
+    }
+    
+    
+    func backImage(){
+        backgroundImageView = UIImageView(frame: view.bounds)
+        backgroundImageView!.image = UIImage(named: "background")
+        backgroundImageView!.alpha = 0.175
+        view.addSubview(backgroundImageView!)
+    }
     
     override func viewDidLoad() {
+        
+        backImage()
         super.viewDidLoad()
         db = Firestore.firestore()
         if Auth.auth().currentUser == nil {
@@ -154,10 +166,7 @@ class EventsTVC: UIViewController, UITableViewDelegate,UITableViewDataSource, UI
 
         }
         
-        let backgroundImageView = UIImageView(frame: view.frame)
-        backgroundImageView.image = UIImage(named: "background")
-        backgroundImageView.alpha = 0.2
-        view.addSubview(backgroundImageView)
+       
     }
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
             if searchBar==search{
