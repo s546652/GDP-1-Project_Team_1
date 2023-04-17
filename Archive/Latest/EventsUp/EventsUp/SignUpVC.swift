@@ -237,7 +237,7 @@ class SignUpVC: UIViewController {
                         let defaultAction = UIAlertAction(title: "Ok",
                                                 style: .default) { (action) in
                             print("test")
-                          //  self.performSegue(withIdentifier: "logintohome", sender: self)
+                            self.performSegue(withIdentifier: "loginToHome", sender: self)
                            }
 //                        let animationView = LottieAnimationView(name: "104368-thank-you")
 //                        animationView.frame = CGRect(x: 0, y: 0, width: 100, height: 100)

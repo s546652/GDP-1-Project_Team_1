@@ -28,7 +28,6 @@
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
                                             <action selector="fnameCheck:" destination="rNN-vo-tyr" eventType="editingChanged" id="fdp-hR-xMj"/>
-                                            <action selector="fnameTF:" destination="rNN-vo-tyr" eventType="editingDidEnd" id="EA3-SD-nhR"/>
                                             <action selector="fnameTFA:" destination="rNN-vo-tyr" eventType="editingChanged" id="0h4-v4-o8N"/>
                                         </connections>
                                     </textField>
@@ -39,7 +38,6 @@
                                         <connections>
                                             <action selector="fnameTFA:" destination="rNN-vo-tyr" eventType="editingChanged" id="jQA-p5-RdD"/>
                                             <action selector="lnameCheck:" destination="rNN-vo-tyr" eventType="editingChanged" id="6cE-sW-xS5"/>
-                                            <action selector="lnameTF:" destination="rNN-vo-tyr" eventType="editingDidEnd" id="Jda-Ys-cSD"/>
                                             <action selector="lnameTFA:" destination="rNN-vo-tyr" eventType="editingChanged" id="330-Bw-p5N"/>
                                         </connections>
                                     </textField>
@@ -49,7 +47,6 @@
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
                                             <action selector="emailCheck:" destination="rNN-vo-tyr" eventType="editingChanged" id="3X8-vv-B8P"/>
-                                            <action selector="emailTF:" destination="rNN-vo-tyr" eventType="editingDidEnd" id="PM4-rN-822"/>
                                             <action selector="emailTFA:" destination="rNN-vo-tyr" eventType="editingChanged" id="971-uk-S0t"/>
                                         </connections>
                                     </textField>
@@ -59,7 +56,6 @@
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
                                             <action selector="sidCheck:" destination="rNN-vo-tyr" eventType="editingChanged" id="0c4-Il-oYt"/>
-                                            <action selector="sidTF:" destination="rNN-vo-tyr" eventType="editingDidEnd" id="ZH0-kq-Tg3"/>
                                             <action selector="sidTFA:" destination="rNN-vo-tyr" eventType="editingChanged" id="LXq-gp-Wby"/>
                                         </connections>
                                     </textField>
@@ -69,7 +65,6 @@
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
                                             <action selector="dobCheck:" destination="rNN-vo-tyr" eventType="editingChanged" id="tSp-Cl-jSQ"/>
-                                            <action selector="dobTF:" destination="rNN-vo-tyr" eventType="editingDidEnd" id="j94-OM-HzG"/>
                                             <action selector="dobTFA:" destination="rNN-vo-tyr" eventType="editingChanged" id="pPw-R6-oba"/>
                                         </connections>
                                     </textField>
@@ -82,7 +77,6 @@
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
                                             <action selector="phnumCheck:" destination="rNN-vo-tyr" eventType="editingChanged" id="zwf-4D-0r4"/>
-                                            <action selector="phnumTF:" destination="rNN-vo-tyr" eventType="editingDidEnd" id="jME-It-IIY"/>
                                             <action selector="phnumTFA:" destination="rNN-vo-tyr" eventType="editingChanged" id="JDp-h6-coM"/>
                                         </connections>
                                     </textField>
@@ -92,7 +86,6 @@
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                         <connections>
                                             <action selector="psswrdCheck:" destination="rNN-vo-tyr" eventType="editingChanged" id="X36-JX-a8w"/>
-                                            <action selector="psswrdTF:" destination="rNN-vo-tyr" eventType="editingDidEnd" id="KGy-tf-GrW"/>
                                             <action selector="psswrdTFA:" destination="rNN-vo-tyr" eventType="editingChanged" id="Ycg-MQ-ekr"/>
                                         </connections>
                                     </textField>
@@ -102,7 +95,6 @@
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                         <connections>
                                             <action selector="repassCheck:" destination="rNN-vo-tyr" eventType="editingChanged" id="Urq-v3-RQj"/>
-                                            <action selector="repassTF:" destination="rNN-vo-tyr" eventType="editingDidEnd" id="9b3-Oj-jcV"/>
                                             <action selector="repassTFA:" destination="rNN-vo-tyr" eventType="editingChanged" id="b6H-IV-1vc"/>
                                         </connections>
                                     </textField>
@@ -121,6 +113,7 @@
                                                 <buttonConfiguration key="configuration" style="filled" title="SignUp"/>
                                                 <connections>
                                                     <action selector="Submit:" destination="rNN-vo-tyr" eventType="touchUpInside" id="9RM-4X-KjX"/>
+                                                    <segue destination="C8i-gM-4Nn" kind="presentation" identifier="loginToHome" id="hJc-ir-tD0"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -156,18 +149,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="my5-Ch-c4a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-12088.317757009345" y="4650.9719222462209"/>
+            <point key="canvasLocation" x="-12088" y="4681"/>
         </scene>
         <!--LoginVC-->
         <scene sceneID="jmn-h1-DWz">
             <objects>
                 <viewController id="C8i-gM-4Nn" customClass="LoginVC" customModule="EventsUp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="X3S-bO-oeo">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="869"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="fLQ-Sn-HOe">
-                                <rect key="frame" x="20" y="351" width="388" height="224"/>
+                                <rect key="frame" x="20" y="322.66666666666669" width="388" height="224.00000000000006"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="6g7-v9-cYb">
                                         <rect key="frame" x="0.0" y="0.0" width="388" height="224"/>
@@ -1074,7 +1067,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="2BP-en-RjK"/>
-        <segue reference="9BW-Uf-XG9"/>
+        <segue reference="hJc-ir-tD0"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="heart.fill" catalog="system" width="128" height="107"/>
