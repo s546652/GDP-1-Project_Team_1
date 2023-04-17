@@ -14,7 +14,7 @@
         <!--Sign UpVC-->
         <scene sceneID="waD-8M-fsB">
             <objects>
-                <viewController id="rNN-vo-tyr" customClass="SignUpVC" customModule="EventsUp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignUpVC" id="rNN-vo-tyr" customClass="SignUpVC" customModule="EventsUp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cEx-Yg-uJe">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="869"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -113,7 +113,6 @@
                                                 <buttonConfiguration key="configuration" style="filled" title="SignUp"/>
                                                 <connections>
                                                     <action selector="Submit:" destination="rNN-vo-tyr" eventType="touchUpInside" id="9RM-4X-KjX"/>
-                                                    <segue destination="C8i-gM-4Nn" kind="presentation" identifier="loginToHome" id="hJc-ir-tD0"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -149,18 +148,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="my5-Ch-c4a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-12088" y="4681"/>
+            <point key="canvasLocation" x="-11993" y="4394"/>
         </scene>
         <!--LoginVC-->
         <scene sceneID="jmn-h1-DWz">
             <objects>
                 <viewController id="C8i-gM-4Nn" customClass="LoginVC" customModule="EventsUp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="X3S-bO-oeo">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="869"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="fLQ-Sn-HOe">
-                                <rect key="frame" x="20" y="322.66666666666669" width="388" height="224.00000000000006"/>
+                                <rect key="frame" x="20" y="351" width="388" height="224"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="6g7-v9-cYb">
                                         <rect key="frame" x="0.0" y="0.0" width="388" height="224"/>
@@ -194,7 +193,7 @@
                                                         <buttonConfiguration key="configuration" style="filled" title="Sign Up"/>
                                                         <connections>
                                                             <action selector="SignupBTN:" destination="C8i-gM-4Nn" eventType="touchUpInside" id="MoQ-X7-Rv7"/>
-                                                            <segue destination="rNN-vo-tyr" kind="show" id="I61-ii-gg1"/>
+                                                            <segue destination="rNN-vo-tyr" kind="show" id="Hxv-jr-4N6"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -1066,8 +1065,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="2BP-en-RjK"/>
-        <segue reference="hJc-ir-tD0"/>
+        <segue reference="vzh-LX-Qha"/>
+        <segue reference="9BW-Uf-XG9"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="heart.fill" catalog="system" width="128" height="107"/>

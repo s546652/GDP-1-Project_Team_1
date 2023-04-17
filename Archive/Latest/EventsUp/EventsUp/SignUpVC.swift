@@ -43,6 +43,7 @@ class SignUpVC: UIViewController {
         dateFormatter.dateFormat = "MM/dd/YYYY"
         dateString=dateFormatter.string(from: picker.date)
         print(dateString)
+        self.dob.text = dateString
     }
  
     override func viewDidLoad() {
@@ -58,7 +59,7 @@ class SignUpVC: UIViewController {
         
         let date = datePicker
         datePicker.addTarget(self, action: #selector(datePickerChanged(picker:)), for: .valueChanged)
-        
+        datePicker.maximumDate = Date()
         self.fName.layer.borderColor = UIColor.red.cgColor
         self.fName.layer.borderWidth = 1
         self.sid.layer.borderColor = UIColor.red.cgColor
@@ -240,7 +241,8 @@ class SignUpVC: UIViewController {
                         let defaultAction = UIAlertAction(title: "Ok",
                                                 style: .default) { (action) in
                             print("test")
-                            self.performSegue(withIdentifier: "loginToHome", sender: self)
+                           // self.performSegue(withIdentifier: "loginToHome", sender: self)
+                            self.navigationController?.popViewController(animated: true)
                            }
 //                        let animationView = LottieAnimationView(name: "104368-thank-you")
 //                        animationView.frame = CGRect(x: 0, y: 0, width: 100, height: 100)

@@ -109,6 +109,8 @@ class LoginVC: UIViewController {
     
     @IBAction func SignupBTN(_ sender: UIButton) {
         print(1)
+//        let vc = storyboard?.instantiateViewController(withIdentifier: "SignUpVC") as! SignUpVC
+//        self.navigationController.pus
     }
     
     
