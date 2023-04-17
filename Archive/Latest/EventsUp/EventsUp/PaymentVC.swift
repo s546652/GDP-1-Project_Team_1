@@ -26,16 +26,26 @@ class PaymentVC: UIViewController {
          //   }
         }
         
-        let animationView = LottieAnimationView()
+       loadPaymentAnimation()
+        // Do any additional setup after loading the view.
+    }
+    
+    override func didRotate(from fromInterfaceOrientation: UIInterfaceOrientation) {
+        super.didRotate(from: fromInterfaceOrientation)
+        loadPaymentAnimation()
+    }
+    
+    let animationView = LottieAnimationView()
+    func loadPaymentAnimation(){
+        
                 let animation = LottieAnimation.named("31737-savings-dollar")
                 animationView.animation = animation
                 animationView.loopMode = .loop
                 animationView.frame = view.bounds
-        animationView.alpha = 0.7
+        animationView.alpha = 0.5
 
                 view.layer.addSublayer(animationView.layer)
                 animationView.play()
-        // Do any additional setup after loading the view.
     }
     
 

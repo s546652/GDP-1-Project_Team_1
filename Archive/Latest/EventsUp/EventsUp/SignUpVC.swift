@@ -79,8 +79,20 @@ class SignUpVC: UIViewController {
         self.re_enterPassword.layer.borderColor = UIColor.red.cgColor
         self.re_enterPassword.layer.borderWidth = 1
         
-      
-        let animationView = LottieAnimationView()
+      loadSignUpAnimation()
+        
+        
+        // Do any additional setup after loading the view.
+    }
+    
+    override func didRotate(from fromInterfaceOrientation: UIInterfaceOrientation) {
+        super.didRotate(from: fromInterfaceOrientation)
+        loadSignUpAnimation()
+    }
+    let animationView = LottieAnimationView()
+    
+    func loadSignUpAnimation(){
+        
                 let animation = LottieAnimation.named("104759-login")
                 animationView.animation = animation
                 animationView.loopMode = .loop
@@ -89,8 +101,6 @@ class SignUpVC: UIViewController {
 
                 view.layer.addSublayer(animationView.layer)
                 animationView.play()
-        
-        // Do any additional setup after loading the view.
     }
     
     @IBOutlet weak var emailError: UILabel!

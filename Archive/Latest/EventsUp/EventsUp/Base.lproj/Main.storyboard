@@ -65,7 +65,7 @@
                                 <rect key="frame" x="150" y="595" width="128" height="128"/>
                             </imageView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YXW-gs-Kwf">
-                                <rect key="frame" x="-55" y="807" width="430" height="48"/>
+                                <rect key="frame" x="-55" y="807" width="430" height="47"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem title="Events" image="list.bullet.rectangle.portrait" catalog="system" id="KXl-ff-QWF">
@@ -294,7 +294,7 @@
                                 </constraints>
                             </stackView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7tB-Tu-CS0">
-                                <rect key="frame" x="-54" y="810" width="430" height="55"/>
+                                <rect key="frame" x="-54" y="809" width="430" height="55"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem title="Events" image="list.bullet.rectangle.portrait" catalog="system" id="XFT-rf-KzF">
@@ -560,7 +560,7 @@
                                 </items>
                             </navigationBar>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bKE-s0-zlt">
-                                <rect key="frame" x="-57" y="805" width="434" height="41"/>
+                                <rect key="frame" x="-58" y="805" width="434" height="40"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem title="Events" image="list.bullet.rectangle.portrait" catalog="system" id="ksh-Tt-j8C">
@@ -1385,7 +1385,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" fixedFrame="YES" placeholder="Search By Name" translatesAutoresizingMaskIntoConstraints="NO" id="nPR-Ax-lDE">
-                                <rect key="frame" x="14" y="144" width="219" height="44"/>
+                                <rect key="frame" x="14" y="144" width="218" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -1393,7 +1393,7 @@
                                 </connections>
                             </searchBar>
                             <searchBar contentMode="redraw" fixedFrame="YES" placeholder="Date" translatesAutoresizingMaskIntoConstraints="NO" id="qiz-cv-css">
-                                <rect key="frame" x="233" y="144" width="170" height="44"/>
+                                <rect key="frame" x="232" y="144" width="170" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -2016,7 +2016,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="vzh-LX-Qha"/>
-        <segue reference="Kjc-4N-RG2"/>
+        <segue reference="fm0-tv-rvQ"/>
         <segue reference="su5-Z2-wuL"/>
         <segue reference="BLW-GB-cKS"/>
         <segue reference="IKF-aI-YBU"/>
