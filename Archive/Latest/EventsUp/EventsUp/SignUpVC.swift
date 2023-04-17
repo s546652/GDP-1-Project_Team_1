@@ -215,6 +215,9 @@ class SignUpVC: UIViewController {
     }
     
     @IBAction func Submit(_ sender: Any) {
+        if !validation() {
+            return
+        }
         
         Auth.auth().createUser(withEmail: email.text!, password: password.text!){Result, error in
             if error != nil {
@@ -268,4 +271,64 @@ class SignUpVC: UIViewController {
     }
     */
 
+}
+
+
+extension SignUpVC {
+    
+    func validation() -> Bool {
+        var errorMsg = ""
+        var isValidate = true
+        let fName = self.fName.text
+        let lName = self.lName.text
+        let emailStr = self.email.text
+        let passStr = self.password.text
+        let phoneStr = self.phNo.text
+        
+        if fName?.isEmpty ?? false{
+            errorMsg += "Please enter first name.\n"
+            isValidate = false
+        }else if fName?.isContainNumeric() ?? false {
+            errorMsg += "Number not allow in first name.\n"
+            isValidate = false
+        }
+        if lName?.isEmpty ?? false{
+            errorMsg += "Please enter last name.\n"
+            isValidate = false
+        }else if lName?.isContainNumeric() ?? false {
+            errorMsg += "Number not allow in last name.\n"
+            isValidate = false
+        }
+        if emailStr?.isEmpty ?? false{
+            errorMsg += "Please enter email.\n"
+            isValidate = false
+        } else if !(emailStr?.isValidEmail() ?? false){
+            errorMsg += "Please enter valid email.\n"
+            isValidate = false
+        }
+        if dateString?.isEmpty ?? false || dateString == nil{
+            errorMsg += "Please select date of birth.\n"
+            isValidate = false
+        }
+        if passStr?.isEmpty ?? false{
+            errorMsg += "Please enter password.\n"
+            isValidate = false
+        }else if !(passStr?.isValidPassword() ?? false){
+            errorMsg += "Password must be atleast 8 character long.\n"
+            isValidate = false
+        }
+        if phoneStr?.isEmpty ?? false{
+            errorMsg += "Please enter phone number.\n"
+            isValidate = false
+        }else if !(phoneStr?.isValidPhone() ?? false){
+            errorMsg += "Phone number must be 10 digit.\n"
+            isValidate = false
+        }
+        if !isValidate {
+            var alert = UIAlertController(title: "Alert!", message: errorMsg, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default))
+            self.present(alert, animated: true)
+        }
+        return isValidate
+    }
 }

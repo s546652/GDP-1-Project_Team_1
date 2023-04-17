@@ -88,6 +88,7 @@
 		F5F3AE1529CD188C005FD102 /* 104759-login.json in Resources */ = {isa = PBXBuildFile; fileRef = F5F3AE1429CD188C005FD102 /* 104759-login.json */; };
 		F5F3AE1729CD1E4C005FD102 /* 104368-thank-you.json in Resources */ = {isa = PBXBuildFile; fileRef = F5F3AE1629CD1E4C005FD102 /* 104368-thank-you.json */; };
 		F66ECD68290CC10800D89F73 /* MySQLDriver in Frameworks */ = {isa = PBXBuildFile; productRef = F66ECD67290CC10800D89F73 /* MySQLDriver */; };
+		FDE01D6129EDA4ED00F1FFC7 /* Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE01D6029EDA4ED00F1FFC7 /* Extention.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -145,6 +146,7 @@
 		F5D9B80B29E8A318009FF567 /* MYCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MYCollectionViewCell.xib; sourceTree = "<group>"; };
 		F5F3AE1429CD188C005FD102 /* 104759-login.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "104759-login.json"; sourceTree = "<group>"; };
 		F5F3AE1629CD1E4C005FD102 /* 104368-thank-you.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "104368-thank-you.json"; sourceTree = "<group>"; };
+		FDE01D6029EDA4ED00F1FFC7 /* Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extention.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,6 +221,7 @@
 			isa = PBXGroup;
 			children = (
 				264F96B12990B17C00573A24 /* wishlistService.swift */,
+				FDE01D6029EDA4ED00F1FFC7 /* Extention.swift */,
 				F5A77A4B28E79076001307B3 /* EventsUp */,
 				F5A77A4A28E79076001307B3 /* Products */,
 			);
@@ -424,6 +427,7 @@
 				26247E2829881A44001BCE1E /* wishListControllerViewController.swift in Sources */,
 				F50DA3952908B89800342EDA /* PayemntController.swift in Sources */,
 				F5186A5A28E8F4F800806FAB /* LoginController.swift in Sources */,
+				FDE01D6129EDA4ED00F1FFC7 /* Extention.swift in Sources */,
 				F55E4AB629A583A6007E5850 /* WishlistTVC.swift in Sources */,
 				F5A77A4D28E79076001307B3 /* AppDelegate.swift in Sources */,
 				266DE80929A719FF001E513D /* SignUpVC.swift in Sources */,
