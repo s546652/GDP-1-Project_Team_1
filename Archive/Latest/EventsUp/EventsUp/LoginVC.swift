@@ -151,6 +151,12 @@ class LoginVC: UIViewController {
         super.viewDidLoad()
       //  print("inside login ConstantsEventsUP.yourVariable --- ",ConstantsEventsUP.yourVariable)
 
+        self.EmailTF.layer.borderColor = UIColor.darkText.cgColor
+        self.EmailTF.layer.borderWidth = 1
+        self.PasswordTF.layer.borderColor = UIColor.darkText.cgColor
+        self.PasswordTF.layer.borderWidth = 1
+        
+        
         db = Firestore.firestore()
         if Auth.auth().currentUser == nil {
             

@@ -16,11 +16,11 @@
             <objects>
                 <viewController storyboardIdentifier="SignUpVC" id="rNN-vo-tyr" customClass="SignUpVC" customModule="EventsUp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cEx-Yg-uJe">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="869"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Fhi-Fz-Tlm">
-                                <rect key="frame" x="20" y="220.33333333333334" width="388" height="428.33333333333326"/>
+                                <rect key="frame" x="20" y="270" width="388" height="386.33333333333326"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="P1a-QE-rKy">
                                         <rect key="frame" x="0.0" y="0.0" width="388" height="34"/>
@@ -32,7 +32,7 @@
                                         </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8it-Ik-TIP">
-                                        <rect key="frame" x="0.0" y="41.999999999999972" width="388" height="34"/>
+                                        <rect key="frame" x="0.0" y="42" width="388" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
@@ -42,7 +42,7 @@
                                         </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HyJ-rx-4db">
-                                        <rect key="frame" x="0.0" y="83.999999999999972" width="388" height="34"/>
+                                        <rect key="frame" x="0.0" y="84" width="388" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
@@ -51,7 +51,7 @@
                                         </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="SID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wbi-pq-5N4">
-                                        <rect key="frame" x="0.0" y="125.99999999999997" width="388" height="34"/>
+                                        <rect key="frame" x="0.0" y="126" width="388" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
@@ -59,20 +59,25 @@
                                             <action selector="sidTFA:" destination="rNN-vo-tyr" eventType="editingChanged" id="LXq-gp-Wby"/>
                                         </connections>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Date of Birth" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZVs-S6-xUJ">
-                                        <rect key="frame" x="0.0" y="167.99999999999997" width="388" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                        <connections>
-                                            <action selector="dobCheck:" destination="rNN-vo-tyr" eventType="editingChanged" id="tSp-Cl-jSQ"/>
-                                            <action selector="dobTFA:" destination="rNN-vo-tyr" eventType="editingChanged" id="pPw-R6-oba"/>
-                                        </connections>
-                                    </textField>
-                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="cyK-1x-d6F">
-                                        <rect key="frame" x="0.0" y="209.99999999999997" width="388" height="50.000000000000028"/>
-                                    </datePicker>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="X9C-kj-1q9">
+                                        <rect key="frame" x="0.0" y="168" width="388" height="50"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Date of Birth" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZVs-S6-xUJ">
+                                                <rect key="frame" x="0.0" y="0.0" width="190" height="50"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="dobCheck:" destination="rNN-vo-tyr" eventType="editingChanged" id="tSp-Cl-jSQ"/>
+                                                    <action selector="dobTFA:" destination="rNN-vo-tyr" eventType="editingChanged" id="pPw-R6-oba"/>
+                                                </connections>
+                                            </textField>
+                                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="cyK-1x-d6F">
+                                                <rect key="frame" x="198" y="0.0" width="190" height="50"/>
+                                            </datePicker>
+                                        </subviews>
+                                    </stackView>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g4Y-5E-P2a">
-                                        <rect key="frame" x="0.0" y="268" width="388" height="34"/>
+                                        <rect key="frame" x="0.0" y="226" width="388" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
@@ -81,7 +86,7 @@
                                         </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YIG-Mv-vhn">
-                                        <rect key="frame" x="0.0" y="310" width="388" height="34"/>
+                                        <rect key="frame" x="0.0" y="268" width="388" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                         <connections>
@@ -90,7 +95,7 @@
                                         </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Re-enter Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="39Q-aS-OUL">
-                                        <rect key="frame" x="0.0" y="352" width="388" height="34"/>
+                                        <rect key="frame" x="0.0" y="310" width="388" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                         <connections>
@@ -99,14 +104,16 @@
                                         </connections>
                                     </textField>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="YT3-e8-uUo">
-                                        <rect key="frame" x="0.0" y="394" width="388" height="34.333333333333314"/>
+                                        <rect key="frame" x="0.0" y="352" width="388" height="34.333333333333314"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lA6-jv-7d0">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aS1-tN-5LU">
                                                 <rect key="frame" x="0.0" y="0.0" width="190" height="34.333333333333336"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Login"/>
+                                                <connections>
+                                                    <segue destination="C8i-gM-4Nn" kind="presentation" modalPresentationStyle="fullScreen" id="tcd-1y-Qt3"/>
+                                                </connections>
+                                            </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VrJ-xX-FJM">
                                                 <rect key="frame" x="198" y="0.0" width="190" height="34.333333333333336"/>
                                                 <state key="normal" title="Button"/>
@@ -118,10 +125,6 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="cyK-1x-d6F" firstAttribute="leading" secondItem="Fhi-Fz-Tlm" secondAttribute="leading" constant="100" id="3Zx-PH-xGI"/>
-                                    <constraint firstItem="cyK-1x-d6F" firstAttribute="leading" secondItem="Fhi-Fz-Tlm" secondAttribute="leading" constant="50" id="Mby-dn-UgP"/>
-                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Mmq-gQ-vY6"/>
@@ -148,7 +151,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="my5-Ch-c4a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-11993" y="4394"/>
+            <point key="canvasLocation" x="-12088" y="4517"/>
         </scene>
         <!--LoginVC-->
         <scene sceneID="jmn-h1-DWz">
@@ -193,7 +196,7 @@
                                                         <buttonConfiguration key="configuration" style="filled" title="Sign Up"/>
                                                         <connections>
                                                             <action selector="SignupBTN:" destination="C8i-gM-4Nn" eventType="touchUpInside" id="MoQ-X7-Rv7"/>
-                                                            <segue destination="rNN-vo-tyr" kind="show" id="Hxv-jr-4N6"/>
+                                                            <segue destination="rNN-vo-tyr" kind="presentation" modalPresentationStyle="fullScreen" id="Hxv-jr-4N6"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -1066,7 +1069,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="vzh-LX-Qha"/>
-        <segue reference="9BW-Uf-XG9"/>
+        <segue reference="tcd-1y-Qt3"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="heart.fill" catalog="system" width="128" height="107"/>
