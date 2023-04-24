@@ -71,6 +71,55 @@ class WishlistTVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
         view.addSubview(backgroundImageView!)
     }
     
+    
+    override func viewWillAppear(_ animated: Bool) {
+        db = Firestore.firestore()
+                if Auth.auth().currentUser == nil {
+                    
+                        print("UserProfile")
+                        self.performSegue(withIdentifier: "wishListLogout", sender: (Any).self)
+                        
+
+                 //   }
+                
+                }
+                tableView.delegate = self
+                tableView.dataSource = self
+                search.delegate=self
+                searchName=ename
+                //searchD=edate
+                
+                //searchDate.delegate=self
+                var t:String!
+                db = Firestore.firestore()
+                if Auth.auth().currentUser != nil {
+                    db.collection("WishList").whereField("User", isEqualTo:  (Auth.auth().currentUser?.email!)!)
+                        .getDocuments() { [self] (querySnapshot, err) in
+                            if let err = err {
+                                print("Error getting documents: \(err)")
+                            } else {
+                                print(555,querySnapshot!.documents.count)
+                                size = querySnapshot!.documents.count
+                                for document in querySnapshot!.documents {
+                                    t = document.documentID
+                                    if(t!.isEmpty == false && !(ename.contains(t!))){
+                                        ename.append(t)
+                                        
+                                    }
+                                }
+                                searchName=ename
+                                tableView.reloadData()
+                            }
+                            
+                        }
+                }
+                else{
+                    self.performSegue(withIdentifier: "wishListLogout", sender: (Any).self)
+
+                }
+    }
+    
+    
     override func viewDidLoad() {
         
         backImage()

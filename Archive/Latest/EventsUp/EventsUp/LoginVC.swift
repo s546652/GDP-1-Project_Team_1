@@ -131,7 +131,6 @@ class LoginVC: UIViewController {
         playerLayer.videoGravity = .resizeAspectFill
         self.videoLayerUV.layer.addSublayer(playerLayer)
 
-
         player.play()
         player.isMuted = true
         // videoLayerUV.bringSubviewToFront(logoIV)
