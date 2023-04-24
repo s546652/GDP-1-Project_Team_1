@@ -134,7 +134,25 @@ class UserProfileVC: UIViewController {
         }
     }
     
+    
+    
+    var backgroundImageView:UIImageView? //= UIImageView(frame: UIScreen.main.bounds)
+    override func didRotate(from fromInterfaceOrientation: UIInterfaceOrientation) {
+        super.didRotate(from: fromInterfaceOrientation)
+        backgroundImageView?.removeFromSuperview()
+        backImage()
+    }
+    
+    func backImage(){
+        backgroundImageView = UIImageView(frame: view.bounds)
+        backgroundImageView!.image = UIImage(named: "bgimage")
+        backgroundImageView!.alpha = 0.2
+        view.addSubview(backgroundImageView!)
+    }
+    
+    
     override func viewDidLoad() {
+        backImage()
         super.viewDidLoad()
         db = Firestore.firestore()
         if Auth.auth().currentUser == nil {

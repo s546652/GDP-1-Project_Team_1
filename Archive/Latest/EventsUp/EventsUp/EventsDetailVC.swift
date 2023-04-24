@@ -23,8 +23,25 @@ class EventsDetailVC: UIViewController {
     @IBOutlet weak var EventDescOutlet: UITextView!
     
     
+    var backgroundImageView:UIImageView? //= UIImageView(frame: UIScreen.main.bounds)
+    override func didRotate(from fromInterfaceOrientation: UIInterfaceOrientation) {
+        super.didRotate(from: fromInterfaceOrientation)
+        backgroundImageView?.removeFromSuperview()
+        backImage()
+    }
+    
+    func backImage(){
+        backgroundImageView = UIImageView(frame: view.bounds)
+        backgroundImageView!.image = UIImage(named: "bgimage")
+        backgroundImageView!.alpha = 0.2
+        view.addSubview(backgroundImageView!)
+    }
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        backImage()
         db = Firestore.firestore()
         if Auth.auth().currentUser == nil {
             

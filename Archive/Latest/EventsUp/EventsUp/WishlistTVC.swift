@@ -66,8 +66,8 @@ class WishlistTVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
     
     func backImage(){
         backgroundImageView = UIImageView(frame: view.bounds)
-        backgroundImageView!.image = UIImage(named: "background")
-        backgroundImageView!.alpha = 0.175
+        backgroundImageView!.image = UIImage(named: "bgimage")
+        backgroundImageView!.alpha = 0.2
         view.addSubview(backgroundImageView!)
     }
     

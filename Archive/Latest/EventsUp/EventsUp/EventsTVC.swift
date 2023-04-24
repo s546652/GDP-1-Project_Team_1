@@ -29,6 +29,7 @@ class EventsTVC: UIViewController, UITableViewDelegate,UITableViewDataSource, UI
     @IBOutlet weak var tableView: UITableView!
     
     var backgroundImageView:UIImageView? //= UIImageView(frame: UIScreen.main.bounds)
+    
     override func didRotate(from fromInterfaceOrientation: UIInterfaceOrientation) {
         super.didRotate(from: fromInterfaceOrientation)
         backgroundImageView?.removeFromSuperview()
@@ -37,11 +38,21 @@ class EventsTVC: UIViewController, UITableViewDelegate,UITableViewDataSource, UI
         
     }
     
+//    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+//        super.viewWillTransition(to: size, with: coordinator)
+//
+//        coordinator.animate(alongsideTransition: nil){ _ in
+//            self.backgroundImageView?.frame = CGRect(origin: .zero, size: size)
+//
+//        }
+//    }
+    
+    
     
     func backImage(){
         backgroundImageView = UIImageView(frame: view.bounds)
-        backgroundImageView!.image = UIImage(named: "background")
-        backgroundImageView!.alpha = 0.175
+        backgroundImageView!.image = UIImage(named: "bgimage")
+        backgroundImageView!.alpha = 0.2
         view.addSubview(backgroundImageView!)
     }
     
