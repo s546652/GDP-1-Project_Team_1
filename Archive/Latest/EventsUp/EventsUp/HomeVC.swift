@@ -14,7 +14,8 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
     
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: (view.frame.size.width/2)-2, height: (view.frame.size.width/2)-2)
+        return CGSize(width: (view.frame.size.width/3)-3, height: (view.frame.size.width/3)-3)
+        //return CGSize(width: 500, height: 500)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
@@ -26,7 +27,7 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return 100
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -35,7 +36,7 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
         return cell
     }
     
-
+    
     private let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
     
     
@@ -60,12 +61,7 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
         super.viewDidLayoutSubviews()
         collectionView.frame = view.bounds
     }
-    
 
-    
-    
-    
-    
     
     
 //    ******************************************************************************************

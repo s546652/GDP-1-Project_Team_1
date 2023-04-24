@@ -58,6 +58,11 @@ class UserProfileVC: UIViewController {
         player!.play()
     }
     
+    func playSoundOk(){
+        let url = Bundle.main.url(forResource: "ok", withExtension: "mp3")
+        player = try! AVAudioPlayer(contentsOf: url!)
+        player!.play()
+    }
     
     
     @IBAction func logoutAccount(_ sender: Any) {
@@ -71,6 +76,7 @@ class UserProfileVC: UIViewController {
         // Create OK button with action handler
         let ok = UIAlertAction(title: "OK", style: .default, handler: { (action) -> Void in
             do {
+                self.playSoundOk()
             try Auth.auth().signOut()
                 self.performSegue(withIdentifier: "logoutSegue", sender: Any?.self)
             } catch let signOutError as NSError {
@@ -123,11 +129,7 @@ class UserProfileVC: UIViewController {
             self.performSegue(withIdentifier: "logoutSegue", sender: (Any).self)
             
             
-            
-            
-            
-            
-            
+
             //self.performSegue(withIdentifier: "logoutSegue", sender: (Any).self)
             
 

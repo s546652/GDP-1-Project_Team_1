@@ -13,6 +13,35 @@ import FirebaseFirestore
 
 class PaymentVC: UIViewController {
 
+    
+    
+    
+    @IBOutlet weak var fNameTF: UITextField!
+    
+    
+    @IBOutlet weak var addressTF: UITextField!
+    
+    
+    
+    @IBOutlet weak var cardNumTF: UITextField!
+    
+    
+    
+    @IBOutlet weak var expiryDateTF: UITextField!
+    
+    
+    @IBOutlet weak var secNumTF: UITextField!
+    
+    
+    
+    @IBOutlet weak var nameOnCardTF: UITextField!
+    
+    
+    
+    
+    
+    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         var db: Firestore!
@@ -27,6 +56,20 @@ class PaymentVC: UIViewController {
         }
         
        loadPaymentAnimation()
+        
+        
+        self.fNameTF.layer.borderColor = UIColor.darkText.cgColor
+        self.fNameTF.layer.borderWidth = 1
+        self.addressTF.layer.borderColor = UIColor.darkText.cgColor
+        self.addressTF.layer.borderWidth = 1
+        self.cardNumTF.layer.borderColor = UIColor.darkText.cgColor
+        self.cardNumTF.layer.borderWidth = 1
+        self.expiryDateTF.layer.borderColor = UIColor.darkText.cgColor
+        self.expiryDateTF.layer.borderWidth = 1
+        self.secNumTF.layer.borderColor = UIColor.darkText.cgColor
+        self.secNumTF.layer.borderWidth = 1
+        self.nameOnCardTF.layer.borderColor = UIColor.darkText.cgColor
+        self.nameOnCardTF.layer.borderWidth = 1
         // Do any additional setup after loading the view.
     }
     

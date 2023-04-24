@@ -151,9 +151,9 @@ class LoginVC: UIViewController {
       //  print("inside login ConstantsEventsUP.yourVariable --- ",ConstantsEventsUP.yourVariable)
 
         self.EmailTF.layer.borderColor = UIColor.darkText.cgColor
-        self.EmailTF.layer.borderWidth = 1
+        self.EmailTF.layer.borderWidth = 2
         self.PasswordTF.layer.borderColor = UIColor.darkText.cgColor
-        self.PasswordTF.layer.borderWidth = 1
+        self.PasswordTF.layer.borderWidth = 2
         
         
         db = Firestore.firestore()

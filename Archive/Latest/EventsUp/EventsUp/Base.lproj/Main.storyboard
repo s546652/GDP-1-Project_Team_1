@@ -311,18 +311,18 @@
             <objects>
                 <viewController id="eJK-e6-ov1" customClass="PaymentVC" customModule="EventsUp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nVX-pv-RzT">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="843"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="869"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="VPZ-7T-e7k">
-                                <rect key="frame" x="20" y="277.33333333333337" width="388" height="288.33333333333337"/>
+                                <rect key="frame" x="20" y="290.33333333333337" width="388" height="288.33333333333337"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Full Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XA0-g0-OBT">
                                         <rect key="frame" x="0.0" y="0.0" width="388" height="34.333333333333336"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Kv-SW-JMQ">
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Kv-SW-JMQ">
                                         <rect key="frame" x="0.0" y="42.333333333333371" width="388" height="34.333333333333343"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -333,12 +333,12 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="97c-I4-M1l" userLabel="Button">
                                                 <rect key="frame" x="0.0" y="0.0" width="190" height="34.333333333333336"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Debit Card"/>
+                                                <buttonConfiguration key="configuration" style="gray" title="Debit Card"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z2h-4t-WIO">
                                                 <rect key="frame" x="198" y="0.0" width="190" height="34.333333333333336"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Credit Card"/>
+                                                <buttonConfiguration key="configuration" style="gray" title="Credit Card"/>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -399,6 +399,12 @@
                     </view>
                     <navigationItem key="navigationItem" id="s3F-rz-lJy"/>
                     <connections>
+                        <outlet property="addressTF" destination="4Kv-SW-JMQ" id="Xfp-qF-28f"/>
+                        <outlet property="cardNumTF" destination="fh3-xO-GdD" id="w6F-e9-uNC"/>
+                        <outlet property="expiryDateTF" destination="bM9-tS-FZc" id="YRT-8z-hFd"/>
+                        <outlet property="fNameTF" destination="XA0-g0-OBT" id="pnS-tm-yDo"/>
+                        <outlet property="nameOnCardTF" destination="obb-br-2gK" id="fpd-Ak-ZQe"/>
+                        <outlet property="secNumTF" destination="KAd-IX-Is4" id="WvM-Or-1iG"/>
                         <segue destination="C8i-gM-4Nn" kind="presentation" identifier="paymentLogout" modalPresentationStyle="fullScreen" id="Kjc-4N-RG2"/>
                     </connections>
                 </viewController>
@@ -1026,19 +1032,20 @@
                                 <rect key="frame" x="0.0" y="47" width="428" height="845"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="aS7-aS-TKD">
-                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="itemSize" width="428" height="375"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="5FQ-eE-arh">
-                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="428" height="375"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="7jd-OW-DaQ">
-                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="428" height="375"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </collectionViewCellContentView>
+                                        <size key="customSize" width="428" height="375"/>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -1058,7 +1065,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hgJ-H4-SSy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-8166" y="1962"/>
+            <point key="canvasLocation" x="-8167.2897196261674" y="1961.9870410367173"/>
         </scene>
         <!--New View Controller-->
         <scene sceneID="WeI-Yy-TMd">
@@ -1078,7 +1085,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="vzh-LX-Qha"/>
-        <segue reference="OdP-PO-gTO"/>
+        <segue reference="bOK-nz-3Ux"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="heart.fill" catalog="system" width="128" height="107"/>
