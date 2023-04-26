@@ -90,6 +90,7 @@ class SignUpVC: UIViewController {
         super.didRotate(from: fromInterfaceOrientation)
         loadSignUpAnimation()
     }
+    
     let animationView = LottieAnimationView()
     
     func loadSignUpAnimation(){

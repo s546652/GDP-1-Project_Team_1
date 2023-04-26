@@ -27,7 +27,7 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 100
+        return 10
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -38,6 +38,14 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
     
     
     private let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
+    
+    var imageCache = NSCache<AnyObject, AnyObject>()
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        imageCache.removeAllObjects()
+        // Dispose of any resources that can be recreated.
+    }
     
     
     override func viewDidLoad() {

@@ -14,7 +14,7 @@ import AVFAudio
 class WishlistTVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
     
     var username:String!
-    var ename:[String] = [""]
+    var ename:[String] = []
     //var edate:[String] = [""]
     var db: Firestore!
     var size: Int = 0
@@ -36,9 +36,9 @@ class WishlistTVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
     
     
     func deleteWishList(index:Int) {
-        let name = ename[index + 1]
+        let name = ename[index]
         self.db.collection("WishList").document(name).delete()
-        self.searchName.remove(at: index + 1)
+        self.searchName.remove(at: index)
         DispatchQueue.main.async {
             self.tableView.reloadData()
         }
@@ -184,7 +184,7 @@ class WishlistTVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //print(ename.count-1,size)
-        return searchName.count-1
+        return searchName.count
     }
 
     
@@ -196,7 +196,7 @@ class WishlistTVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
 
         var cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         //print(ename[indexPath.row+1].self)
-        cell.textLabel?.text = searchName[indexPath.row+1].self
+        cell.textLabel?.text = searchName[indexPath.row].self
       //  cell.detailTextLabel?.text = edate[indexPath.row+1].self
         return cell
     }

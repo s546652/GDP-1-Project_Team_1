@@ -26,38 +26,21 @@
                                         <rect key="frame" x="0.0" y="0.0" width="388" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
-                                        <connections>
-                                            <action selector="fnameCheck:" destination="rNN-vo-tyr" eventType="editingChanged" id="fdp-hR-xMj"/>
-                                            <action selector="fnameTFA:" destination="rNN-vo-tyr" eventType="editingChanged" id="0h4-v4-o8N"/>
-                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8it-Ik-TIP">
                                         <rect key="frame" x="0.0" y="42" width="388" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
-                                        <connections>
-                                            <action selector="fnameTFA:" destination="rNN-vo-tyr" eventType="editingChanged" id="jQA-p5-RdD"/>
-                                            <action selector="lnameCheck:" destination="rNN-vo-tyr" eventType="editingChanged" id="6cE-sW-xS5"/>
-                                            <action selector="lnameTFA:" destination="rNN-vo-tyr" eventType="editingChanged" id="330-Bw-p5N"/>
-                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HyJ-rx-4db">
                                         <rect key="frame" x="0.0" y="84" width="388" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
-                                        <connections>
-                                            <action selector="emailCheck:" destination="rNN-vo-tyr" eventType="editingChanged" id="3X8-vv-B8P"/>
-                                            <action selector="emailTFA:" destination="rNN-vo-tyr" eventType="editingChanged" id="971-uk-S0t"/>
-                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="SID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wbi-pq-5N4">
                                         <rect key="frame" x="0.0" y="126" width="388" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
-                                        <connections>
-                                            <action selector="sidCheck:" destination="rNN-vo-tyr" eventType="editingChanged" id="0c4-Il-oYt"/>
-                                            <action selector="sidTFA:" destination="rNN-vo-tyr" eventType="editingChanged" id="LXq-gp-Wby"/>
-                                        </connections>
                                     </textField>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="X9C-kj-1q9">
                                         <rect key="frame" x="0.0" y="168" width="388" height="50"/>
@@ -66,10 +49,6 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="190" height="50"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
-                                                <connections>
-                                                    <action selector="dobCheck:" destination="rNN-vo-tyr" eventType="editingChanged" id="tSp-Cl-jSQ"/>
-                                                    <action selector="dobTFA:" destination="rNN-vo-tyr" eventType="editingChanged" id="pPw-R6-oba"/>
-                                                </connections>
                                             </textField>
                                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="cyK-1x-d6F">
                                                 <rect key="frame" x="198" y="0.0" width="190" height="50"/>
@@ -80,28 +59,16 @@
                                         <rect key="frame" x="0.0" y="226" width="388" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
-                                        <connections>
-                                            <action selector="phnumCheck:" destination="rNN-vo-tyr" eventType="editingChanged" id="zwf-4D-0r4"/>
-                                            <action selector="phnumTFA:" destination="rNN-vo-tyr" eventType="editingChanged" id="JDp-h6-coM"/>
-                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YIG-Mv-vhn">
                                         <rect key="frame" x="0.0" y="268" width="388" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                                        <connections>
-                                            <action selector="psswrdCheck:" destination="rNN-vo-tyr" eventType="editingChanged" id="X36-JX-a8w"/>
-                                            <action selector="psswrdTFA:" destination="rNN-vo-tyr" eventType="editingChanged" id="Ycg-MQ-ekr"/>
-                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Re-enter Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="39Q-aS-OUL">
                                         <rect key="frame" x="0.0" y="310" width="388" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                                        <connections>
-                                            <action selector="repassCheck:" destination="rNN-vo-tyr" eventType="editingChanged" id="Urq-v3-RQj"/>
-                                            <action selector="repassTFA:" destination="rNN-vo-tyr" eventType="editingChanged" id="b6H-IV-1vc"/>
-                                        </connections>
                                     </textField>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="YT3-e8-uUo">
                                         <rect key="frame" x="0.0" y="352" width="388" height="34.333333333333314"/>
@@ -311,11 +278,11 @@
             <objects>
                 <viewController id="eJK-e6-ov1" customClass="PaymentVC" customModule="EventsUp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nVX-pv-RzT">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="869"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="843"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="VPZ-7T-e7k">
-                                <rect key="frame" x="20" y="290.33333333333337" width="388" height="288.33333333333337"/>
+                                <rect key="frame" x="20" y="277.33333333333337" width="388" height="288.33333333333337"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Full Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XA0-g0-OBT">
                                         <rect key="frame" x="0.0" y="0.0" width="388" height="34.333333333333336"/>
@@ -1084,8 +1051,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="vzh-LX-Qha"/>
-        <segue reference="bOK-nz-3Ux"/>
+        <segue reference="2BP-en-RjK"/>
+        <segue reference="tcd-1y-Qt3"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="heart.fill" catalog="system" width="128" height="107"/>
